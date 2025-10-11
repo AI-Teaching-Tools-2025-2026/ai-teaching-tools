@@ -17,6 +17,7 @@ This project aims to empower **instructors** with tools that let them design **c
 | Dylan Liu | liudy@oregonstate.edu |
 | Alina Hyk | hyak@oregonstate.edu |
 | Annabel Wang | wanganna@oregonstate.edu |
+| Brendon Tran | tranbren@oregonstate.edu |
 
 ---
 
