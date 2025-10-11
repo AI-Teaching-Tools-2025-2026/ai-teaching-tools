@@ -10,15 +10,14 @@ Developed by **AI Education Labs, Inc.** in collaboration with the **Applied Soc
 This project aims to empower **instructors** with tools that let them design **custom AI-enhanced teaching experiences** and gain insights into how their students learn, where they struggle, and how to intervene proactively. 
 
 # Contact Information 
+| Team Member | Email |
+| --- | ---|
+| Joe Slade | joseph.slade@oregonstate.edu |
+| Katie Kimura | kimuraka@oregonstate.edu |
+| Dylan Liu | liudy@oregonstate.edu |
+| Alina Hyk | hyak@oregonstate.edu |
+| Annabel Wang | wanganna@oregonstate.edu |
 
-Project Partner 
-Joe Slade joseph.slade@oregonstate.edu
-
-Katie Kimura kimuraka@oregonstate.edu
-Dylan Liu liudy@oregonstate.edu
-Brendon Tran tranbren@oregonstate.edu
-Alina Hyk hyak@oregonstate.edu
-Annabel Wang wanganna@oregonstate.edu
 ---
 
 ## 🧠 Core Features
