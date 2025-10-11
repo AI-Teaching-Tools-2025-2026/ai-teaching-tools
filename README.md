@@ -106,11 +106,4 @@ We aim to:
 
 ---
 
-## 📢 Contact
-
-Interested in collaborating or learning more?  
-📧 Reach out at [info@aiedlabs.org](mailto:info@aiedlabs.org)
-
----
-
 > _“Not just data. Not just AI. A teaching partner.”_
