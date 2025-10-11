@@ -5,16 +5,20 @@ Developed by **AI Education Labs, Inc.** in collaboration with the **Applied Soc
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
-This project aims to empower **instructors** with tools that let them design **custom AI-enhanced teaching experiences** and gain insights into how their students learn, where they struggle, and how to intervene proactively. Built on top of an existing student-facing platform, this new system will focus on developing:
+This project aims to empower **instructors** with tools that let them design **custom AI-enhanced teaching experiences** and gain insights into how their students learn, where they struggle, and how to intervene proactively. 
 
-- An **Instructor Analytics Dashboard**  
-- A **Custom AI-Integrated Assignment Builder**  
-- **Actionable AI-Driven Insights**
+# Contact Information 
 
-These tools will enable **real-time educational intervention**, provide **automated feedback**, and support **deep learning** through AI-enhanced assignments and engagement tracking.
+Project Partner 
+Joe Slade joseph.slade@oregonstate.edu
 
+Katie Kimura kimuraka@oregonstate.edu
+Dylan Liu liudy@oregonstate.edu
+Brendon Tran tranbren@oregonstate.edu
+Alina Hyk hyak@oregonstate.edu
+Annabel Wang wanganna@oregonstate.edu
 ---
 
 ## 🧠 Core Features
