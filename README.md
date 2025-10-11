@@ -1,4 +1,4 @@
-# AI-Enhanced Teaching Tools Platform
+# AI-Enhanced Teaching Tools Platform 
 
 Empowering Instructors with Custom AI Teaching Assistants  
 Developed by **AI Education Labs, Inc.** in collaboration with the **Applied Social Cognition Lab, OSU School of Psychological Science**
