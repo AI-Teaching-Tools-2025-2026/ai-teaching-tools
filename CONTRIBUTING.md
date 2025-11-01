@@ -93,26 +93,33 @@ reference issues.
 ## Code Style, Linting & Formatting
 Name the formatter/linter, config file locations, and the exact commands to
 check/fix locally.
+- Linters: ESLint and Prettier
+   - ESLint Config File: eslint.config.mjs
+   - Prettier Config File: .prettierrc
+- Before commiting and/or as often as possible, run the following command from the root directory: `npx eslint . --fix`. This will automatically reformat your code according to the standards set in the config files
 
 ## Testing
 Define required test types, how to run tests, expected coverage thresholds, and
 when new/updated tests are mandatory.
 
 ## Pull Requests & Reviews
-Outline PR requirements (template, checklist, size limits), reviewer expectations,
-approval rules, and required status checks.
+- Refer to the pull_request_template.md for the PR template
+- PRs require at least one reviewer, who can determine based on Github's recommendation and a manual check whether or not to approve the change
+   - If a reviewer is unsure whether or not to approve a change, they should contact the rest of the team for feedback
+- When a PR needs immediate review, the team member who authored it should ping the rest of the team via the Discord server
 
 ## CI/CD
 Link to pipeline definitions, list mandatory jobs, how to view logs/re-run jobs,
-and what must pass before merge/release.
+and what must pass before merge/release. 
+- CI/CD guidelines TBD
 
 ## Security & Secrets
-State how to report vulnerabilities, prohibited patterns (hard-coded secrets),
-dependency update policy, and scanning tools.
+- Secrets should never be hard-coded into code, they should be stored in in .env, which should never be pushed to the Github repo since it is in the .gitignore
+- If a vulnerability is discovered, alert the team immediately, who will then decide if escalation to the partner is necessary or if it can be handled internally 
 
 ## Documentation Expectations
-Specify what must be updated (README, docs/, API refs, CHANGELOG) and
-docstring/comment standards.
+- If any changes are made to the code that affect the setup process, those changes should be documented in the README.md file as soon as possible (ideally, they should accompany the PR)
+- Comments should be meaningful and as detailed as possible if needed (e.g., listing the date/time, describing what changed, etc) 
 
 ## Release Process
 Describe versioning scheme, tagging, changelog generation, packaging/publishing
