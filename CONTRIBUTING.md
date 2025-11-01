@@ -57,13 +57,6 @@ ai-teaching-tools/
 └── tests/              # Test files
 ```
 
-## How to Contribute
-Add more here later...
-
-## Boilerplate Next.js README.md
-To be deleted later, but might be useful to keep around for now.
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -84,18 +77,47 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Branching & Workflow
+- Default branch: main
+- Branch naming: name/feature/description
+- Simple feature-branch workflow and merge completed brances into main 
 
-To learn more about Next.js, take a look at the following resources:
+## Issues & Planning
+- File issues in GitHub with a description of the problem with labels such as feature, bug, etc.
+- Estimate effort roughly (e.g., small, medium, large)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Commit Messages
+State the convention (e.g., Conventional Commits), include examples, and how to
+reference issues.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Code Style, Linting & Formatting
+Name the formatter/linter, config file locations, and the exact commands to
+check/fix locally.
 
-## Deploy on Vercel
+## Testing
+Define required test types, how to run tests, expected coverage thresholds, and
+when new/updated tests are mandatory.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pull Requests & Reviews
+Outline PR requirements (template, checklist, size limits), reviewer expectations,
+approval rules, and required status checks.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-                
+## CI/CD
+Link to pipeline definitions, list mandatory jobs, how to view logs/re-run jobs,
+and what must pass before merge/release.
+
+## Security & Secrets
+State how to report vulnerabilities, prohibited patterns (hard-coded secrets),
+dependency update policy, and scanning tools.
+
+## Documentation Expectations
+Specify what must be updated (README, docs/, API refs, CHANGELOG) and
+docstring/comment standards.
+
+## Release Process
+Describe versioning scheme, tagging, changelog generation, packaging/publishing
+steps, and rollback process.
+
+## Support & Contact
+Provide maintainer contact channel, expected response windows, and where to ask
+questions.
