@@ -87,45 +87,42 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - Estimate effort roughly (e.g., small, medium, large)
 
 ## Commit Messages
-We’ll use short, descriptive commit messages following the Conventional Commits style for consistency and clarity. 
-Each message should state what was done (e.g., feat: add new assignment form or fix: update API call). 
-When relevant, we’ll reference related issues using the issue number in parentheses.
+- We’ll use short, descriptive commit messages following the Conventional Commits style for consistency and clarity. 
+- Each message should state what was done (e.g., feat: add new assignment form or fix: update API call). 
+- When relevant, we’ll reference related issues using the issue number in parentheses.
 
 ## Code Style, Linting & Formatting
-Name the formatter/linter, config file locations, and the exact commands to
-check/fix locally.
 - Linters: ESLint and Prettier
-   - ESLint Config File: eslint.config.mjs
-   - Prettier Config File: .prettierrc
+   - ESLint Config File: [eslint.config.mjs](https://github.com/AI-Teaching-Tools-2025-2026/ai-teaching-tools/blob/2654cd121aeca2871fb19697cbcdb551c3349f9d/eslint.config.mjs)
+   - Prettier Config File: [.prettierrc](https://github.com/AI-Teaching-Tools-2025-2026/ai-teaching-tools/blob/2654cd121aeca2871fb19697cbcdb551c3349f9d/.prettierrc)
 - Before commiting and/or as often as possible, run the following command from the root directory: `npx eslint . --fix`. This will automatically reformat your code according to the standards set in the config files
 
 ## Testing
-Define required test types, how to run tests, expected coverage thresholds, and
-when new/updated tests are mandatory.
+- Testing guidelines TBD (pending partner input)
 
 ## Pull Requests & Reviews
-- Refer to the pull_request_template.md for the PR template
+- Refer to the [pull_request_template.md](https://github.com/AI-Teaching-Tools-2025-2026/ai-teaching-tools/blob/2654cd121aeca2871fb19697cbcdb551c3349f9d/pull_request_template.md) for the PR template
 - PRs require at least one reviewer, who can determine based on Github's recommendation and a manual check whether or not to approve the change
    - If a reviewer is unsure whether or not to approve a change, they should contact the rest of the team for feedback
 - When a PR needs immediate review, the team member who authored it should ping the rest of the team via the Discord server
 
 ## CI/CD
-Link to pipeline definitions, list mandatory jobs, how to view logs/re-run jobs,
-and what must pass before merge/release. 
-- CI/CD guidelines TBD
+- CI/CD guidelines TBD (pending partner input)
 
 ## Security & Secrets
-- Secrets should never be hard-coded into code, they should be stored in in .env, which should never be pushed to the Github repo since it is in the .gitignore
+- Secrets should never be hard-coded into code, they should be stored in in .env, which should never be pushed to the Github repo since it is in the [.gitignore](https://github.com/AI-Teaching-Tools-2025-2026/ai-teaching-tools/blob/2654cd121aeca2871fb19697cbcdb551c3349f9d/.gitignore)
 - If a vulnerability is discovered, alert the team immediately, who will then decide if escalation to the partner is necessary or if it can be handled internally 
 
 ## Documentation Expectations
-- If any changes are made to the code that affect the setup process, those changes should be documented in the README.md file as soon as possible (ideally, they should accompany the PR)
+- If any changes are made to the code that affect the setup process, those changes should be documented in the [README.md](https://github.com/AI-Teaching-Tools-2025-2026/ai-teaching-tools/blob/2654cd121aeca2871fb19697cbcdb551c3349f9d/README.md) file as soon as possible (ideally, they should accompany the PR)
 - Comments should be meaningful and as detailed as possible if needed (e.g., listing the date/time, describing what changed, etc) 
 
 ## Release Process
-Describe versioning scheme, tagging, changelog generation, packaging/publishing
-steps, and rollback process.
+- Release Process guidelines TBD (pending partner input)
 
 ## Support & Contact
-Provide maintainer contact channel, expected response windows, and where to ask
-questions.
+- Main method of communication is via the Discord server 
+- Communication with the partner can be through Discord or during weekly in-person partner meetings 
+- Expected response window: 24 hours 
+   - Exceptions shall be made on a case-by-case basis
+   - If a team member knows ahead of time that they will be unavailable, they should let the team know as soon as possible
