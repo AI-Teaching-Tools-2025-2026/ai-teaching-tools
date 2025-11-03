@@ -21,29 +21,29 @@ This project aims to empower **instructors** with tools that let them design **c
 
 ---
 
-## 🧠 Core Features
+## Core Features
 
-### 📊 Instructor Analytics Dashboard
+### Instructor Analytics Dashboard
 Visualize key student engagement metrics:
 - Reading completion per chapter/section
 - Quiz and flashcard scores
 - High-difficulty topics based on LLM analysis of student input
 - Progress tracking via dynamic Table of Contents
 
-### 🛠️ AI-Integrated Assignment Builder
+### AI-Integrated Assignment Builder
 Create AI-powered teaching materials:
-- Drag-and-drop or form-based UI
+- Drag-and-drop or form-based UI for document and materials upload
 - Integrates with existing course readings
-- Auto-generates Socratic questions, flashcards, and quizzes using LLMs
+- Auto-generates Socratic questions, flashcards, and quizzes using LLMs, including both pre-generated and dynamically generated questions
 
-### 🔍 Actionable Insights
+### Actionable Insights
 Let instructors proactively support student learning:
 - "Most students struggled with Chapter 3 Section 2 — consider reviewing this in class"
 - AI-generated interventions based on learning analytics and performance
 
 ---
 
-## 🗓️ Project Timeline
+## Project Timeline
 
 | Phase | Timeline | Milestones |
 |-------|----------|------------|
@@ -53,7 +53,7 @@ Let instructors proactively support student learning:
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
 | Category | Technology |
 |---------|-------------|
@@ -68,7 +68,7 @@ Let instructors proactively support student learning:
 
 ---
 
-## 🌐 Current System Overview
+## Current System Overview
 
 Students can:
 - Upload textbook PDFs  
@@ -84,7 +84,7 @@ Instructors (coming soon) will:
 
 ---
 
-## 🎯 Capstone Developer Responsibilities
+## Capstone Developer Responsibilities
 
 - Develop the instructor-facing **Dashboard** and **Assignment Builder**
 - Integrate LLM features to enhance student-instructor feedback loops
@@ -93,7 +93,7 @@ Instructors (coming soon) will:
 
 ---
 
-## 📚 Educational Impact
+## Educational Impact
 
 This project is about more than analytics—it's about transforming teaching.  
 We aim to:
@@ -103,7 +103,7 @@ We aim to:
 
 ---
 
-## 🤝 Collaborators
+## Collaborators
 
 - **AI Education Labs, Inc.** (Startup)
 - **Applied Social Cognition Lab**, Oregon State University – School of Psychological Science
