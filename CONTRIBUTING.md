@@ -87,8 +87,9 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - Estimate effort roughly (e.g., small, medium, large)
 
 ## Commit Messages
-State the convention (e.g., Conventional Commits), include examples, and how to
-reference issues.
+We’ll use short, descriptive commit messages following the Conventional Commits style for consistency and clarity. 
+Each message should state what was done (e.g., feat: add new assignment form or fix: update API call). 
+When relevant, we’ll reference related issues using the issue number in parentheses.
 
 ## Code Style, Linting & Formatting
 Name the formatter/linter, config file locations, and the exact commands to
