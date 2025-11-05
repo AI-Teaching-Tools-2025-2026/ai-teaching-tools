@@ -1,0 +1,1 @@
+// This will store the constants for the entire app.
