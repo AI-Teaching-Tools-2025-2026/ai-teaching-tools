@@ -12,7 +12,7 @@
 
 # testing
 /coverage
-/creditentials.json
+/credentials.json
 
 # next.js
 /.next/
