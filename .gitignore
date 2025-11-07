@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/creditentials.json
 
 # next.js
 /.next/
