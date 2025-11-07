@@ -4,23 +4,22 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-export default function ActionAreaCard() {
+export default function PlaceholderCard() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          image="/placeholder.jpg"
+          alt="placeholder alt text"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            Placeholder Title
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            Placeholder Text
           </Typography>
         </CardContent>
       </CardActionArea>

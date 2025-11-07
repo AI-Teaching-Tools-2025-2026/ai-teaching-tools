@@ -1,17 +1,18 @@
 import { Container, Typography } from "@mui/material";
-import LoginForm from "@/components/forms/loginForm";
+import PlaceholderCard from "@/components/ui/placeholderCard";
 
-export default function LoginPage() {
+export default function DashboardPage() {
   return (
     <Container>
       <Typography 
         variant="h1"
         sx={{ fontSize: '2rem', fontWeight: 'bold', marginTop: '2rem', textAlign: 'center' }}
       >
-        Login Page
+        Dashboard Page
       </Typography>
 
-      <LoginForm />
+    <PlaceholderCard />
+
     </Container>
   );
 }
