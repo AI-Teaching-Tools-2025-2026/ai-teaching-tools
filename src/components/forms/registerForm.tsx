@@ -35,7 +35,7 @@ export default function RegisterForm() {
 
         setErrors([]);
         console.log("Registered:", { username, password });
-        window.location.href = "/dashboard"; // TODO: Replace with API call
+        window.location.href = "/login"; // TODO: Replace with API call
     };
 
     const textFieldStyle = {
