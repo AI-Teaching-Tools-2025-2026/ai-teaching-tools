@@ -23,7 +23,7 @@ export default function LoginForm() {
 
             console.log(response.data); // { message: "Login successful!" }
 
-            router.push("/dashboard");
+            router.push("/courses");
 
         } catch (error: any) {
             if (error.response) {
