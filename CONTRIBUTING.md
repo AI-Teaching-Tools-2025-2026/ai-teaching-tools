@@ -24,12 +24,17 @@ This project is developed in collaboration with Oregon State University and AI E
 - Node.js 18.x or higher
 - npm or yarn package manager
 - Git
+- Python 3
+- pip
 
 ### Installation
 
 1. Install dependencies:
    ```bash
    npm install
+   ```
+   ```bash
+   pip install -r requirements.txt
    ```
 
 2. Set up environment variables (create a `.env.local` file):
@@ -40,7 +45,7 @@ This project is developed in collaboration with Oregon State University and AI E
 
 3. Run the backend server:
    ```bash
-   .\venv\Scripts\python.exe -m uvicorn main:app --reload 
+   python -m uvicorn main:app --reload 
    ```
    
 4. Run the development server:
