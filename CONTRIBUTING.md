@@ -54,7 +54,7 @@ This project is developed in collaboration with Oregon State University and AI E
    ```
    ```bash
    # For Backend, from the backend directory
-   uvicorn main:app --reload
+   python -m uvicorn main:app --reload
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
