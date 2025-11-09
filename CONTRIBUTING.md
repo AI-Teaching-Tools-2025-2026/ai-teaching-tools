@@ -37,18 +37,18 @@ This project is developed in collaboration with Oregon State University and AI E
    pip install -r requirements.txt
    ```
 
-2. Set up environment variables (create a `.env.local` file):
+2. Set up environment variables (create a `.env` file in the backend folder):
    ```env
    # Add required environment variables here
    NEXT_PUBLIC_API_URL=your_api_url
    ```
 
-3. Run the backend server:
+3. Run the backend server (in the backend directory):
    ```bash
    python -m uvicorn main:app --reload 
    ```
    
-4. Run the development server:
+4. Run the development server (in the root directory):
    ```bash
    npm run dev
    ```
