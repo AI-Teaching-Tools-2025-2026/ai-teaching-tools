@@ -1,5 +1,7 @@
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import axios from 'axios';
 import Button from "@mui/material/Button";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -10,6 +12,7 @@ export default function RegisterForm() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errors, setErrors] = useState<string[]>([]);
+    const router = useRouter();
 
     // Validate password and return an array of unmet requirements
     const validatePassword = (pw: string) => {
@@ -20,7 +23,7 @@ export default function RegisterForm() {
         return messages;
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         const passwordErrors = validatePassword(password);
@@ -33,9 +36,23 @@ export default function RegisterForm() {
             return;
         }
 
-        setErrors([]);
-        console.log("Registered:", { username, password });
-        window.location.href = "/login"; // TODO: Replace with API call
+        try {
+            const response = await axios.post("http://127.0.0.1:8000/auth/signup", {
+                username,
+                password,
+            });
+
+            console.log(response.data); // e.g. { message: "User created successfully!" }
+
+            setErrors([]);
+            router.push("/login");
+        } catch (error: any) {
+            if (error.response) {
+                alert(error.response.data.detail);
+            } else {
+                alert(["An error occurred. Try again."]);
+            }
+        }
     };
 
     const textFieldStyle = {

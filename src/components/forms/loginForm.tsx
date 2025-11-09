@@ -1,4 +1,7 @@
 'use client';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 import Button from "@mui/material/Button";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -6,6 +9,31 @@ import TextField from '@mui/material/TextField';
 // TODO: Add form validation and error handling
 // TODO: Put the styles in a separate file / create new components for styled TextFields (depending on theme)
 export default function LoginForm() {
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const router = useRouter();
+
+    const handleLogin = async () => {
+        try {
+            const response = await axios.post("http://127.0.0.1:8000/auth/login", {
+                username: username,
+                password: password,
+            });
+
+            console.log(response.data); // { message: "Login successful!" }
+
+            router.push("/dashboard");
+
+        } catch (error: any) {
+            if (error.response) {
+                alert(error.response.data.detail); // show backend error message
+            } else {
+                alert("An error occurred. Try again.");
+            }
+        }
+    };
+
     return (
         <Box
             component="form"
@@ -44,6 +72,7 @@ export default function LoginForm() {
                     input: { color: '#ffffff' },
                     '& .MuiInputBase-input': { color: '#ffffff' },
                 }}
+                onChange={(e) => setUsername(e.target.value)}
             />
 
             <TextField
@@ -70,14 +99,14 @@ export default function LoginForm() {
                     input: { color: '#ffffff' },
                     '& .MuiInputBase-input': { color: '#ffffff' },
                 }}
+                onChange={(e) => setPassword(e.target.value)}
             />
 
             <Button
-                type="submit" variant="contained" sx={{ mt: 2 }}
-                // TODO: API Implementation (hard coded redirect for now)
-                href="dashboard"
+                type="button" variant="contained" sx={{ mt: 2 }}
+                onClick={handleLogin}
             >
-                Sign in
+                Log in
             </Button>
         </Box>
     );
