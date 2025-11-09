@@ -42,7 +42,8 @@ This project is developed in collaboration with Oregon State University and AI E
    # For backend, from the backend directory
    pip install -r requirements.txt
    ```
-
+   > [!NOTE]
+   > If you update any package or dependency, run `pip freeze > requirements.txt` to capture the updated versions, then commit and push the changes to the repository.
 5. Set up environment variables (create a `.env.local` file):
    > [!NOTE] 
    > Get this information by contacting one of the team members. 
