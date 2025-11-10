@@ -11,10 +11,7 @@ import Link from "next/link";
 export default function CourseCard() {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea
-        component={Link}
-        href={"/dashboard"}
-      >
+      <CardActionArea component={Link} href={"/dashboard"}>
         <CardMedia
           component="img"
           height="140"

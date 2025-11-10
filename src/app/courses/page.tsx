@@ -10,7 +10,7 @@ export default function CoursesPage() {
           fontSize: "2rem",
           fontWeight: "bold",
           marginTop: "2rem",
-          textAlign: "left",
+          textAlign: "center",
         }}
       >
         Courses Page
