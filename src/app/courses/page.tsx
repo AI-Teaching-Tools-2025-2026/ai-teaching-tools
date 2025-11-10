@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
-import RegisterForm from "@/components/forms/registerForm";
+import PlaceholderCard from "@/components/ui/placeholderCard";
 
-export default function registerPage() {
+export default function CoursesPage() {
   return (
     <Container>
       <Typography
@@ -10,13 +10,13 @@ export default function registerPage() {
           fontSize: "2rem",
           fontWeight: "bold",
           marginTop: "2rem",
-          textAlign: "center",
+          textAlign: "left",
         }}
       >
-        Register Page
+        Courses Page
       </Typography>
 
-      <RegisterForm />
+      <PlaceholderCard />
     </Container>
   );
 }
