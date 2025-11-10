@@ -4,9 +4,14 @@ import RegisterForm from "@/components/forms/registerForm";
 export default function registerPage() {
   return (
     <Container>
-      <Typography 
+      <Typography
         variant="h1"
-        sx={{ fontSize: '2rem', fontWeight: 'bold', marginTop: '2rem', textAlign: 'center' }}
+        sx={{
+          fontSize: "2rem",
+          fontWeight: "bold",
+          marginTop: "2rem",
+          textAlign: "center",
+        }}
       >
         Register Page
       </Typography>

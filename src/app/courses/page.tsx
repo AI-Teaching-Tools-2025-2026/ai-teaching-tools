@@ -4,15 +4,19 @@ import PlaceholderCard from "@/components/ui/placeholderCard";
 export default function CoursesPage() {
   return (
     <Container>
-      <Typography 
+      <Typography
         variant="h1"
-        sx={{ fontSize: '2rem', fontWeight: 'bold', marginTop: '2rem', textAlign: 'center' }}
+        sx={{
+          fontSize: "2rem",
+          fontWeight: "bold",
+          marginTop: "2rem",
+          textAlign: "left",
+        }}
       >
         Courses Page
       </Typography>
 
-    <PlaceholderCard />
-
+      <PlaceholderCard />
     </Container>
   );
 }
