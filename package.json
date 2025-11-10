@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint . --fix",
     "start-all": "concurrently \"npm run frontend\" \"npm run backend\"",
     "frontend": "npm run dev",
     "backend": "cd backend && uvicorn main:app --reload"

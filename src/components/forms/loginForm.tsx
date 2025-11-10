@@ -2,9 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios, { AxiosError } from "axios";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import { Button, Box, TextField } from "@mui/material";
 
 // TODO: Add form validation and error handling
 // TODO: Put the styles in a separate file / create new components for styled TextFields (depending on theme)
