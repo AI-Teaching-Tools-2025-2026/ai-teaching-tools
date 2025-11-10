@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 import { Button, Box, TextField } from "@mui/material";
 
 // TODO: Add form validation and error handling
@@ -21,11 +21,9 @@ export default function LoginForm() {
       console.log(response.data); // { message: "Login successful!" }
 
       router.push("/courses");
-    } catch (error) {
-      // Use AxiosError since, we are using a Axios call and error is based off of that
-      const err = error as AxiosError<{ detail?: string }>;
-      if (err.response?.data?.detail) {
-        alert(err.response.data.detail);
+    } catch (error: any) {
+      if (error.response) {
+        alert(error.response.data.detail); // show backend error message
       } else {
         alert("An error occurred. Try again.");
       }

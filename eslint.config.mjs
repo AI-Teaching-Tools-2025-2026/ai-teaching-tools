@@ -15,6 +15,7 @@ export default defineConfig([
     rules: {
       ...prettierConfig.rules, // disables conflicting ESLint rules
       "prettier/prettier": ["error"], // runs Prettier as an ESLint rule
+      "@typescript-eslint/no-explicit-any": ["off"]
     },
   },
   globalIgnores([

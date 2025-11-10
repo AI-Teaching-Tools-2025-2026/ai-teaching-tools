@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 import { Button, Box, TextField } from "@mui/material";
 
 // TODO: Move inline sx styling into theme or styled components
@@ -47,13 +47,11 @@ export default function RegisterForm() {
 
       setErrors([]);
       router.push("/login");
-    } catch (error) {
-      // Use AxiosError since, we are using a Axios call and error is based off of that
-      const err = error as AxiosError<{ detail?: string }>;
-      if (err.response?.data?.detail) {
-        alert(err.response.data.detail);
+    } catch (error: any) {
+      if (error.response) {
+        alert(error.response.data.detail);
       } else {
-        alert("An error occurred. Try again.");
+        alert(["An error occurred. Try again."]);
       }
     }
   };
