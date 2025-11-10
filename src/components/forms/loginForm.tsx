@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -23,9 +23,11 @@ export default function LoginForm() {
       console.log(response.data); // { message: "Login successful!" }
 
       router.push("/courses");
-    } catch (error: any) {
-      if (error.response) {
-        alert(error.response.data.detail); // show backend error message
+    } catch (error) {
+      // Use AxiosError since, we are using a Axios call and error is based off of that
+      const err = error as AxiosError<{ detail?: string }>;
+      if (err.response?.data?.detail) {
+        alert(err.response.data.detail);
       } else {
         alert("An error occurred. Try again.");
       }
