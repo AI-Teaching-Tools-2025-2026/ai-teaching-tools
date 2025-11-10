@@ -1,5 +1,5 @@
 import { Container, Typography } from "@mui/material";
-import PlaceholderCard from "@/components/ui/placeholderCard";
+import CourseCard from "@/components/ui/courseCard";
 
 export default function CoursesPage() {
   return (
@@ -16,7 +16,7 @@ export default function CoursesPage() {
         Courses Page
       </Typography>
 
-      <PlaceholderCard />
+      <CourseCard />
     </Container>
   );
 }
