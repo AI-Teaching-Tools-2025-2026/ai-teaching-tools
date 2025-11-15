@@ -91,7 +91,10 @@ ai-teaching-tools/
 - Linters: ESLint and Prettier
    - ESLint Config File: [eslint.config.mjs](https://github.com/AI-Teaching-Tools-2025-2026/ai-teaching-tools/blob/2654cd121aeca2871fb19697cbcdb551c3349f9d/eslint.config.mjs)
    - Prettier Config File: [.prettierrc](https://github.com/AI-Teaching-Tools-2025-2026/ai-teaching-tools/blob/2654cd121aeca2871fb19697cbcdb551c3349f9d/.prettierrc)
-- Before commiting and/or as often as possible, run the following command from the root directory: `npm run lint`. This will automatically reformat your code according to the standards set in the config files
+- Before commiting and/or as often as possible, run the following command from the root directory to automatically reformat your code according to the standards set in the config files:
+```bash
+npm run lint
+```
 
 ## Testing
 - Testing guidelines TBD (pending partner input)
