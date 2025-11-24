@@ -7,7 +7,6 @@ import {
   Container,
   Grid,
 } from "@mui/material";
-import Image from "next/image";
 import SideNavbar from "@/components/ui/sideNavbar";
 import GradesGrid from "@/components/grades/GradesGrid";
 
