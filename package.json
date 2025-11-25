@@ -8,8 +8,10 @@
     "start": "next start",
     "lint": "eslint . --fix",
     "start-all": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "start-all-mac": "concurrently \"npm run frontend\" \"npm run backendmac\"",
     "frontend": "npm run dev",
-    "backend": "cd backend && python3 -m uvicorn main:app --reload"
+    "backend": "cd backend && python -m uvicorn main:app --reload",
+    "backendmac": "cd backend && python3 -m uvicorn main:app --reload"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
