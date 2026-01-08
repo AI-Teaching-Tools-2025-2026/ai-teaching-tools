@@ -22,6 +22,7 @@
     "ag-grid-community": "^34.3.1",
     "ag-grid-react": "^34.3.1",
     "axios": "^1.13.2",
+    "class-variance-authority": "^0.7.1",
     "next": "^16.1.1",
     "radix-ui": "^1.4.3",
     "react": "19.2.0",
