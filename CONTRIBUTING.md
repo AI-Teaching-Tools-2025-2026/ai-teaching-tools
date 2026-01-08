@@ -48,14 +48,14 @@ This project is developed in collaboration with Oregon State University and AI E
    > [!NOTE] 
    > Get this information by contacting one of the team members. 
 
-6. Run the development server (requires two terminal instances):
+6. Run the development server (inside the root directory):
    ```bash
-   # For frontend, from the root directory
-   npm run dev
+   # For Windows:
+   npm run start-all
    ```
    ```bash
-   # For Backend, from the backend directory
-   python -m uvicorn main:app --reload
+   # For Mac:
+   npm run start-all-mac
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
