@@ -1,6 +1,6 @@
 // import Image from "next/image";
-// import Link from "next/link";
-import Button from "@mui/material/Button";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -15,22 +15,12 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <Button
-            // component={NextLink}
-            href="/login"
-            variant="contained"
-            className="h-12 w-full md:w-[158px]"
-          >
-            Login
+          <Button variant="default" size="lg" asChild>
+            <Link href="/login">Login</Link>
           </Button>
 
-          <Button
-            // component={NextLink}
-            href="/register"
-            variant="outlined"
-            className="h-12 w-full md:w-[158px]"
-          >
-            Register
+          <Button variant="outline" size="lg" asChild>
+            <Link href="/register">Register</Link>
           </Button>
         </div>
       </main>
