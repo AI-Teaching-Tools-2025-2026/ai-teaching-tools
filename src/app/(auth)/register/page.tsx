@@ -3,20 +3,12 @@ import RegisterForm from "@/components/forms/registerForm";
 
 export default function registerPage() {
   return (
-    <Container>
-      <Typography
-        variant="h1"
-        sx={{
-          fontSize: "2rem",
-          fontWeight: "bold",
-          marginTop: "2rem",
-          textAlign: "center",
-        }}
-      >
+    <div>
+      <h1 className="text-3xl font-bold mt-8 text-center">
         Register Page
-      </Typography>
+      </h1>
 
       <RegisterForm />
-    </Container>
+    </div>
   );
 }
