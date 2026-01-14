@@ -1,4 +1,3 @@
-import { Container, Typography } from "@mui/material";
 import RegisterForm from "@/components/forms/registerForm";
 
 export default function registerPage() {
