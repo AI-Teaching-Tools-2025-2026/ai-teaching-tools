@@ -2,7 +2,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { Button, Box, TextField } from "@mui/material";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 // TODO: Move inline sx styling into theme or styled components
 export default function RegisterForm() {
@@ -51,92 +53,60 @@ export default function RegisterForm() {
       if (error.response) {
         alert(error.response.data.detail);
       } else {
-        alert(["An error occurred. Try again."]);
+        alert("An error occurred. Try again.");
       }
     }
   };
 
-  const textFieldStyle = {
-    "& .MuiOutlinedInput-root": {
-      backgroundColor: "transparent",
-      "& .MuiOutlinedInput-notchedOutline": {
-        borderColor: "rgba(255,255,255,0.9)",
-      },
-      "&:hover .MuiOutlinedInput-notchedOutline": {
-        borderColor: "rgba(255,255,255,1)",
-      },
-      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-        borderColor: "rgba(255,255,255,1)",
-      },
-    },
-    "& .MuiInputLabel-root": { color: "rgba(255,255,255,0.9)" },
-    "& input::placeholder": { color: "rgba(255,255,255,0.7)" },
-    input: { color: "#ffffff" },
-    "& .MuiInputBase-input": { color: "#ffffff" },
-  };
-
   return (
-    <Box
-      component="form"
-      noValidate
-      autoComplete="off"
+    <form
+      className="flex flex-col items-center gap-4 mt-8"
       onSubmit={handleSubmit}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        "& .MuiTextField-root": { m: 1, width: "25ch" },
-        marginTop: 4,
-      }}
     >
-      <TextField
-        id="username"
-        label="Username"
-        variant="outlined"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        sx={textFieldStyle}
-      />
+      <div className="grid w-full max-w-sm gap-1.5">
+        <Label htmlFor="username">Username</Label>
+        <Input
+          id="username"
+          type="text"
+          placeholder="Enter your username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
 
-      <TextField
-        id="password"
-        label="Password"
-        type="password"
-        variant="outlined"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        sx={textFieldStyle}
-      />
+      <div className="grid w-full max-w-sm gap-1.5">
+        <Label htmlFor="password">Password</Label>
+        <Input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
 
-      <TextField
-        id="confirmPassword"
-        label="Confirm Password"
-        type="password"
-        variant="outlined"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-        sx={textFieldStyle}
-      />
+      <div className="grid w-full max-w-sm gap-1.5">
+        <Label htmlFor="confirmPassword">Confirm Password</Label>
+        <Input
+          id="confirmPassword"
+          type="password"
+          placeholder="Confirm your password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
+      </div>
 
       {errors.length > 0 && (
-        <Box
-          sx={{
-            color: "red",
-            mt: 1,
-            textAlign: "left",
-            fontSize: "0.875rem",
-            width: "25ch",
-          }}
-        >
+        <div className="text-destructive text-sm mt-1 text-left w-full max-w-sm">
           {errors.map((err, index) => (
             <div key={index}>• {err}</div>
           ))}
-        </Box>
+        </div>
       )}
 
-      <Button type="submit" variant="contained" sx={{ mt: 2 }}>
+      <Button type="submit" className="mt-2">
         Register
       </Button>
-    </Box>
+    </form>
   );
 }

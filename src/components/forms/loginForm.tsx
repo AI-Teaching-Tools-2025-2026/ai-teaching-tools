@@ -2,7 +2,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { Button, Box, TextField } from "@mui/material";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 // TODO: Add form validation and error handling
 // TODO: Put the styles in a separate file / create new components for styled TextFields (depending on theme)
@@ -31,81 +33,38 @@ export default function LoginForm() {
   };
 
   return (
-    <Box
-      component="form"
-      noValidate
-      autoComplete="off"
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        "& .MuiTextField-root": { m: 1, width: "25ch" },
-        marginTop: 4,
+    <form
+      className="flex flex-col items-center gap-4 mt-8"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleLogin();
       }}
     >
-      <TextField
-        id="username"
-        label="Username"
-        variant="outlined"
-        sx={{
-          "& .MuiOutlinedInput-root": {
-            backgroundColor: "transparent",
-            // outline (border) color controls:
-            "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgba(255,255,255,0.9)",
-            },
-            "&:hover .MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgba(255,255,255,1)",
-            },
-            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgba(255,255,255,1)",
-            },
-          },
-          "& .MuiInputLabel-root": { color: "rgba(255,255,255,0.9)" }, // label color
-          // placeholder/sample text color only:
-          "& input::placeholder": { color: "rgba(255,255,255,0.7)" },
-          // input text color
-          input: { color: "#ffffff" },
-          "& .MuiInputBase-input": { color: "#ffffff" },
-        }}
-        onChange={(e) => setUsername(e.target.value)}
-      />
+      <div className="grid w-full max-w-sm gap-1.5">
+        <Label htmlFor="username">Username</Label>
+        <Input
+          id="username"
+          type="text"
+          placeholder="Enter your username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
 
-      <TextField
-        id="password"
-        label="Password"
-        type="password"
-        variant="outlined"
-        sx={{
-          "& .MuiOutlinedInput-root": {
-            backgroundColor: "transparent",
-            "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgba(255,255,255,0.9)",
-            },
-            "&:hover .MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgba(255,255,255,1)",
-            },
-            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              borderColor: "rgba(255,255,255,1)",
-            },
-          },
-          "& .MuiInputLabel-root": { color: "rgba(255,255,255,0.9)" },
-          "& input::placeholder": { color: "rgba(255,255,255,0.7)" },
-          // make typed text white
-          input: { color: "#ffffff" },
-          "& .MuiInputBase-input": { color: "#ffffff" },
-        }}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+      <div className="grid w-full max-w-sm gap-1.5">
+        <Label htmlFor="password">Password</Label>
+        <Input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
 
-      <Button
-        type="button"
-        variant="contained"
-        sx={{ mt: 2 }}
-        onClick={handleLogin}
-      >
+      <Button type="submit" className="mt-2">
         Log in
       </Button>
-    </Box>
+    </form>
   );
 }

@@ -1,106 +1,75 @@
 "use client";
-import {
-  Box,
-  Typography,
-  AppBar,
-  Toolbar,
-  Container,
-  Grid,
-} from "@mui/material";
 import Image from "next/image";
 import SideNavbar from "@/components/ui/sideNavbar";
 
 export default function DashboardPage() {
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar
-        position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, bgcolor: "gray" }}
-      >
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            AI Teaching Tools
-          </Typography>
+    <div className="flex min-h-screen">
+      {/* Top AppBar */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-muted text-foreground">
+        <div className="flex items-center px-4 py-3">
+          <h1 className="text-lg font-semibold flex-grow">AI Teaching Tools</h1>
           {/* The following can be uncommented once we can check for persistent auth */}
-          {/* <Button color="inherit">Account</Button> */}
-        </Toolbar>
-      </AppBar>
+          {/* <Button variant="ghost">Account</Button> */}
+        </div>
+      </header>
 
       <SideNavbar />
 
-      <Box sx={{ flexGrow: 1, p: 3 }}>
-        <Toolbar />
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: "2rem",
-            fontWeight: "bold",
-            textAlign: "left",
-            ml: 3,
-          }}
-        >
-          Dashboard Page
-        </Typography>
+      {/* Main Content */}
+      <main className="flex-grow p-6 ml-60 mt-16">
+        <h1 className="text-2xl font-bold text-left ml-3">Dashboard Page</h1>
 
-        <Container maxWidth={false} sx={{ mt: 4 }}>
-          <Grid container spacing={2} columns={16} sx={{ mt: 2 }}>
-            <Grid size={10}>
-              <Grid sx={{ bgcolor: "gray" }}>
-                <Typography
-                  variant="h2"
-                  sx={{ p: 2, fontSize: "h5.fontSize", fontWeight: "bold" }}
-                >
-                  Overview
-                </Typography>
+        <div className="mt-8">
+          <div className="grid grid-cols-16 gap-4">
+            {/* Left Column - 10/16 */}
+            <div className="col-span-10 space-y-4">
+              <div className="bg-muted rounded-lg">
+                <h2 className="p-4 text-xl font-bold">Overview</h2>
+                <div className="p-8">
+                  <Image
+                    src="/barChartPlaceholder.png"
+                    width={800}
+                    height={400}
+                    alt="Bar Chart Placeholder"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-muted rounded-lg">
+                <h2 className="p-4 text-xl font-bold">More Data</h2>
+                <div className="p-8">
+                  <Image
+                    src="/barChartPlaceholder.png"
+                    width={800}
+                    height={400}
+                    alt="Bar Chart Placeholder"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - 6/16 */}
+            <div className="col-span-6 bg-muted rounded-lg">
+              <h2 className="p-4 text-xl font-bold">Student-Specific Data</h2>
+              <div className="p-8 space-y-4">
                 <Image
-                  src="/barChartPlaceholder.png"
-                  style={{ padding: "2rem" }}
-                  width={800}
+                  src="/pieChartPlaceholder.png"
+                  width={400}
                   height={400}
-                  alt="Bar Chart Placeholder"
-                ></Image>
-              </Grid>
-              <Grid sx={{ bgcolor: "gray", mt: 2 }}>
-                <Typography
-                  variant="h2"
-                  sx={{ p: 2, fontSize: "h5.fontSize", fontWeight: "bold" }}
-                >
-                  More Data
-                </Typography>
+                  alt="Pie Chart Placeholder"
+                />
                 <Image
-                  src="/barChartPlaceholder.png"
-                  style={{ padding: "2rem" }}
-                  width={800}
+                  src="/pieChartPlaceholder.png"
+                  width={400}
                   height={400}
-                  alt="Bar Chart Placeholder"
-                ></Image>
-              </Grid>
-            </Grid>
-            <Grid size={6} sx={{ bgcolor: "gray" }}>
-              <Typography
-                variant="h2"
-                sx={{ p: 2, fontSize: "h5.fontSize", fontWeight: "bold" }}
-              >
-                Student-Specific Data
-              </Typography>
-              <Image
-                src="/pieChartPlaceholder.png"
-                style={{ padding: "2rem" }}
-                width={400}
-                height={400}
-                alt="Pie Chart Placeholder"
-              ></Image>
-              <Image
-                src="/pieChartPlaceholder.png"
-                style={{ padding: "2rem" }}
-                width={400}
-                height={400}
-                alt="Pie Chart Placeholder"
-              ></Image>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
-    </Box>
+                  alt="Pie Chart Placeholder"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }

@@ -1,34 +1,37 @@
 "use client";
+import Link from "next/link";
+import Image from "next/image";
 import {
   Card,
   CardContent,
-  CardMedia,
-  Typography,
-  CardActionArea,
-} from "@mui/material";
-import Link from "next/link";
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 export default function CourseCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea component={Link} href={"/dashboard"}>
-        <CardMedia
-          component="img"
-          height="140"
-          image="/blueCourseCover.png"
-          alt="placeholder alt text"
-        />
+    <Link href="/dashboard" className="block">
+      <Card className="max-w-[345px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+        <div className="relative w-full h-[140px]">
+          <Image
+            src="/blueCourseCover.png"
+            alt="placeholder alt text"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <CardHeader className="pb-2">
+          <CardTitle>Course 1</CardTitle>
+        </CardHeader>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Course 1
-          </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <CardDescription>
             Fall 2025
-            <br></br>
+            <br />
             Intro to Psychology by Jane Doe
-          </Typography>
+          </CardDescription>
         </CardContent>
-      </CardActionArea>
-    </Card>
+      </Card>
+    </Link>
   );
 }
