@@ -1,62 +1,107 @@
 "use client";
 
 import { AgGridReact } from "ag-grid-react";
-import { ModuleRegistry, AllCommunityModule, ColDef } from "ag-grid-community";
+import {
+  ModuleRegistry,
+  AllCommunityModule,
+  ColDef,
+} from "ag-grid-community";
 import { mockGrades } from "./mockGrades";
 
-// Register all community modules (required for AG Grid v34+ modular build)
 ModuleRegistry.registerModules([AllCommunityModule]);
 
-// mockGrades imported from ./mockGrades
+// Calculate overall grade per student + add showName flag
+function prepareRowData(grades: typeof mockGrades) {
+  const totals: Record<string, { sum: number; count: number }> = {};
+
+  grades.forEach((g) => {
+    if (!totals[g.name]) totals[g.name] = { sum: 0, count: 0 };
+    totals[g.name].sum += g.percentage;
+    totals[g.name].count += 1;
+  });
+
+  // Sort by student then assignment so grouping is correct
+  const sorted = grades.slice().sort((a, b) => {
+    if (a.name !== b.name) return a.name.localeCompare(b.name);
+    return a.assignmentName.localeCompare(b.assignmentName);
+  });
+
+  return sorted.map((g, index) => ({
+    ...g,
+    overallGrade: Number((totals[g.name].sum / totals[g.name].count).toFixed(1)),
+    showName: index === 0 || sorted[index - 1].name !== g.name,
+  }));
+}
+
+const rowData = prepareRowData(mockGrades);
 
 const columnDefs: ColDef[] = [
-  { field: "name", headerName: "Student Name" },
-  { field: "email", headerName: "Email", flex: 1, minWidth: 200 },
-  { field: "assignmentName", headerName: "Assignment", flex: 1, minWidth: 150 },
+  {
+    field: "name",
+    headerName: "Student",
+    minWidth: 180,
+    cellStyle: { fontWeight: "600" },
+    valueFormatter: (params) => (params.data.showName ? params.value : ""),
+  },
+  {
+    field: "assignmentName",
+    headerName: "Assignment",
+    minWidth: 180,
+  },
   {
     field: "score",
     headerName: "Score",
-    flex: 0.6,
-    minWidth: 110,
+    minWidth: 120,
     valueFormatter: (params) =>
       `${params.data?.score}/${params.data?.maxScore}`,
   },
   {
     field: "percentage",
     headerName: "Grade",
-    flex: 0.6,
-    minWidth: 100,
+    minWidth: 110,
     valueFormatter: (params) => `${params.value}%`,
+    cellStyle: (params) => {
+      if (params.value >= 90) return { color: "green", fontWeight: "600" };
+      if (params.value >= 70) return { color: "#ca8a04" };
+      return { color: "red" };
+    },
+  },
+  {
+    field: "overallGrade",
+    headerName: "Overall",
+    minWidth: 120,
+    valueFormatter: (params) =>
+      params.data.showName ? `${params.value}%` : "",
+    cellStyle: (params) => {
+      if (!params.data.showName) return {};
+      if (params.value >= 90) return { color: "green", fontWeight: "700" };
+      if (params.value >= 70) return { color: "#ca8a04", fontWeight: "700" };
+      return { color: "red", fontWeight: "700" };
+    },
   },
   {
     field: "dateSubmitted",
-    headerName: "Date Submitted",
-    flex: 0.8,
-    minWidth: 140,
+    headerName: "Submitted",
+    minWidth: 150,
+    valueFormatter: (params) =>
+      params.value ? new Date(params.value).toLocaleDateString() : "",
   },
 ];
 
 export default function GradesGrid() {
   return (
-    // Use AG Grid built-in pagination (requires a fixed height so pager is visible)
-    <div style={{ width: "100%" }}>
-      <div style={{ width: "100%", height: 500 }}>
-        <AgGridReact
-          rowData={mockGrades}
-          columnDefs={columnDefs}
-          pagination={true}
-          paginationPageSize={10}
-          groupDisplayType={"singleColumn"}
-          autoGroupColumnDef={{ headerName: "Student", minWidth: 200 }}
-          groupDefaultExpanded={1}
-          defaultColDef={{
-            sortable: true,
-            filter: true,
-            resizable: true,
-            floatingFilter: true,
-          }}
-        />
-      </div>
+    <div style={{ width: "100%", height: "100%" }}>
+      <AgGridReact
+        rowData={rowData}
+        columnDefs={columnDefs}
+        suppressMultiSort={true}
+        defaultColDef={{
+          sortable: false,
+          filter: false,
+          resizable: true,
+          floatingFilter: false,
+        }}
+      />
     </div>
   );
 }
