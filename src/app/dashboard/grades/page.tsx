@@ -1,52 +1,30 @@
 "use client";
-import {
-  Box,
-  Typography,
-  AppBar,
-  Toolbar,
-  Container,
-  Grid,
-} from "@mui/material";
 import SideNavbar from "@/components/ui/sideNavbar";
 import GradesGrid from "@/components/grades/GradesGrid";
 
-export default function DashboardPage() {
+export default function GradesPage() {
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar
-        position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, bgcolor: "gray" }}
-      >
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            AI Teaching Tools
-          </Typography>
+    <div className="flex min-h-screen">
+      {/* Top AppBar */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-muted text-foreground">
+        <div className="flex items-center px-4 py-3">
+          <h1 className="text-lg font-semibold flex-grow">AI Teaching Tools</h1>
           {/* The following can be uncommented once we can check for persistent auth */}
-          {/* <Button color="inherit">Account</Button> */}
-        </Toolbar>
-      </AppBar>
+          {/* <Button variant="ghost">Account</Button> */}
+        </div>
+      </header>
 
       <SideNavbar />
 
-      <Box sx={{ flexGrow: 1, p: 3 }}>
-        <Toolbar />
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: "2rem",
-            fontWeight: "bold",
-            textAlign: "left",
-            ml: 3,
-          }}
-        >
-          Grades
-        </Typography>
+      {/* Main Content */}
+      <main className="flex-grow p-6 ml-60 mt-16">
+        <h1 className="text-2xl font-bold text-left ml-3">Grades</h1>
 
         {/* Grades table */}
-        <Container maxWidth={false} sx={{ mt: 4 }}>
+        <div className="mt-8 w-full">
           <GradesGrid />
-        </Container>
-      </Box>
-    </Box>
+        </div>
+      </main>
+    </div>
   );
 }

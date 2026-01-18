@@ -1,22 +1,13 @@
-import { Container, Typography } from "@mui/material";
 import CourseCard from "@/components/ui/courseCard";
 
 export default function CoursesPage() {
   return (
-    <Container>
-      <Typography
-        variant="h1"
-        sx={{
-          fontSize: "2rem",
-          fontWeight: "bold",
-          marginTop: "2rem",
-          textAlign: "center",
-        }}
-      >
-        Courses Page
-      </Typography>
+    <div className="container mx-auto px-4">
+      <h1 className="text-2xl font-bold mt-8 text-center">Courses Page</h1>
 
-      <CourseCard />
-    </Container>
+      <div className="mt-8">
+        <CourseCard />
+      </div>
+    </div>
   );
 }
