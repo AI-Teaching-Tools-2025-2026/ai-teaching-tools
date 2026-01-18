@@ -11,7 +11,7 @@ import {
 
 export default function CourseCard() {
   return (
-    <Link href="/dashboard" className="block">
+    <Link href="/dashboard" className="inline-block">
       <Card className="max-w-[345px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
         <div className="relative w-full h-[140px]">
           <Image
