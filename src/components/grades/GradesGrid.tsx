@@ -1,11 +1,7 @@
 "use client";
 
 import { AgGridReact } from "ag-grid-react";
-import {
-  ModuleRegistry,
-  AllCommunityModule,
-  ColDef,
-} from "ag-grid-community";
+import { ModuleRegistry, AllCommunityModule, ColDef } from "ag-grid-community";
 import { mockGrades } from "./mockGrades";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
@@ -28,7 +24,9 @@ function prepareRowData(grades: typeof mockGrades) {
 
   return sorted.map((g, index) => ({
     ...g,
-    overallGrade: Number((totals[g.name].sum / totals[g.name].count).toFixed(1)),
+    overallGrade: Number(
+      (totals[g.name].sum / totals[g.name].count).toFixed(1),
+    ),
     showName: index === 0 || sorted[index - 1].name !== g.name,
   }));
 }
