@@ -1,5 +1,7 @@
 from fastapi import APIRouter, HTTPException, status
 from .models import UserLogin, UserCreate
+import uuid
+import hashlib
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
@@ -23,8 +25,19 @@ async def signup_user(user_data: UserCreate) -> dict:
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="username already exists."
         )
+    
+    user_id = str(uuid.uuid4())
 
-    await collection.insert_one(user_data.model_dump())
+    user_doc = {
+        "_id": user_id,
+        "username": user_data.username,
+        "email": user_data.email,
+        "id": user_id,
+        "disabled": 0,
+        "hashed_password": hashlib.sha256(user_data.password.encode()).hexdigest()
+    }
+
+    await collection.insert_one(user_doc)
     return {"message": "User created successfully!"}
 
 
@@ -43,7 +56,9 @@ async def login_user(user_data: UserLogin) -> dict:
             detail="user not found"
         )
 
-    if user["password"] != user_data.password: 
+    hashed_input = hashlib.sha256(user_data.password.encode()).hexdigest()
+
+    if hashed_input != user["hashed_password"]:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="incorrect password"

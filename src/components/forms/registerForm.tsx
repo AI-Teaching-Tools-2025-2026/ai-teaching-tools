@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 // TODO: Move inline sx styling into theme or styled components
 export default function RegisterForm() {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState<string[]>([]);
@@ -27,22 +28,38 @@ export default function RegisterForm() {
     return messages;
   };
 
+  // Validate email 
+  const validateEmail = (email: string) => {
+    const messages: string[] = [];
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      messages.push("Please enter a valid email address.");
+    }
+    return messages; 
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const passwordErrors = validatePassword(password);
+    const emailErrors = validateEmail(email);
+
     if (password !== confirmPassword) {
       passwordErrors.push("Passwords do not match.");
     }
 
-    if (passwordErrors.length > 0) {
-      setErrors(passwordErrors);
+    const allErrors = [...passwordErrors, ...emailErrors];  //combine password and email errors 
+
+    if (allErrors.length > 0) {
+      setErrors(allErrors);
       return;
     }
 
     try {
       const response = await axios.post("http://127.0.0.1:8000/auth/signup", {
         username,
+        email,
         password,
       });
 
@@ -72,6 +89,17 @@ export default function RegisterForm() {
           placeholder="Enter your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+
+      <div className="grid w-full max-w-sm gap-1.5">
+        <Label htmlFor="email">Email</Label>
+        <Input
+          id="email"
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
 
