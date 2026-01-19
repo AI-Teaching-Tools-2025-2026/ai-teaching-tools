@@ -17,11 +17,11 @@ export default function GradesPage() {
       <SideNavbar />
 
       {/* Main Content */}
-      <main className="flex-grow p-6 ml-60 mt-16">
-        <h1 className="text-2xl font-bold text-left ml-3">Grades</h1>
+      <main className="flex-grow p-6 ml-60 mt-16 h-[calc(100vh-64px)]">
+        <h1 className="text-2xl font-bold text-left ml-3 mt-4">Grades</h1>
 
         {/* Grades table */}
-        <div className="mt-8 w-full">
+        <div className="mt-8 w-full h-full">
           <GradesGrid />
         </div>
       </main>
