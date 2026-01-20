@@ -28,7 +28,7 @@ export default function RegisterForm() {
     return messages;
   };
 
-  // Validate email 
+  // Validate email
   const validateEmail = (email: string) => {
     const messages: string[] = [];
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -36,7 +36,7 @@ export default function RegisterForm() {
     if (!emailRegex.test(email)) {
       messages.push("Please enter a valid email address.");
     }
-    return messages; 
+    return messages;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -49,7 +49,7 @@ export default function RegisterForm() {
       passwordErrors.push("Passwords do not match.");
     }
 
-    const allErrors = [...passwordErrors, ...emailErrors];  //combine password and email errors 
+    const allErrors = [...passwordErrors, ...emailErrors]; //combine password and email errors
 
     if (allErrors.length > 0) {
       setErrors(allErrors);
