@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "AI Teaching Tools",
-  description: "Powerful tools for instructors - enhanced by artificial intelligence.",
+  description:
+    "Powerful tools for instructors - enhanced by artificial intelligence.",
 };
 
 // TODO: Add layout components (Navbar, Footer, etc.)
