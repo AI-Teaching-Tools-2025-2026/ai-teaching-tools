@@ -19,7 +19,7 @@ export default function SideNavbar() {
           <Link
             key={item.name}
             href={item.href}
-            className="px-4 py-4 hover:bg-accent hover:text-accent-foreground transition-colors"
+            className="px-4 py-4 hover:bg-primary/10 hover:border-l-4 hover:border-primary transition-all duration-200 border-l-4 border-transparent"
           >
             {item.name}
           </Link>
