@@ -1,23 +1,9 @@
 "use client";
 import Image from "next/image";
-import SideNavbar from "@/components/ui/sideNavbar";
 
 export default function DashboardPage() {
   return (
-    <div className="flex min-h-screen">
-      {/* Top AppBar */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-muted text-foreground">
-        <div className="flex items-center px-4 py-3">
-          <h1 className="text-lg font-semibold flex-grow">AI Teaching Tools</h1>
-          {/* The following can be uncommented once we can check for persistent auth */}
-          {/* <Button variant="ghost">Account</Button> */}
-        </div>
-      </header>
-
-      <SideNavbar />
-
-      {/* Main Content */}
-      <main className="flex-grow p-6 ml-60 mt-16">
+    <div className="p-6">
         <h1 className="text-2xl font-bold text-left ml-3">Dashboard Page</h1>
 
         <div className="mt-8">
@@ -69,7 +55,6 @@ export default function DashboardPage() {
             </div>
           </div>
         </div>
-      </main>
     </div>
   );
 }
