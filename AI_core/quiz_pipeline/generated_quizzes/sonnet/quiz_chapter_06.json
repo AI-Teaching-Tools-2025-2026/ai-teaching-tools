@@ -1,0 +1,448 @@
+{
+  "_id": "610efa904ae548ac848badd1",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 6",
+  "quizId": "QUIZ_SONNET_CH06",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "Which of the following best defines non-experimental research?",
+      "answers": [
+        {
+          "text": "Research that lacks the manipulation of an independent variable",
+          "isCorrect": true
+        },
+        {
+          "text": "Research that always uses qualitative data",
+          "isCorrect": false
+        },
+        {
+          "text": "Research that is conducted only in laboratory settings",
+          "isCorrect": false
+        },
+        {
+          "text": "Research that randomly assigns participants to conditions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "According to the chapter, which statement about the relationship between experimental and non-experimental research is most accurate?",
+      "answers": [
+        {
+          "text": "Non-experimental research is less important than experimental research",
+          "isCorrect": false
+        },
+        {
+          "text": "Experimental research can provide strong evidence of causation, while non-experimental research generally cannot",
+          "isCorrect": true
+        },
+        {
+          "text": "Non-experimental research always has higher external validity than experimental research",
+          "isCorrect": false
+        },
+        {
+          "text": "Experimental research is appropriate only when ethical concerns prevent manipulation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "When would non-experimental research be most appropriate?",
+      "answers": [
+        {
+          "text": "When the research question pertains to a causal relationship and random assignment is possible",
+          "isCorrect": false
+        },
+        {
+          "text": "When the independent variable cannot be manipulated for practical or ethical reasons",
+          "isCorrect": true
+        },
+        {
+          "text": "When the goal is exclusively to explain behavior",
+          "isCorrect": false
+        },
+        {
+          "text": "When studying simple relationships between two quantitative variables",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "In correlational research, what does a Pearson's r value of -0.85 indicate?",
+      "answers": [
+        {
+          "text": "A weak negative relationship",
+          "isCorrect": false
+        },
+        {
+          "text": "A strong positive relationship",
+          "isCorrect": false
+        },
+        {
+          "text": "A strong negative relationship",
+          "isCorrect": true
+        },
+        {
+          "text": "No relationship between the variables",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "What is the 'directionality problem' in correlational research?",
+      "answers": [
+        {
+          "text": "The difficulty in determining whether variables have a positive or negative correlation",
+          "isCorrect": false
+        },
+        {
+          "text": "The inability to determine whether X causes Y or Y causes X",
+          "isCorrect": true
+        },
+        {
+          "text": "The challenge of measuring variables in the correct order",
+          "isCorrect": false
+        },
+        {
+          "text": "The problem of choosing the right statistical test",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "Which of the following is an example of the 'third-variable problem'?",
+      "answers": [
+        {
+          "text": "Exercise causes happiness through improved physical health",
+          "isCorrect": false
+        },
+        {
+          "text": "Physical health causes both exercise and happiness",
+          "isCorrect": true
+        },
+        {
+          "text": "Happiness causes people to exercise more frequently",
+          "isCorrect": false
+        },
+        {
+          "text": "Exercise and happiness are measured using three different scales",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "According to the chapter, what is a major limitation of Pearson's r?",
+      "answers": [
+        {
+          "text": "It cannot measure relationships between categorical variables",
+          "isCorrect": false
+        },
+        {
+          "text": "It is only a good measure for linear relationships",
+          "isCorrect": true
+        },
+        {
+          "text": "It can only detect positive correlations",
+          "isCorrect": false
+        },
+        {
+          "text": "It requires a minimum sample size of 1,000 participants",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "What is 'restriction of range' in correlational research?",
+      "answers": [
+        {
+          "text": "When the correlation coefficient is limited to values between 0 and 1",
+          "isCorrect": false
+        },
+        {
+          "text": "When one or both variables have a limited range in the sample relative to the population",
+          "isCorrect": true
+        },
+        {
+          "text": "When researchers only collect data from a narrow geographic area",
+          "isCorrect": false
+        },
+        {
+          "text": "When participants are restricted from discussing their responses",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "In cross-sectional studies, what is the primary concern when comparing different age groups?",
+      "answers": [
+        {
+          "text": "Random assignment cannot be used",
+          "isCorrect": false
+        },
+        {
+          "text": "Differences may reflect cohort effects rather than true age effects",
+          "isCorrect": true
+        },
+        {
+          "text": "The studies take too long to complete",
+          "isCorrect": false
+        },
+        {
+          "text": "Participants may drop out over time",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "What distinguishes participant observation from naturalistic observation?",
+      "answers": [
+        {
+          "text": "Participant observation always takes place in laboratory settings",
+          "isCorrect": false
+        },
+        {
+          "text": "In participant observation, researchers become active members of the group being studied",
+          "isCorrect": true
+        },
+        {
+          "text": "Naturalistic observation requires informed consent while participant observation does not",
+          "isCorrect": false
+        },
+        {
+          "text": "Participant observation can only be conducted with disguised identities",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "According to the chapter, what is a key advantage of qualitative research?",
+      "answers": [
+        {
+          "text": "It provides precise statistical answers to specific research questions",
+          "isCorrect": false
+        },
+        {
+          "text": "It can generate new and interesting research questions and provide rich descriptions of behavior",
+          "isCorrect": true
+        },
+        {
+          "text": "It eliminates the need for reliability and validity considerations",
+          "isCorrect": false
+        },
+        {
+          "text": "It always has higher internal validity than quantitative research",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "What is 'grounded theory' in qualitative research?",
+      "answers": [
+        {
+          "text": "A method where researchers start with a theory and test specific hypotheses",
+          "isCorrect": false
+        },
+        {
+          "text": "An approach where researchers develop a theory that is 'grounded in' the data they collect",
+          "isCorrect": true
+        },
+        {
+          "text": "A technique for conducting observations in natural ground-level settings",
+          "isCorrect": false
+        },
+        {
+          "text": "A statistical method for analyzing qualitative data",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "What does 'reactivity' refer to in observational research?",
+      "answers": [
+        {
+          "text": "When participants react emotionally to the research topic",
+          "isCorrect": false
+        },
+        {
+          "text": "When a measure changes participants' behavior",
+          "isCorrect": true
+        },
+        {
+          "text": "When researchers react to unexpected findings",
+          "isCorrect": false
+        },
+        {
+          "text": "When chemical reactions occur during physiological measurements",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "Which type of study involves following one group of people over time as they age?",
+      "answers": [
+        {
+          "text": "Cross-sectional study",
+          "isCorrect": false
+        },
+        {
+          "text": "Longitudinal study",
+          "isCorrect": true
+        },
+        {
+          "text": "Cross-sequential study",
+          "isCorrect": false
+        },
+        {
+          "text": "Correlational study",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "What is factor analysis primarily used for?",
+      "answers": [
+        {
+          "text": "Testing whether one variable causes another",
+          "isCorrect": false
+        },
+        {
+          "text": "Organizing many variables into smaller clusters based on correlation patterns",
+          "isCorrect": true
+        },
+        {
+          "text": "Calculating the reliability of a single measurement",
+          "isCorrect": false
+        },
+        {
+          "text": "Determining sample size for experimental studies",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "According to the chapter, what is a key limitation of case studies?",
+      "answers": [
+        {
+          "text": "They provide too little detail about individual participants",
+          "isCorrect": false
+        },
+        {
+          "text": "They suffer from problems with both internal and external validity",
+          "isCorrect": true
+        },
+        {
+          "text": "They can only be conducted in laboratory settings",
+          "isCorrect": false
+        },
+        {
+          "text": "They always require quantitative data analysis",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "What is 'partial correlation' used for in complex correlational research?",
+      "answers": [
+        {
+          "text": "Measuring only part of a relationship between two variables",
+          "isCorrect": false
+        },
+        {
+          "text": "Examining the relationship between two variables while statistically controlling for third variables",
+          "isCorrect": true
+        },
+        {
+          "text": "Calculating correlations with incomplete data sets",
+          "isCorrect": false
+        },
+        {
+          "text": "Determining which portion of variance is due to measurement error",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "In structured observation, what is 'coding'?",
+      "answers": [
+        {
+          "text": "Encrypting participant data to ensure confidentiality",
+          "isCorrect": false
+        },
+        {
+          "text": "Categorizing participants' behaviors according to clearly defined target behaviors",
+          "isCorrect": true
+        },
+        {
+          "text": "Assigning numerical codes to replace participant names",
+          "isCorrect": false
+        },
+        {
+          "text": "Programming computer software to collect data",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "According to the chapter, when can correlation establish causation?",
+      "answers": [
+        {
+          "text": "When the correlation coefficient exceeds +0.80 or -0.80",
+          "isCorrect": false
+        },
+        {
+          "text": "When combined with longitudinal research designs",
+          "isCorrect": false
+        },
+        {
+          "text": "Correlation cannot unambiguously establish causation",
+          "isCorrect": true
+        },
+        {
+          "text": "When third variables have been measured and controlled statistically",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "What is 'triangulation' in the context of combining quantitative and qualitative research?",
+      "answers": [
+        {
+          "text": "Using three different statistical tests to analyze the same data",
+          "isCorrect": false
+        },
+        {
+          "text": "Using both methods simultaneously to study the same questions and comparing results",
+          "isCorrect": true
+        },
+        {
+          "text": "Dividing participants into three equal groups for comparison",
+          "isCorrect": false
+        },
+        {
+          "text": "Collecting data from three different geographic locations",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

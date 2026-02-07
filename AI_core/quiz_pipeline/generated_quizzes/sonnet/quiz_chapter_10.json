@@ -1,0 +1,448 @@
+{
+  "_id": "6aa531b434f448218d8b0955",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 10",
+  "quizId": "QUIZ_SONNET_CH10",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "What is the primary difference between single-subject research and group research?",
+      "answers": [
+        {
+          "text": "Single-subject research studies a small number of participants intensively, while group research studies large numbers and focuses on group statistics",
+          "isCorrect": true
+        },
+        {
+          "text": "Single-subject research is qualitative, while group research is quantitative",
+          "isCorrect": false
+        },
+        {
+          "text": "Single-subject research uses surveys, while group research uses experiments",
+          "isCorrect": false
+        },
+        {
+          "text": "Single-subject research has lower internal validity than group research",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "In the study by Hall and colleagues, what was the treatment used to increase students' studying behavior?",
+      "answers": [
+        {
+          "text": "Giving students extra homework assignments",
+          "isCorrect": false
+        },
+        {
+          "text": "Positive attention from the teacher, such as comments like 'good work' or a pat on the shoulder",
+          "isCorrect": true
+        },
+        {
+          "text": "Removing disruptive students from the classroom",
+          "isCorrect": false
+        },
+        {
+          "text": "Providing monetary rewards for completing schoolwork",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "What does the term 'social validity' refer to in single-subject research?",
+      "answers": [
+        {
+          "text": "The ability to generalize results to different social groups",
+          "isCorrect": false
+        },
+        {
+          "text": "Strong and consistent effects that can be implemented reliably in real-world contexts",
+          "isCorrect": true
+        },
+        {
+          "text": "The extent to which participants accept the researcher socially",
+          "isCorrect": false
+        },
+        {
+          "text": "Statistical validity when analyzing social behavior",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "Which of the following is NOT an assumption underlying single-subject research?",
+      "answers": [
+        {
+          "text": "It is important to focus intensively on individual participants",
+          "isCorrect": false
+        },
+        {
+          "text": "Large sample sizes are necessary to detect treatment effects",
+          "isCorrect": true
+        },
+        {
+          "text": "Causal relationships should be discovered through experimental manipulation",
+          "isCorrect": false
+        },
+        {
+          "text": "It is important to study strong and consistent effects with biological or social importance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "What is the 'steady state strategy' in single-subject research?",
+      "answers": [
+        {
+          "text": "Keeping all conditions constant throughout the study",
+          "isCorrect": false
+        },
+        {
+          "text": "Waiting until the participant's behavior becomes fairly consistent before changing conditions",
+          "isCorrect": true
+        },
+        {
+          "text": "Maintaining a fixed schedule for introducing treatments",
+          "isCorrect": false
+        },
+        {
+          "text": "Ensuring participants remain in the same emotional state",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "In an ABA reversal design, what does the first 'A' phase represent?",
+      "answers": [
+        {
+          "text": "The treatment phase",
+          "isCorrect": false
+        },
+        {
+          "text": "A baseline condition before treatment is introduced",
+          "isCorrect": true
+        },
+        {
+          "text": "An alternating treatment condition",
+          "isCorrect": false
+        },
+        {
+          "text": "The final assessment phase",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "Why is the reversal (removal of treatment) considered necessary in reversal designs?",
+      "answers": [
+        {
+          "text": "To save time and resources during the study",
+          "isCorrect": false
+        },
+        {
+          "text": "To increase the internal validity by showing that changes are due to the treatment, not extraneous variables",
+          "isCorrect": true
+        },
+        {
+          "text": "To ensure participants do not become dependent on the treatment",
+          "isCorrect": false
+        },
+        {
+          "text": "To meet ethical requirements for research",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "In a multiple-baseline design across participants, when is the treatment introduced?",
+      "answers": [
+        {
+          "text": "At the same time for all participants",
+          "isCorrect": false
+        },
+        {
+          "text": "At different times for each participant",
+          "isCorrect": true
+        },
+        {
+          "text": "Only after all baselines are completely stable",
+          "isCorrect": false
+        },
+        {
+          "text": "Randomly throughout the study period",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "What was the key finding in Ross and Horner's study on bullying prevention?",
+      "answers": [
+        {
+          "text": "Aggressive behaviors increased after the program was implemented",
+          "isCorrect": false
+        },
+        {
+          "text": "Aggressive behaviors dropped shortly after the program was implemented at each school",
+          "isCorrect": true
+        },
+        {
+          "text": "The program had no effect on bullying behavior",
+          "isCorrect": false
+        },
+        {
+          "text": "Only one school showed improvement in student behavior",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "In a multiple-baseline design across behaviors, what is varied?",
+      "answers": [
+        {
+          "text": "The participants receiving treatment",
+          "isCorrect": false
+        },
+        {
+          "text": "The dependent variables for the same participant, with treatment introduced at different times",
+          "isCorrect": true
+        },
+        {
+          "text": "The type of treatment used",
+          "isCorrect": false
+        },
+        {
+          "text": "The duration of each baseline phase",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "What is 'visual inspection' in single-subject research?",
+      "answers": [
+        {
+          "text": "Using video recordings to analyze participant behavior",
+          "isCorrect": false
+        },
+        {
+          "text": "Plotting individual data graphically and making judgments about treatment effects",
+          "isCorrect": true
+        },
+        {
+          "text": "Observing participants through one-way mirrors",
+          "isCorrect": false
+        },
+        {
+          "text": "Conducting statistical analyses using visualization software",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "Which factor is NOT typically considered when visually inspecting single-subject data?",
+      "answers": [
+        {
+          "text": "Changes in level from condition to condition",
+          "isCorrect": false
+        },
+        {
+          "text": "Trend (gradual increases or decreases)",
+          "isCorrect": false
+        },
+        {
+          "text": "Sample size requirements",
+          "isCorrect": true
+        },
+        {
+          "text": "Latency (time for change to occur after condition change)",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "What does PND (percentage of non-overlapping data) measure?",
+      "answers": [
+        {
+          "text": "The percentage of participants who showed improvement",
+          "isCorrect": false
+        },
+        {
+          "text": "The percentage of responses in treatment that are more extreme than the most extreme response in control",
+          "isCorrect": true
+        },
+        {
+          "text": "The percentage of time the dependent variable was measured",
+          "isCorrect": false
+        },
+        {
+          "text": "The statistical significance level of the treatment effect",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "Who is considered a founder of single-subject research methodology in the mid-20th century?",
+      "answers": [
+        {
+          "text": "Sigmund Freud",
+          "isCorrect": false
+        },
+        {
+          "text": "B. F. Skinner",
+          "isCorrect": true
+        },
+        {
+          "text": "Carl Rogers",
+          "isCorrect": false
+        },
+        {
+          "text": "Jean Piaget",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "What is 'applied behavior analysis'?",
+      "answers": [
+        {
+          "text": "A subfield using single-subject research primarily with humans in applied settings",
+          "isCorrect": true
+        },
+        {
+          "text": "A statistical method for analyzing group data",
+          "isCorrect": false
+        },
+        {
+          "text": "A qualitative approach to studying behavior",
+          "isCorrect": false
+        },
+        {
+          "text": "A theoretical perspective focused on unconscious processes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "In an alternating treatments design, how are treatments presented?",
+      "answers": [
+        {
+          "text": "One treatment is used for the entire study",
+          "isCorrect": false
+        },
+        {
+          "text": "Two or more treatments are alternated relatively quickly on a regular schedule",
+          "isCorrect": true
+        },
+        {
+          "text": "Treatments are introduced in random order over months",
+          "isCorrect": false
+        },
+        {
+          "text": "Multiple treatments are given simultaneously",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "What is one potential problem with reversal designs mentioned in the chapter?",
+      "answers": [
+        {
+          "text": "They require too many participants",
+          "isCorrect": false
+        },
+        {
+          "text": "It may be unethical to remove a working treatment, or the dependent variable may not return to baseline",
+          "isCorrect": true
+        },
+        {
+          "text": "They cannot establish causal relationships",
+          "isCorrect": false
+        },
+        {
+          "text": "They are too expensive to conduct",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "According to the chapter, what concern do single-subject researchers have about group research data analysis?",
+      "answers": [
+        {
+          "text": "Group means can be misleading when treatment effects differ across individuals",
+          "isCorrect": true
+        },
+        {
+          "text": "Group research never uses statistical analysis",
+          "isCorrect": false
+        },
+        {
+          "text": "Group research cannot measure dependent variables reliably",
+          "isCorrect": false
+        },
+        {
+          "text": "Group research always lacks internal validity",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "What is the 'principle of converging evidence'?",
+      "answers": [
+        {
+          "text": "Conducting the same study multiple times with identical methods",
+          "isCorrect": false
+        },
+        {
+          "text": "Examining patterns across multiple studies with different strengths and weaknesses to increase confidence in conclusions",
+          "isCorrect": true
+        },
+        {
+          "text": "Using only experimental designs to establish causation",
+          "isCorrect": false
+        },
+        {
+          "text": "Focusing exclusively on statistically significant findings",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "How did single-subject research contribute to understanding the 'number sense'?",
+      "answers": [
+        {
+          "text": "By showing that only humans possess mathematical abilities",
+          "isCorrect": false
+        },
+        {
+          "text": "By demonstrating similar abilities in animals and human infants to discriminate small numbers",
+          "isCorrect": true
+        },
+        {
+          "text": "By proving that number sense must be taught through education",
+          "isCorrect": false
+        },
+        {
+          "text": "By establishing that number sense develops only in adulthood",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

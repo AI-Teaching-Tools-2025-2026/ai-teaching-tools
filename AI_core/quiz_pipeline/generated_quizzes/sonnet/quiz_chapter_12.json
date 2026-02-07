@@ -1,0 +1,448 @@
+{
+  "_id": "63bb40a596fb495ebf329d4a",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 12",
+  "quizId": "QUIZ_SONNET_CH12",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "What is the primary purpose of descriptive statistics in psychological research?",
+      "answers": [
+        {
+          "text": "To summarize and display data from a sample",
+          "isCorrect": true
+        },
+        {
+          "text": "To determine causality between variables",
+          "isCorrect": false
+        },
+        {
+          "text": "To test hypotheses about population parameters",
+          "isCorrect": false
+        },
+        {
+          "text": "To randomly assign participants to conditions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "In a frequency table, the levels of a variable are typically ordered:",
+      "answers": [
+        {
+          "text": "From highest at the top to lowest at the bottom",
+          "isCorrect": true
+        },
+        {
+          "text": "Alphabetically from A to Z",
+          "isCorrect": false
+        },
+        {
+          "text": "Randomly to avoid bias",
+          "isCorrect": false
+        },
+        {
+          "text": "From lowest at the top to highest at the bottom",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "A distribution with two distinct peaks is called:",
+      "answers": [
+        {
+          "text": "Bimodal",
+          "isCorrect": true
+        },
+        {
+          "text": "Unimodal",
+          "isCorrect": false
+        },
+        {
+          "text": "Negatively skewed",
+          "isCorrect": false
+        },
+        {
+          "text": "Symmetrical",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "A negatively skewed distribution has:",
+      "answers": [
+        {
+          "text": "Its peak shifted toward the upper end with a long negative tail",
+          "isCorrect": true
+        },
+        {
+          "text": "Its peak shifted toward the lower end with a long positive tail",
+          "isCorrect": false
+        },
+        {
+          "text": "Two distinct peaks of equal height",
+          "isCorrect": false
+        },
+        {
+          "text": "A perfectly symmetrical shape",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "The mean is calculated by:",
+      "answers": [
+        {
+          "text": "Summing all scores and dividing by the number of scores",
+          "isCorrect": true
+        },
+        {
+          "text": "Finding the middle score in an ordered distribution",
+          "isCorrect": false
+        },
+        {
+          "text": "Identifying the most frequently occurring score",
+          "isCorrect": false
+        },
+        {
+          "text": "Subtracting the lowest score from the highest score",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "When there is an even number of scores, the median is:",
+      "answers": [
+        {
+          "text": "The value halfway between the two middle scores",
+          "isCorrect": true
+        },
+        {
+          "text": "The sum of the two middle scores",
+          "isCorrect": false
+        },
+        {
+          "text": "The lower of the two middle scores",
+          "isCorrect": false
+        },
+        {
+          "text": "The most frequently occurring score",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "Which measure of central tendency is most appropriate for highly skewed distributions?",
+      "answers": [
+        {
+          "text": "Median",
+          "isCorrect": true
+        },
+        {
+          "text": "Mean",
+          "isCorrect": false
+        },
+        {
+          "text": "Mode",
+          "isCorrect": false
+        },
+        {
+          "text": "Range",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "The range is calculated as:",
+      "answers": [
+        {
+          "text": "The difference between the highest and lowest scores",
+          "isCorrect": true
+        },
+        {
+          "text": "The average distance between scores and the mean",
+          "isCorrect": false
+        },
+        {
+          "text": "The square root of the variance",
+          "isCorrect": false
+        },
+        {
+          "text": "The sum of squared deviations from the mean",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "The standard deviation represents:",
+      "answers": [
+        {
+          "text": "The average distance between the scores and the mean",
+          "isCorrect": true
+        },
+        {
+          "text": "The difference between the highest and lowest scores",
+          "isCorrect": false
+        },
+        {
+          "text": "The middle score in a distribution",
+          "isCorrect": false
+        },
+        {
+          "text": "The percentage of scores below a given value",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "When computing the standard deviation, why do researchers often divide by N − 1 instead of N?",
+      "answers": [
+        {
+          "text": "To correct for the tendency of sample standard deviations to underestimate population standard deviations",
+          "isCorrect": true
+        },
+        {
+          "text": "To make the calculation easier and faster",
+          "isCorrect": false
+        },
+        {
+          "text": "To ensure the result is always a whole number",
+          "isCorrect": false
+        },
+        {
+          "text": "To eliminate outliers from the calculation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "A percentile rank of 80 means that:",
+      "answers": [
+        {
+          "text": "80% of scores in the distribution are lower than that score",
+          "isCorrect": true
+        },
+        {
+          "text": "The score is 80% of the maximum possible score",
+          "isCorrect": false
+        },
+        {
+          "text": "80% of scores are higher than that score",
+          "isCorrect": false
+        },
+        {
+          "text": "The score is 80 points above the mean",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "A z score of +0.67 indicates that a raw score is:",
+      "answers": [
+        {
+          "text": "0.67 standard deviations above the mean",
+          "isCorrect": true
+        },
+        {
+          "text": "0.67 points above the mean",
+          "isCorrect": false
+        },
+        {
+          "text": "67% higher than the average score",
+          "isCorrect": false
+        },
+        {
+          "text": "0.67 standard deviations below the mean",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "Outliers are sometimes defined as scores with z scores:",
+      "answers": [
+        {
+          "text": "Less than −3.00 or greater than +3.00",
+          "isCorrect": true
+        },
+        {
+          "text": "Less than −1.00 or greater than +1.00",
+          "isCorrect": false
+        },
+        {
+          "text": "Exactly equal to zero",
+          "isCorrect": false
+        },
+        {
+          "text": "Between −0.50 and +0.50",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "Cohen's d is calculated by:",
+      "answers": [
+        {
+          "text": "Dividing the difference between two means by the standard deviation",
+          "isCorrect": true
+        },
+        {
+          "text": "Computing the mean cross-product of z scores",
+          "isCorrect": false
+        },
+        {
+          "text": "Subtracting the smallest mean from the largest mean",
+          "isCorrect": false
+        },
+        {
+          "text": "Dividing the variance by the sample size",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "According to Cohen's guidelines, a Cohen's d value of 0.50 is considered:",
+      "answers": [
+        {
+          "text": "Medium",
+          "isCorrect": true
+        },
+        {
+          "text": "Small",
+          "isCorrect": false
+        },
+        {
+          "text": "Large",
+          "isCorrect": false
+        },
+        {
+          "text": "Trivial",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "Pearson's r is described as:",
+      "answers": [
+        {
+          "text": "The mean cross-product of z scores",
+          "isCorrect": true
+        },
+        {
+          "text": "The difference between two group means",
+          "isCorrect": false
+        },
+        {
+          "text": "The percentage of variance explained",
+          "isCorrect": false
+        },
+        {
+          "text": "The sum of squared deviations",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "According to Cohen's guidelines, a Pearson's r value of ±0.10 is considered:",
+      "answers": [
+        {
+          "text": "Small/weak",
+          "isCorrect": true
+        },
+        {
+          "text": "Medium",
+          "isCorrect": false
+        },
+        {
+          "text": "Strong/large",
+          "isCorrect": false
+        },
+        {
+          "text": "Perfect correlation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "In APA style, numerical results should be rounded to:",
+      "answers": [
+        {
+          "text": "Two decimal places",
+          "isCorrect": true
+        },
+        {
+          "text": "One decimal place",
+          "isCorrect": false
+        },
+        {
+          "text": "The nearest whole number",
+          "isCorrect": false
+        },
+        {
+          "text": "Three decimal places",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "Error bars in APA-style bar graphs most commonly represent:",
+      "answers": [
+        {
+          "text": "One standard error in each direction",
+          "isCorrect": true
+        },
+        {
+          "text": "The full range of scores",
+          "isCorrect": false
+        },
+        {
+          "text": "The median value",
+          "isCorrect": false
+        },
+        {
+          "text": "The mode of the distribution",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "A planned analysis is one that:",
+      "answers": [
+        {
+          "text": "Tests a relationship that was expected based on a hypothesis",
+          "isCorrect": true
+        },
+        {
+          "text": "Explores data for unexpected patterns without a prior hypothesis",
+          "isCorrect": false
+        },
+        {
+          "text": "Excludes all outliers before examining the data",
+          "isCorrect": false
+        },
+        {
+          "text": "Is conducted only after inferential statistics are complete",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
