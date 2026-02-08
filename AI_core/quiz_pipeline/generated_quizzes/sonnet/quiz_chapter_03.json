@@ -1,0 +1,448 @@
+{
+  "_id": "3fe8d88d6493454b958e6af4",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 3",
+  "quizId": "QUIZ_SONNET_CH03",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "According to the framework presented in Table 3.1, which of the following is NOT one of the four general moral principles that apply to scientific research?",
+      "answers": [
+        {
+          "text": "Weighing risks against benefits",
+          "isCorrect": false
+        },
+        {
+          "text": "Maximizing financial compensation",
+          "isCorrect": true
+        },
+        {
+          "text": "Seeking justice",
+          "isCorrect": false
+        },
+        {
+          "text": "Respecting people's rights and dignity",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "In Milgram's obedience study, what was the primary ethical concern regarding the research participants?",
+      "answers": [
+        {
+          "text": "They were not compensated adequately for their time",
+          "isCorrect": false
+        },
+        {
+          "text": "They experienced severe psychological stress during the procedure",
+          "isCorrect": true
+        },
+        {
+          "text": "They were denied access to the study results",
+          "isCorrect": false
+        },
+        {
+          "text": "They were required to participate against their will",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "The Tuskegee syphilis study is primarily an example of a violation of which moral principle?",
+      "answers": [
+        {
+          "text": "Acting responsibly and with integrity",
+          "isCorrect": false
+        },
+        {
+          "text": "Seeking justice",
+          "isCorrect": true
+        },
+        {
+          "text": "Weighing risks against benefits",
+          "isCorrect": false
+        },
+        {
+          "text": "Minimizing deception",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "According to the chapter, what did participants in the Tuskegee study believe they were receiving?",
+      "answers": [
+        {
+          "text": "Experimental treatment for heart disease",
+          "isCorrect": false
+        },
+        {
+          "text": "Treatment for 'bad blood'",
+          "isCorrect": true
+        },
+        {
+          "text": "A new vaccine for syphilis",
+          "isCorrect": false
+        },
+        {
+          "text": "Routine health screenings only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "Which ethics code was written in 1947 in conjunction with the trials of Nazi physicians?",
+      "answers": [
+        {
+          "text": "The Declaration of Helsinki",
+          "isCorrect": false
+        },
+        {
+          "text": "The Belmont Report",
+          "isCorrect": false
+        },
+        {
+          "text": "The Nuremberg Code",
+          "isCorrect": true
+        },
+        {
+          "text": "The APA Ethics Code",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "What year was the Belmont Report published?",
+      "answers": [
+        {
+          "text": "1947",
+          "isCorrect": false
+        },
+        {
+          "text": "1964",
+          "isCorrect": false
+        },
+        {
+          "text": "1978",
+          "isCorrect": true
+        },
+        {
+          "text": "1997",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "According to the chapter, an institutional review board (IRB) must consist of at least how many people?",
+      "answers": [
+        {
+          "text": "Three",
+          "isCorrect": false
+        },
+        {
+          "text": "Five",
+          "isCorrect": true
+        },
+        {
+          "text": "Seven",
+          "isCorrect": false
+        },
+        {
+          "text": "Ten",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "Which level of research risk is the lowest and includes studies on the effectiveness of normal educational activities?",
+      "answers": [
+        {
+          "text": "Minimal risk research",
+          "isCorrect": false
+        },
+        {
+          "text": "Expedited research",
+          "isCorrect": false
+        },
+        {
+          "text": "Exempt research",
+          "isCorrect": true
+        },
+        {
+          "text": "Greater than minimal risk research",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "According to APA Ethics Code Standard 8.02, informed consent must include information about all of the following EXCEPT:",
+      "answers": [
+        {
+          "text": "The purpose of the research and expected duration",
+          "isCorrect": false
+        },
+        {
+          "text": "The researcher's personal beliefs about the topic",
+          "isCorrect": true
+        },
+        {
+          "text": "Participants' right to decline or withdraw",
+          "isCorrect": false
+        },
+        {
+          "text": "Limits of confidentiality",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "What does the chapter define as 'anonymity' in research?",
+      "answers": [
+        {
+          "text": "When researchers agree not to disclose participants' information",
+          "isCorrect": false
+        },
+        {
+          "text": "When participants' names and personally identifiable information are not collected at all",
+          "isCorrect": true
+        },
+        {
+          "text": "When data is stored in a locked cabinet",
+          "isCorrect": false
+        },
+        {
+          "text": "When participants use pseudonyms during the study",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "In the 'personal space' study conducted in a public men's room, what did researchers secretly observe?",
+      "answers": [
+        {
+          "text": "How long participants washed their hands",
+          "isCorrect": false
+        },
+        {
+          "text": "Whether it took participants longer to begin urinating when another man was nearby",
+          "isCorrect": true
+        },
+        {
+          "text": "How participants reacted to crowded conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "Whether participants maintained eye contact with confederates",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "According to APA Standard 8.07, under what condition is deception NOT allowed in research?",
+      "answers": [
+        {
+          "text": "When effective nondeceptive alternatives are available",
+          "isCorrect": false
+        },
+        {
+          "text": "When the research is reasonably expected to cause physical pain or severe emotional distress",
+          "isCorrect": true
+        },
+        {
+          "text": "When participants cannot be debriefed immediately",
+          "isCorrect": false
+        },
+        {
+          "text": "When the study involves minimal risk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "What is debriefing?",
+      "answers": [
+        {
+          "text": "The initial screening process to determine participant eligibility",
+          "isCorrect": false
+        },
+        {
+          "text": "The process of informing participants of the study's purpose and revealing any deception as soon as possible",
+          "isCorrect": true
+        },
+        {
+          "text": "The payment procedure at the end of the study",
+          "isCorrect": false
+        },
+        {
+          "text": "The confidentiality agreement signed before participation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "In Jerry Burger's 2009 replication of Milgram's study, what modification was made to minimize risks?",
+      "answers": [
+        {
+          "text": "Participants were told the shocks were fake before the study began",
+          "isCorrect": false
+        },
+        {
+          "text": "The procedure was always stopped when participants were about to administer the 150-V shock",
+          "isCorrect": true
+        },
+        {
+          "text": "No confederates were used in the study",
+          "isCorrect": false
+        },
+        {
+          "text": "Participants were allowed to leave at any time without consequences",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "According to the chapter, what is 'self-plagiarism'?",
+      "answers": [
+        {
+          "text": "Using your own ideas without proper documentation",
+          "isCorrect": false
+        },
+        {
+          "text": "Publishing the same material more than once",
+          "isCorrect": true
+        },
+        {
+          "text": "Citing yourself too frequently in a paper",
+          "isCorrect": false
+        },
+        {
+          "text": "Reusing old data in a new study",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "When President Bill Clinton apologized for the Tuskegee study in 1997, how many years had passed since the study began?",
+      "answers": [
+        {
+          "text": "25 years",
+          "isCorrect": false
+        },
+        {
+          "text": "40 years",
+          "isCorrect": false
+        },
+        {
+          "text": "65 years",
+          "isCorrect": true
+        },
+        {
+          "text": "75 years",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "According to APA Standard 8.10, what must psychologists do if they discover significant errors in their published data?",
+      "answers": [
+        {
+          "text": "Ignore minor errors and only correct major ones",
+          "isCorrect": false
+        },
+        {
+          "text": "Take reasonable steps to correct such errors through a correction, retraction, erratum, or other appropriate means",
+          "isCorrect": true
+        },
+        {
+          "text": "Withdraw from future research in that area",
+          "isCorrect": false
+        },
+        {
+          "text": "Notify only the journal editor privately",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "Which of the following is an example of deception that does NOT involve actively misleading participants?",
+      "answers": [
+        {
+          "text": "Using a confederate who pretends to be another participant",
+          "isCorrect": false
+        },
+        {
+          "text": "Withholding information about the full design or true purpose of the study",
+          "isCorrect": true
+        },
+        {
+          "text": "Providing false feedback about performance",
+          "isCorrect": false
+        },
+        {
+          "text": "Using phony equipment like a fake shock generator",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "According to the chapter, what is one criticism of how Milgram handled the ethical issues in his obedience study?",
+      "answers": [
+        {
+          "text": "He did not obtain institutional approval before conducting the research",
+          "isCorrect": false
+        },
+        {
+          "text": "Although he did not know participants would react severely initially, he should have made adjustments after testing the first several participants",
+          "isCorrect": true
+        },
+        {
+          "text": "He failed to compensate participants for their time",
+          "isCorrect": false
+        },
+        {
+          "text": "He did not use a proper control group",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "According to APA Standard 8.12b on publication credit, under what circumstance should a student be listed as principal author?",
+      "answers": [
+        {
+          "text": "Only if the student collected all the data personally",
+          "isCorrect": false
+        },
+        {
+          "text": "When a multiple-authored article is substantially based on the student's doctoral dissertation, except under exceptional circumstances",
+          "isCorrect": true
+        },
+        {
+          "text": "Only if the faculty advisor agrees to be listed as second author",
+          "isCorrect": false
+        },
+        {
+          "text": "Never, because faculty advisors must always be first author",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

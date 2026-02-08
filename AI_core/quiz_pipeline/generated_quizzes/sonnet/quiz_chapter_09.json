@@ -1,0 +1,448 @@
+{
+  "_id": "8b49307d2b3f45c289994649",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 9",
+  "quizId": "QUIZ_SONNET_CH09",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "In the study by Schnall and colleagues on disgust and moral judgments, what were the two independent variables?",
+      "answers": [
+        {
+          "text": "Disgust (clean vs. messy room) and private body consciousness (high vs. low)",
+          "isCorrect": true
+        },
+        {
+          "text": "Disgust (clean vs. messy room) and moral judgment severity",
+          "isCorrect": false
+        },
+        {
+          "text": "Private body consciousness and hand washing behavior",
+          "isCorrect": false
+        },
+        {
+          "text": "Room cleanliness and participant emotional state",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "What is a factorial design?",
+      "answers": [
+        {
+          "text": "An experiment where each level of one independent variable is combined with each level of the others to produce all possible combinations",
+          "isCorrect": true
+        },
+        {
+          "text": "An experiment that includes only one independent variable with multiple levels",
+          "isCorrect": false
+        },
+        {
+          "text": "A study that focuses on the relationship between two correlated variables",
+          "isCorrect": false
+        },
+        {
+          "text": "A research design that uses only non-manipulated independent variables",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "How many conditions would a 3 × 2 factorial design have?",
+      "answers": [
+        {
+          "text": "6 conditions",
+          "isCorrect": true
+        },
+        {
+          "text": "5 conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "9 conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "3 conditions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "In a 2 × 2 × 2 factorial design, how many independent variables are there?",
+      "answers": [
+        {
+          "text": "3 independent variables",
+          "isCorrect": true
+        },
+        {
+          "text": "2 independent variables",
+          "isCorrect": false
+        },
+        {
+          "text": "6 independent variables",
+          "isCorrect": false
+        },
+        {
+          "text": "8 independent variables",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "What is a between-subjects factorial design?",
+      "answers": [
+        {
+          "text": "A design where all independent variables are manipulated between subjects, with each participant tested in only one condition",
+          "isCorrect": true
+        },
+        {
+          "text": "A design where all independent variables are manipulated within subjects, with each participant tested in all conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "A design where one independent variable is manipulated between subjects and another within subjects",
+          "isCorrect": false
+        },
+        {
+          "text": "A design where participants are randomly assigned to different experimenters",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "What is a mixed factorial design?",
+      "answers": [
+        {
+          "text": "A design where one independent variable is manipulated between subjects and another is manipulated within subjects",
+          "isCorrect": true
+        },
+        {
+          "text": "A design that combines experimental and correlational methods",
+          "isCorrect": false
+        },
+        {
+          "text": "A design where all variables are non-manipulated",
+          "isCorrect": false
+        },
+        {
+          "text": "A design that uses both quantitative and qualitative data",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "In the Brown and colleagues study on hypochondriasis and word recall, what type of independent variable was hypochondriasis?",
+      "answers": [
+        {
+          "text": "A non-manipulated independent variable (participant variable)",
+          "isCorrect": true
+        },
+        {
+          "text": "A manipulated between-subjects variable",
+          "isCorrect": false
+        },
+        {
+          "text": "A manipulated within-subjects variable",
+          "isCorrect": false
+        },
+        {
+          "text": "A dependent variable",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "Why can causal conclusions only be drawn about manipulated independent variables and not non-manipulated ones?",
+      "answers": [
+        {
+          "text": "Because non-manipulated variables may be correlated with third variables that could actually cause the observed effect",
+          "isCorrect": true
+        },
+        {
+          "text": "Because non-manipulated variables are always measured after the dependent variable",
+          "isCorrect": false
+        },
+        {
+          "text": "Because non-manipulated variables have lower statistical power",
+          "isCorrect": false
+        },
+        {
+          "text": "Because non-manipulated variables cannot be included in factorial designs",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "What is a main effect in a factorial design?",
+      "answers": [
+        {
+          "text": "The effect of one independent variable on the dependent variable, averaged across all levels of the other independent variable(s)",
+          "isCorrect": true
+        },
+        {
+          "text": "The combined effect of all independent variables on the dependent variable",
+          "isCorrect": false
+        },
+        {
+          "text": "The effect that occurs only when two independent variables interact",
+          "isCorrect": false
+        },
+        {
+          "text": "The most statistically significant effect in the experiment",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "What is an interaction effect?",
+      "answers": [
+        {
+          "text": "When the effect of one independent variable depends on the level of another independent variable",
+          "isCorrect": true
+        },
+        {
+          "text": "When two independent variables have additive effects on the dependent variable",
+          "isCorrect": false
+        },
+        {
+          "text": "When participants interact with the researcher during the experiment",
+          "isCorrect": false
+        },
+        {
+          "text": "When the dependent variable influences the independent variable",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "In Schnall and colleagues' study, the effect of disgust on moral judgments depended on private body consciousness. What does this describe?",
+      "answers": [
+        {
+          "text": "An interaction between disgust and private body consciousness",
+          "isCorrect": true
+        },
+        {
+          "text": "A main effect of disgust only",
+          "isCorrect": false
+        },
+        {
+          "text": "A main effect of private body consciousness only",
+          "isCorrect": false
+        },
+        {
+          "text": "A confounding variable",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "What is a spreading interaction?",
+      "answers": [
+        {
+          "text": "An interaction where one independent variable has an effect at one level of another independent variable but not at the other level, or has a stronger effect at one level than the other",
+          "isCorrect": true
+        },
+        {
+          "text": "An interaction where the effects of one variable are in opposite directions at different levels of another variable",
+          "isCorrect": false
+        },
+        {
+          "text": "An interaction where effects gradually increase across all conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "An interaction that affects multiple dependent variables simultaneously",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "What is a crossover interaction?",
+      "answers": [
+        {
+          "text": "An interaction where one independent variable has opposite effects at different levels of another independent variable",
+          "isCorrect": true
+        },
+        {
+          "text": "An interaction where two variables have the same effect across all conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "An interaction that occurs midway through an experiment",
+          "isCorrect": false
+        },
+        {
+          "text": "An interaction between a within-subjects and between-subjects variable",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "In Gilliland's study on caffeine and test performance, introverts performed better without caffeine while extraverts performed better with caffeine. What type of interaction is this?",
+      "answers": [
+        {
+          "text": "A crossover interaction",
+          "isCorrect": true
+        },
+        {
+          "text": "A spreading interaction",
+          "isCorrect": false
+        },
+        {
+          "text": "A main effect only",
+          "isCorrect": false
+        },
+        {
+          "text": "A simple effect",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "What is a simple effects analysis?",
+      "answers": [
+        {
+          "text": "An analysis that examines the effect of each independent variable at each level of the other independent variable(s)",
+          "isCorrect": true
+        },
+        {
+          "text": "An analysis that only examines main effects",
+          "isCorrect": false
+        },
+        {
+          "text": "An analysis used when no interaction is present",
+          "isCorrect": false
+        },
+        {
+          "text": "An analysis that averages effects across all conditions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "When is it necessary to conduct a simple effects analysis?",
+      "answers": [
+        {
+          "text": "When an interaction is present",
+          "isCorrect": true
+        },
+        {
+          "text": "Only when main effects are absent",
+          "isCorrect": false
+        },
+        {
+          "text": "In all factorial designs regardless of results",
+          "isCorrect": false
+        },
+        {
+          "text": "Only in within-subjects designs",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "How many simple effects analyses would need to be examined in a 2 × 2 factorial design?",
+      "answers": [
+        {
+          "text": "4 simple effects",
+          "isCorrect": true
+        },
+        {
+          "text": "2 simple effects",
+          "isCorrect": false
+        },
+        {
+          "text": "8 simple effects",
+          "isCorrect": false
+        },
+        {
+          "text": "6 simple effects",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "What is the primary advantage of including multiple independent variables in a single experiment?",
+      "answers": [
+        {
+          "text": "It allows researchers to answer questions about whether the effect of one independent variable depends on the level of another",
+          "isCorrect": true
+        },
+        {
+          "text": "It reduces the need for statistical analysis",
+          "isCorrect": false
+        },
+        {
+          "text": "It eliminates the need for random assignment",
+          "isCorrect": false
+        },
+        {
+          "text": "It guarantees that causal conclusions can be drawn about all variables",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "If a factorial design includes only non-manipulated independent variables, what type of study is it?",
+      "answers": [
+        {
+          "text": "A non-experimental study",
+          "isCorrect": true
+        },
+        {
+          "text": "A true experiment",
+          "isCorrect": false
+        },
+        {
+          "text": "A quasi-experiment only if it has two variables",
+          "isCorrect": false
+        },
+        {
+          "text": "A within-subjects experiment",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "In a 4 × 5 factorial design, how many distinct conditions would there be?",
+      "answers": [
+        {
+          "text": "20 conditions",
+          "isCorrect": true
+        },
+        {
+          "text": "9 conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "45 conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "10 conditions",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

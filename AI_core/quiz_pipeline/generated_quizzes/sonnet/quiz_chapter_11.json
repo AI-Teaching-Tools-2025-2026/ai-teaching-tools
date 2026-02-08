@@ -1,0 +1,448 @@
+{
+  "_id": "cd8d598381d5420dbaf0414b",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 11",
+  "quizId": "QUIZ_SONNET_CH11",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "What is the primary purpose of APA style according to the chapter?",
+      "answers": [
+        {
+          "text": "To make psychological writing sound more scientific and technical",
+          "isCorrect": false
+        },
+        {
+          "text": "To facilitate scientific communication by promoting clarity and standardizing organization",
+          "isCorrect": true
+        },
+        {
+          "text": "To ensure all psychology papers are written in a formal literary style",
+          "isCorrect": false
+        },
+        {
+          "text": "To replace MLA style as the universal academic writing standard",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "According to the chapter, which of the following is NOT a standard section of an APA-style empirical research report?",
+      "answers": [
+        {
+          "text": "Abstract",
+          "isCorrect": false
+        },
+        {
+          "text": "Literature Review",
+          "isCorrect": true
+        },
+        {
+          "text": "Method",
+          "isCorrect": false
+        },
+        {
+          "text": "Discussion",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "What does the chapter identify as the 'second level' of APA style?",
+      "answers": [
+        {
+          "text": "Low-level style including grammar and spelling rules",
+          "isCorrect": false
+        },
+        {
+          "text": "High-level style including formal and straightforward writing",
+          "isCorrect": true
+        },
+        {
+          "text": "The organization of research articles into sections",
+          "isCorrect": false
+        },
+        {
+          "text": "Reference formatting and citation rules",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "According to the chapter, why should researchers avoid using direct quotations frequently in APA-style writing?",
+      "answers": [
+        {
+          "text": "Direct quotations are too difficult to format correctly",
+          "isCorrect": false
+        },
+        {
+          "text": "Psychological phenomena and theories are objective and do not depend on specific words used",
+          "isCorrect": true
+        },
+        {
+          "text": "Direct quotations make the reference list too long",
+          "isCorrect": false
+        },
+        {
+          "text": "Other researchers prefer paraphrasing over direct quotes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "When citing a work with three to five authors for the first time in APA style, what should you do?",
+      "answers": [
+        {
+          "text": "Include only the first author's name followed by et al.",
+          "isCorrect": false
+        },
+        {
+          "text": "Include all authors' names",
+          "isCorrect": true
+        },
+        {
+          "text": "Include only the first two authors' names",
+          "isCorrect": false
+        },
+        {
+          "text": "Include all authors' names followed by et al.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "What term should be used instead of 'sexual preference' according to APA guidelines discussed in the chapter?",
+      "answers": [
+        {
+          "text": "Sexual identity",
+          "isCorrect": false
+        },
+        {
+          "text": "Sexual orientation",
+          "isCorrect": true
+        },
+        {
+          "text": "Sexual lifestyle",
+          "isCorrect": false
+        },
+        {
+          "text": "Sexual tendency",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "According to Daryl Bem's recommendations in the chapter, how should a research report introduction begin?",
+      "answers": [
+        {
+          "text": "With a detailed literature review of previous studies",
+          "isCorrect": false
+        },
+        {
+          "text": "With general observations about the topic in ordinary language about people and behavior",
+          "isCorrect": true
+        },
+        {
+          "text": "With a formal statement of the research hypothesis",
+          "isCorrect": false
+        },
+        {
+          "text": "With technical jargon to establish credibility",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "What is the recommended maximum length for an APA-style article title?",
+      "answers": [
+        {
+          "text": "8 words or fewer",
+          "isCorrect": false
+        },
+        {
+          "text": "12 words or fewer",
+          "isCorrect": true
+        },
+        {
+          "text": "15 words or fewer",
+          "isCorrect": false
+        },
+        {
+          "text": "20 words or fewer",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "In an APA-style reference for a journal article, which elements are italicized?",
+      "answers": [
+        {
+          "text": "The article title and journal title",
+          "isCorrect": false
+        },
+        {
+          "text": "The journal title and volume number",
+          "isCorrect": true
+        },
+        {
+          "text": "The journal title and issue number",
+          "isCorrect": false
+        },
+        {
+          "text": "Only the journal title",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "According to the chapter, what should the abstract of an APA-style research report typically be limited to?",
+      "answers": [
+        {
+          "text": "About 100 words",
+          "isCorrect": false
+        },
+        {
+          "text": "About 200 words",
+          "isCorrect": true
+        },
+        {
+          "text": "About 300 words",
+          "isCorrect": false
+        },
+        {
+          "text": "About 500 words",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "Which principle for avoiding biased language involves referring to 'people diagnosed with schizophrenia' rather than 'schizophrenics'?",
+      "answers": [
+        {
+          "text": "Using more specific terms",
+          "isCorrect": false
+        },
+        {
+          "text": "Putting the person first",
+          "isCorrect": true
+        },
+        {
+          "text": "Avoiding objectifying participants",
+          "isCorrect": false
+        },
+        {
+          "text": "Being sensitive to labels",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "What does the chapter recommend regarding the use of 'et al.' after the first citation of a work?",
+      "answers": [
+        {
+          "text": "Never use et al. for works with fewer than six authors",
+          "isCorrect": false
+        },
+        {
+          "text": "Use et al. after the first citation for works with three to five authors",
+          "isCorrect": true
+        },
+        {
+          "text": "Always spell out all authors' names regardless of citation number",
+          "isCorrect": false
+        },
+        {
+          "text": "Use et al. only in parenthetical citations",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "According to the chapter, what is the purpose of the literature review in an introduction?",
+      "answers": [
+        {
+          "text": "To list all previous studies on the topic chronologically",
+          "isCorrect": false
+        },
+        {
+          "text": "To construct an argument for why the research question is worth addressing",
+          "isCorrect": true
+        },
+        {
+          "text": "To demonstrate the researcher's knowledge of the field",
+          "isCorrect": false
+        },
+        {
+          "text": "To criticize previous researchers' methodologies",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "In the method section, what principle should guide the level of detail included?",
+      "answers": [
+        {
+          "text": "Include every detail so the manuscript appears thorough",
+          "isCorrect": false
+        },
+        {
+          "text": "Include enough detail that other researchers could replicate the study",
+          "isCorrect": true
+        },
+        {
+          "text": "Keep it brief to maintain reader interest",
+          "isCorrect": false
+        },
+        {
+          "text": "Focus only on novel aspects of the methodology",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "According to the chapter, what should typically be discussed first in the results section?",
+      "answers": [
+        {
+          "text": "The most surprising findings",
+          "isCorrect": false
+        },
+        {
+          "text": "Preliminary issues such as data exclusions and variable computation",
+          "isCorrect": true
+        },
+        {
+          "text": "The main hypothesis test",
+          "isCorrect": false
+        },
+        {
+          "text": "Secondary analyses",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "What structure does Bem (2003) suggest for discussing each new result in the results section?",
+      "answers": [
+        {
+          "text": "Present statistics first, then explain in words",
+          "isCorrect": false
+        },
+        {
+          "text": "Remind readers of the question, answer in words, present statistics, qualify if necessary, and summarize",
+          "isCorrect": true
+        },
+        {
+          "text": "State the hypothesis, present statistics, and move to the next result",
+          "isCorrect": false
+        },
+        {
+          "text": "Describe the statistical test, report the results, and interpret the findings",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "According to the chapter, what typically comes immediately after the participants subsection in a simple method section organization?",
+      "answers": [
+        {
+          "text": "Materials subsection",
+          "isCorrect": false
+        },
+        {
+          "text": "Design and procedure subsection",
+          "isCorrect": true
+        },
+        {
+          "text": "Separate design subsection",
+          "isCorrect": false
+        },
+        {
+          "text": "Apparatus subsection",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "What does the chapter say about discussing limitations in the discussion section?",
+      "answers": [
+        {
+          "text": "List every possible limitation to show thoroughness",
+          "isCorrect": false
+        },
+        {
+          "text": "Avoid mentioning limitations as they weaken the study",
+          "isCorrect": false
+        },
+        {
+          "text": "Pick two or three limitations that could have influenced results and explain how",
+          "isCorrect": true
+        },
+        {
+          "text": "Only mention limitations if reviewers specifically ask",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "For poster presentations at conferences, what font size does the chapter recommend for the title and authors' names?",
+      "answers": [
+        {
+          "text": "28 points",
+          "isCorrect": false
+        },
+        {
+          "text": "48 points",
+          "isCorrect": false
+        },
+        {
+          "text": "72 points",
+          "isCorrect": true
+        },
+        {
+          "text": "96 points",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "According to the chapter, how should information on a poster be organized for optimal readability?",
+      "answers": [
+        {
+          "text": "In rows that flow across the poster from left to right",
+          "isCorrect": false
+        },
+        {
+          "text": "In columns that flow from top to bottom",
+          "isCorrect": true
+        },
+        {
+          "text": "In a circular pattern starting from the center",
+          "isCorrect": false
+        },
+        {
+          "text": "In a single large block of text",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
