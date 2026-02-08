@@ -20,10 +20,7 @@ interface QuizQuestion {
 export default function QuizBuilder() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<Tab>("details");
-  const [questions, setQuestions] = useState<QuizQuestion[]>([
-    { id: "1", text: "What is the primary function of the hippocampus?", type: "multiple-choice", options: ["Memory consolidation", "Motor control", "Visual processing", "Auditory processing"], correctAnswer: "Memory consolidation" },
-    { id: "2", text: "Neuroplasticity refers to the brain's ability to reorganize itself.", type: "true-false", correctAnswer: "True" }
-  ]);
+  const [questions, setQuestions] = useState<QuizQuestion[]>([]);
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#0a0a0a] text-[#fafafa]">
@@ -75,7 +72,7 @@ export default function QuizBuilder() {
                 <label className="text-sm font-medium text-[#fafafa]">Quiz Title</label>
                 <input 
                     type="text" 
-                    defaultValue="Introduction to Psychology" 
+                    placeholder="Enter quiz title" 
                     className="flex h-10 w-full rounded-md border border-[#404040] bg-white/5 px-3 py-2 text-sm text-[#fafafa] placeholder:text-neutral-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent disabled:cursor-not-allowed disabled:opacity-50"
                 />
             </div>
@@ -84,7 +81,7 @@ export default function QuizBuilder() {
             <div className="flex flex-col gap-2">
                 <label className="text-sm font-medium text-[#fafafa]">Description</label>
                 <textarea 
-                    defaultValue="A basic quiz covering the fundamentals of psychology." 
+                    placeholder="Enter quiz description" 
                     className="flex min-h-[120px] w-full rounded-md border border-[#404040] bg-white/5 px-3 py-2 text-sm text-[#fafafa] placeholder:text-neutral-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent disabled:cursor-not-allowed disabled:opacity-50 resize-y"
                 />
             </div>

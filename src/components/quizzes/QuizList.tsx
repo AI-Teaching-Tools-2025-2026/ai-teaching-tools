@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ChevronDown, MoreHorizontal, Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { mockQuizzes } from "./mockData";
+import { quizService } from "@/services/quizService";
+import { QuizData } from "./mockData";
 import { cn } from "@/lib/utils";
 import {
   Table,
@@ -17,14 +18,31 @@ import {
 
 export default function QuizList() {
   const router = useRouter();
+  const [quizzes, setQuizzes] = useState<QuizData[]>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);
-  const allSelected = selectedQuizzes.length === mockQuizzes.length && mockQuizzes.length > 0;
+
+  useEffect(() => {
+    const loadQuizzes = async () => {
+      try {
+        const data = await quizService.getAllQuizzes();
+        setQuizzes(data);
+      } catch (error) {
+        console.error("Failed to load quizzes:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadQuizzes();
+  }, []);
+
+  const allSelected = selectedQuizzes.length === quizzes.length && quizzes.length > 0;
 
   const toggleSelectAll = () => {
     if (allSelected) {
       setSelectedQuizzes([]);
     } else {
-      setSelectedQuizzes(mockQuizzes.map((q) => q.quizId));
+      setSelectedQuizzes(quizzes.map((q) => q.quizId));
     }
   };
 
@@ -83,7 +101,7 @@ export default function QuizList() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {mockQuizzes.map((quiz) => {
+              {quizzes.map((quiz) => {
                 const isSelected = selectedQuizzes.includes(quiz.quizId);
                 return (
                   <TableRow 
