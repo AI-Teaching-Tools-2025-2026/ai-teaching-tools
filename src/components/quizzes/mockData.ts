@@ -98,10 +98,11 @@ export const mockQuizzes: QuizData[] = [
   },
 ];
 
-export const mockCourses = [
-  { id: "COURSE001", name: "Introduction to Psychology" },
-  { id: "COURSE002", name: "Advanced Neuroscience" },
-  { id: "COURSE003", name: "Behavioral Analysis" },
+export const mockQuizTypes = [
+  { id: "TYPE001", name: "Exam" },
+  { id: "TYPE002", name: "Quiz" },
+  { id: "TYPE003", name: "Assignment" },
+  { id: "TYPE004", name: "Practice" },
 ];
 
 export const mockSections = [

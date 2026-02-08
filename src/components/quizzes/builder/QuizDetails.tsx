@@ -9,19 +9,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { mockCourses, mockSections } from "../mockData";
-import { CourseOption } from "@/types/quiz";
+import { mockQuizTypes, mockSections } from "../mockData";
+import { QuizTypeOption } from "@/types/quiz";
 
 interface QuizDetailsProps {
-  selectedCourse: CourseOption;
-  setSelectedCourse: (course: CourseOption) => void;
+  selectedQuizType: QuizTypeOption;
+  setSelectedQuizType: (type: QuizTypeOption) => void;
   selectedSection: string;
   setSelectedSection: (section: string) => void;
 }
 
 export function QuizDetails({
-  selectedCourse,
-  setSelectedCourse,
+  selectedQuizType,
+  setSelectedQuizType,
   selectedSection,
   setSelectedSection,
 }: QuizDetailsProps) {
@@ -47,24 +47,24 @@ export function QuizDetails({
       </div>
 
       <div className="grid grid-cols-2 gap-6">
-        {/* Course Select */}
+        {/* Quiz Type Select */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium text-foreground">Course</label>
+          <label className="text-sm font-medium text-foreground">Quiz Type</label>
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background/50 px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
-                {selectedCourse.name}
+                {selectedQuizType.name}
                 <ChevronDown className="h-4 w-4 text-muted-foreground" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-[300px]">
-              {mockCourses.map((course) => (
+              {mockQuizTypes.map((type) => (
                 <DropdownMenuItem
-                  key={course.id}
-                  onClick={() => setSelectedCourse(course)}
+                  key={type.id}
+                  onClick={() => setSelectedQuizType(type)}
                   className="cursor-pointer"
                 >
-                  {course.name}
+                  {type.name}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>

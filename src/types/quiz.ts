@@ -31,7 +31,7 @@ export interface BuilderQuestion {
   correctAnswer?: string;
 }
 
-export interface CourseOption {
+export interface QuizTypeOption {
   id: string;
   name: string;
 }

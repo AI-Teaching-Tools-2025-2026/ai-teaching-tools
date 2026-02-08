@@ -5,10 +5,10 @@ import { ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
-import { mockCourses, mockSections } from "./mockData";
+import { mockQuizTypes, mockSections } from "./mockData";
 import { QuizDetails } from "./builder/QuizDetails";
 import { QuestionList } from "./builder/QuestionList";
-import { BuilderQuestion, CourseOption } from "@/types/quiz";
+import { BuilderQuestion, QuizTypeOption } from "@/types/quiz";
 
 type Tab = "details" | "questions";
 
@@ -16,8 +16,8 @@ export default function QuizBuilder() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<Tab>("details");
   const [questions, setQuestions] = useState<BuilderQuestion[]>([]);
-  const [selectedCourse, setSelectedCourse] = useState<CourseOption>(
-    mockCourses[0]
+  const [selectedQuizType, setSelectedQuizType] = useState<QuizTypeOption>(
+    mockQuizTypes[0]
   );
   const [selectedSection, setSelectedSection] = useState(mockSections[0]);
 
@@ -65,8 +65,8 @@ export default function QuizBuilder() {
 
         {activeTab === "details" && (
           <QuizDetails
-            selectedCourse={selectedCourse}
-            setSelectedCourse={setSelectedCourse}
+            selectedQuizType={selectedQuizType}
+            setSelectedQuizType={setSelectedQuizType}
             selectedSection={selectedSection}
             setSelectedSection={setSelectedSection}
           />
