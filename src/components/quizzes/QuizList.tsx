@@ -37,95 +37,90 @@ export default function QuizList() {
   };
 
   return (
-    <div className="flex flex-col gap-4 w-full max-w-5xl">
-       {/* Header Actions */}
+    <div className="flex flex-col gap-8 w-full max-w-[1200px] mx-auto p-6 bg-[#0a0a0a] min-h-screen">
+      {/* Header Actions */}
       <div className="flex items-center justify-between w-full">
-        <h2 className="text-xl font-medium text-neutral-900">Quizzes</h2>
-        <div className="flex gap-2">
-            <Button variant="outline" className="gap-2">
-                Filter <ChevronDown className="h-4 w-4" />
-            </Button>
-            <Button onClick={() => router.push("/dashboard/quizzes/builder")}>
-                <Plus className="h-4 w-4 mr-2" />
-                Create Quiz
-            </Button>
-        </div>
+        <h2 className="text-5xl font-semibold text-white tracking-tight">Quizzes</h2>
+        <Button 
+          onClick={() => router.push("/dashboard/quizzes/builder")}
+          className="bg-white text-black hover:bg-neutral-200 font-medium rounded-lg px-6 h-10"
+        >
+          <Plus className="h-4 w-4 mr-2" />
+          Create Quiz
+        </Button>
       </div>
 
-      {/* Table */}
-      <div className="rounded-md border bg-white overflow-hidden">
-        <Table>
-          <TableHeader className="bg-neutral-50">
-            <TableRow>
-              <TableHead className="w-12 text-center">
-                <input
-                  type="checkbox"
-                  className="h-4 w-4 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900"
-                  checked={allSelected}
-                  onChange={toggleSelectAll}
-                  aria-label="Select all"
-                />
-              </TableHead>
-              <TableHead className="font-medium text-neutral-500">Quiz Title</TableHead>
-              <TableHead className="w-48 font-medium text-neutral-500">Course & Topic</TableHead>
-              <TableHead className="w-32 font-medium text-neutral-500">List of Questions</TableHead>
-              <TableHead className="w-32 font-medium text-neutral-500">Status</TableHead>
-              <TableHead className="w-32 font-medium text-neutral-500">Created At</TableHead>
-              <TableHead className="w-16"></TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {mockQuizzes.map((quiz) => (
-              <TableRow 
-                key={quiz.quizId} 
-                data-state={selectedQuizzes.includes(quiz.quizId) && "selected"}
-                className={selectedQuizzes.includes(quiz.quizId) ? "bg-neutral-50" : ""}
-              >
-                <TableCell className="text-center">
-                   <input
-                    type="checkbox"
-                    className="h-4 w-4 rounded border-neutral-300 text-neutral-900 focus:ring-neutral-900"
-                    checked={selectedQuizzes.includes(quiz.quizId)}
-                    onChange={() => toggleSelectQuiz(quiz.quizId)}
-                    aria-label={`Select ${quiz.title}`}
-                  />
-                </TableCell>
-                <TableCell className="font-medium">
-                  <span className="text-neutral-900 font-medium">{quiz.title}</span>
-                </TableCell>
-                <TableCell>
-                  <div className="flex flex-col">
-                     <span className="font-medium text-neutral-900">{quiz.courseId}</span>
-                     <span className="text-xs text-neutral-500">{quiz.section}</span>
+      <div className="rounded-lg border border-[#404040] overflow-hidden">
+        {/* Table Header Filter Bar - mimicking the visual from Figma */}
+        <div className="p-4 bg-[#171717] border-b border-[#404040] flex justify-between items-center">
+            <h3 className="text-xl font-medium text-white">All Quizzes</h3>
+             <Button variant="outline" className="gap-2 bg-[#262626] border-none text-[#f5f5f5] hover:bg-[#333] hover:text-white">
+                Filter <ChevronDown className="h-4 w-4" />
+            </Button>
+        </div>
+
+        <div className="bg-[#171717]">
+          <Table>
+            <TableHeader>
+              <TableRow className="border-[#404040] hover:bg-transparent">
+                <TableHead className="w-[50px] pl-6 py-4">
+                  <div 
+                    className={cn(
+                      "h-5 w-5 rounded border border-[#525252] flex items-center justify-center cursor-pointer transition-colors",
+                      allSelected ? "bg-white border-white" : "bg-transparent hover:border-neutral-400"
+                    )}
+                    onClick={toggleSelectAll}
+                  >
+                    {allSelected && <div className="h-2.5 w-2.5 bg-black rounded-sm" />}
                   </div>
-                </TableCell>
-                <TableCell className="text-neutral-600">
-                  {quiz.questions.length} Questions
-                </TableCell>
-                <TableCell>
-                   <span
-                      className={cn(
-                        "inline-flex items-center px-2 py-1 rounded-full text-xs font-medium",
-                        quiz.status === "Published"
-                          ? "bg-green-100 text-green-700"
-                          : "bg-yellow-100 text-yellow-700"
-                      )}
-                    >
-                      {quiz.status}
-                    </span>
-                </TableCell>
-                <TableCell className="text-neutral-600">
-                  {new Date(quiz.timestamp.$date).toLocaleDateString()}
-                </TableCell>
-                <TableCell className="text-right">
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    <MoreHorizontal className="h-4 w-4" />
-                  </Button>
-                </TableCell>
+                </TableHead>
+                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Title</TableHead>
+                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Section</TableHead>
+                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Course</TableHead>
+                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Questions</TableHead>
+                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Date</TableHead>
+                <TableHead className="w-[50px]"></TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {mockQuizzes.map((quiz) => {
+                const isSelected = selectedQuizzes.includes(quiz.quizId);
+                return (
+                  <TableRow 
+                    key={quiz.quizId} 
+                    className={cn(
+                        "border-[#404040] group transition-colors data-[state=selected]:bg-[#262626]",
+                        isSelected ? "bg-[#262626]" : "hover:bg-[#262626]/50"
+                    )}
+                  >
+                    <TableCell className="pl-6 py-4">
+                      <div 
+                        className={cn(
+                          "h-5 w-5 rounded border border-[#525252] flex items-center justify-center cursor-pointer transition-colors",
+                          isSelected ? "bg-white border-white" : "bg-transparent group-hover:border-neutral-400"
+                        )}
+                        onClick={() => toggleSelectQuiz(quiz.quizId)}
+                      >
+                         {isSelected && <div className="h-2.5 w-2.5 bg-black rounded-sm" />}
+                      </div>
+                    </TableCell>
+                    <TableCell className="font-normal text-lg text-[#fafafa] py-4">{quiz.title}</TableCell>
+                    <TableCell className="font-normal text-lg text-[#fafafa] py-4">{quiz.courseId}</TableCell>
+                    <TableCell className="font-normal text-lg text-[#fafafa] py-4">{quiz.questions.length}</TableCell>
+                    <TableCell className="font-normal text-lg text-[#fafafa] py-4">
+                      {new Date(quiz.timestamp.$date).toLocaleDateString()}
+                    </TableCell>
+                     <TableCell className="pr-6">
+                        <Button variant="ghost" size="icon" className="text-[#a3a3a3] hover:text-white hover:bg-white/10">
+                            <MoreHorizontal className="h-5 w-5" />
+                        </Button>
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </div>
       </div>
     </div>
   );
