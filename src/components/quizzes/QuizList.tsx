@@ -21,6 +21,8 @@ export default function QuizList() {
   const [quizzes, setQuizzes] = useState<QuizData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);
+  
+  console.log("Quizzes data:", quizzes);
 
   useEffect(() => {
     const loadQuizzes = async () => {
@@ -93,10 +95,11 @@ export default function QuizList() {
                   </div>
                 </TableHead>
                 <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[300px]">Title</TableHead>
-                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[200px]">Section</TableHead>
-                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[150px]">Course</TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[150px]">Section</TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[150px]">Due Date</TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[100px]">Points</TableHead>
                 <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[100px]">Questions</TableHead>
-                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[150px]">Date</TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[120px]">Published</TableHead>
                 <TableHead className="w-[50px] h-10"></TableHead>
               </TableRow>
             </TableHeader>
@@ -137,10 +140,16 @@ export default function QuizList() {
                     </TableCell>
                     <TableCell className="font-medium text-sm text-[#fafafa] py-3">{quiz.title}</TableCell>
                     <TableCell className="text-sm text-[#fafafa] py-3">{quiz.section}</TableCell>
-                    <TableCell className="text-sm text-[#fafafa] py-3">{quiz.courseId}</TableCell>
+                    <TableCell className="text-sm text-[#fafafa] py-3">{quiz.dueDate}</TableCell>
+                    <TableCell className="text-sm text-[#fafafa] py-3">{quiz.points}</TableCell>
                     <TableCell className="text-sm text-[#fafafa] py-3">{quiz.questions.length}</TableCell>
                     <TableCell className="text-sm text-[#fafafa] py-3">
-                      {new Date(quiz.timestamp.$date).toLocaleDateString()}
+                      <div className={cn(
+                        "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium",
+                        quiz.status === "Published" ? "bg-green-500/10 text-green-500" : "bg-neutral-500/10 text-neutral-400"
+                      )}>
+                        {quiz.status === "Published" ? "Yes" : "No"}
+                      </div>
                     </TableCell>
                      <TableCell className="pr-6 py-3">
                         <Button variant="ghost" size="icon" className="h-8 w-8 text-[#a3a3a3] hover:text-white hover:bg-white/10">

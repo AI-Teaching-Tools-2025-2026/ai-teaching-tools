@@ -18,6 +18,8 @@ export interface QuizData {
   section: string;
   courseId: string;
   timestamp: { $date: string };
+  dueDate: string; // ISO Date string
+  points: number;
   questions: Question[];
 }
 
@@ -30,6 +32,8 @@ export const mockQuizzes: QuizData[] = [
     section: "Chapter 1",
     courseId: "COURSE001",
     timestamp: { $date: "2026-02-04T12:00:00.000Z" },
+    dueDate: "2026-02-10",
+    points: 100,
     questions: [
       {
         questionId: 1,
@@ -60,6 +64,8 @@ export const mockQuizzes: QuizData[] = [
     section: "Chapter 5",
     courseId: "COURSE001",
     timestamp: { $date: "2026-02-05T14:30:00.000Z" },
+    dueDate: "2026-03-15",
+    points: 200,
     questions: [
       {
         questionId: 1,
@@ -79,6 +85,8 @@ export const mockQuizzes: QuizData[] = [
     section: "Chapter 3",
     courseId: "COURSE002",
     timestamp: { $date: "2026-02-06T09:00:00.000Z" },
+    dueDate: "2026-02-20",
+    points: 50,
     questions: Array(10).fill({
         questionId: 1,
         question: "Placeholder question",
@@ -93,6 +101,8 @@ export const mockQuizzes: QuizData[] = [
     section: "Chapter 2",
     courseId: "COURSE003",
     timestamp: { $date: "2026-02-07T10:15:00.000Z" },
+    dueDate: "2026-02-28",
+    points: 150,
     questions: Array(20).fill(null),
   },
   {
@@ -103,6 +113,8 @@ export const mockQuizzes: QuizData[] = [
     section: "Chapter 4",
     courseId: "COURSE002",
     timestamp: { $date: "2026-02-08T16:45:00.000Z" },
+    dueDate: "2026-04-01",
+    points: 75,
     questions: Array(12).fill(null),
   },
 ];
