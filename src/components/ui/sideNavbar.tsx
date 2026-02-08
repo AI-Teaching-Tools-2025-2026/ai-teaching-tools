@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const drawerList = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { name: "Grades", href: "/dashboard/grades", icon: NotebookTabs },
-  { name: "Quiz Builder", href: "/dashboard/quiz-builder", icon: FileQuestion },
+  { name: "Quizzes", href: "/dashboard/quizzes", icon: FileQuestion },
   { name: "Assignment Builder", href: "/dashboard/assignment-builder", icon: SquarePen },
   { name: "Question Banks", href: "/dashboard/question-banks", icon: Database },
 ];
