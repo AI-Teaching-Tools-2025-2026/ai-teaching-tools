@@ -17,7 +17,7 @@ export default function QuizBuilder() {
   const [activeTab, setActiveTab] = useState<Tab>("details");
   const [questions, setQuestions] = useState<BuilderQuestion[]>([]);
   const [selectedQuizType, setSelectedQuizType] = useState<QuizTypeOption>(
-    mockQuizTypes[0]
+    mockQuizTypes[0],
   );
   const [selectedSection, setSelectedSection] = useState(mockSections[0]);
 
@@ -45,7 +45,7 @@ export default function QuizBuilder() {
               "px-6 py-2 rounded-lg text-sm font-medium transition-all",
               activeTab === "details"
                 ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
+                : "text-muted-foreground hover:text-foreground",
             )}
           >
             Details
@@ -56,7 +56,7 @@ export default function QuizBuilder() {
               "px-6 py-2 rounded-lg text-sm font-medium transition-all",
               activeTab === "questions"
                 ? "bg-background text-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
+                : "text-muted-foreground hover:text-foreground",
             )}
           >
             Questions

@@ -7,7 +7,7 @@ export const quizService = {
   getAllQuizzes: async (): Promise<QuizData[]> => {
     // Simulate API call
     console.log("Fetching quizzes via service...");
-    await delay(500); 
+    await delay(500);
     // In the future, this will be:
     // const response = await axios.get('/api/quizzes');
     // return response.data;
@@ -17,5 +17,5 @@ export const quizService = {
   getQuizById: async (id: string): Promise<QuizData | undefined> => {
     await delay(300);
     return mockQuizzes.find((q) => q.quizId === id);
-  }
+  },
 };

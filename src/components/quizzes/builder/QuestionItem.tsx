@@ -52,7 +52,7 @@ export function QuestionItem({ question: q, index }: QuestionItemProps) {
                 "h-4 w-4 rounded-full border flex items-center justify-center",
                 opt === q.correctAnswer
                   ? "border-green-500 bg-green-500/20"
-                  : "border-border"
+                  : "border-border",
               )}
             >
               {opt === q.correctAnswer && (
@@ -64,7 +64,7 @@ export function QuestionItem({ question: q, index }: QuestionItemProps) {
                 "text-sm",
                 opt === q.correctAnswer
                   ? "text-foreground"
-                  : "text-muted-foreground"
+                  : "text-muted-foreground",
               )}
             >
               {opt}

@@ -29,7 +29,9 @@ export function QuizDetails({
     <div className="w-full max-w-3xl bg-card border border-border rounded-lg p-8 shadow-sm flex flex-col gap-6">
       {/* Title Input */}
       <div className="flex flex-col gap-2">
-        <label className="text-sm font-medium text-foreground">Quiz Title</label>
+        <label className="text-sm font-medium text-foreground">
+          Quiz Title
+        </label>
         <input
           type="text"
           placeholder="Enter quiz title"
@@ -39,7 +41,9 @@ export function QuizDetails({
 
       {/* Description Textarea */}
       <div className="flex flex-col gap-2">
-        <label className="text-sm font-medium text-foreground">Description</label>
+        <label className="text-sm font-medium text-foreground">
+          Description
+        </label>
         <textarea
           placeholder="Enter quiz description"
           className="flex min-h-[120px] w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-y"
@@ -49,7 +53,9 @@ export function QuizDetails({
       <div className="grid grid-cols-2 gap-6">
         {/* Quiz Type Select */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium text-foreground">Quiz Type</label>
+          <label className="text-sm font-medium text-foreground">
+            Quiz Type
+          </label>
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background/50 px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">

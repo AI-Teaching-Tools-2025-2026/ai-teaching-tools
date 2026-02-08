@@ -67,12 +67,12 @@ export const mockQuizzes: QuizData[] = [
     dueDate: "2026-02-20",
     points: 50,
     questions: Array(10).fill({
-        questionId: 1,
-        question: "Placeholder question",
-        answers: []
+      questionId: 1,
+      question: "Placeholder question",
+      answers: [],
     }),
   },
-   {
+  {
     _id: { $oid: "6983dd6e46779b82136e8b94" },
     quizId: "QUIZ004",
     title: "Statistical Methods",
