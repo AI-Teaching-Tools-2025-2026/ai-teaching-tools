@@ -55,10 +55,10 @@ export default function QuizList() {
   };
 
   return (
-    <div className="flex flex-col gap-8 w-full max-w-[1200px] mx-auto p-6 bg-[#0a0a0a] min-h-screen">
+    <div className="flex flex-col gap-6 w-full p-6">
       {/* Header Actions */}
       <div className="flex items-center justify-between w-full">
-        <h2 className="text-5xl font-semibold text-white tracking-tight">Quizzes</h2>
+        <h1 className="text-2xl font-bold text-left ml-3">Quizzes</h1>
         <Button 
           onClick={() => router.push("/dashboard/quizzes/builder")}
           className="bg-white text-black hover:bg-neutral-200 font-medium rounded-lg px-6 h-10"
@@ -71,9 +71,9 @@ export default function QuizList() {
       <div className="rounded-lg border border-[#404040] overflow-hidden">
         {/* Table Header Filter Bar - mimicking the visual from Figma */}
         <div className="p-4 bg-[#171717] border-b border-[#404040] flex justify-between items-center">
-            <h3 className="text-xl font-medium text-white">All Quizzes</h3>
-             <Button variant="outline" className="gap-2 bg-[#262626] border-none text-[#f5f5f5] hover:bg-[#333] hover:text-white">
-                Filter <ChevronDown className="h-4 w-4" />
+            <h3 className="text-base font-medium text-white">All Quizzes</h3>
+             <Button variant="outline" className="gap-2 bg-[#262626] border-none text-[#f5f5f5] hover:bg-[#333] hover:text-white h-8 text-xs">
+                Filter <ChevronDown className="h-3 w-3" />
             </Button>
         </div>
 
@@ -81,27 +81,40 @@ export default function QuizList() {
           <Table>
             <TableHeader>
               <TableRow className="border-[#404040] hover:bg-transparent">
-                <TableHead className="w-[50px] pl-6 py-4">
+                <TableHead className="w-[50px] pl-6 h-10">
                   <div 
                     className={cn(
-                      "h-5 w-5 rounded border border-[#525252] flex items-center justify-center cursor-pointer transition-colors",
+                      "h-4 w-4 rounded border border-[#525252] flex items-center justify-center cursor-pointer transition-colors",
                       allSelected ? "bg-white border-white" : "bg-transparent hover:border-neutral-400"
                     )}
                     onClick={toggleSelectAll}
                   >
-                    {allSelected && <div className="h-2.5 w-2.5 bg-black rounded-sm" />}
+                    {allSelected && <div className="h-2 w-2 bg-black rounded-sm" />}
                   </div>
                 </TableHead>
-                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Title</TableHead>
-                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Section</TableHead>
-                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Course</TableHead>
-                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Questions</TableHead>
-                <TableHead className="text-lg font-medium text-[#a3a3a3] h-14">Date</TableHead>
-                <TableHead className="w-[50px]"></TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[300px]">Title</TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[200px]">Section</TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[150px]">Course</TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[100px]">Questions</TableHead>
+                <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[150px]">Date</TableHead>
+                <TableHead className="w-[50px] h-10"></TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {quizzes.map((quiz) => {
+              {loading ? (
+                <TableRow>
+                  <TableCell colSpan={7} className="h-24 text-center text-[#a3a3a3] text-sm">
+                    Loading quizzes...
+                  </TableCell>
+                </TableRow>
+               ) : quizzes.length === 0 ? (
+                <TableRow>
+                  <TableCell colSpan={7} className="h-24 text-center text-[#a3a3a3] text-sm">
+                    No quizzes found.
+                  </TableCell>
+                </TableRow>
+              ) : (
+                quizzes.map((quiz) => {
                 const isSelected = selectedQuizzes.includes(quiz.quizId);
                 return (
                   <TableRow 
@@ -111,31 +124,32 @@ export default function QuizList() {
                         isSelected ? "bg-[#262626]" : "hover:bg-[#262626]/50"
                     )}
                   >
-                    <TableCell className="pl-6 py-4">
+                    <TableCell className="pl-6 py-3">
                       <div 
                         className={cn(
-                          "h-5 w-5 rounded border border-[#525252] flex items-center justify-center cursor-pointer transition-colors",
+                          "h-4 w-4 rounded border border-[#525252] flex items-center justify-center cursor-pointer transition-colors",
                           isSelected ? "bg-white border-white" : "bg-transparent group-hover:border-neutral-400"
                         )}
                         onClick={() => toggleSelectQuiz(quiz.quizId)}
                       >
-                         {isSelected && <div className="h-2.5 w-2.5 bg-black rounded-sm" />}
+                         {isSelected && <div className="h-2 w-2 bg-black rounded-sm" />}
                       </div>
                     </TableCell>
-                    <TableCell className="font-normal text-lg text-[#fafafa] py-4">{quiz.title}</TableCell>
-                    <TableCell className="font-normal text-lg text-[#fafafa] py-4">{quiz.courseId}</TableCell>
-                    <TableCell className="font-normal text-lg text-[#fafafa] py-4">{quiz.questions.length}</TableCell>
-                    <TableCell className="font-normal text-lg text-[#fafafa] py-4">
+                    <TableCell className="font-medium text-sm text-[#fafafa] py-3">{quiz.title}</TableCell>
+                    <TableCell className="text-sm text-[#fafafa] py-3">{quiz.section}</TableCell>
+                    <TableCell className="text-sm text-[#fafafa] py-3">{quiz.courseId}</TableCell>
+                    <TableCell className="text-sm text-[#fafafa] py-3">{quiz.questions.length}</TableCell>
+                    <TableCell className="text-sm text-[#fafafa] py-3">
                       {new Date(quiz.timestamp.$date).toLocaleDateString()}
                     </TableCell>
-                     <TableCell className="pr-6">
-                        <Button variant="ghost" size="icon" className="text-[#a3a3a3] hover:text-white hover:bg-white/10">
-                            <MoreHorizontal className="h-5 w-5" />
+                     <TableCell className="pr-6 py-3">
+                        <Button variant="ghost" size="icon" className="h-8 w-8 text-[#a3a3a3] hover:text-white hover:bg-white/10">
+                            <MoreHorizontal className="h-4 w-4" />
                         </Button>
                     </TableCell>
                   </TableRow>
                 );
-              })}
+              }))}
             </TableBody>
           </Table>
         </div>
