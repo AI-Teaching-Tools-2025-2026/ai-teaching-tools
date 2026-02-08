@@ -1,27 +1,6 @@
-export interface Answer {
-  text: string;
-  isCorrect: boolean;
-}
+import { QuizData, Question, Answer } from "@/types/quiz";
 
-export interface Question {
-  questionId: number;
-  question: string;
-  answers: Answer[];
-}
-
-// Quiz Schema
-export interface QuizData {
-  _id: { $oid: string };
-  quizId: string;
-  title: string; 
-  status: "Published" | "Draft"; 
-  section: string;
-  courseId: string;
-  timestamp: { $date: string };
-  dueDate: string; // ISO Date string
-  points: number;
-  questions: Question[];
-}
+export type { QuizData, Question, Answer };
 
 export const mockQuizzes: QuizData[] = [
   {
