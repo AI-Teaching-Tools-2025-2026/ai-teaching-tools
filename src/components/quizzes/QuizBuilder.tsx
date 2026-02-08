@@ -6,6 +6,12 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { mockCourses, mockSections } from "./mockData";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 // Define strict types for the builder data structure
 type Tab = "details" | "questions";
@@ -22,6 +28,8 @@ export default function QuizBuilder() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<Tab>("details");
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
+  const [selectedCourse, setSelectedCourse] = useState(mockCourses[0]);
+  const [selectedSection, setSelectedSection] = useState(mockSections[0]);
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#0a0a0a] text-[#fafafa]">
@@ -91,26 +99,48 @@ export default function QuizBuilder() {
                 {/* Course Select */}
                 <div className="flex flex-col gap-2">
                     <label className="text-sm font-medium text-[#fafafa]">Course</label>
-                    <div className="relative">
-                        <select className="flex h-10 w-full appearance-none rounded-md border border-[#404040] bg-white/5 px-3 py-2 text-sm text-[#fafafa] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent disabled:cursor-not-allowed disabled:opacity-50">
-                            {mockCourses.map((course) => (
-                              <option key={course.id} value={course.id}>{course.name}</option>
-                            ))}
-                        </select>
-                        <ChevronDown className="absolute right-3 top-3 h-4 w-4 text-[#a3a3a3] pointer-events-none" />
-                    </div>
+                    <DropdownMenu modal={false}>
+                      <DropdownMenuTrigger asChild>
+                        <button className="flex h-10 w-full items-center justify-between rounded-md border border-[#404040] bg-white/5 px-3 py-2 text-sm text-[#fafafa] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent disabled:cursor-not-allowed disabled:opacity-50">
+                          {selectedCourse.name}
+                          <ChevronDown className="h-4 w-4 text-[#a3a3a3]" />
+                        </button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-[300px] bg-[#171717] border-[#404040] text-white">
+                        {mockCourses.map((course) => (
+                          <DropdownMenuItem 
+                            key={course.id}
+                            onClick={() => setSelectedCourse(course)}
+                            className="text-[#fafafa] focus:bg-[#262626] focus:text-white cursor-pointer"
+                          >
+                            {course.name}
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                 </div>
                  {/* Section Select */}
                  <div className="flex flex-col gap-2">
                     <label className="text-sm font-medium text-[#fafafa]">Section</label>
-                    <div className="relative">
-                        <select className="flex h-10 w-full appearance-none rounded-md border border-[#404040] bg-white/5 px-3 py-2 text-sm text-[#fafafa] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent disabled:cursor-not-allowed disabled:opacity-50">
-                            {mockSections.map((section) => (
-                              <option key={section} value={section}>{section}</option>
-                            ))}
-                        </select>
-                        <ChevronDown className="absolute right-3 top-3 h-4 w-4 text-[#a3a3a3] pointer-events-none" />
-                    </div>
+                    <DropdownMenu modal={false}>
+                      <DropdownMenuTrigger asChild>
+                        <button className="flex h-10 w-full items-center justify-between rounded-md border border-[#404040] bg-white/5 px-3 py-2 text-sm text-[#fafafa] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent disabled:cursor-not-allowed disabled:opacity-50">
+                          {selectedSection}
+                          <ChevronDown className="h-4 w-4 text-[#a3a3a3]" />
+                        </button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-[300px] bg-[#171717] border-[#404040] text-white">
+                        {mockSections.map((section) => (
+                          <DropdownMenuItem 
+                            key={section}
+                            onClick={() => setSelectedSection(section)}
+                            className="text-[#fafafa] focus:bg-[#262626] focus:text-white cursor-pointer"
+                          >
+                            {section}
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                 </div>
             </div>
             
