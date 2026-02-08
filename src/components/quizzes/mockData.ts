@@ -9,11 +9,12 @@ export interface Question {
   answers: Answer[];
 }
 
+// Quiz Schema
 export interface QuizData {
   _id: { $oid: string };
   quizId: string;
-  title: string; // Added for UI
-  status: "Published" | "Draft"; // Added for UI
+  title: string; 
+  status: "Published" | "Draft"; 
   section: string;
   courseId: string;
   timestamp: { $date: string };
@@ -104,4 +105,18 @@ export const mockQuizzes: QuizData[] = [
     timestamp: { $date: "2026-02-08T16:45:00.000Z" },
     questions: Array(12).fill(null),
   },
+];
+
+export const mockCourses = [
+  { id: "COURSE001", name: "Introduction to Psychology" },
+  { id: "COURSE002", name: "Advanced Neuroscience" },
+  { id: "COURSE003", name: "Behavioral Analysis" },
+];
+
+export const mockSections = [
+  "Chapter 1",
+  "Chapter 2",
+  "Chapter 3",
+  "Chapter 4",
+  "Chapter 5",
 ];

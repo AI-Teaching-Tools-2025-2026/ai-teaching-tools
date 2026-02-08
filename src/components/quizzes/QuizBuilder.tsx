@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronDown, Plus, GripVertical, Trash2 } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { mockCourses, mockSections } from "./mockData";
 
 // Define strict types for the builder data structure
 type Tab = "details" | "questions";
@@ -92,8 +93,9 @@ export default function QuizBuilder() {
                     <label className="text-sm font-medium text-[#fafafa]">Course</label>
                     <div className="relative">
                         <select className="flex h-10 w-full appearance-none rounded-md border border-[#404040] bg-white/5 px-3 py-2 text-sm text-[#fafafa] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent disabled:cursor-not-allowed disabled:opacity-50">
-                            <option>Psychology 101</option>
-                            <option>Advanced Neuroscience</option>
+                            {mockCourses.map((course) => (
+                              <option key={course.id} value={course.id}>{course.name}</option>
+                            ))}
                         </select>
                         <ChevronDown className="absolute right-3 top-3 h-4 w-4 text-[#a3a3a3] pointer-events-none" />
                     </div>
@@ -103,8 +105,9 @@ export default function QuizBuilder() {
                     <label className="text-sm font-medium text-[#fafafa]">Section</label>
                     <div className="relative">
                         <select className="flex h-10 w-full appearance-none rounded-md border border-[#404040] bg-white/5 px-3 py-2 text-sm text-[#fafafa] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-transparent disabled:cursor-not-allowed disabled:opacity-50">
-                            <option>COURSE001</option>
-                            <option>COURSE002</option>
+                            {mockSections.map((section) => (
+                              <option key={section} value={section}>{section}</option>
+                            ))}
                         </select>
                         <ChevronDown className="absolute right-3 top-3 h-4 w-4 text-[#a3a3a3] pointer-events-none" />
                     </div>
