@@ -16,17 +16,18 @@ export default function LoginForm() {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://127.0.0.1:8000/auth/login", {
+      const response = await axios.post("http://localhost:8000/auth/login", {
         username: username,
-        password: password,
-      });
+        password: password, },
+        { withCredentials: true }
+      );
 
-      console.log(response.data); // { message: "Login successful!" }
+      console.log(response.data); 
 
       router.push("/courses");
     } catch (error: any) {
       if (error.response) {
-        alert(error.response.data.detail); // show backend error message
+        alert(error.response.data.detail); 
       } else {
         alert("An error occurred. Try again.");
       }
