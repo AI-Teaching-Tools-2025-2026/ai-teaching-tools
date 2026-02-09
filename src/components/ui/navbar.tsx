@@ -8,8 +8,26 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Settings, LogOut, User } from "lucide-react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    try {
+      await axios.post("http://localhost:8000/auth/logout",
+        {}, 
+        { withCredentials: true } 
+      );
+
+      router.push("/courses");
+    } catch (error: any) {
+      console.error("Logout failed", error);
+      alert("Logout failed. Try again.");
+    }
+  };
+
   return (
     <header
       className="fixed top-0 left-0 right-0 z-50"
@@ -49,7 +67,8 @@ export default function Navbar() {
                 <span>Settings</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator className="bg-neutral-600" />
-              <DropdownMenuItem className="text-neutral-50 focus:bg-neutral-600 focus:text-neutral-50">
+              <DropdownMenuItem className="text-neutral-50 focus:bg-neutral-600 focus:text-neutral-50"
+                onClick={handleLogout}>
                 <LogOut className="mr-2 h-4 w-4" />
                 <span>Log out</span>
               </DropdownMenuItem>
