@@ -1,10 +1,13 @@
 "use client";
 
 import { AgGridReact } from "ag-grid-react";
-import { ModuleRegistry, AllCommunityModule, ColDef } from "ag-grid-community";
+import { ModuleRegistry, AllCommunityModule, ColDef, colorSchemeDark, themeQuartz } from "ag-grid-community";
 import { mockGrades } from "./mockGrades";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
+
+const theme = themeQuartz.withPart(colorSchemeDark);
+
 
 // Calculate overall grade per student + add showName flag
 function prepareRowData(grades: typeof mockGrades) {
@@ -93,6 +96,7 @@ export default function GradesGrid() {
         rowData={rowData}
         columnDefs={columnDefs}
         suppressMultiSort={true}
+        theme={theme}
         defaultColDef={{
           sortable: false,
           filter: false,
