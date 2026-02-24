@@ -68,7 +68,7 @@ export default function QuizList() {
   return (
     <div className="rounded-md border bg-card">
       {/* Toolbar */}
-      <div className="flex items-center justify-between p-4 border-b">
+      <div className="flex items-center justify-end p-4 border-b">
         <div className="flex items-center gap-2">
           <Button variant="outline" size="sm" className="h-8 gap-2">
             <Filter className="h-3.5 w-3.5" />
