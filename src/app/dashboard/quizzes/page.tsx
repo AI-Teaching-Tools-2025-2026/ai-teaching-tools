@@ -1,7 +1,8 @@
 import QuizList from "@/components/quizzes/QuizTable";
 import { DashboardHeader } from "@/components/ui/dashboardHeader";
 import { Button } from "@/components/ui/button";
-import { Download, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
+import Link from "next/link";
 
 export default function QuizzesPage() {
   return (
@@ -9,8 +10,10 @@ export default function QuizzesPage() {
         <DashboardHeader
           title="Quizzes"
         >
-          <Button variant="default" className="gap-2">
-            <Plus /> Create Quiz
+          <Button variant="default" className="gap-2" asChild>
+            <Link href="/dashboard/quizzes/builder">
+              <Plus /> Create Quiz
+            </Link>
           </Button>
         </DashboardHeader>
 
