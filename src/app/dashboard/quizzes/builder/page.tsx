@@ -25,11 +25,11 @@ export default function QuizBuilderPage() {
           <h1 className="text-3xl font-semibold tracking-tight text-foreground">
             Quiz Builder
           </h1>
-          
         </div>
-        <div className="flex-1 flex items-center justify-center">
-          <QuizBuilder />
-        </div>
+
+      <div className="flex flex-col items-center justify-center">
+        <QuizBuilder />
+      </div>
       </div>
   )
 }

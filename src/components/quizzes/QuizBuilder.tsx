@@ -22,9 +22,8 @@ export default function QuizBuilder() {
   const [selectedSection, setSelectedSection] = useState(mockSections[0]);
 
   return (
-    <div className="flex flex-col w-full text-foreground items-center justify-center">
-
-      <div className="flex flex-col max-w-5xl mx-auto w-full p-8 gap-8">
+    <div className="flex flex-col w-full max-w-3xl text-foreground">
+      <div className="flex flex-col w-full gap-8">
         {/* Tabs */}
         <div className="bg-muted/50 p-1 rounded-xl inline-flex self-start border border-border">
           <button
