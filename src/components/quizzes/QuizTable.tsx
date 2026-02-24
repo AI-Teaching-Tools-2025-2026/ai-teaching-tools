@@ -159,7 +159,7 @@ export default function QuizList() {
                           "font-medium",
                           quiz.status === "Published"
                             ? "bg-green-500/15 text-green-500 hover:bg-green-500/25 border-green-500/20"
-                            : "bg-neutral-500/15 text-neutral-400 hover:bg-neutral-500/25 border-neutral-500/20"
+                            : "bg-neutral-500/15 text-neutral-400 hover:bg-neutral-500/25 border-neutral-500/20",
                         )}
                       >
                         {quiz.status}
@@ -184,7 +184,9 @@ export default function QuizList() {
                             Edit
                           </DropdownMenuItem>
                           <DropdownMenuItem
-                            onClick={() => console.log("Duplicate", quiz.quizId)}
+                            onClick={() =>
+                              console.log("Duplicate", quiz.quizId)
+                            }
                           >
                             Duplicate
                           </DropdownMenuItem>

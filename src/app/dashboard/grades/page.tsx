@@ -7,9 +7,7 @@ import { Download } from "lucide-react";
 export default function GradesPage() {
   return (
     <div className="flex flex-col h-[calc(100vh-4rem)] p-8 gap-8 max-w-[1600px] mx-auto w-full">
-      <DashboardHeader
-        title="Grades"
-      >
+      <DashboardHeader title="Grades">
         <Button variant="outline" className="gap-2">
           <Download className="h-4 w-4" />
           Export CSV

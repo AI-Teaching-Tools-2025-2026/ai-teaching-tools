@@ -28,10 +28,7 @@ interface SideBarProps {
   toggleSidebar: () => void;
 }
 
-export default function SideBar({
-  isCollapsed,
-  toggleSidebar,
-}: SideBarProps) {
+export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
   const pathname = usePathname();
 
   return (

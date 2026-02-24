@@ -3,7 +3,13 @@
 import React, { useState } from "react";
 import { ChevronLeft, GraduationCap, Trash2, Eye, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
@@ -59,7 +65,7 @@ export default function QuizBuilder() {
                   </span>
                 </button>
               </div>
-            </div>  
+            </div>
           </CardHeader>
           <Separator />
           <CardContent className="pt-6">
@@ -86,7 +92,10 @@ export default function QuizBuilder() {
             <CardTitle className="text-lg">Actions</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-3">
-            <Button variant="secondary" className="w-full gap-2 justify-start h-auto py-3 px-4  cursor-pointer">
+            <Button
+              variant="secondary"
+              className="w-full gap-2 justify-start h-auto py-3 px-4  cursor-pointer"
+            >
               <Eye className="h-4 w-4" />
               Student View
             </Button>
@@ -106,32 +115,36 @@ export default function QuizBuilder() {
         </Card>
 
         {activeTab === "questions" && (
-           <Card className="border-border bg-card sticky top-[280px]">
+          <Card className="border-border bg-card sticky top-[280px]">
             <CardHeader>
-             <CardTitle className="text-lg">Quick Add</CardTitle>
+              <CardTitle className="text-lg">Quick Add</CardTitle>
             </CardHeader>
-             <CardContent className="flex flex-col gap-3">
-               <Button variant="outline" className="justify-start gap-2" onClick={() => {
-                   /* Logic to add specific type */
-                   const newQ: BuilderQuestion = {
-                       id: crypto.randomUUID(),
-                       text: "",
-                       type: "multiple-choice",
-                       options: ["", "", "", ""],
-                       correctAnswer: ""
-                   };
-                   setQuestions([...questions, newQ]);
-               }}>
-                 <Plus className="h-4 w-4"/> Multiple Choice
-               </Button>
-               <Button variant="outline" className="justify-start gap-2">
-                 <Plus className="h-4 w-4"/> True / False
-               </Button>
-               <Button variant="outline" className="justify-start gap-2">
-                 <Plus className="h-4 w-4"/> Short Answer
-               </Button>
-             </CardContent>
-           </Card>
+            <CardContent className="flex flex-col gap-3">
+              <Button
+                variant="outline"
+                className="justify-start gap-2"
+                onClick={() => {
+                  /* Logic to add specific type */
+                  const newQ: BuilderQuestion = {
+                    id: crypto.randomUUID(),
+                    text: "",
+                    type: "multiple-choice",
+                    options: ["", "", "", ""],
+                    correctAnswer: "",
+                  };
+                  setQuestions([...questions, newQ]);
+                }}
+              >
+                <Plus className="h-4 w-4" /> Multiple Choice
+              </Button>
+              <Button variant="outline" className="justify-start gap-2">
+                <Plus className="h-4 w-4" /> True / False
+              </Button>
+              <Button variant="outline" className="justify-start gap-2">
+                <Plus className="h-4 w-4" /> Short Answer
+              </Button>
+            </CardContent>
+          </Card>
         )}
       </div>
     </div>

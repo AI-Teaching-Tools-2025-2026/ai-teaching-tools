@@ -5,9 +5,7 @@ import { DashboardHeader } from "@/components/ui/dashboardHeader";
 export default function DashboardPage() {
   return (
     <div className="flex flex-col gap-8 p-8 max-w-[1600px] mx-auto w-full">
-      <DashboardHeader
-        title="Dashboard"
-      />
+      <DashboardHeader title="Dashboard" />
 
       <div className="grid grid-cols-16 gap-4">
         {/* Left Column - 10/16 */}
