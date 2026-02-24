@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronLeft, Save, X, Eye, Plus } from "lucide-react";
+import { ChevronLeft, GraduationCap, Trash2, Eye, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -86,22 +86,21 @@ export default function QuizBuilder() {
             <CardTitle className="text-lg">Actions</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-3">
-            <Button className="w-full gap-2" size="lg">
-              <Save className="h-4 w-4" />
-              Save Quiz
-            </Button>
-            <Button variant="secondary" className="w-full gap-2">
+            <Button variant="secondary" className="w-full gap-2 justify-start h-auto py-3 px-4  cursor-pointer">
               <Eye className="h-4 w-4" />
-              Preview
+              Student View
             </Button>
-            <Separator className="my-2" />
+            <Button className="w-full gap-2 justify-start h-auto py-3 px-4 bg-primary hover:bg-primary/90">
+              <GraduationCap className="h-4 w-4" />
+              Publish Quiz
+            </Button>
             <Button
-              variant="outline"
-              className="w-full gap-2 hover:bg-destructive/10 hover:text-destructive hover:border-destructive/50"
+              variant="destructive"
+              className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer"
               onClick={() => router.back()}
             >
-              <X className="h-4 w-4" />
-              Cancel
+              <Trash2 className="h-4 w-4" />
+              Delete Quiz
             </Button>
           </CardContent>
         </Card>
