@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Navbar from "@/components/ui/navbar";
-import SideNavbar from "@/components/ui/sideNavbar";
+import SideBar from "@/components/ui/sideBar";
 import { cn } from "@/lib/utils";
 
 export default function DashboardLayout({
@@ -15,7 +15,7 @@ export default function DashboardLayout({
   return (
     <div className="flex min-h-screen">
       <Navbar />
-      <SideNavbar
+      <SideBar
         isCollapsed={isCollapsed}
         toggleSidebar={() => setIsCollapsed(!isCollapsed)}
       />
