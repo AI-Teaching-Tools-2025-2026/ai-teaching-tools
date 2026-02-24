@@ -23,18 +23,6 @@ export default function QuizBuilder() {
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-background text-foreground">
-      {/* Top Navigation */}
-      <div className="flex items-center gap-4 py-6 px-8 border-b border-border">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => router.back()}
-          className="text-muted-foreground hover:text-foreground hover:bg-muted"
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </Button>
-        <h1 className="text-3xl font-semibold tracking-tight">Create Quiz</h1>
-      </div>
 
       <div className="flex flex-col max-w-5xl mx-auto w-full p-8 gap-8">
         {/* Tabs */}
