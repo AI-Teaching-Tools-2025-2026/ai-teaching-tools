@@ -27,7 +27,9 @@ export default function QuizBuilderPage() {
           </h1>
           
         </div>
-        <QuizBuilder />
+        <div className="flex-1 flex items-center justify-center">
+          <QuizBuilder />
+        </div>
       </div>
   )
 }
