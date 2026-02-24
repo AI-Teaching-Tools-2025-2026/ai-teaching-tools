@@ -12,7 +12,7 @@ interface QuestionListProps {
 
 export function QuestionList({ questions }: QuestionListProps) {
   return (
-    <div className="flex flex-col gap-6 w-full max-w-3xl">
+    <div className="flex flex-col gap-6 w-full max-w-3xl mx-auto">
       {questions.map((q, index) => (
         <QuestionItem key={q.id} question={q} index={index} />
       ))}
