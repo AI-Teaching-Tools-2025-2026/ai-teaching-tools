@@ -1,4 +1,4 @@
-import QuizList from "@/components/quizzes/QuizList";
+import QuizList from "@/components/quizzes/QuizTable";
 import { DashboardHeader } from "@/components/ui/dashboardHeader";
 import { Button } from "@/components/ui/button";
 import { Download, Plus } from "lucide-react";
