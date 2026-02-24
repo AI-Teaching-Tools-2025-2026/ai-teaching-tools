@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ChevronDown, MoreHorizontal, Plus } from "lucide-react";
+import { ChevronDown, MoreHorizontal, Filter } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 import { quizService } from "@/services/quizService";
 import { QuizData } from "./mockData";
 import { cn } from "@/lib/utils";
@@ -15,6 +17,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function QuizList() {
   const router = useRouter();
@@ -58,146 +66,142 @@ export default function QuizList() {
   };
 
   return (
-    <div className="rounded-lg border border-[#404040] overflow-hidden">
-      {/* Table Header Filter Bar - mimicking the visual from Figma */}
-      <div className="p-4 bg-[#171717] border-b border-[#404040] flex justify-between items-center">
-        <h3 className="text-base font-medium text-white">All Quizzes</h3>
-        <Button
-          variant="outline"
-          className="gap-2 bg-[#262626] border-none text-[#f5f5f5] hover:bg-[#333] hover:text-white h-8 text-xs"
-        >
-          Filter <ChevronDown className="h-3 w-3" />
-        </Button>
+    <div className="rounded-md border bg-card">
+      {/* Toolbar */}
+      <div className="flex items-center justify-between p-4 border-b">
+        <div className="flex items-center gap-2">
+          <Button variant="outline" size="sm" className="h-8 gap-2">
+            <Filter className="h-3.5 w-3.5" />
+            <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+              Filter
+            </span>
+          </Button>
+        </div>
       </div>
 
-      <div className="bg-[#171717]">
-        <Table>
-          <TableHeader>
-            <TableRow className="border-[#404040] hover:bg-transparent">
-              <TableHead className="w-[50px] pl-6 h-10">
-                <div
-                  className={cn(
-                    "h-4 w-4 rounded border border-[#525252] flex items-center justify-center cursor-pointer transition-colors",
-                    allSelected
-                      ? "bg-white border-white"
-                      : "bg-transparent hover:border-neutral-400",
-                  )}
-                  onClick={toggleSelectAll}
-                >
-                  {allSelected && (
-                    <div className="h-2 w-2 bg-black rounded-sm" />
-                  )}
-                </div>
-              </TableHead>
-              <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[300px]">
-                Title
-              </TableHead>
-              <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[150px]">
-                Section
-              </TableHead>
-              <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[150px]">
-                Due Date
-              </TableHead>
-              <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[100px]">
-                Points
-              </TableHead>
-              <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[100px]">
-                Questions
-              </TableHead>
-              <TableHead className="text-sm font-medium text-[#a3a3a3] h-10 w-[120px]">
-                Published
-              </TableHead>
-              <TableHead className="w-[50px] h-10"></TableHead>
+      {/* Table */}
+      <Table>
+        <TableHeader>
+          <TableRow className="bg-muted/50 hover:bg-muted/50">
+            <TableHead className="w-[50px] pl-4">
+              <Checkbox
+                checked={allSelected}
+                onCheckedChange={toggleSelectAll}
+                aria-label="Select all"
+              />
+            </TableHead>
+            <TableHead className="w-[300px]">Title</TableHead>
+            <TableHead className="w-[150px]">Section</TableHead>
+            <TableHead className="w-[150px]">Due Date</TableHead>
+            <TableHead className="w-[100px]">Points</TableHead>
+            <TableHead className="w-[100px]">Questions</TableHead>
+            <TableHead className="w-[120px]">Status</TableHead>
+            <TableHead className="w-[50px]"></TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {loading ? (
+            <TableRow>
+              <TableCell
+                colSpan={8}
+                className="h-24 text-center text-muted-foreground"
+              >
+                Loading quizzes...
+              </TableCell>
             </TableRow>
-          </TableHeader>
-          <TableBody>
-            {loading ? (
-              <TableRow>
-                <TableCell
-                  colSpan={7}
-                  className="h-24 text-center text-[#a3a3a3] text-sm"
+          ) : quizzes.length === 0 ? (
+            <TableRow>
+              <TableCell
+                colSpan={8}
+                className="h-24 text-center text-muted-foreground"
+              >
+                No quizzes found.
+              </TableCell>
+            </TableRow>
+          ) : (
+            quizzes.map((quiz) => {
+              const isSelected = selectedQuizzes.includes(quiz.quizId);
+              return (
+                <TableRow
+                  key={quiz.quizId}
+                  data-state={isSelected ? "selected" : undefined}
+                  className="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
                 >
-                  Loading quizzes...
-                </TableCell>
-              </TableRow>
-            ) : quizzes.length === 0 ? (
-              <TableRow>
-                <TableCell
-                  colSpan={7}
-                  className="h-24 text-center text-[#a3a3a3] text-sm"
-                >
-                  No quizzes found.
-                </TableCell>
-              </TableRow>
-            ) : (
-              quizzes.map((quiz) => {
-                const isSelected = selectedQuizzes.includes(quiz.quizId);
-                return (
-                  <TableRow
-                    key={quiz.quizId}
-                    className={cn(
-                      "border-[#404040] group transition-colors data-[state=selected]:bg-[#262626]",
-                      isSelected ? "bg-[#262626]" : "hover:bg-[#262626]/50",
-                    )}
-                  >
-                    <TableCell className="pl-6 py-3">
-                      <div
-                        className={cn(
-                          "h-4 w-4 rounded border border-[#525252] flex items-center justify-center cursor-pointer transition-colors",
-                          isSelected
-                            ? "bg-white border-white"
-                            : "bg-transparent group-hover:border-neutral-400",
-                        )}
-                        onClick={() => toggleSelectQuiz(quiz.quizId)}
-                      >
-                        {isSelected && (
-                          <div className="h-2 w-2 bg-black rounded-sm" />
-                        )}
-                      </div>
-                    </TableCell>
-                    <TableCell className="font-medium text-sm text-[#fafafa] py-3">
-                      {quiz.title}
-                    </TableCell>
-                    <TableCell className="text-sm text-[#fafafa] py-3">
-                      {quiz.section}
-                    </TableCell>
-                    <TableCell className="text-sm text-[#fafafa] py-3">
-                      {quiz.dueDate}
-                    </TableCell>
-                    <TableCell className="text-sm text-[#fafafa] py-3">
-                      {quiz.points}
-                    </TableCell>
-                    <TableCell className="text-sm text-[#fafafa] py-3">
-                      {quiz.questions.length}
-                    </TableCell>
-                    <TableCell className="text-sm text-[#fafafa] py-3">
-                      <div
-                        className={cn(
-                          "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium",
-                          quiz.status === "Published"
-                            ? "bg-green-500/10 text-green-500"
-                            : "bg-neutral-500/10 text-neutral-400",
-                        )}
-                      >
-                        {quiz.status === "Published" ? "Yes" : "No"}
-                      </div>
-                    </TableCell>
-                    <TableCell className="pr-6 py-3">
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="h-8 w-8 text-[#a3a3a3] hover:text-white hover:bg-white/10"
-                      >
-                        <MoreHorizontal className="h-4 w-4" />
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                );
-              })
-            )}
-          </TableBody>
-        </Table>
-      </div>
+                  <TableCell className="pl-4">
+                    <Checkbox
+                      checked={isSelected}
+                      onCheckedChange={() => toggleSelectQuiz(quiz.quizId)}
+                      aria-label={`Select ${quiz.title}`}
+                    />
+                  </TableCell>
+                  <TableCell className="font-medium text-foreground">
+                    {quiz.title}
+                  </TableCell>
+                  <TableCell className="text-muted-foreground">
+                    {quiz.section}
+                  </TableCell>
+                  <TableCell className="text-muted-foreground">
+                    {new Date(quiz.dueDate).toLocaleDateString()}
+                  </TableCell>
+                  <TableCell className="text-muted-foreground">
+                    {quiz.points}
+                  </TableCell>
+                  <TableCell className="text-muted-foreground">
+                    {quiz.questions.length}
+                  </TableCell>
+                  <TableCell>
+                    <Badge
+                      variant={
+                        quiz.status === "Published" ? "default" : "secondary"
+                      }
+                      className={cn(
+                        "font-medium",
+                        quiz.status === "Published"
+                          ? "bg-green-500/15 text-green-500 hover:bg-green-500/25 border-green-500/20"
+                          : "bg-neutral-500/15 text-neutral-400 hover:bg-neutral-500/25 border-neutral-500/20"
+                      )}
+                    >
+                      {quiz.status}
+                    </Badge>
+                  </TableCell>
+                  <TableCell>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-8 w-8 p-0"
+                        >
+                          <span className="sr-only">Open menu</span>
+                          <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        <DropdownMenuItem
+                          onClick={() => console.log("Edit", quiz.quizId)}
+                        >
+                          Edit
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          onClick={() => console.log("Duplicate", quiz.quizId)}
+                        >
+                          Duplicate
+                        </DropdownMenuItem>
+                        <DropdownMenuItem
+                          className="text-destructive focus:text-destructive"
+                          onClick={() => console.log("Delete", quiz.quizId)}
+                        >
+                          Delete
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </TableCell>
+                </TableRow>
+              );
+            })
+          )}
+        </TableBody>
+      </Table>
     </div>
   );
 }
