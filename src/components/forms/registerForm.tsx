@@ -15,7 +15,11 @@ export default function RegisterForm() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [usernameError, setUsernameError] = useState("");
   const router = useRouter();
+
+  // whether any of the current validation errors relate to the password field
+  const passwordHasError = errors.some((err) => /password/i.test(err));
 
   // Validate password and return an array of unmet requirements
   const validatePassword = (pw: string) => {
@@ -71,7 +75,18 @@ export default function RegisterForm() {
       router.push("/login");
     } catch (error: any) {
       if (error.response) {
-        alert(error.response.data.detail);
+        const detail = error.response.data?.detail ?? "";
+        // If the server indicates the username is already taken, show inline username error
+        const usernameTaken =
+          error.response.status === 409 || /username.*(exists|taken|already|in use)|already exists|user.*exists/i.test(detail);
+
+        if (usernameTaken) {
+          setUsernameError("Username already exists");
+          // clear generic errors to avoid duplication
+          setErrors([]);
+        } else {
+          alert(detail);
+        }
       } else {
         alert("An error occurred. Try again.");
       }
@@ -93,9 +108,19 @@ export default function RegisterForm() {
           type="text"
           placeholder="Enter your username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => {
+            setUsername(e.target.value);
+            if (usernameError) setUsernameError("");
+          }}
           disabled={isLoading}
+          aria-invalid={!!usernameError}
+          className={usernameError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
         />
+        {usernameError && (
+          <div className="text-destructive text-sm mt-1">
+            <span className="font-bold">{usernameError}</span>
+          </div>
+        )}
       </div>
 
       <div className="grid w-full max-w-sm gap-1.5">
@@ -117,6 +142,8 @@ export default function RegisterForm() {
           placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          aria-invalid={passwordHasError}
+          className={passwordHasError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
           disabled={isLoading}
         />
       </div>
@@ -135,7 +162,9 @@ export default function RegisterForm() {
       {errors.length > 0 && (
         <div className="text-destructive text-sm mt-1 text-left w-full max-w-sm">
           {errors.map((err, index) => (
-            <div key={index}>• {err}</div>
+            <div key={index}>
+              • <span className="font-bold">{err}</span>
+            </div>
           ))}
         </div>
       )}
