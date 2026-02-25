@@ -13,9 +13,12 @@ export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [authError, setAuthError] = useState("");
   const router = useRouter();
 
   const handleLogin = async () => {
+  // clear previous field errors
+  setAuthError("");
     setIsLoading(true);
     try {
       const response = await axios.post(
@@ -32,7 +35,19 @@ export default function LoginForm() {
       router.push("/courses");
     } catch (error: any) {
       if (error.response) {
-        alert(error.response.data.detail);
+        const detail = error.response.data?.detail ?? "";
+        // Detect username or password related failures by inspecting status or message text
+        const usernameFail =
+          error.response.status === 404 || /username|user not found|no account|does not exist|invalid user/i.test(detail);
+        const passwordFail =
+          error.response.status === 401 || /password|incorrect|invalid password/i.test(detail);
+
+        if (usernameFail || passwordFail) {
+          // show a single generic message when either field fails
+          setAuthError("The username or password is incorrect.");
+        } else {
+          alert(detail);
+        }
       } else {
         alert("An error occurred. Try again.");
       }
@@ -57,8 +72,13 @@ export default function LoginForm() {
           type="text"
           placeholder="Enter your username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => {
+            setUsername(e.target.value);
+            if (authError) setAuthError("");
+          }}
           disabled={isLoading}
+          aria-invalid={!!authError}
+          className={authError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
         />
       </div>
 
@@ -68,9 +88,19 @@ export default function LoginForm() {
           id="password"
           placeholder="Enter your password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            if (authError) setAuthError("");
+          }}
           disabled={isLoading}
+          aria-invalid={!!authError}
+          className={authError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
         />
+        {authError && (
+          <div className="text-destructive text-sm mt-1">
+            <span className="font-bold">{authError}</span>
+          </div>
+        )}
       </div>
 
       <Button type="submit" className="mt-2" disabled={isLoading}>
