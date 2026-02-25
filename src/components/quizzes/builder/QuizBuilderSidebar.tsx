@@ -26,23 +26,23 @@ export function QuizBuilderSidebar({
         <CardContent className="flex flex-col gap-3">
           <Button
             variant="secondary"
-            className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer"
+            className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer whitespace-normal text-left"
           >
-            <GraduationCap className="h-4 w-4" />
+            <GraduationCap className="h-4 w-4 shrink-0" />
             Student View
           </Button>
           <Button 
-            className="w-full gap-2 justify-start h-auto py-3 px-4 bg-blue-800 hover:bg-blue-900 text-white"
+            className="w-full gap-2 justify-start h-auto py-3 px-4 bg-blue-800 hover:bg-blue-900 text-white whitespace-normal text-left"
             onClick={onPublish}
           >
-            <Eye className="h-4 w-4" />
+            <Eye className="h-4 w-4 shrink-0" />
             Publish Quiz
           </Button>
           <Button
-            className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer bg-[#9E4042] hover:bg-[#9E4042]/90 text-white"
+            className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer bg-[#9E4042] hover:bg-[#9E4042]/90 text-white whitespace-normal text-left"
             onClick={onDelete}
           >
-            <Trash2 className="h-4 w-4" />
+            <Trash2 className="h-4 w-4 shrink-0" />
             Delete Quiz
           </Button>
         </CardContent>
