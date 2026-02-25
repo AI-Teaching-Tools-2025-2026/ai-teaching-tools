@@ -21,7 +21,7 @@ interface QuestionFormProps {
 
 export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
   const [authorship, setAuthorship] = useState("manual");
-  const [questionText, setQuestionText] = useState("Question 1");
+  const [questionText, setQuestionText] = useState("");
   const [questionType, setQuestionType] = useState("multiple-choice");
   const [points, setPoints] = useState("5");
   

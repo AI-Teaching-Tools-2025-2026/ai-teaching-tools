@@ -18,8 +18,8 @@ export function QuizBuilderSidebar({
   onPublish,
 }: QuizBuilderSidebarProps) {
   return (
-    <div className="lg:col-span-3 flex flex-col gap-6 ">
-      <Card className="border-border bg-card sticky top-6">
+    <div className="lg:col-span-3 flex flex-col gap-6 h-fit sticky top-24">
+      <Card className="border-border bg-card">
         <CardHeader>
           <CardTitle className="text-lg">Actions</CardTitle>
         </CardHeader>
