@@ -1,19 +1,16 @@
 import React from "react";
-import { GraduationCap, Eye, Trash2, Plus } from "lucide-react";
+import { GraduationCap, Eye, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { BuilderQuestion } from "@/types/quiz";
 
 interface QuizBuilderSidebarProps {
-  activeTab: "details" | "questions";
-  onAddQuestion: (type: BuilderQuestion["type"]) => void;
+  onStudentView: () => void;
   onDelete: () => void;
   onPublish: () => void;
 }
 
 export function QuizBuilderSidebar({
-  activeTab,
-  onAddQuestion,
+  onStudentView,
   onDelete,
   onPublish,
 }: QuizBuilderSidebarProps) {
@@ -27,11 +24,12 @@ export function QuizBuilderSidebar({
           <Button
             variant="secondary"
             className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer whitespace-normal text-left"
+            onClick={onStudentView}
           >
             <GraduationCap className="h-4 w-4 shrink-0" />
             Student View
           </Button>
-          <Button 
+          <Button
             className="w-full gap-2 justify-start h-auto py-3 px-4 bg-blue-800 hover:bg-blue-900 text-white whitespace-normal text-left"
             onClick={onPublish}
           >

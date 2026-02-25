@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ChevronDown, MoreHorizontal, Filter } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { MoreHorizontal, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -25,7 +24,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export default function QuizList() {
-  const router = useRouter();
   const [quizzes, setQuizzes] = useState<QuizData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);

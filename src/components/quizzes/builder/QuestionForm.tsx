@@ -24,7 +24,7 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
   const [questionText, setQuestionText] = useState("");
   const [questionType, setQuestionType] = useState("multiple-choice");
   const [points, setPoints] = useState("5");
-  
+
   // State for answers
   const [correctAnswer, setCorrectAnswer] = useState("");
   const [incorrectAnswers, setIncorrectAnswers] = useState(["", "", ""]);
@@ -56,11 +56,18 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
         >
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="manual" id="manual" />
-            <Label htmlFor="manual" className="font-normal text-muted-foreground">Manual</Label>
+            <Label
+              htmlFor="manual"
+              className="font-normal text-muted-foreground"
+            >
+              Manual
+            </Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="bank" id="bank" />
-            <Label htmlFor="bank" className="font-normal text-muted-foreground">Question Bank</Label>
+            <Label htmlFor="bank" className="font-normal text-muted-foreground">
+              Question Bank
+            </Label>
           </div>
         </RadioGroup>
       </div>
@@ -69,10 +76,12 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
 
       {/* Question Name */}
       <div className="grid gap-2">
-        <Label htmlFor="name" className="text-[15px] font-medium">Question Name</Label>
-        <Input 
-          id="name" 
-          value={questionText} 
+        <Label htmlFor="name" className="text-[15px] font-medium">
+          Question Name
+        </Label>
+        <Input
+          id="name"
+          value={questionText}
           onChange={(e) => setQuestionText(e.target.value)}
           className="bg-card/50"
         />
@@ -94,11 +103,13 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
 
       {/* Number of Points */}
       <div className="grid gap-2">
-        <Label htmlFor="points" className="text-[15px] font-medium">Number of Points</Label>
-        <Input 
-          id="points" 
-          type="number" 
-          className="w-[200px] bg-card/50" 
+        <Label htmlFor="points" className="text-[15px] font-medium">
+          Number of Points
+        </Label>
+        <Input
+          id="points"
+          type="number"
+          className="w-[200px] bg-card/50"
           value={points}
           onChange={(e) => setPoints(e.target.value)}
         />
@@ -108,37 +119,40 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
       <div className="grid gap-4 pt-2">
         <Label className="text-lg font-medium">Answers</Label>
         <div className="rounded-lg border bg-card/30 p-4 grid gap-6">
-            
-            {/* Correct Answer */}
-            <div className="grid gap-2">
-                <Label className="text-blue-500 font-medium">Correct Answer</Label>
-                <Input 
-                    value={correctAnswer} 
-                    onChange={(e) => setCorrectAnswer(e.target.value)}
-                    className="border-blue-500/50 focus-visible:ring-blue-500/50"
-                />
-            </div>
+          {/* Correct Answer */}
+          <div className="grid gap-2">
+            <Label className="text-blue-500 font-medium">Correct Answer</Label>
+            <Input
+              value={correctAnswer}
+              onChange={(e) => setCorrectAnswer(e.target.value)}
+              className="border-blue-500/50 focus-visible:ring-blue-500/50"
+            />
+          </div>
 
-            {/* Possible Answers */}
-            {incorrectAnswers.map((ans, idx) => (
-                <div key={idx} className="grid gap-2">
-                    <Label className="text-muted-foreground font-medium">Possible Answer</Label>
-                    <Input 
-                        value={ans}
-                        onChange={(e) => {
-                            const newArr = [...incorrectAnswers];
-                            newArr[idx] = e.target.value;
-                            setIncorrectAnswers(newArr);
-                        }}
-                        className="bg-muted/30"
-                    />
-                </div>
-            ))}
+          {/* Possible Answers */}
+          {incorrectAnswers.map((ans, idx) => (
+            <div key={idx} className="grid gap-2">
+              <Label className="text-muted-foreground font-medium">
+                Possible Answer
+              </Label>
+              <Input
+                value={ans}
+                onChange={(e) => {
+                  const newArr = [...incorrectAnswers];
+                  newArr[idx] = e.target.value;
+                  setIncorrectAnswers(newArr);
+                }}
+                className="bg-muted/30"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="flex justify-end gap-3 pt-4">
-        <Button variant="outline" onClick={onCancel}>Cancel</Button>
+        <Button variant="outline" onClick={onCancel}>
+          Cancel
+        </Button>
         <Button onClick={handleSave}>Save changes</Button>
       </div>
     </div>

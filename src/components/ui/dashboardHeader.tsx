@@ -3,14 +3,12 @@ import { cn } from "@/lib/utils";
 
 interface DashboardHeaderProps {
   title: string;
-  description?: string;
   children?: React.ReactNode;
   className?: string;
 }
 
 export function DashboardHeader({
   title,
-  description,
   children,
   className,
 }: DashboardHeaderProps) {
