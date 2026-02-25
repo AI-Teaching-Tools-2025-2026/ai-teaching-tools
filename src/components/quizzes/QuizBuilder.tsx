@@ -101,8 +101,8 @@ export default function QuizBuilder() {
       <QuizBuilderSidebar
         activeTab={activeTab}
         onAddQuestion={handleAddQuestion}
-        onDelete={() => router.back()}
-        onPublish={() => console.log("Publishing...")}
+        onDelete={() => router.back()} // Gonna have to change later lol
+        onPublish={() => console.log("Publishing...")} // Placeholder
       />
     </div>
   );
