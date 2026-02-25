@@ -17,6 +17,7 @@ import { mockQuizTypes, mockSections } from "./mockData";
 import { QuizDetails } from "./builder/QuizDetails";
 import { QuestionList } from "./builder/QuestionList";
 import { BuilderQuestion, QuizTypeOption } from "@/types/quiz";
+import { QuizBuilderSidebar } from "./builder/QuizBuilderSidebar";
 
 type Tab = "details" | "questions";
 
@@ -29,9 +30,20 @@ export default function QuizBuilder() {
   );
   const [selectedSection, setSelectedSection] = useState(mockSections[0]);
 
+  const handleAddQuestion = (type: BuilderQuestion["type"]) => {
+    const newQ: BuilderQuestion = {
+      id: crypto.randomUUID(),
+      text: "",
+      type: type,
+      options: ["", "", "", ""],
+      correctAnswer: "",
+    };
+    setQuestions([...questions, newQ]);
+  };
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-[1600px]">
-      {/* Main Content Form - Spans 8 columns on large screens */}
+      {/* Main Content Form */}
       <div className="lg:col-span-9 flex flex-col gap-6">
         <Card className="border-border bg-card">
           <CardHeader>
@@ -85,67 +97,13 @@ export default function QuizBuilder() {
         </Card>
       </div>
 
-      {/* Sidebar Actions */}
-      <div className="lg:col-span-3 flex flex-col gap-6 ">
-        <Card className="border-border bg-card sticky top-6">
-          <CardHeader>
-            <CardTitle className="text-lg">Actions</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-3">
-            <Button
-              variant="secondary"
-              className="w-full gap-2 justify-start h-auto py-3 px-4  cursor-pointer"
-            >
-              <GraduationCap className="h-4 w-4" />
-              Student View
-            </Button>
-            <Button className="w-full gap-2 justify-start h-auto py-3 px-4 bg-blue-800 hover:bg-blue-900 text-white">
-              <Eye className="h-4 w-4" />
-              Publish Quiz
-            </Button>
-            <Button
-              className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer bg-[#9E4042] hover:bg-[#9E4042]/90 text-white"
-              onClick={() => router.back()}
-            >
-              <Trash2 className="h-4 w-4" />
-              Delete Quiz
-            </Button>
-          </CardContent>
-        </Card>
-
-        {activeTab === "questions" && (
-          <Card className="border-border bg-card sticky top-[280px]">
-            <CardHeader>
-              <CardTitle className="text-lg">Quick Add</CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-3">
-              <Button
-                variant="outline"
-                className="justify-start gap-2"
-                onClick={() => {
-                  /* Logic to add specific type */
-                  const newQ: BuilderQuestion = {
-                    id: crypto.randomUUID(),
-                    text: "",
-                    type: "multiple-choice",
-                    options: ["", "", "", ""],
-                    correctAnswer: "",
-                  };
-                  setQuestions([...questions, newQ]);
-                }}
-              >
-                <Plus className="h-4 w-4" /> Multiple Choice
-              </Button>
-              <Button variant="outline" className="justify-start gap-2">
-                <Plus className="h-4 w-4" /> True / False
-              </Button>
-              <Button variant="outline" className="justify-start gap-2">
-                <Plus className="h-4 w-4" /> Short Answer
-              </Button>
-            </CardContent>
-          </Card>
-        )}
-      </div>
+      {/* Sidebar */}
+      <QuizBuilderSidebar
+        activeTab={activeTab}
+        onAddQuestion={handleAddQuestion}
+        onDelete={() => router.back()}
+        onPublish={() => console.log("Publishing...")}
+      />
     </div>
   );
 }
