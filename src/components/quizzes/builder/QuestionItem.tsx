@@ -51,12 +51,12 @@ export function QuestionItem({ question: q, index }: QuestionItemProps) {
               className={cn(
                 "h-4 w-4 rounded-full border flex items-center justify-center",
                 opt === q.correctAnswer
-                  ? "border-green-500 bg-green-500/20"
+                  ? "border-white bg-black"
                   : "border-border",
               )}
             >
               {opt === q.correctAnswer && (
-                <div className="h-2 w-2 rounded-full bg-green-500" />
+                <div className="h-2 w-2 rounded-full bg-white" />
               )}
             </div>
             <span

@@ -16,9 +16,10 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:8000/auth/logout",
-        {}, 
-        { withCredentials: true } 
+      await axios.post(
+        "http://localhost:8000/auth/logout",
+        {},
+        { withCredentials: true },
       );
 
       router.push("/courses");
@@ -67,8 +68,10 @@ export default function Navbar() {
                 <span>Settings</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator className="bg-neutral-600" />
-              <DropdownMenuItem className="text-neutral-50 focus:bg-neutral-600 focus:text-neutral-50"
-                onClick={handleLogout}>
+              <DropdownMenuItem
+                className="text-neutral-50 focus:bg-neutral-600 focus:text-neutral-50"
+                onClick={handleLogout}
+              >
                 <LogOut className="mr-2 h-4 w-4" />
                 <span>Log out</span>
               </DropdownMenuItem>

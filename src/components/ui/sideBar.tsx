@@ -23,15 +23,12 @@ const drawerList = [
   { name: "Question Banks", href: "/dashboard/question-banks", icon: Database },
 ];
 
-interface SideNavbarProps {
+interface SideBarProps {
   isCollapsed: boolean;
   toggleSidebar: () => void;
 }
 
-export default function SideNavbar({
-  isCollapsed,
-  toggleSidebar,
-}: SideNavbarProps) {
+export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
   const pathname = usePathname();
 
   return (

@@ -3,6 +3,8 @@
 import React from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,17 +28,13 @@ export function QuizDetails({
   setSelectedSection,
 }: QuizDetailsProps) {
   return (
-    <div className="w-full max-w-3xl bg-card border border-border rounded-lg p-8 shadow-sm flex flex-col gap-6">
+    <div className="w-full max-w-3xl mx-auto bg-card border border-border rounded-lg p-8 shadow-sm flex flex-col gap-6">
       {/* Title Input */}
       <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-foreground">
           Quiz Title
         </label>
-        <input
-          type="text"
-          placeholder="Enter quiz title"
-          className="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-        />
+        <Input type="text" placeholder="Enter quiz title" />
       </div>
 
       {/* Description Textarea */}
@@ -44,13 +42,13 @@ export function QuizDetails({
         <label className="text-sm font-medium text-foreground">
           Description
         </label>
-        <textarea
+        <Textarea
           placeholder="Enter quiz description"
-          className="flex min-h-[120px] w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 resize-y"
+          className="min-h-[120px] resize-y"
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Quiz Type Select */}
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-foreground">
@@ -58,12 +56,12 @@ export function QuizDetails({
           </label>
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background/50 px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer">
                 {selectedQuizType.name}
                 <ChevronDown className="h-4 w-4 text-muted-foreground" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-[300px]">
+            <DropdownMenuContent className="w-[200px]">
               {mockQuizTypes.map((type) => (
                 <DropdownMenuItem
                   key={type.id}
@@ -82,12 +80,12 @@ export function QuizDetails({
           <label className="text-sm font-medium text-foreground">Section</label>
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background/50 px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer">
                 {selectedSection}
                 <ChevronDown className="h-4 w-4 text-muted-foreground" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-[300px]">
+            <DropdownMenuContent className="w-[200px]">
               {mockSections.map((section) => (
                 <DropdownMenuItem
                   key={section}
@@ -100,6 +98,12 @@ export function QuizDetails({
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
+
+        {/* Points Input */}
+        <div className="flex flex-col gap-2">
+          <label className="text-sm font-medium text-foreground">Points</label>
+          <Input type="number" placeholder="100" min={0} />
+        </div>
       </div>
 
       <div className="h-px bg-border w-full my-2" />
@@ -108,7 +112,7 @@ export function QuizDetails({
       <div className="flex justify-end gap-3">
         <Button
           variant="ghost"
-          className="text-muted-foreground hover:bg-muted hover:text-foreground"
+          className="text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer"
         >
           Cancel
         </Button>
