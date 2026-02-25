@@ -18,7 +18,7 @@ export function QuestionList({ questions }: QuestionListProps) {
       ))}
 
       {/* Add Question Button */}
-      <button className="w-full border border-dashed border-primary/50 rounded-lg p-8 flex flex-col items-center justify-center gap-3 hover:bg-primary/5 transition-colors group bg-card">
+      <button className="w-full border border-dashed border-primary/50 rounded-lg p-8 flex flex-col items-center justify-center gap-3 hover:bg-primary/5 transition-colors group bg-card cursor-pointer">
         <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground shadow-lg group-hover:scale-110 transition-transform">
           <Plus className="h-5 w-5" />
         </div>

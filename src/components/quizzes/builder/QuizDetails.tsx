@@ -56,7 +56,7 @@ export function QuizDetails({
           </label>
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer">
                 {selectedQuizType.name}
                 <ChevronDown className="h-4 w-4 text-muted-foreground" />
               </button>
@@ -80,7 +80,7 @@ export function QuizDetails({
           <label className="text-sm font-medium text-foreground">Section</label>
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer">
                 {selectedSection}
                 <ChevronDown className="h-4 w-4 text-muted-foreground" />
               </button>
@@ -112,7 +112,7 @@ export function QuizDetails({
       <div className="flex justify-end gap-3">
         <Button
           variant="ghost"
-          className="text-muted-foreground hover:bg-muted hover:text-foreground"
+          className="text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer"
         >
           Cancel
         </Button>

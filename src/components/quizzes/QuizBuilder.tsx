@@ -54,7 +54,7 @@ export default function QuizBuilder() {
                 <button
                   onClick={() => setActiveTab("details")}
                   className={cn(
-                    "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                    "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer",
                     activeTab === "details"
                       ? "bg-background text-foreground shadow-sm"
                       : "text-muted-foreground hover:text-foreground",
@@ -65,7 +65,7 @@ export default function QuizBuilder() {
                 <button
                   onClick={() => setActiveTab("questions")}
                   className={cn(
-                    "px-4 py-1.5 rounded-md text-sm font-medium transition-all",
+                    "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer",
                     activeTab === "questions"
                       ? "bg-background text-foreground shadow-sm"
                       : "text-muted-foreground hover:text-foreground",
