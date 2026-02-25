@@ -47,37 +47,6 @@ export function QuizBuilderSidebar({
           </Button>
         </CardContent>
       </Card>
-
-      {activeTab === "questions" && (
-        <Card className="border-border bg-card sticky top-[280px]">
-          <CardHeader>
-            <CardTitle className="text-lg">Quick Add</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-3">
-            <Button
-              variant="outline"
-              className="justify-start gap-2"
-              onClick={() => onAddQuestion("multiple-choice")}
-            >
-              <Plus className="h-4 w-4" /> Multiple Choice
-            </Button>
-            <Button 
-              variant="outline" 
-              className="justify-start gap-2"
-              onClick={() => onAddQuestion("true-false")}
-            >
-              <Plus className="h-4 w-4" /> True / False
-            </Button>
-            <Button 
-              variant="outline" 
-              className="justify-start gap-2"
-              onClick={() => onAddQuestion("short-answer")}
-            >
-              <Plus className="h-4 w-4" /> Short Answer
-            </Button>
-          </CardContent>
-        </Card>
-      )}
     </div>
   );
 }
