@@ -32,7 +32,7 @@ export default function QuizBuilder() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-[1600px]">
       {/* Main Content Form - Spans 8 columns on large screens */}
-      <div className="lg:col-span-8 flex flex-col gap-6">
+      <div className="lg:col-span-9 flex flex-col gap-6">
         <Card className="border-border bg-card">
           <CardHeader>
             <div className="flex items-center justify-between">
@@ -85,8 +85,8 @@ export default function QuizBuilder() {
         </Card>
       </div>
 
-      {/* Sidebar Actions - Spans 4 columns on large screens */}
-      <div className="lg:col-span-4 flex flex-col gap-6 ">
+      {/* Sidebar Actions */}
+      <div className="lg:col-span-3 flex flex-col gap-6 ">
         <Card className="border-border bg-card sticky top-6">
           <CardHeader>
             <CardTitle className="text-lg">Actions</CardTitle>
@@ -96,16 +96,15 @@ export default function QuizBuilder() {
               variant="secondary"
               className="w-full gap-2 justify-start h-auto py-3 px-4  cursor-pointer"
             >
-              <Eye className="h-4 w-4" />
+              <GraduationCap className="h-4 w-4" />
               Student View
             </Button>
-            <Button className="w-full gap-2 justify-start h-auto py-3 px-4 bg-primary hover:bg-primary/90">
-              <GraduationCap className="h-4 w-4" />
+            <Button className="w-full gap-2 justify-start h-auto py-3 px-4 bg-blue-800 hover:bg-blue-900 text-white">
+              <Eye className="h-4 w-4" />
               Publish Quiz
             </Button>
             <Button
-              variant="destructive"
-              className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer"
+              className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer bg-[#9E4042] hover:bg-[#9E4042]/90 text-white"
               onClick={() => router.back()}
             >
               <Trash2 className="h-4 w-4" />
