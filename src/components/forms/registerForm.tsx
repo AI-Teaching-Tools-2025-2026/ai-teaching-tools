@@ -14,6 +14,7 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   // Validate password and return an array of unmet requirements
@@ -56,6 +57,7 @@ export default function RegisterForm() {
       return;
     }
 
+    setIsLoading(true);
     try {
       const response = await axios.post("http://localhost:8000/auth/register", {
         username,
@@ -73,6 +75,8 @@ export default function RegisterForm() {
       } else {
         alert("An error occurred. Try again.");
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -80,6 +84,7 @@ export default function RegisterForm() {
     <form
       className="flex flex-col items-center gap-4 mt-8"
       onSubmit={handleSubmit}
+      aria-busy={isLoading}
     >
       <div className="grid w-full max-w-sm gap-1.5">
         <Label htmlFor="username">Username</Label>
@@ -89,6 +94,7 @@ export default function RegisterForm() {
           placeholder="Enter your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          disabled={isLoading}
         />
       </div>
 
@@ -100,6 +106,7 @@ export default function RegisterForm() {
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          disabled={isLoading}
         />
       </div>
 
@@ -110,6 +117,7 @@ export default function RegisterForm() {
           placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          disabled={isLoading}
         />
       </div>
 
@@ -120,6 +128,7 @@ export default function RegisterForm() {
           placeholder="Confirm your password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
+          disabled={isLoading}
         />
       </div>
 
@@ -131,8 +140,35 @@ export default function RegisterForm() {
         </div>
       )}
 
-      <Button type="submit" className="mt-2">
-        Register
+      <Button type="submit" className="mt-2" disabled={isLoading}>
+        {isLoading ? (
+          <span className="inline-flex items-center gap-2">
+            <svg
+              className="animate-spin h-4 w-4 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+              ></path>
+            </svg>
+            Registering...
+          </span>
+        ) : (
+          "Register"
+        )}
       </Button>
     </form>
   );
