@@ -11,11 +11,14 @@ class AppSettings(BaseSettings):
         # Point to the .env file in the root directory
         env_file = str(ROOT_DIR / ".env")
         env_file_encoding = "utf-8"
-        env_prefix = "app_"
 
-    # MongoDB
-    MONGO_DB_URL: str
-    MONGO_DB_DB: str
+    # MongoDB Clusters
+    INSTRUCTOR_MONGODB_URL: str
+    STUDENT_MONGODB_URL: str
+
+    # Databases
+    INSTRUCTOR_MAIN_DB: str 
+    STUDENT_DB: str
 
     # JWT
     JWT_SECRET_KEY: str
