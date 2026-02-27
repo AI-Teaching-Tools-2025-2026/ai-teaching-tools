@@ -1,26 +1,19 @@
-from fastapi import APIRouter, HTTPException, Response, Request
+from fastapi import APIRouter, HTTPException, Response, Request, Depends
 from .models import UserLogin, UserCreate
 from .jwt_service import create_access_token, verify_access_token
 from configs.settings import settings
+from db.utils import get_instructor_db
 import uuid
 from passlib.context import CryptContext
 
-router = APIRouter(prefix="/auth", tags=["Auth"])
+auth_router = APIRouter(prefix="/auth", tags=["Auth"])
 
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
-# imports the app basically, to avoid circular dependency from main 
-def get_current_app(): 
-    import importlib 
-    module = importlib.import_module("main")
-    return getattr(module, "app")
+@auth_router.post("/register")
+async def register_user(user_data: UserCreate, db = Depends(get_instructor_db)) -> dict:
 
-
-@router.post("/register")
-async def register_user(user_data: UserCreate) -> dict:
-    app = get_current_app()
-
-    collection = app.mongodb.get_collection("users")
+    collection = db["users"]
 
     existing_user = await collection.find_one({"username": user_data.username})
     if existing_user:
@@ -41,11 +34,10 @@ async def register_user(user_data: UserCreate) -> dict:
     return {"message": "User created successfully!"}
 
 
-@router.post("/login")
-async def login_user(user_data: UserLogin, response: Response) -> dict:
-    app = get_current_app()
+@auth_router.post("/login")
+async def login_user(user_data: UserLogin, response: Response, db = Depends(get_instructor_db)) -> dict:
 
-    collection = app.mongodb.get_collection("users")
+    collection = db["users"]
 
     user = await collection.find_one({"username": user_data.username})
     if not user:
@@ -69,15 +61,15 @@ async def login_user(user_data: UserLogin, response: Response) -> dict:
     return {"message": "Logged in successfully"}
 
 
-@router.post("/logout")
+@auth_router.post("/logout")
 async def logout(response: Response):
     response.delete_cookie("access_token", path="/")
 
     return {"message": "Logged out"}
 
 
-@router.get("/username")
-async def me(request: Request):
+@auth_router.get("/username")
+async def me(request: Request, db = Depends(get_instructor_db)):
     token = request.cookies.get("access_token")
     if not token:
         raise HTTPException(status_code=401, detail="not authenticated")
@@ -86,8 +78,7 @@ async def me(request: Request):
     if not user_id:
         raise HTTPException(status_code=401, detail="invalid or expired token")
 
-    app = get_current_app()
-    user = await app.mongodb.get_collection("users").find_one({"_id": user_id})
+    user = await db["users"].find_one({"_id": user_id})
 
     return {
         "username": user["username"]

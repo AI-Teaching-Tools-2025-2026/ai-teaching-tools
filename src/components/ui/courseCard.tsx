@@ -9,26 +9,31 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 
-export default function CourseCard() {
+export default function CourseCard({ course }: any) {
   return (
-    <Link href="/dashboard" className="inline-block">
+    <Link href={`/courses/${course._id}`} className="inline-block">
       <Card className="max-w-[345px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
         <div className="relative w-full h-[140px]">
-          <Image
-            src="/blueCourseCover.png"
+          {/* <Image
+            src={course.imageSrc || "/blueCourseCover.png"}
             alt="placeholder alt text"
             fill
             className="object-cover"
+          /> */}
+          <img
+              src={course.imageSrc || "/blueCourseCover.png"}
+              alt={course.courseTitle}
+              className="w-full h-full object-cover"
           />
         </div>
         <CardHeader className="pb-2">
-          <CardTitle>Course 1</CardTitle>
+          <CardTitle>{course.courseTitle}</CardTitle>
         </CardHeader>
         <CardContent>
           <CardDescription>
-            Fall 2025
+            {course.courseTerm}
             <br />
-            Intro to Psychology by Jane Doe
+            {course.courseDescription}
           </CardDescription>
         </CardContent>
       </Card>
