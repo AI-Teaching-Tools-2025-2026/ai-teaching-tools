@@ -1,17 +1,15 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
-from modules.auth.service import router as api_router
-from db.utils import get_mongodb
+from db.utils import Database
+from modules.auth.routes import auth_router
+from modules.course.routes import courses_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # set up MongoDB
-    mongodb = get_mongodb()
-    app.mongodb = mongodb
+    app.db = Database()
     yield
-    # close MongoDB connection
-    mongodb.client.close()
+    app.db.close()
 
 app = FastAPI(lifespan=lifespan)
 
@@ -23,7 +21,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(api_router)
+app.include_router(auth_router)
+app.include_router(courses_router)
 
 @app.get("/")
 async def read_root() -> dict[str, str]:
