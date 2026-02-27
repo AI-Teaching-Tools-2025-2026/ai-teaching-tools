@@ -14,7 +14,12 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [usernameError, setUsernameError] = useState("");
   const router = useRouter();
+
+  // whether any of the current validation errors relate to the password field
+  const passwordHasError = errors.some((err) => /password/i.test(err));
 
   // Validate password and return an array of unmet requirements
   const validatePassword = (pw: string) => {
@@ -56,6 +61,7 @@ export default function RegisterForm() {
       return;
     }
 
+    setIsLoading(true);
     try {
       const response = await axios.post("http://localhost:8000/auth/register", {
         username,
@@ -69,10 +75,23 @@ export default function RegisterForm() {
       router.push("/login");
     } catch (error: any) {
       if (error.response) {
-        alert(error.response.data.detail);
+        const detail = error.response.data?.detail ?? "";
+        // If the server indicates the username is already taken, show inline username error
+        const usernameTaken =
+          error.response.status === 409 || /username.*(exists|taken|already|in use)|already exists|user.*exists/i.test(detail);
+
+        if (usernameTaken) {
+          setUsernameError("Username already exists");
+          // clear generic errors to avoid duplication
+          setErrors([]);
+        } else {
+          alert(detail);
+        }
       } else {
         alert("An error occurred. Try again.");
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -80,6 +99,7 @@ export default function RegisterForm() {
     <form
       className="flex flex-col items-center gap-4 mt-8"
       onSubmit={handleSubmit}
+      aria-busy={isLoading}
     >
       <div className="grid w-full max-w-sm gap-1.5">
         <Label htmlFor="username">Username</Label>
@@ -88,8 +108,19 @@ export default function RegisterForm() {
           type="text"
           placeholder="Enter your username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => {
+            setUsername(e.target.value);
+            if (usernameError) setUsernameError("");
+          }}
+          disabled={isLoading}
+          aria-invalid={!!usernameError}
+          className={usernameError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
         />
+        {usernameError && (
+          <div className="text-destructive text-sm mt-1">
+            <span className="font-bold">{usernameError}</span>
+          </div>
+        )}
       </div>
 
       <div className="grid w-full max-w-sm gap-1.5">
@@ -100,6 +131,7 @@ export default function RegisterForm() {
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          disabled={isLoading}
         />
       </div>
 
@@ -110,6 +142,9 @@ export default function RegisterForm() {
           placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          aria-invalid={passwordHasError}
+          className={passwordHasError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
+          disabled={isLoading}
         />
       </div>
 
@@ -120,19 +155,49 @@ export default function RegisterForm() {
           placeholder="Confirm your password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
+          disabled={isLoading}
         />
       </div>
 
       {errors.length > 0 && (
         <div className="text-destructive text-sm mt-1 text-left w-full max-w-sm">
           {errors.map((err, index) => (
-            <div key={index}>• {err}</div>
+            <div key={index}>
+              • <span className="font-bold">{err}</span>
+            </div>
           ))}
         </div>
       )}
 
-      <Button type="submit" className="mt-2">
-        Register
+      <Button type="submit" className="mt-2" disabled={isLoading}>
+        {isLoading ? (
+          <span className="inline-flex items-center gap-2">
+            <svg
+              className="animate-spin h-4 w-4 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+              ></path>
+            </svg>
+            Registering...
+          </span>
+        ) : (
+          "Register"
+        )}
       </Button>
     </form>
   );
