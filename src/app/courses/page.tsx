@@ -3,9 +3,19 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "@/components/ui/navbar";
 import CourseCard from "@/components/ui/courseCard";
+import AddCourses from "@/components/forms/addCourses";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 
 export default function CoursesPage() {
   const [courses, setCourses] = useState<any[]>([]);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   useEffect(() => {
     const loadCourses = async () => {
@@ -26,8 +36,30 @@ export default function CoursesPage() {
   }, []);
 
   return (
-    <div>
+    <div className="relative">
       <Navbar />
+
+      <div className="absolute top-6 right-6 z-50">
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+          <SheetTrigger asChild>
+            <Button onClick={() => setIsSheetOpen(true)}>Add Course</Button>
+          </SheetTrigger>
+
+          <SheetContent side="right">
+            <SheetHeader>
+              <SheetTitle>Courses</SheetTitle>
+            </SheetHeader>
+            <div className="px-4">
+              <AddCourses
+                onSuccess={() => {
+                  setIsSheetOpen(false);
+                }}
+              />
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+
       <div className="container mx-auto px-4 mt-25">
         <h1 className="text-2xl font-bold mt-8 text-center">Courses</h1>
         <div className="mt-8">
