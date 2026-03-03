@@ -4,11 +4,13 @@ import type { NextRequest } from "next/server";
 export function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // skip Next internals and API routes
+  // skip Next internals, API routes, and static images
+  // Placeholder images don't have cookies (weird bug)
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
-    pathname.startsWith("/favicon")
+    pathname.startsWith("/favicon") ||
+    pathname.match(/\.(png|jpe?g|webp|svg|gif)$/)
   ) {
     return NextResponse.next();
   }
