@@ -1,23 +1,59 @@
-import React from "react";
+"use client";
+import Image from "next/image";
+import { DashboardHeader } from "@/components/ui/dashboardHeader";
 
-// In Next.js App Router, dynamic route parameters are passed via the `params` prop.
-export default async function CourseDashboard({
-  params,
-}: {
-  params: { courseId: string };
-}) {
-  // Await the params object if you are using Next.js 15+
-  const { courseId } = await params; 
-
-  // You can now use `courseId` to fetch data, render specific components, or perform CRUD operations.
-  // Example: const courseData = await fetchCourseById(courseId);
-
+export default function DashboardPage() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold">Course Dashboard</h1>
-      <p>Managing course ID: {courseId}</p>
-      
-      {/* Add your specific course components here */}
+    <div className="flex flex-col gap-8 p-8 max-w-[1600px] mx-auto w-full">
+      <DashboardHeader title="Dashboard" />
+
+      <div className="grid grid-cols-16 gap-4">
+        {/* Left Column - 10/16 */}
+        <div className="col-span-10 space-y-4">
+          <div className="bg-muted rounded-lg">
+            <h2 className="p-4 text-xl font-bold">Overview</h2>
+            <div className="p-8">
+              <Image
+                src="/barChartPlaceholder.png"
+                width={800}
+                height={400}
+                alt="Bar Chart Placeholder"
+              />
+            </div>
+          </div>
+
+          <div className="bg-muted rounded-lg">
+            <h2 className="p-4 text-xl font-bold">More Data</h2>
+            <div className="p-8">
+              <Image
+                src="/barChartPlaceholder.png"
+                width={800}
+                height={400}
+                alt="Bar Chart Placeholder"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - 6/16 */}
+        <div className="col-span-6 bg-muted rounded-lg">
+          <h2 className="p-4 text-xl font-bold">Student-Specific Data</h2>
+          <div className="p-8 space-y-4">
+            <Image
+              src="/pieChartPlaceholder.png"
+              width={400}
+              height={400}
+              alt="Pie Chart Placeholder"
+            />
+            <Image
+              src="/pieChartPlaceholder.png"
+              width={400}
+              height={400}
+              alt="Pie Chart Placeholder"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
