@@ -16,3 +16,20 @@ async def retrieve_courses(request: Request, db=Depends(get_instructor_db)):
 
     courses = await db["courses"].find({"userID": user_id}).to_list()
     return courses
+
+# Make sure user actually owns the course (Dylantest shoudl not be able to access it)
+@courses_router.get("/{course_id}")
+async def get_course(course_id: str, request: Request, db=Depends(get_instructor_db)):
+    token = request.cookies.get("access_token")
+    if not token:
+        raise HTTPException(401, "not authenticated")
+
+    user_id = verify_access_token(token)
+    if not user_id:
+        raise HTTPException(401, "invalid or expired token")
+
+    course = await db["courses"].find_one({"_id": course_id, "userID": user_id})
+    if not course:
+        raise HTTPException(403, "Not authorized to access this course or it does not exist")
+
+    return {"message": "Access granted"}
