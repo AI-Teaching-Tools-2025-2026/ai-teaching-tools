@@ -1,4 +1,4 @@
-import QuizList from "@/components/quizzes/QuizTable";
+import QuizTable from "@/components/quizzes/QuizTable";
 import { DashboardHeader } from "@/components/ui/dashboardHeader";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
@@ -15,7 +15,7 @@ export default function QuizzesPage() {
         </Button>
       </DashboardHeader>
 
-      <QuizList />
+      <QuizTable />
     </div>
   );
 }
