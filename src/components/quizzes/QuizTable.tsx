@@ -23,7 +23,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export default function QuizList() {
+export default function QuizTable() {
   const [quizzes, setQuizzes] = useState<QuizData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);

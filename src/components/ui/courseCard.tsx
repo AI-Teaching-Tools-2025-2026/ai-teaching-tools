@@ -21,9 +21,9 @@ export default function CourseCard({ course }: any) {
             className="object-cover"
           /> */}
           <img
-              src={course.imageSrc || "/blueCourseCover.png"}
-              alt={course.courseTitle}
-              className="w-full h-full object-cover"
+            src={course.imageSrc || "/blueCourseCover.png"}
+            alt={course.courseTitle}
+            className="w-full h-full object-cover"
           />
         </div>
         <CardHeader className="pb-2">

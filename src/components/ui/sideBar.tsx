@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import {
   LayoutDashboard,
   NotebookTabs,
@@ -11,18 +11,6 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const drawerList = [
-  { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { name: "Grades", href: "/dashboard/grades", icon: NotebookTabs },
-  { name: "Quizzes", href: "/dashboard/quizzes", icon: FileQuestion },
-  {
-    name: "Assignment Builder",
-    href: "/dashboard/assignment-builder",
-    icon: SquarePen,
-  },
-  { name: "Question Banks", href: "/dashboard/question-banks", icon: Database },
-];
-
 interface SideBarProps {
   isCollapsed: boolean;
   toggleSidebar: () => void;
@@ -30,6 +18,28 @@ interface SideBarProps {
 
 export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
   const pathname = usePathname();
+  const params = useParams();
+  const courseId = params?.courseId as string;
+
+  const drawerList = [
+    { name: "Dashboard", href: `/courses/${courseId}`, icon: LayoutDashboard },
+    { name: "Grades", href: `/courses/${courseId}/grades`, icon: NotebookTabs },
+    {
+      name: "Quizzes",
+      href: `/courses/${courseId}/quizzes`,
+      icon: FileQuestion,
+    },
+    {
+      name: "Assignment Builder",
+      href: `/courses/${courseId}/quizzes/builder`,
+      icon: SquarePen,
+    },
+    {
+      name: "Question Banks",
+      href: `/courses/${courseId}/question-banks`,
+      icon: Database,
+    },
+  ];
 
   return (
     <aside
@@ -62,7 +72,10 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
       </div>
       <nav className="flex flex-col gap-1 overflow-x-hidden">
         {drawerList.map((item) => {
-          const isActive = pathname === item.href;
+          const isActive =
+            pathname === item.href ||
+            (item.href !== `/courses/${courseId}` &&
+              pathname.startsWith(item.href));
           return (
             <Link
               key={item.name}

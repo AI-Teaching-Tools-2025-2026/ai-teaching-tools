@@ -78,7 +78,10 @@ export default function RegisterForm() {
         const detail = error.response.data?.detail ?? "";
         // If the server indicates the username is already taken, show inline username error
         const usernameTaken =
-          error.response.status === 409 || /username.*(exists|taken|already|in use)|already exists|user.*exists/i.test(detail);
+          error.response.status === 409 ||
+          /username.*(exists|taken|already|in use)|already exists|user.*exists/i.test(
+            detail,
+          );
 
         if (usernameTaken) {
           setUsernameError("Username already exists");
@@ -114,7 +117,11 @@ export default function RegisterForm() {
           }}
           disabled={isLoading}
           aria-invalid={!!usernameError}
-          className={usernameError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
+          className={
+            usernameError
+              ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive"
+              : ""
+          }
         />
         {usernameError && (
           <div className="text-destructive text-sm mt-1">
@@ -143,7 +150,11 @@ export default function RegisterForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           aria-invalid={passwordHasError}
-          className={passwordHasError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
+          className={
+            passwordHasError
+              ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive"
+              : ""
+          }
           disabled={isLoading}
         />
       </div>
