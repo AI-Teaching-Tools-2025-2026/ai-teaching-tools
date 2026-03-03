@@ -17,8 +17,8 @@ export default function LoginForm() {
   const router = useRouter();
 
   const handleLogin = async () => {
-  // clear previous field errors
-  setAuthError("");
+    // clear previous field errors
+    setAuthError("");
     setIsLoading(true);
     try {
       const response = await axios.post(
@@ -38,9 +38,13 @@ export default function LoginForm() {
         const detail = error.response.data?.detail ?? "";
         // Detect username or password related failures by inspecting status or message text
         const usernameFail =
-          error.response.status === 404 || /username|user not found|no account|does not exist|invalid user/i.test(detail);
+          error.response.status === 404 ||
+          /username|user not found|no account|does not exist|invalid user/i.test(
+            detail,
+          );
         const passwordFail =
-          error.response.status === 401 || /password|incorrect|invalid password/i.test(detail);
+          error.response.status === 401 ||
+          /password|incorrect|invalid password/i.test(detail);
 
         if (usernameFail || passwordFail) {
           // show a single generic message when either field fails
@@ -78,7 +82,11 @@ export default function LoginForm() {
           }}
           disabled={isLoading}
           aria-invalid={!!authError}
-          className={authError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
+          className={
+            authError
+              ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive"
+              : ""
+          }
         />
       </div>
 
@@ -94,7 +102,11 @@ export default function LoginForm() {
           }}
           disabled={isLoading}
           aria-invalid={!!authError}
-          className={authError ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive" : ""}
+          className={
+            authError
+              ? "border-destructive focus-visible:ring-1 focus-visible:ring-destructive"
+              : ""
+          }
         />
         {authError && (
           <div className="text-destructive text-sm mt-1">

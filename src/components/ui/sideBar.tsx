@@ -24,13 +24,21 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
   const drawerList = [
     { name: "Dashboard", href: `/courses/${courseId}`, icon: LayoutDashboard },
     { name: "Grades", href: `/courses/${courseId}/grades`, icon: NotebookTabs },
-    { name: "Quizzes", href: `/courses/${courseId}/quizzes`, icon: FileQuestion },
+    {
+      name: "Quizzes",
+      href: `/courses/${courseId}/quizzes`,
+      icon: FileQuestion,
+    },
     {
       name: "Assignment Builder",
       href: `/courses/${courseId}/quizzes/builder`,
       icon: SquarePen,
     },
-    { name: "Question Banks", href: `/courses/${courseId}/question-banks`, icon: Database },
+    {
+      name: "Question Banks",
+      href: `/courses/${courseId}/question-banks`,
+      icon: Database,
+    },
   ];
 
   return (
@@ -64,7 +72,10 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
       </div>
       <nav className="flex flex-col gap-1 overflow-x-hidden">
         {drawerList.map((item) => {
-          const isActive = pathname === item.href || (item.href !== `/courses/${courseId}` && pathname.startsWith(item.href));
+          const isActive =
+            pathname === item.href ||
+            (item.href !== `/courses/${courseId}` &&
+              pathname.startsWith(item.href));
           return (
             <Link
               key={item.name}
