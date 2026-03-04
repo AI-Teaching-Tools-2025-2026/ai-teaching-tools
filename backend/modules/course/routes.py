@@ -4,8 +4,8 @@ from modules.auth.jwt_service import verify_access_token
 
 courses_router = APIRouter(prefix="/courses", tags=["Courses"])
 
-@courses_router.get("/retrieve_courses")
-async def retrieve_courses(request: Request, db=Depends(get_instructor_db)):
+@courses_router.get("/fetch_courses")
+async def fetch_courses(request: Request, db=Depends(get_instructor_db)):
     token = request.cookies.get("access_token")
     if not token:
         raise HTTPException(401, "not authenticated")

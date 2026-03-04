@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 from db.utils import Database
 from modules.auth.routes import auth_router
 from modules.course.routes import courses_router
+from modules.quiz.routes import quiz_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -23,6 +24,8 @@ app.add_middleware(
 
 app.include_router(auth_router)
 app.include_router(courses_router)
+app.include_router(quiz_router)
+
 
 @app.get("/")
 async def read_root() -> dict[str, str]:

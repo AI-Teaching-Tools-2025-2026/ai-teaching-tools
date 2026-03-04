@@ -1,4 +1,4 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from pathlib import Path
 
 # This points to backend/configs
@@ -7,10 +7,12 @@ CURRENT_FILE_DIR = Path(__file__).resolve().parent
 ROOT_DIR = CURRENT_FILE_DIR.parent.parent
 
 class AppSettings(BaseSettings):
-    class Config:
-        # Point to the .env file in the root directory
-        env_file = str(ROOT_DIR / ".env")
-        env_file_encoding = "utf-8"
+
+    model_config = SettingsConfigDict(
+        env_file=str(ROOT_DIR / ".env"),
+        env_file_encoding="utf-8",
+        extra='ignore'  
+    )
 
     # MongoDB Clusters
     INSTRUCTOR_MONGODB_URL: str

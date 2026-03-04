@@ -8,10 +8,10 @@ import SideBar from "@/components/ui/sideBar";
 import { cn } from "@/lib/utils";
 
 export default function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+    children,
+  }: {
+    children: React.ReactNode;
+  }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isAuthorized, setIsAuthorized] = useState(false);
   const router = useRouter();
@@ -22,7 +22,7 @@ export default function DashboardLayout({
   useEffect(() => {
     const verifyCourseAccess = async () => {
       try {
-        await axios.get(`http://localhost:8000/courses/${courseId}`, {
+        await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${courseId}`, {
           withCredentials: true,
         });
         setIsAuthorized(true);

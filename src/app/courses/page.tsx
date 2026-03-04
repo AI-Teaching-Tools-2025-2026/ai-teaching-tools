@@ -11,7 +11,7 @@ export default function CoursesPage() {
     const loadCourses = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/courses/retrieve_courses`,
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/fetch_courses`,
           { withCredentials: true },
         );
 

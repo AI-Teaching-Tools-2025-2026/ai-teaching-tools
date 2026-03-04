@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
 import { MoreHorizontal, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,13 +28,13 @@ export default function QuizTable() {
   const [quizzes, setQuizzes] = useState<QuizData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);
-
-  console.log("Quizzes data:", quizzes);
+  const params = useParams();
+  const courseId = params.courseId as string;
 
   useEffect(() => {
     const loadQuizzes = async () => {
       try {
-        const data = await quizService.getAllQuizzes();
+        const data = await quizService.getAllQuizzes(courseId as string);
         setQuizzes(data);
       } catch (error) {
         console.error("Failed to load quizzes:", error);
@@ -41,8 +42,10 @@ export default function QuizTable() {
         setLoading(false);
       }
     };
-    loadQuizzes();
+    if (courseId) loadQuizzes();
   }, []);
+
+  console.log("Quizzes data:", quizzes);
 
   const allSelected =
     selectedQuizzes.length === quizzes.length && quizzes.length > 0;
@@ -51,7 +54,7 @@ export default function QuizTable() {
     if (allSelected) {
       setSelectedQuizzes([]);
     } else {
-      setSelectedQuizzes(quizzes.map((q) => q.quizId));
+      setSelectedQuizzes(quizzes.map((q) => q._id));
     }
   };
 
@@ -62,6 +65,26 @@ export default function QuizTable() {
       setSelectedQuizzes([...selectedQuizzes, id]);
     }
   };
+
+  const handleDelete = async (quizId: string) => {
+    try {
+      await quizService.deleteQuizById(quizId);
+
+      setQuizzes((prev) => prev.filter((q) => q._id !== quizId));
+    } catch (error) {
+      console.error("Failed to delete quiz", error);
+    }
+  };
+
+  const handleDuplicate = async (quizId: string) => {
+    try {
+      const newQuiz = await quizService.duplicateQuizById(quizId);
+
+      setQuizzes((prev) => [...prev, newQuiz]);
+    } catch (error) {
+      console.error("Failed to duplicate quiz", error);
+    }
+};
 
   return (
     <div className="flex flex-col gap-4">
@@ -119,17 +142,17 @@ export default function QuizTable() {
               </TableRow>
             ) : (
               quizzes.map((quiz) => {
-                const isSelected = selectedQuizzes.includes(quiz.quizId);
+                const isSelected = selectedQuizzes.includes(quiz._id);
                 return (
                   <TableRow
-                    key={quiz.quizId}
+                    key={quiz._id}
                     data-state={isSelected ? "selected" : undefined}
                     className="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
                   >
                     <TableCell className="pl-4">
                       <Checkbox
                         checked={isSelected}
-                        onCheckedChange={() => toggleSelectQuiz(quiz.quizId)}
+                        onCheckedChange={() => toggleSelectQuiz(quiz._id)}
                         aria-label={`Select ${quiz.title}`}
                       />
                     </TableCell>
@@ -177,20 +200,18 @@ export default function QuizTable() {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem
-                            onClick={() => console.log("Edit", quiz.quizId)}
+                            onClick={() => console.log("Edit", quiz._id)}
                           >
                             Edit
                           </DropdownMenuItem>
                           <DropdownMenuItem
-                            onClick={() =>
-                              console.log("Duplicate", quiz.quizId)
-                            }
+                            onClick={() => handleDuplicate(quiz._id)}
                           >
                             Duplicate
                           </DropdownMenuItem>
                           <DropdownMenuItem
                             className="text-destructive focus:text-destructive"
-                            onClick={() => console.log("Delete", quiz.quizId)}
+                            onClick={() => handleDelete(quiz._id)}
                           >
                             Delete
                           </DropdownMenuItem>
