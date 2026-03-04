@@ -28,7 +28,7 @@ export default function DashboardLayout({
         setIsAuthorized(true);
       } catch (error) {
         // Chore: Should redirect the user to 404 page.
-        alert("You do not have access to this page.")
+        alert("You do not have access to this page.");
         router.push("/courses");
       }
     };
@@ -39,7 +39,7 @@ export default function DashboardLayout({
   }, [courseId, router]);
 
   if (!isAuthorized) {
-    return null; 
+    return null;
   }
 
   return (
