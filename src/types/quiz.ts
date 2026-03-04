@@ -10,8 +10,7 @@ export interface Question {
 }
 
 export interface QuizData {
-  _id: { $oid: string };
-  quizId: string;
+  _id: string;
   title: string;
   status: "Published" | "Draft";
   section: string;
