@@ -194,7 +194,7 @@ export default function QuizTable() {
                           "font-medium",
                           quiz.quizStatus === "Published"
                             ? "bg-green-500/15 text-green-500 hover:bg-green-500/25 border-green-500/20"
-                            : "bg-neutral-500/15 text-neutral-400 hover:bg-neutral-500/25 border-neutral-500/20"
+                            : "bg-neutral-500/15 text-neutral-400 hover:bg-neutral-500/25 border-neutral-500/20",
                         )}
                       >
                         {quiz.quizStatus}
@@ -217,9 +217,7 @@ export default function QuizTable() {
 
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem
-                            onClick={() =>
-                              console.log("Edit quiz", quiz._id)
-                            }
+                            onClick={() => console.log("Edit quiz", quiz._id)}
                           >
                             Edit
                           </DropdownMenuItem>

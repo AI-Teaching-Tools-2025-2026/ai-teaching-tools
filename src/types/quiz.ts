@@ -7,20 +7,20 @@ export interface Answer {
 
 export interface Question {
   questionId: number;
-  questionPoints: number; 
+  questionPoints: number;
   question: string;
   answers: Answer[];
 }
 
 export interface QuizData {
   _id: string;
-  quizTitle: string;        
-  quizStatus: "Published" | "Draft"; 
+  quizTitle: string;
+  quizStatus: "Published" | "Draft";
   section: string;
   courseId: string;
-  createdAt: string;      
+  createdAt: string;
   dueDate: string;
-  totalPoints: number;      
+  totalPoints: number;
   questions: Question[];
 }
 

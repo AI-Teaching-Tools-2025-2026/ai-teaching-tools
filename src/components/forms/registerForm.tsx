@@ -63,11 +63,14 @@ export default function RegisterForm() {
 
     setIsLoading(true);
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/register`, {
-        username,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/register`,
+        {
+          username,
+          email,
+          password,
+        },
+      );
 
       console.log(response.data); // e.g. { message: "User created successfully!" }
 
