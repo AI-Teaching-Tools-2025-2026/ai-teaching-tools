@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { quizService } from "@/services/quizService";
-import { QuizData } from "./mockData";
+import { QuizData } from "@/types/quiz";
 import { cn } from "@/lib/utils";
 import {
   Table,
@@ -28,13 +28,14 @@ export default function QuizTable() {
   const [quizzes, setQuizzes] = useState<QuizData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);
+
   const params = useParams();
   const courseId = params.courseId as string;
 
   useEffect(() => {
     const loadQuizzes = async () => {
       try {
-        const data = await quizService.getAllQuizzes(courseId as string);
+        const data = await quizService.getAllQuizzes(courseId);
         setQuizzes(data);
       } catch (error) {
         console.error("Failed to load quizzes:", error);
@@ -42,9 +43,9 @@ export default function QuizTable() {
         setLoading(false);
       }
     };
-    if (courseId) loadQuizzes();
-  }, []);
 
+    if (courseId) loadQuizzes();
+  }, [courseId]);
   console.log("Quizzes data:", quizzes);
 
   const allSelected =
@@ -69,7 +70,6 @@ export default function QuizTable() {
   const handleDelete = async (quizId: string) => {
     try {
       await quizService.deleteQuizById(quizId);
-
       setQuizzes((prev) => prev.filter((q) => q._id !== quizId));
     } catch (error) {
       console.error("Failed to delete quiz", error);
@@ -79,25 +79,22 @@ export default function QuizTable() {
   const handleDuplicate = async (quizId: string) => {
     try {
       const newQuiz = await quizService.duplicateQuizById(quizId);
-
       setQuizzes((prev) => [...prev, newQuiz]);
     } catch (error) {
       console.error("Failed to duplicate quiz", error);
     }
-};
+  };
 
   return (
     <div className="flex flex-col gap-4">
       {/* Toolbar */}
       <div className="flex items-center justify-end">
-        <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" className="h-8 gap-2">
-            <Filter className="h-3.5 w-3.5" />
-            <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-              Filter
-            </span>
-          </Button>
-        </div>
+        <Button variant="outline" size="sm" className="h-8 gap-2">
+          <Filter className="h-3.5 w-3.5" />
+          <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+            Filter
+          </span>
+        </Button>
       </div>
 
       {/* Table */}
@@ -118,9 +115,10 @@ export default function QuizTable() {
               <TableHead className="w-[100px]">Points</TableHead>
               <TableHead className="w-[100px]">Questions</TableHead>
               <TableHead className="w-[120px]">Status</TableHead>
-              <TableHead className="w-[50px]"></TableHead>
+              <TableHead className="w-[50px]" />
             </TableRow>
           </TableHeader>
+
           <TableBody>
             {loading ? (
               <TableRow>
@@ -143,49 +141,67 @@ export default function QuizTable() {
             ) : (
               quizzes.map((quiz) => {
                 const isSelected = selectedQuizzes.includes(quiz._id);
+
                 return (
                   <TableRow
                     key={quiz._id}
                     data-state={isSelected ? "selected" : undefined}
                     className="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
                   >
+                    {/* Checkbox */}
                     <TableCell className="pl-4">
                       <Checkbox
                         checked={isSelected}
                         onCheckedChange={() => toggleSelectQuiz(quiz._id)}
-                        aria-label={`Select ${quiz.title}`}
+                        aria-label={`Select ${quiz.quizTitle}`}
                       />
                     </TableCell>
+
+                    {/* Title */}
                     <TableCell className="font-medium text-foreground">
-                      {quiz.title}
+                      {quiz.quizTitle}
                     </TableCell>
+
+                    {/* Section */}
                     <TableCell className="text-muted-foreground">
                       {quiz.section}
                     </TableCell>
+
+                    {/* Due Date */}
                     <TableCell className="text-muted-foreground">
                       {new Date(quiz.dueDate).toLocaleDateString()}
                     </TableCell>
+
+                    {/* Points */}
                     <TableCell className="text-muted-foreground">
-                      {quiz.points}
+                      {quiz.totalPoints}
                     </TableCell>
+
+                    {/* Questions Count */}
                     <TableCell className="text-muted-foreground">
                       {quiz.questions.length}
                     </TableCell>
+
+                    {/* Status */}
                     <TableCell>
                       <Badge
                         variant={
-                          quiz.status === "Published" ? "default" : "secondary"
+                          quiz.quizStatus === "Published"
+                            ? "default"
+                            : "secondary"
                         }
                         className={cn(
                           "font-medium",
-                          quiz.status === "Published"
+                          quiz.quizStatus === "Published"
                             ? "bg-green-500/15 text-green-500 hover:bg-green-500/25 border-green-500/20"
                             : "bg-neutral-500/15 text-neutral-400 hover:bg-neutral-500/25 border-neutral-500/20",
                         )}
                       >
-                        {quiz.status}
+                        {quiz.quizStatus}
                       </Badge>
                     </TableCell>
+
+                    {/* Actions */}
                     <TableCell>
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
@@ -198,17 +214,20 @@ export default function QuizTable() {
                             <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
                           </Button>
                         </DropdownMenuTrigger>
+
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem
-                            onClick={() => console.log("Edit", quiz._id)}
+                            onClick={() => console.log("Edit quiz", quiz._id)}
                           >
                             Edit
                           </DropdownMenuItem>
+
                           <DropdownMenuItem
                             onClick={() => handleDuplicate(quiz._id)}
                           >
                             Duplicate
                           </DropdownMenuItem>
+
                           <DropdownMenuItem
                             className="text-destructive focus:text-destructive"
                             onClick={() => handleDelete(quiz._id)}

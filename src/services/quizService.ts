@@ -6,18 +6,18 @@ export const quizService = {
     const response = await axios.get(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/quiz/fetch_quizzes`,
       {
-        params: { courseId },  
+        params: { courseId },
         withCredentials: true,
-      }
+      },
     );
-    
+
     return response.data;
   },
 
   getQuizById: async (quizId: string): Promise<QuizData> => {
     const response = await axios.get(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/quiz/${quizId}`,
-      { withCredentials: true }
+      { withCredentials: true },
     );
     return response.data;
   },
@@ -25,7 +25,7 @@ export const quizService = {
   deleteQuizById: async (quizId: string): Promise<void> => {
     await axios.delete(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/quiz/${quizId}`,
-      { withCredentials: true }
+      { withCredentials: true },
     );
   },
 
@@ -33,11 +33,9 @@ export const quizService = {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/quiz/${quizId}/duplicate`,
       {},
-      { withCredentials: true }
+      { withCredentials: true },
     );
 
     return response.data;
-},
-
-  
+  },
 };

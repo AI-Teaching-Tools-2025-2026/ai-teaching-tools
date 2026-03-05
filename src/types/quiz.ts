@@ -1,23 +1,26 @@
+// Formatted to MongoDB Schema
+
 export interface Answer {
   text: string;
   isCorrect: boolean;
 }
 
 export interface Question {
-  questionId: number; // For DB/API question
+  questionId: number;
+  questionPoints: number;
   question: string;
   answers: Answer[];
 }
 
 export interface QuizData {
   _id: string;
-  title: string;
-  status: "Published" | "Draft";
+  quizTitle: string;
+  quizStatus: "Published" | "Draft";
   section: string;
   courseId: string;
-  timestamp: { $date: string };
-  dueDate: string; // ISO Date string
-  points: number;
+  createdAt: string;
+  dueDate: string;
+  totalPoints: number;
   questions: Question[];
 }
 
