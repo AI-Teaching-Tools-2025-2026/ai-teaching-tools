@@ -1,21 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
+import axios from "axios";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
-type Course = {
-  _id: string;
-  coursetitle: string;
-  couseterm: string;
-  coursedescription: string;
-  file?: File | null;
-};
-
 type Props = {
-  onSuccess?: (newCourse: Course) => void;
+  onSuccess?: (newCourse: any) => void;
 };
 
 export default function AddCourses({ onSuccess }: Props) {
@@ -64,18 +57,21 @@ export default function AddCourses({ onSuccess }: Props) {
     try {
       setLoading(true);
 
-      // Simulate delay (optional)
-      await new Promise((resolve) => setTimeout(resolve, 500));
-
-      const newCourse: Course = {
-        _id: crypto.randomUUID(),
-        coursetitle: courseTitle,
-        couseterm: courseTerm,
-        coursedescription: courseDescription,
-        file,
+      const payload = {
+        textbookID: file ? file.name : "",
+        courseTitle,
+        courseTerm,
+        courseDescription,
+        imageSrc: "",
       };
 
-      if (onSuccess) onSuccess(newCourse);
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/create_course`,
+        payload,
+        { withCredentials: true },
+      );
+
+      if (onSuccess) onSuccess(response.data);
 
       // Reset form
       setCourseTitle("");
