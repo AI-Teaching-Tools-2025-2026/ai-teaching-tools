@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { MoreHorizontal, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
 import { quizService } from "@/services/quizService";
 import { QuizData } from "@/types/quiz";
 import { cn } from "@/lib/utils";
@@ -23,11 +24,38 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+type FilterState = {
+  search: string;
+  section: string;
+  status: string;
+  dueDateFilter: string;
+  minPoints: string;
+  minQuestions: string;
+};
+
+const DEFAULT_FILTERS: FilterState = {
+  search: "",
+  section: "all",
+  status: "all",
+  dueDateFilter: "all",
+  minPoints: "",
+  minQuestions: "",
+};
 
 export default function QuizTable() {
   const [quizzes, setQuizzes] = useState<QuizData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);
+  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
+  const [showFilterTable, setShowFilterTable] = useState(false);
 
   const params = useParams();
   const courseId = params.courseId as string;
@@ -46,16 +74,66 @@ export default function QuizTable() {
 
     if (courseId) loadQuizzes();
   }, [courseId]);
-  console.log("Quizzes data:", quizzes);
+
+  const sections = useMemo(
+    () => Array.from(new Set(quizzes.map((q) => q.section).filter(Boolean))).sort(),
+    [quizzes],
+  );
+
+  const filteredQuizzes = useMemo(() => {
+    return quizzes.filter((quiz) => {
+      if (filters.search) {
+        const search = filters.search.toLowerCase();
+        if (!quiz.quizTitle.toLowerCase().includes(search)) return false;
+      }
+      if (filters.section !== "all" && quiz.section !== filters.section)
+        return false;
+      if (filters.status !== "all" && quiz.quizStatus !== filters.status)
+        return false;
+      if (filters.dueDateFilter !== "all") {
+        const due = new Date(quiz.dueDate).getTime();
+        const now = Date.now();
+        if (filters.dueDateFilter === "overdue" && due >= now) return false;
+        if (filters.dueDateFilter === "upcoming" && due < now) return false;
+      }
+      if (filters.minPoints) {
+        const min = parseInt(filters.minPoints, 10);
+        if (!isNaN(min) && quiz.totalPoints < min) return false;
+      }
+      if (filters.minQuestions) {
+        const min = parseInt(filters.minQuestions, 10);
+        if (!isNaN(min) && quiz.questions.length < min) return false;
+      }
+      return true;
+    });
+  }, [quizzes, filters]);
+
+  const updateFilter = <K extends keyof FilterState>(
+    key: K,
+    value: FilterState[K],
+  ) => setFilters((prev) => ({ ...prev, [key]: value }));
+
+  const clearFilters = () => {
+    setFilters(DEFAULT_FILTERS);
+  };
+
+  const hasActiveFilters =
+    filters.search ||
+    filters.section !== "all" ||
+    filters.status !== "all" ||
+    filters.dueDateFilter !== "all" ||
+    filters.minPoints !== "" ||
+    filters.minQuestions !== "";
 
   const allSelected =
-    selectedQuizzes.length === quizzes.length && quizzes.length > 0;
+    selectedQuizzes.length === filteredQuizzes.length &&
+    filteredQuizzes.length > 0;
 
   const toggleSelectAll = () => {
     if (allSelected) {
       setSelectedQuizzes([]);
     } else {
-      setSelectedQuizzes(quizzes.map((q) => q._id));
+      setSelectedQuizzes(filteredQuizzes.map((q) => q._id));
     }
   };
 
@@ -87,17 +165,158 @@ export default function QuizTable() {
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Toolbar */}
-      <div className="flex items-center justify-end">
-        <Button variant="outline" size="sm" className="h-8 gap-2">
-          <Filter className="h-3.5 w-3.5" />
-          <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-            Filter
-          </span>
-        </Button>
+      {/* Filter section - button in top right when expanded, or minimal bar when collapsed */}
+      <div className="rounded-md border bg-card">
+        {showFilterTable ? (
+          <Table>
+            <TableHeader>
+              <TableRow className="bg-muted/50 hover:bg-muted/50">
+                <TableHead className="w-[50px] pl-4">
+                  <Filter className="h-3.5 w-3.5 text-muted-foreground" />
+                </TableHead>
+                <TableHead className="w-[300px]">Title</TableHead>
+                <TableHead className="w-[150px]">Section</TableHead>
+                <TableHead className="w-[150px]">Due Date</TableHead>
+                <TableHead className="w-[80px]">Points</TableHead>
+                <TableHead className="w-[80px]">Questions</TableHead>
+                <TableHead className="w-[120px]">Status</TableHead>
+                <TableHead className="w-[120px]">
+                  <div className="flex justify-end">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className={cn(
+                        "h-8 gap-2",
+                        hasActiveFilters && "border-primary/50 bg-primary/5",
+                      )}
+                      onClick={() => setShowFilterTable(false)}
+                    >
+                      <Filter className="h-3.5 w-3.5" />
+                      <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                        Filter
+                      </span>
+                    </Button>
+                  </div>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow className="hover:bg-transparent">
+                <TableCell className="pl-4" />
+                <TableCell>
+                  <Input
+                    placeholder="Search by title..."
+                    value={filters.search}
+                    onChange={(e) => updateFilter("search", e.target.value)}
+                    className="h-8"
+                  />
+              </TableCell>
+              <TableCell>
+                <Select
+                  value={filters.section}
+                  onValueChange={(v) => updateFilter("section", v)}
+                >
+                  <SelectTrigger className="h-8">
+                    <SelectValue placeholder="All sections" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All sections</SelectItem>
+                    {sections.map((s) => (
+                      <SelectItem key={s} value={s}>
+                        {s}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </TableCell>
+              <TableCell>
+                <Select
+                  value={filters.dueDateFilter}
+                  onValueChange={(v) => updateFilter("dueDateFilter", v)}
+                >
+                  <SelectTrigger className="h-8">
+                    <SelectValue placeholder="All" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All</SelectItem>
+                    <SelectItem value="overdue">Overdue</SelectItem>
+                    <SelectItem value="upcoming">Upcoming</SelectItem>
+                  </SelectContent>
+                </Select>
+              </TableCell>
+              <TableCell>
+                <Input
+                  type="number"
+                  placeholder="Min"
+                  min={0}
+                  value={filters.minPoints}
+                  onChange={(e) => updateFilter("minPoints", e.target.value)}
+                  className="h-8"
+                />
+              </TableCell>
+              <TableCell>
+                <Input
+                  type="number"
+                  placeholder="Min"
+                  min={0}
+                  value={filters.minQuestions}
+                  onChange={(e) => updateFilter("minQuestions", e.target.value)}
+                  className="h-8"
+                />
+              </TableCell>
+              <TableCell>
+                <Select
+                  value={filters.status}
+                  onValueChange={(v) => updateFilter("status", v)}
+                >
+                  <SelectTrigger className="h-8">
+                    <SelectValue placeholder="All statuses" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All statuses</SelectItem>
+                    <SelectItem value="Published">Published</SelectItem>
+                    <SelectItem value="Draft">Draft</SelectItem>
+                  </SelectContent>
+                </Select>
+              </TableCell>
+              <TableCell>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className={cn(
+                    "h-8 text-muted-foreground",
+                    hasActiveFilters && "text-foreground",
+                  )}
+                  onClick={clearFilters}
+                  disabled={!hasActiveFilters}
+                >
+                  Clear
+                </Button>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+          </Table>
+        ) : (
+          <div className="flex justify-end p-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className={cn(
+                "h-8 gap-2",
+                hasActiveFilters && "border-primary/50 bg-primary/5",
+              )}
+              onClick={() => setShowFilterTable(true)}
+            >
+              <Filter className="h-3.5 w-3.5" />
+              <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                Filter
+              </span>
+            </Button>
+          </div>
+        )}
       </div>
 
-      {/* Table */}
+      {/* Quiz table */}
       <div className="rounded-md border bg-card">
         <Table>
           <TableHeader>
@@ -129,17 +348,19 @@ export default function QuizTable() {
                   Loading quizzes...
                 </TableCell>
               </TableRow>
-            ) : quizzes.length === 0 ? (
+            ) : filteredQuizzes.length === 0 ? (
               <TableRow>
                 <TableCell
                   colSpan={8}
                   className="h-24 text-center text-muted-foreground"
                 >
-                  No quizzes found.
+                  {quizzes.length === 0
+                    ? "No quizzes found."
+                    : "No quizzes match your filters."}
                 </TableCell>
               </TableRow>
             ) : (
-              quizzes.map((quiz) => {
+              filteredQuizzes.map((quiz) => {
                 const isSelected = selectedQuizzes.includes(quiz._id);
 
                 return (
