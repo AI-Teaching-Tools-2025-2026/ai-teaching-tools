@@ -76,7 +76,8 @@ export default function QuizTable() {
   }, [courseId]);
 
   const sections = useMemo(
-    () => Array.from(new Set(quizzes.map((q) => q.section).filter(Boolean))).sort(),
+    () =>
+      Array.from(new Set(quizzes.map((q) => q.section).filter(Boolean))).sort(),
     [quizzes],
   );
 
@@ -210,91 +211,93 @@ export default function QuizTable() {
                     onChange={(e) => updateFilter("search", e.target.value)}
                     className="h-8"
                   />
-              </TableCell>
-              <TableCell>
-                <Select
-                  value={filters.section}
-                  onValueChange={(v) => updateFilter("section", v)}
-                >
-                  <SelectTrigger className="h-8">
-                    <SelectValue placeholder="All sections" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All sections</SelectItem>
-                    {sections.map((s) => (
-                      <SelectItem key={s} value={s}>
-                        {s}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </TableCell>
-              <TableCell>
-                <Select
-                  value={filters.dueDateFilter}
-                  onValueChange={(v) => updateFilter("dueDateFilter", v)}
-                >
-                  <SelectTrigger className="h-8">
-                    <SelectValue placeholder="All" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All</SelectItem>
-                    <SelectItem value="overdue">Overdue</SelectItem>
-                    <SelectItem value="upcoming">Upcoming</SelectItem>
-                  </SelectContent>
-                </Select>
-              </TableCell>
-              <TableCell>
-                <Input
-                  type="number"
-                  placeholder="Min"
-                  min={0}
-                  value={filters.minPoints}
-                  onChange={(e) => updateFilter("minPoints", e.target.value)}
-                  className="h-8"
-                />
-              </TableCell>
-              <TableCell>
-                <Input
-                  type="number"
-                  placeholder="Min"
-                  min={0}
-                  value={filters.minQuestions}
-                  onChange={(e) => updateFilter("minQuestions", e.target.value)}
-                  className="h-8"
-                />
-              </TableCell>
-              <TableCell>
-                <Select
-                  value={filters.status}
-                  onValueChange={(v) => updateFilter("status", v)}
-                >
-                  <SelectTrigger className="h-8">
-                    <SelectValue placeholder="All statuses" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All statuses</SelectItem>
-                    <SelectItem value="Published">Published</SelectItem>
-                    <SelectItem value="Draft">Draft</SelectItem>
-                  </SelectContent>
-                </Select>
-              </TableCell>
-              <TableCell>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className={cn(
-                    "h-8 text-muted-foreground",
-                    hasActiveFilters && "text-foreground",
-                  )}
-                  onClick={clearFilters}
-                  disabled={!hasActiveFilters}
-                >
-                  Clear
-                </Button>
-              </TableCell>
-            </TableRow>
-          </TableBody>
+                </TableCell>
+                <TableCell>
+                  <Select
+                    value={filters.section}
+                    onValueChange={(v) => updateFilter("section", v)}
+                  >
+                    <SelectTrigger className="h-8">
+                      <SelectValue placeholder="All sections" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All sections</SelectItem>
+                      {sections.map((s) => (
+                        <SelectItem key={s} value={s}>
+                          {s}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </TableCell>
+                <TableCell>
+                  <Select
+                    value={filters.dueDateFilter}
+                    onValueChange={(v) => updateFilter("dueDateFilter", v)}
+                  >
+                    <SelectTrigger className="h-8">
+                      <SelectValue placeholder="All" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All</SelectItem>
+                      <SelectItem value="overdue">Overdue</SelectItem>
+                      <SelectItem value="upcoming">Upcoming</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </TableCell>
+                <TableCell>
+                  <Input
+                    type="number"
+                    placeholder="Min"
+                    min={0}
+                    value={filters.minPoints}
+                    onChange={(e) => updateFilter("minPoints", e.target.value)}
+                    className="h-8"
+                  />
+                </TableCell>
+                <TableCell>
+                  <Input
+                    type="number"
+                    placeholder="Min"
+                    min={0}
+                    value={filters.minQuestions}
+                    onChange={(e) =>
+                      updateFilter("minQuestions", e.target.value)
+                    }
+                    className="h-8"
+                  />
+                </TableCell>
+                <TableCell>
+                  <Select
+                    value={filters.status}
+                    onValueChange={(v) => updateFilter("status", v)}
+                  >
+                    <SelectTrigger className="h-8">
+                      <SelectValue placeholder="All statuses" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All statuses</SelectItem>
+                      <SelectItem value="Published">Published</SelectItem>
+                      <SelectItem value="Draft">Draft</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </TableCell>
+                <TableCell>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className={cn(
+                      "h-8 text-muted-foreground",
+                      hasActiveFilters && "text-foreground",
+                    )}
+                    onClick={clearFilters}
+                    disabled={!hasActiveFilters}
+                  >
+                    Clear
+                  </Button>
+                </TableCell>
+              </TableRow>
+            </TableBody>
           </Table>
         ) : (
           <div className="flex justify-end p-2">
