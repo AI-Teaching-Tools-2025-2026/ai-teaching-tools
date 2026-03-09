@@ -51,7 +51,8 @@ export default function CoursesPage() {
             </SheetHeader>
             <div className="px-4">
               <AddCourses
-                onSuccess={() => {
+                onSuccess={(newCourse) => {
+                  setCourses((prev) => [newCourse, ...prev]);
                   setIsSheetOpen(false);
                 }}
               />
