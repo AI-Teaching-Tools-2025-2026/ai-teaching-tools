@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 import { MoreHorizontal, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -58,10 +59,19 @@ export default function QuizTable() {
   const [showFilterTable, setShowFilterTable] = useState(false);
 
   const params = useParams();
-  const courseId = params.courseId as string;
+  const courseId = params.courseId as string | undefined;
+
+  const getPreviewHref = (quizId: string) =>
+    courseId
+      ? `/courses/${courseId}/quizzes/preview/${quizId}`
+      : `/dashboard/quizzes/preview/${quizId}`;
 
   useEffect(() => {
     const loadQuizzes = async () => {
+      if (!courseId) {
+        setLoading(false);
+        return;
+      }
       try {
         const data = await quizService.getAllQuizzes(courseId);
         setQuizzes(data);
@@ -72,7 +82,7 @@ export default function QuizTable() {
       }
     };
 
-    if (courseId) loadQuizzes();
+    loadQuizzes();
   }, [courseId]);
 
   const sections = useMemo(
@@ -381,9 +391,14 @@ export default function QuizTable() {
                       />
                     </TableCell>
 
-                    {/* Title */}
+                    {/* Title - clickable to preview */}
                     <TableCell className="font-medium text-foreground">
-                      {quiz.quizTitle}
+                      <Link
+                        href={getPreviewHref(quiz._id)}
+                        className="text-foreground hover:underline focus:outline-none focus:underline"
+                      >
+                        {quiz.quizTitle}
+                      </Link>
                     </TableCell>
 
                     {/* Section */}
