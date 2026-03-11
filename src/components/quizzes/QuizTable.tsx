@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
+import SubmissionModal from "@/components/modal/submissionModal";
 import { quizService } from "@/services/quizService";
 import { QuizData } from "@/types/quiz";
 import { cn } from "@/lib/utils";
@@ -57,6 +58,8 @@ export default function QuizTable() {
   const [selectedQuizzes, setSelectedQuizzes] = useState<string[]>([]);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [showFilterTable, setShowFilterTable] = useState(false);
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [quizToDelete, setQuizToDelete] = useState<QuizData | null>(null);
 
   const params = useParams();
   const courseId = params.courseId as string | undefined;
@@ -160,6 +163,7 @@ export default function QuizTable() {
     try {
       await quizService.deleteQuizById(quizId);
       setQuizzes((prev) => prev.filter((q) => q._id !== quizId));
+      setSelectedQuizzes((prev) => prev.filter((id) => id !== quizId));
     } catch (error) {
       console.error("Failed to delete quiz", error);
     }
@@ -469,7 +473,10 @@ export default function QuizTable() {
 
                           <DropdownMenuItem
                             className="text-destructive focus:text-destructive"
-                            onClick={() => handleDelete(quiz._id)}
+                            onClick={() => {
+                              setQuizToDelete(quiz);
+                              setDeleteModalOpen(true);
+                            }}
                           >
                             Delete
                           </DropdownMenuItem>
@@ -483,6 +490,26 @@ export default function QuizTable() {
           </TableBody>
         </Table>
       </div>
+
+      <SubmissionModal
+        isOpen={deleteModalOpen}
+        onOpenChange={(open) => {
+          setDeleteModalOpen(open);
+          if (!open) {
+            setQuizToDelete(null);
+          }
+        }}
+        body={
+          quizToDelete
+            ? `This will permanently delete "${quizToDelete.quizTitle}". This cannot be undone.`
+            : undefined
+        }
+        onSubmit={async () => {
+          if (!quizToDelete) return;
+          await handleDelete(quizToDelete._id);
+          setQuizToDelete(null);
+        }}
+      />
     </div>
   );
 }
