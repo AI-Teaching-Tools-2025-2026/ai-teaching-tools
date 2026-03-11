@@ -19,7 +19,9 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
           <div className="flex flex-wrap items-center gap-2">
             <CardTitle className="text-xl">{quiz.quizTitle}</CardTitle>
             <Badge
-              variant={quiz.quizStatus === "Published" ? "default" : "secondary"}
+              variant={
+                quiz.quizStatus === "Published" ? "default" : "secondary"
+              }
               className={cn(
                 "font-medium",
                 quiz.quizStatus === "Published"
