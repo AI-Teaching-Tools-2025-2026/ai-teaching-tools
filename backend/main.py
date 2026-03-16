@@ -5,6 +5,7 @@ from db.utils import Database
 from modules.auth.routes import auth_router
 from modules.course.routes import courses_router
 from modules.quiz.routes import quiz_router
+from modules.chatbot.routes import chatbot_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -25,6 +26,7 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(courses_router)
 app.include_router(quiz_router)
+app.include_router(chatbot_router)
 
 
 @app.get("/")

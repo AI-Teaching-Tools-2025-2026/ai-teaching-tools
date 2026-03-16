@@ -26,4 +26,8 @@ class AppSettings(BaseSettings):
     JWT_SECRET_KEY: str
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: float = 60
 
+    # OpenAI
+    OPENAI_API_KEY: str = ""
+    OPENAI_MODEL: str = "gpt-4o-mini"
+
 settings = AppSettings()  
