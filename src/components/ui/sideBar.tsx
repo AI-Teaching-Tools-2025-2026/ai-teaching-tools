@@ -8,6 +8,7 @@ import {
   SquarePen,
   Database,
   ChevronLeft,
+  MessageCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -38,6 +39,11 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
       name: "Question Banks",
       href: `/courses/${courseId}/question-banks`,
       icon: Database,
+    },
+    {
+      name: "AI Tutor",
+      href: `/courses/${courseId}/chatbot`,
+      icon: MessageCircle,
     },
   ];
 
