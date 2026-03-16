@@ -9,6 +9,7 @@ import {
   Database,
   ChevronLeft,
   MessageCircle,
+  ArrowLeftCircle
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
