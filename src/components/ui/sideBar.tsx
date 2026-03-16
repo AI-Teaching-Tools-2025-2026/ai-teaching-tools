@@ -114,6 +114,26 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
           );
         })}
       </nav>
+
+      <div className="mt-auto pb-4">
+        <Link
+          href="/courses"
+          className={cn(
+            "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors text-neutral-400 hover:bg-neutral-800 hover:text-neutral-200",
+            isCollapsed && "justify-center px-2",
+          )}
+        >
+          <ArrowLeftCircle className="h-5 w-5 shrink-0" />
+          <span
+            className={cn(
+              "whitespace-nowrap transition-all duration-300 origin-left overflow-hidden",
+              isCollapsed ? "w-0 opacity-0" : "w-auto opacity-100",
+            )}
+          >
+            Back to Courses
+          </span>
+        </Link>
+      </div>
     </aside>
   );
 }

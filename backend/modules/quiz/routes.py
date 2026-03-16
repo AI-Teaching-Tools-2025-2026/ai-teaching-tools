@@ -7,7 +7,23 @@ quiz_router = APIRouter(prefix="/quiz", tags=["Quiz"])
 
 @quiz_router.get("/fetch_quizzes")
 async def fetch_quizzes(courseId: str, db=Depends(get_instructor_db)):
-    quizzes = await db["quizzes"].find({"courseId": courseId}).to_list(None)
+    # Only return fields needed by the frontend table to reduce payload size
+    projection = {
+        "_id": 1,
+        "quizTitle": 1,
+        "quizStatus": 1,
+        "section": 1,
+        "courseId": 1,
+        "createdAt": 1,
+        "dueDate": 1,
+        "totalPoints": 1,
+        "questions": 1,
+    }
+
+    quizzes = await db["quizzes"].find(
+        {"courseId": courseId},
+        projection,
+    ).to_list(None)
     return quizzes
 
 @quiz_router.get("/{quizId}")
