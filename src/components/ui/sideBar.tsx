@@ -10,7 +10,7 @@ import {
   Database,
   ChevronLeft,
   MessageCircle,
-  ArrowLeftCircle
+  ArrowLeftCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -32,7 +32,7 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
   const courseId = params?.courseId as string;
 
   const drawerList: DrawerItem[] = [
-    { name: "Dashboard", href: `/courses/${courseId}`, icon: LayoutDashboard },
+    { name: "Home", href: `/courses/${courseId}`, icon: LayoutDashboard },
     {
       name: "Grades",
       href: `/courses/${courseId}/grades`,

@@ -148,9 +148,7 @@ export default function ChatInterface({ courseId }: ChatInterfaceProps) {
             <Bot className="h-4 w-4 text-white" />
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-foreground">
-              {botName}
-            </h3>
+            <h3 className="text-sm font-semibold text-foreground">{botName}</h3>
             <p className="text-xs text-muted-foreground">
               {config?.persona || "AI Teaching Assistant"}
             </p>
@@ -216,9 +214,7 @@ export default function ChatInterface({ courseId }: ChatInterfaceProps) {
             <div
               className={cn(
                 "h-7 w-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5",
-                message.role === "assistant"
-                  ? "bg-blue-600"
-                  : "bg-neutral-600",
+                message.role === "assistant" ? "bg-blue-600" : "bg-neutral-600",
               )}
             >
               {message.role === "assistant" ? (

@@ -157,9 +157,7 @@ export default function ChatbotConfigPage() {
           <Button
             variant="outline"
             className="gap-2"
-            onClick={() =>
-              router.push(`/courses/${courseId}/chatbot/preview`)
-            }
+            onClick={() => router.push(`/courses/${courseId}/chatbot/preview`)}
           >
             <Eye className="h-4 w-4" />
             Preview
