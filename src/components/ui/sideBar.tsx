@@ -6,7 +6,6 @@ import {
   LayoutDashboard,
   NotebookTabs,
   FileQuestion,
-  SquarePen,
   Database,
   ChevronLeft,
   MessageCircle,
@@ -43,12 +42,6 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
       name: "Quizzes",
       href: `/courses/${courseId}/quizzes`,
       icon: FileQuestion,
-    },
-    {
-      name: "Assignment Builder",
-      href: `/courses/${courseId}/quizzes/builder`,
-      icon: SquarePen,
-      disabled: true,
     },
     {
       name: "Question Banks",
