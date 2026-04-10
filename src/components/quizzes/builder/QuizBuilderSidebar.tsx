@@ -1,16 +1,20 @@
 import React from "react";
-import { GraduationCap, Eye, Trash2 } from "lucide-react";
+import { GraduationCap, Eye, Trash2, RefreshCcw, SquarePen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 interface QuizBuilderSidebarProps {
-  onStudentView: () => void;
+  onPreview: () => void;
+  onCreateQuiz: () => void;
+  onUpdateQuiz: () => void;
   onDelete: () => void;
   onPublish: () => void;
 }
 
 export function QuizBuilderSidebar({
-  onStudentView,
+  onPreview,
+  onCreateQuiz,
+  onUpdateQuiz,
   onDelete,
   onPublish,
 }: QuizBuilderSidebarProps) {
@@ -24,16 +28,31 @@ export function QuizBuilderSidebar({
           <Button
             variant="secondary"
             className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer whitespace-normal text-left"
-            onClick={onStudentView}
+            onClick={onPreview}
           >
-            <GraduationCap className="h-4 w-4 shrink-0" />
-            Student View
+            <Eye className="h-4 w-4 shrink-0" />
+            Preview
           </Button>
           <Button
+            className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer whitespace-normal text-left"
+            onClick={onCreateQuiz}
+          >
+            <SquarePen className="h-4 w-4 shrink-0" />
+            Create Quiz
+          </Button>
+          {/* <Button
+            className="w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer whitespace-normal text-left"
+            onClick={onUpdateQuiz}
+          >
+            <RefreshCcw className="h-4 w-4 shrink-0" />
+            Update Quiz
+          </Button>
+          <Button
+            disabled
             className="w-full gap-2 justify-start h-auto py-3 px-4 bg-blue-800 hover:bg-blue-900 text-white whitespace-normal text-left"
             onClick={onPublish}
           >
-            <Eye className="h-4 w-4 shrink-0" />
+            <GraduationCap className="h-4 w-4 shrink-0" />
             Publish Quiz
           </Button>
           <Button
@@ -42,7 +61,7 @@ export function QuizBuilderSidebar({
           >
             <Trash2 className="h-4 w-4 shrink-0" />
             Delete Quiz
-          </Button>
+          </Button> */}
         </CardContent>
       </Card>
     </div>

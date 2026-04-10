@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from db.utils import get_instructor_db
+from .models import QuizCreate
 from datetime import datetime
 import uuid
 
@@ -35,6 +36,15 @@ async def get_quiz_by_id(quizId: str, db=Depends(get_instructor_db)):
 
     return quiz
 
+@quiz_router.post("")
+async def create_quiz(payload: QuizCreate, db=Depends(get_instructor_db)):
+    quiz = payload.model_dump()
+    quiz["_id"] = f"QUIZ{uuid.uuid4().hex[:6].upper()}"
+
+    await db["quizzes"].insert_one(quiz)
+    
+    return quiz
+
 @quiz_router.delete("/{quizId}")
 async def delete_quiz_by_id(quizId: str, db=Depends(get_instructor_db)):
     result = await db["quizzes"].delete_one({"_id": quizId})
@@ -53,8 +63,8 @@ async def duplicate_quiz(quizId: str, db=Depends(get_instructor_db)):
 
     quiz.pop("_id", None)
 
-    new_quiz_id = f"QUIZ{uuid.uuid4().hex[:6].upper()}"
-    quiz["_id"] = new_quiz_id
+    quiz["_id"] = f"QUIZ{uuid.uuid4().hex[:6].upper()}"
+    quiz["quizTitle"] = f"{quiz.get("quizTitle", "")} Copy"
     quiz["quizStatus"] = "Draft"
     quiz["createdAt"] = datetime.now().isoformat()
 

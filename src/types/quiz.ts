@@ -19,6 +19,7 @@ export interface QuizData {
   section: string;
   courseId: string;
   createdAt: string;
+  description: string;
   dueDate: string;
   totalPoints: number;
   questions: Question[];
@@ -28,10 +29,43 @@ export interface QuizData {
 export interface BuilderQuestion {
   id: string; // For frontend local state
   text: string;
-  type: "multiple-choice" | "true-false" | "short-answer";
+  type: "multiple-choice" | "true-false";
+  points: number;
   options?: string[];
   correctAnswer?: string;
 }
+
+// Convert BuilderQuestion into Question
+export const transformBuilderQuestions = (
+  builderQuestions: BuilderQuestion[]
+): Question[] => {
+  return builderQuestions.map((q, index) => {
+    let answers: Answer[] = [];
+
+    // Multiple choice
+    if (q.type === "multiple-choice") {
+      answers = (q.options || []).map((opt) => ({
+        text: opt,
+        isCorrect: opt === q.correctAnswer,
+      }));
+    }
+
+    // True / False
+    if (q.type === "true-false") {
+      answers = ["True", "False"].map((opt) => ({
+        text: opt,
+        isCorrect: opt === q.correctAnswer,
+      }));
+    }
+
+    return {
+      questionId: index + 1,
+      questionPoints: q.points,
+      question: q.text,
+      answers,
+    };
+  });
+};
 
 export interface QuizTypeOption {
   id: string;
