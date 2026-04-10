@@ -3,16 +3,21 @@
 import { QuizData } from "@/types/quiz";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface QuizPreviewProps {
   quiz: QuizData;
 }
 
+function formatDueDate(iso: string) {
+  if (!iso?.trim()) return "Not set";
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? "Not set" : d.toLocaleDateString();
+}
+
 export default function QuizPreview({ quiz }: QuizPreviewProps) {
   return (
-    <div className="flex flex-col gap-6 max-w-2xl mx-auto">
+    <div className="flex flex-col gap-6 max-w-2xl mx-auto w-full">
       {/* Quiz header */}
       <Card>
         <CardHeader className="pb-2">
@@ -34,7 +39,7 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
           </div>
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-1">
             <span>Section: {quiz.section}</span>
-            <span>Due: {new Date(quiz.dueDate).toLocaleDateString()}</span>
+            <span>Due: {formatDueDate(quiz.dueDate)}</span>
             <span>{quiz.totalPoints} pts</span>
             <span>{quiz.questions.length} questions</span>
           </div>
@@ -46,6 +51,14 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
         <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
           Preview — correct answers shown
         </h2>
+        {quiz.questions.length === 0 && (
+          <Card>
+            <CardContent className="py-8 text-center text-sm text-muted-foreground">
+              No questions yet. Add questions in the Questions tab to see them
+              here.
+            </CardContent>
+          </Card>
+        )}
         {quiz.questions.map((q, index) => (
           <Card key={q.questionId}>
             <CardHeader className="pb-2">
@@ -65,21 +78,27 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
                   <li
                     key={i}
                     className={cn(
-                      "flex items-center gap-2 rounded-md px-3 py-2 text-sm border",
+                      "flex items-center gap-3 rounded-md px-3 py-2 text-sm border",
                       answer.isCorrect
                         ? "bg-green-500/10 border-green-500/30 text-foreground"
                         : "bg-muted/30 border-transparent text-muted-foreground",
                     )}
                   >
+                    <div
+                      className={cn(
+                        "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
+                        answer.isCorrect
+                          ? "border-green-500 bg-green-500/20"
+                          : "border-border",
+                      )}
+                    >
+                      {answer.isCorrect && (
+                        <div className="h-2 w-2 rounded-full bg-green-500" />
+                      )}
+                    </div>
+                    <span className="min-w-0 flex-1">{answer.text}</span>
                     {answer.isCorrect && (
-                      <CheckCircle2 className="h-4 w-4 shrink-0 text-green-500" />
-                    )}
-                    {!answer.isCorrect && (
-                      <span className="w-4 shrink-0 inline-block" />
-                    )}
-                    <span>{answer.text}</span>
-                    {answer.isCorrect && (
-                      <span className="ml-auto text-xs font-medium text-green-600 dark:text-green-400">
+                      <span className="shrink-0 text-xs font-medium text-green-600 dark:text-green-400">
                         Correct
                       </span>
                     )}

@@ -19,10 +19,19 @@ export function QuestionList({ questions, setQuestions }: QuestionListProps) {
     setIsFormOpen(false);
   };
 
+  const handleDeleteQuestion = (id: string) => {
+    setQuestions((prev) => prev.filter((q) => q.id !== id));
+  };
+
   return (
     <div className="flex flex-col gap-6 w-full max-w-3xl mx-auto">
       {questions.map((q, index) => (
-        <QuestionItem key={q.id} question={q} index={index} />
+        <QuestionItem
+          key={q.id}
+          question={q}
+          index={index}
+          onDelete={handleDeleteQuestion}
+        />
       ))}
 
       {/* Inline Form or Add Button */}

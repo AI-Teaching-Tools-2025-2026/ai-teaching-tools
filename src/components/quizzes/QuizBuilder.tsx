@@ -1,16 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { useRouter, useParams } from "next/navigation";
-import { mockQuizTypes, mockSections } from "./mockData";
+import { mockSections } from "./mockData";
 import { QuizDetails } from "./builder/QuizDetails";
 import { QuestionList } from "./builder/QuestionList";
-import { QuizData, BuilderQuestion, QuizTypeOption, transformBuilderQuestions } from "@/types/quiz";
+import {
+  QuizData,
+  BuilderQuestion,
+  transformBuilderQuestions,
+} from "@/types/quiz";
 import { QuizBuilderSidebar } from "./builder/QuizBuilderSidebar";
 import { quizService } from "@/services/quizService";
+import QuizPreview from "./QuizPreview";
 
 type Tab = "details" | "questions";
 
@@ -32,10 +43,31 @@ export default function QuizBuilder() {
   });
   const [questions, setQuestions] = useState<BuilderQuestion[]>([]);
   const [selectedSection, setSelectedSection] = useState(mockSections[0]);
+  const [previewOpen, setPreviewOpen] = useState(false);
 
-  const handlePreview = async () => {
-    // to do 
-  }
+  const previewQuiz = useMemo((): QuizData => {
+    const transformed = transformBuilderQuestions(questions);
+    const pointsFromQuestions = questions.reduce((sum, q) => sum + q.points, 0);
+    return {
+      _id: "",
+      quizTitle: quizData.quizTitle?.trim() || "Untitled quiz",
+      quizStatus: quizData.quizStatus ?? "Draft",
+      section: (quizData.section || selectedSection) ?? "",
+      courseId,
+      createdAt: quizData.createdAt || new Date().toISOString(),
+      description: quizData.description ?? "",
+      dueDate: quizData.dueDate ?? "",
+      totalPoints:
+        pointsFromQuestions > 0
+          ? pointsFromQuestions
+          : (quizData.totalPoints ?? 0),
+      questions: transformed,
+    };
+  }, [quizData, questions, selectedSection, courseId]);
+
+  const handlePreview = () => {
+    setPreviewOpen(true);
+  };
 
   const handleCreateQuiz = async () => {
     const transformedQuestions = transformBuilderQuestions(questions);
@@ -63,6 +95,24 @@ export default function QuizBuilder() {
   }
 
   return (
+    <>
+      <Sheet open={previewOpen} onOpenChange={setPreviewOpen}>
+        <SheetContent
+          side="right"
+          className="w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl overflow-y-auto"
+        >
+          <SheetHeader className="space-y-1 border-b border-border pb-4 pr-8">
+            <SheetTitle>Quiz preview</SheetTitle>
+            <p className="text-sm text-muted-foreground font-normal">
+              How the quiz looks with correct answers marked (draft view).
+            </p>
+          </SheetHeader>
+          <div className="mt-4 pb-8">
+            <QuizPreview quiz={previewQuiz} />
+          </div>
+        </SheetContent>
+      </Sheet>
+
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-[1600px]">
       {/* Main Content Form */}
       <div className="lg:col-span-9 flex flex-col gap-6">
@@ -127,5 +177,6 @@ export default function QuizBuilder() {
         onPublish={() => console.log("Publishing...")} 
       />
     </div>
+    </>
   );
 }
