@@ -31,6 +31,16 @@ export const quizService = {
     return response.data;
   },
 
+  updateQuiz: async (quizId: string, quiz: QuizData): Promise<QuizData> => {
+    const response = await axios.put(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/quiz/${quizId}`,
+      quiz,
+      { withCredentials: true },
+    );
+
+    return response.data;
+  },
+
   deleteQuizById: async (quizId: string): Promise<void> => {
     await axios.delete(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/quiz/${quizId}`,

@@ -45,6 +45,15 @@ async def create_quiz(payload: QuizCreate, db=Depends(get_instructor_db)):
     
     return quiz
 
+@quiz_router.put("/{quizId}")
+async def update_quiz(quizId: str, payload: QuizCreate, db=Depends(get_instructor_db)):
+    quiz = payload.model_dump()
+    quiz["_id"] = quizId
+
+    await db["quizzes"].replace_one({"_id": quizId}, quiz)
+
+    return quiz
+
 @quiz_router.delete("/{quizId}")
 async def delete_quiz_by_id(quizId: str, db=Depends(get_instructor_db)):
     result = await db["quizzes"].delete_one({"_id": quizId})
