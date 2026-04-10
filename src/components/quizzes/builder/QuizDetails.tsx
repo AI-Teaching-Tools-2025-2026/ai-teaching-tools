@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -27,7 +27,9 @@ function toDateInputValue(stored: string | undefined): string {
 
 interface QuizDetailsProps {
   quizData: Partial<QuizData>;
-  setQuizData: (data: Partial<QuizData>) => void;
+  // accept the state setter dispatch so callers can pass the useState setter
+  // and this component can use the functional updater form to avoid races.
+  setQuizData: React.Dispatch<React.SetStateAction<Partial<QuizData>>>;
   selectedSection: string;
   setSelectedSection: (section: string) => void;
 }
@@ -38,6 +40,19 @@ export function QuizDetails({
   selectedSection,
   setSelectedSection,
 }: QuizDetailsProps) {
+  // set a sensible default (today) for the due date when creating a new quiz
+  useEffect(() => {
+    if (!quizData.dueDate || !quizData.dueDate.trim()) {
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = String(now.getMonth() + 1).padStart(2, "0");
+      const d = String(now.getDate()).padStart(2, "0");
+      const today = `${y}-${m}-${d}`;
+      setQuizData((prev) => ({ ...prev, dueDate: today }));
+    }
+    // run only on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="w-full max-w-3xl mx-auto bg-card border border-border rounded-lg p-8 shadow-sm flex flex-col gap-6">
       {/* Title Input */}
@@ -45,17 +60,17 @@ export function QuizDetails({
         <label className="text-sm font-medium text-foreground">
           Quiz Title
         </label>
-        <Input 
-          type="text" 
+        <Input
+          type="text"
           placeholder="Enter quiz title"
           value={quizData.quizTitle ?? ""}
           onChange={(e) =>
-            setQuizData({
-              ...quizData,
+            setQuizData((prev) => ({
+              ...prev,
               quizTitle: e.target.value,
-            })
+            }))
           }
-           />
+        />
       </div>
 
       {/* Description Textarea */}
@@ -68,10 +83,10 @@ export function QuizDetails({
           className="min-h-[120px] resize-y"
           value={quizData.description ?? ""}
           onChange={(e) =>
-            setQuizData({
-              ...quizData,
+            setQuizData((prev) => ({
+              ...prev,
               description: e.target.value,
-            })
+            }))
           }
         />
       </div>
@@ -105,33 +120,37 @@ export function QuizDetails({
         {/* Points Input */}
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-foreground">Points</label>
-          <Input 
-            type="number" 
+          <Input
+            type="number"
             value={quizData.totalPoints ?? 0}
             onChange={(e) =>
-            setQuizData({
-              ...quizData,
-              totalPoints: Number(e.target.value),
-            })
-          } />
+              setQuizData((prev) => ({
+                ...prev,
+                totalPoints: Number(e.target.value),
+              }))
+            }
+          />
         </div>
 
         {/* Due date */}
         <div className="flex flex-col gap-2">
           <label htmlFor="quiz-due-date" className="text-sm font-medium text-foreground">
-            Due date
+            Due Date
           </label>
           <Input
             id="quiz-due-date"
             type="date"
             className="bg-background"
             value={toDateInputValue(quizData.dueDate)}
-            onChange={(e) =>
-              setQuizData({
-                ...quizData,
-                dueDate: e.target.value,
-              })
-            }
+            onChange={(e) => {
+              const v = e.target.value;
+              // store as a date-only string (YYYY-MM-DD) to match MongoDB format
+              // expected by the backend.
+              setQuizData((prev) => ({
+                ...prev,
+                dueDate: v || "",
+              }));
+            }}
           />
         </div>
       </div>

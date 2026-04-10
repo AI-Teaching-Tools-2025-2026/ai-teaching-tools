@@ -58,6 +58,13 @@ function SubmissionModal({
     };
   }, []);
 
+  // Reset loading state whenever the modal is opened/closed so the button
+  // doesn't remain in a stale "Submitting..." state when reused.
+  React.useEffect(() => {
+    // clear loading each time the modal visibility changes
+    setIsLoading(false);
+  }, [isOpen]);
+
   const handleSubmit = async () => {
     setIsLoading(true);
     try {
