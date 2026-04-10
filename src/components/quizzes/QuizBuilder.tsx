@@ -4,34 +4,59 @@ import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { mockQuizTypes, mockSections } from "./mockData";
 import { QuizDetails } from "./builder/QuizDetails";
 import { QuestionList } from "./builder/QuestionList";
-import { BuilderQuestion, QuizTypeOption } from "@/types/quiz";
+import { QuizData, BuilderQuestion, QuizTypeOption, transformBuilderQuestions } from "@/types/quiz";
 import { QuizBuilderSidebar } from "./builder/QuizBuilderSidebar";
 
 type Tab = "details" | "questions";
 
 export default function QuizBuilder() {
   const router = useRouter();
+  const params = useParams();
+  const courseId = params.courseId as string;
   const [activeTab, setActiveTab] = useState<Tab>("details");
+  const [quizData, setQuizData] = useState<Partial<QuizData>>({
+    quizTitle: "",
+    quizStatus: "Draft",
+    section: "",
+    courseId,
+    createdAt: "",
+    description: "",
+    dueDate: "",
+    totalPoints: 0,
+    questions: [],
+  });
   const [questions, setQuestions] = useState<BuilderQuestion[]>([]);
   const [selectedQuizType, setSelectedQuizType] = useState<QuizTypeOption>(
     mockQuizTypes[0],
   );
   const [selectedSection, setSelectedSection] = useState(mockSections[0]);
 
-  const handleAddQuestion = (type: BuilderQuestion["type"]) => {
-    const newQ: BuilderQuestion = {
-      id: crypto.randomUUID(),
-      text: "",
-      type: type,
-      options: ["", "", "", ""],
-      correctAnswer: "",
+  const handlePreview = async () => {
+    // to do 
+  }
+
+  const handleCreateQuiz = async () => {
+    const transformedQuestions = transformBuilderQuestions(questions);
+
+    const quiz: QuizData = {
+      _id: `QUIZ${crypto.randomUUID().slice(0, 6).toUpperCase()}`,
+      quizTitle: quizData.quizTitle ?? "",
+      quizStatus: "Draft",
+      section: quizData.section ?? "",
+      courseId,
+      createdAt: new Date().toISOString(),
+      description: quizData.description ?? "",
+      dueDate: quizData.dueDate ?? "",
+      totalPoints: quizData.totalPoints ?? 0,
+      questions: transformedQuestions,
     };
-    setQuestions([...questions, newQ]);
-  };
+
+    console.log(quiz);
+  }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-[1600px]">
@@ -75,8 +100,8 @@ export default function QuizBuilder() {
           <CardContent className="pt-6">
             {activeTab === "details" && (
               <QuizDetails
-                selectedQuizType={selectedQuizType}
-                setSelectedQuizType={setSelectedQuizType}
+                quizData={quizData}
+                setQuizData={setQuizData}
                 selectedSection={selectedSection}
                 setSelectedSection={setSelectedSection}
               />
@@ -91,10 +116,11 @@ export default function QuizBuilder() {
 
       {/* Sidebar */}
       <QuizBuilderSidebar
-        activeTab={activeTab}
-        onAddQuestion={handleAddQuestion}
-        onDelete={() => router.back()} // Gonna have to change later lol
-        onPublish={() => console.log("Publishing...")} // Placeholder
+        onPreview={handlePreview}
+        onCreateQuiz={handleCreateQuiz}
+        onUpdateQuiz={() => console.log("Updating...")}
+        onDelete={() => console.log("Deleting...")}
+        onPublish={() => console.log("Publishing...")} 
       />
     </div>
   );

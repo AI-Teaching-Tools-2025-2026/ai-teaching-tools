@@ -2,7 +2,6 @@
 
 import React from "react";
 import { ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -11,19 +10,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { mockQuizTypes, mockSections } from "../mockData";
-import { QuizTypeOption } from "@/types/quiz";
+import { mockSections } from "../mockData";
+import { QuizData } from "@/types/quiz";
 
 interface QuizDetailsProps {
-  selectedQuizType: QuizTypeOption;
-  setSelectedQuizType: (type: QuizTypeOption) => void;
+  quizData: Partial<QuizData>;
+  setQuizData: (data: Partial<QuizData>) => void;
   selectedSection: string;
   setSelectedSection: (section: string) => void;
 }
 
 export function QuizDetails({
-  selectedQuizType,
-  setSelectedQuizType,
+  quizData,
+  setQuizData,
   selectedSection,
   setSelectedSection,
 }: QuizDetailsProps) {
@@ -34,7 +33,17 @@ export function QuizDetails({
         <label className="text-sm font-medium text-foreground">
           Quiz Title
         </label>
-        <Input type="text" placeholder="Enter quiz title" />
+        <Input 
+          type="text" 
+          placeholder="Enter quiz title"
+          value={quizData.quizTitle ?? ""}
+          onChange={(e) =>
+            setQuizData({
+              ...quizData,
+              quizTitle: e.target.value,
+            })
+          }
+           />
       </div>
 
       {/* Description Textarea */}
@@ -45,35 +54,17 @@ export function QuizDetails({
         <Textarea
           placeholder="Enter quiz description"
           className="min-h-[120px] resize-y"
+          value={quizData.description ?? ""}
+          onChange={(e) =>
+            setQuizData({
+              ...quizData,
+              description: e.target.value,
+            })
+          }
         />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Quiz Type Select */}
-        <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium text-foreground">
-            Quiz Type
-          </label>
-          <DropdownMenu modal={false}>
-            <DropdownMenuTrigger asChild>
-              <button className="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer">
-                {selectedQuizType.name}
-                <ChevronDown className="h-4 w-4 text-muted-foreground" />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-[200px]">
-              {mockQuizTypes.map((type) => (
-                <DropdownMenuItem
-                  key={type.id}
-                  onClick={() => setSelectedQuizType(type)}
-                  className="cursor-pointer"
-                >
-                  {type.name}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
 
         {/* Section Select */}
         <div className="flex flex-col gap-2">
@@ -102,23 +93,16 @@ export function QuizDetails({
         {/* Points Input */}
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-foreground">Points</label>
-          <Input type="number" placeholder="100" min={0} />
+          <Input 
+            type="number" 
+            value={quizData.totalPoints ?? 0}
+            onChange={(e) =>
+            setQuizData({
+              ...quizData,
+              totalPoints: Number(e.target.value),
+            })
+          } />
         </div>
-      </div>
-
-      <div className="h-px bg-border w-full my-2" />
-
-      {/* Actions */}
-      <div className="flex justify-end gap-3">
-        <Button
-          variant="ghost"
-          className="text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer"
-        >
-          Cancel
-        </Button>
-        <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-          Save Changes
-        </Button>
       </div>
     </div>
   );
