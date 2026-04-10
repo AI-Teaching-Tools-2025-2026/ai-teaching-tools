@@ -92,7 +92,6 @@ export function QuizDetails({
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
         {/* Section Select */}
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-foreground">Section</label>
@@ -134,7 +133,10 @@ export function QuizDetails({
 
         {/* Due date */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="quiz-due-date" className="text-sm font-medium text-foreground">
+          <label
+            htmlFor="quiz-due-date"
+            className="text-sm font-medium text-foreground"
+          >
             Due Date
           </label>
           <Input

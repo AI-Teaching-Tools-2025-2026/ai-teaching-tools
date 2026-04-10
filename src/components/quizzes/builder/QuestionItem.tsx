@@ -12,7 +12,11 @@ interface QuestionItemProps {
   onDelete: (id: string) => void;
 }
 
-export function QuestionItem({ question: q, index, onDelete }: QuestionItemProps) {
+export function QuestionItem({
+  question: q,
+  index,
+  onDelete,
+}: QuestionItemProps) {
   return (
     <div className="w-full bg-card border border-border rounded-lg p-6 flex flex-col gap-4 group hover:border-ring transition-colors relative">
       <div className="absolute right-4 top-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity z-10">

@@ -92,7 +92,7 @@ export default function QuizBuilder() {
     } catch (error) {
       console.error("Failed to create quiz:", error);
     }
-  }
+  };
 
   return (
     <>
@@ -113,70 +113,73 @@ export default function QuizBuilder() {
         </SheetContent>
       </Sheet>
 
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-[1600px]">
-      {/* Main Content Form */}
-      <div className="lg:col-span-9 flex flex-col gap-6">
-        <Card className="border-border bg-card">
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <CardTitle>Quiz Configuration</CardTitle>
-              {/* Internal Tabs for switching views within the form context */}
-              <div className="bg-muted p-1 rounded-lg inline-flex border border-border">
-                <button
-                  onClick={() => setActiveTab("details")}
-                  className={cn(
-                    "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer",
-                    activeTab === "details"
-                      ? "bg-background text-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  Details
-                </button>
-                <button
-                  onClick={() => setActiveTab("questions")}
-                  className={cn(
-                    "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer",
-                    activeTab === "questions"
-                      ? "bg-background text-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  Questions
-                  <span className="ml-2 bg-primary/10 text-primary text-xs px-1.5 py-0.5 rounded-full">
-                    {questions.length}
-                  </span>
-                </button>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-[1600px]">
+        {/* Main Content Form */}
+        <div className="lg:col-span-9 flex flex-col gap-6">
+          <Card className="border-border bg-card">
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle>Quiz Configuration</CardTitle>
+                {/* Internal Tabs for switching views within the form context */}
+                <div className="bg-muted p-1 rounded-lg inline-flex border border-border">
+                  <button
+                    onClick={() => setActiveTab("details")}
+                    className={cn(
+                      "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer",
+                      activeTab === "details"
+                        ? "bg-background text-foreground shadow-sm"
+                        : "text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    Details
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("questions")}
+                    className={cn(
+                      "px-4 py-1.5 rounded-md text-sm font-medium transition-all cursor-pointer",
+                      activeTab === "questions"
+                        ? "bg-background text-foreground shadow-sm"
+                        : "text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    Questions
+                    <span className="ml-2 bg-primary/10 text-primary text-xs px-1.5 py-0.5 rounded-full">
+                      {questions.length}
+                    </span>
+                  </button>
+                </div>
               </div>
-            </div>
-          </CardHeader>
-          <Separator />
-          <CardContent className="pt-6">
-            {activeTab === "details" && (
-              <QuizDetails
-                quizData={quizData}
-                setQuizData={setQuizData}
-                selectedSection={selectedSection}
-                setSelectedSection={setSelectedSection}
-              />
-            )}
+            </CardHeader>
+            <Separator />
+            <CardContent className="pt-6">
+              {activeTab === "details" && (
+                <QuizDetails
+                  quizData={quizData}
+                  setQuizData={setQuizData}
+                  selectedSection={selectedSection}
+                  setSelectedSection={setSelectedSection}
+                />
+              )}
 
-            {activeTab === "questions" && (
-              <QuestionList questions={questions} setQuestions={setQuestions} />
-            )}
-          </CardContent>
-        </Card>
+              {activeTab === "questions" && (
+                <QuestionList
+                  questions={questions}
+                  setQuestions={setQuestions}
+                />
+              )}
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Sidebar */}
+        <QuizBuilderSidebar
+          onPreview={handlePreview}
+          onCreateQuiz={handleCreateQuiz}
+          onUpdateQuiz={() => console.log("Updating...")}
+          onDelete={() => console.log("Deleting...")}
+          onPublish={() => console.log("Publishing...")}
+        />
       </div>
-
-      {/* Sidebar */}
-      <QuizBuilderSidebar
-        onPreview={handlePreview}
-        onCreateQuiz={handleCreateQuiz}
-        onUpdateQuiz={() => console.log("Updating...")}
-        onDelete={() => console.log("Deleting...")}
-        onPublish={() => console.log("Publishing...")} 
-      />
-    </div>
     </>
   );
 }

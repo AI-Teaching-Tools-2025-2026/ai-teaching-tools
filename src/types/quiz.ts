@@ -37,7 +37,7 @@ export interface BuilderQuestion {
 
 // Convert BuilderQuestion into Question
 export const transformBuilderQuestions = (
-  builderQuestions: BuilderQuestion[]
+  builderQuestions: BuilderQuestion[],
 ): Question[] => {
   return builderQuestions.map((q, index) => {
     let answers: Answer[] = [];

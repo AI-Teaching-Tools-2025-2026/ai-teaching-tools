@@ -47,5 +47,4 @@ export const quizService = {
 
     return response.data;
   },
-
 };

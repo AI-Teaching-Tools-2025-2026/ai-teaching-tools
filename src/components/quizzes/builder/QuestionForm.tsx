@@ -187,7 +187,6 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
         <Label className="text-lg font-medium">Answers</Label>
 
         <div className="rounded-lg border bg-card/30 p-4 grid gap-6">
-          
           {/* TRUE / FALSE MODE */}
           {questionType === "true-false" && (
             <div className="grid gap-3">
@@ -195,10 +194,7 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
                 Correct Answer
               </Label>
 
-              <Select
-                value={correctAnswer}
-                onValueChange={setCorrectAnswer}
-              >
+              <Select value={correctAnswer} onValueChange={setCorrectAnswer}>
                 <SelectTrigger className="bg-card">
                   <SelectValue placeholder="Select True or False" />
                 </SelectTrigger>
