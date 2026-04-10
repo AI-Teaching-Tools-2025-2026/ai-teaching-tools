@@ -13,6 +13,18 @@ import {
 import { mockSections } from "../mockData";
 import { QuizData } from "@/types/quiz";
 
+function toDateInputValue(stored: string | undefined): string {
+  if (!stored?.trim()) return "";
+  const isoDay = stored.match(/^(\d{4}-\d{2}-\d{2})/);
+  if (isoDay) return isoDay[1];
+  const d = new Date(stored);
+  if (Number.isNaN(d.getTime())) return "";
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
 interface QuizDetailsProps {
   quizData: Partial<QuizData>;
   setQuizData: (data: Partial<QuizData>) => void;
@@ -102,6 +114,25 @@ export function QuizDetails({
               totalPoints: Number(e.target.value),
             })
           } />
+        </div>
+
+        {/* Due date */}
+        <div className="flex flex-col gap-2">
+          <label htmlFor="quiz-due-date" className="text-sm font-medium text-foreground">
+            Due date
+          </label>
+          <Input
+            id="quiz-due-date"
+            type="date"
+            className="bg-background"
+            value={toDateInputValue(quizData.dueDate)}
+            onChange={(e) =>
+              setQuizData({
+                ...quizData,
+                dueDate: e.target.value,
+              })
+            }
+          />
         </div>
       </div>
     </div>
