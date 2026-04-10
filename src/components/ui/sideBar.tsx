@@ -1,15 +1,15 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
+import type { LucideIcon } from "lucide-react";
 import {
   LayoutDashboard,
   NotebookTabs,
   FileQuestion,
-  SquarePen,
   Database,
   ChevronLeft,
   MessageCircle,
-  ArrowLeftCircle
+  ArrowLeftCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -18,23 +18,30 @@ interface SideBarProps {
   toggleSidebar: () => void;
 }
 
+type DrawerItem = {
+  name: string;
+  href: string;
+  icon: LucideIcon;
+  disabled?: boolean;
+};
+
 export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
   const pathname = usePathname();
   const params = useParams();
   const courseId = params?.courseId as string;
 
-  const drawerList = [
-    { name: "Dashboard", href: `/courses/${courseId}`, icon: LayoutDashboard },
-    { name: "Grades", href: `/courses/${courseId}/grades`, icon: NotebookTabs },
+  const drawerList: DrawerItem[] = [
+    { name: "Home", href: `/courses/${courseId}`, icon: LayoutDashboard },
+    {
+      name: "Grades",
+      href: `/courses/${courseId}/grades`,
+      icon: NotebookTabs,
+      disabled: true,
+    },
     {
       name: "Quizzes",
       href: `/courses/${courseId}/quizzes`,
       icon: FileQuestion,
-    },
-    {
-      name: "Assignment Builder",
-      href: `/courses/${courseId}/quizzes/builder`,
-      icon: SquarePen,
     },
     {
       name: "Question Banks",
@@ -80,37 +87,59 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
       <nav className="flex flex-col gap-1 overflow-x-hidden">
         {drawerList.map((item) => {
           const isActive =
-            pathname === item.href ||
-            (item.href !== `/courses/${courseId}` &&
-              pathname.startsWith(item.href));
-          return (
-            <Link
-              key={item.name}
-              href={item.href}
+            !item.disabled &&
+            (pathname === item.href ||
+              (item.href !== `/courses/${courseId}` &&
+                pathname.startsWith(item.href)));
+
+          const rowClassName = cn(
+            "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors relative group",
+            item.disabled
+              ? "cursor-not-allowed text-neutral-600 opacity-50"
+              : isActive
+                ? "bg-neutral-800 text-neutral-50"
+                : "hover:bg-neutral-800 text-neutral-400 hover:text-neutral-200",
+            isCollapsed && "justify-center px-2",
+          );
+
+          const iconClassName = cn(
+            "h-5 w-5 shrink-0",
+            item.disabled
+              ? "text-neutral-600"
+              : isActive
+                ? "text-neutral-50"
+                : "text-neutral-400 group-hover:text-neutral-200",
+          );
+
+          const label = (
+            <span
               className={cn(
-                "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors relative group",
-                isActive
-                  ? "bg-neutral-800 text-neutral-50"
-                  : "hover:bg-neutral-800 text-neutral-400 hover:text-neutral-200",
-                isCollapsed && "justify-center px-2",
+                "whitespace-nowrap transition-all duration-300 origin-left overflow-hidden",
+                isCollapsed ? "w-0 opacity-0" : "w-auto opacity-100",
               )}
             >
-              <item.icon
-                className={cn(
-                  "h-5 w-5 shrink-0",
-                  isActive
-                    ? "text-neutral-50"
-                    : "text-neutral-400 group-hover:text-neutral-200",
-                )}
-              />
-              <span
-                className={cn(
-                  "whitespace-nowrap transition-all duration-300 origin-left overflow-hidden",
-                  isCollapsed ? "w-0 opacity-0" : "w-auto opacity-100",
-                )}
+              {item.name}
+            </span>
+          );
+
+          if (item.disabled) {
+            return (
+              <div
+                key={item.name}
+                className={rowClassName}
+                aria-disabled="true"
+                title="Unavailable"
               >
-                {item.name}
-              </span>
+                <item.icon className={iconClassName} aria-hidden />
+                {label}
+              </div>
+            );
+          }
+
+          return (
+            <Link key={item.name} href={item.href} className={rowClassName}>
+              <item.icon className={iconClassName} aria-hidden />
+              {label}
             </Link>
           );
         })}

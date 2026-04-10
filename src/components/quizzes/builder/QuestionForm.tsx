@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { Plus, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -14,6 +15,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { BuilderQuestion } from "@/types/quiz";
 
+/** Wrong options always include at least this many rows; with correct answer → minimum 2 options total. */
+const MIN_INCORRECT_ANSWERS = 1;
+
 interface QuestionFormProps {
   onSave: (question: BuilderQuestion) => void;
   onCancel: () => void;
@@ -25,19 +29,81 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
   const [questionType, setQuestionType] = useState("multiple-choice");
   const [points, setPoints] = useState(5);
 
-  // State for answers
+  // State for answers (multiple choice: correct + ≥1 incorrect so at least 2 options including correct)
   const [correctAnswer, setCorrectAnswer] = useState("");
-  const [incorrectAnswers, setIncorrectAnswers] = useState(["", "", ""]);
+  const [incorrectAnswers, setIncorrectAnswers] = useState<string[]>(() =>
+    Array(MIN_INCORRECT_ANSWERS).fill(""),
+  );
+
+  const handleQuestionTypeChange = (value: string) => {
+    setQuestionType(value);
+    if (value === "multiple-choice") {
+      setIncorrectAnswers(Array(MIN_INCORRECT_ANSWERS).fill(""));
+      setCorrectAnswer("");
+    } else if (value === "true-false") {
+      setCorrectAnswer("");
+    }
+  };
+
+  const addIncorrectAnswer = () => {
+    setIncorrectAnswers((prev) => [...prev, ""]);
+  };
+
+  const removeIncorrectAnswer = (index: number) => {
+    if (index < MIN_INCORRECT_ANSWERS) return;
+    setIncorrectAnswers((prev) =>
+      prev.length > MIN_INCORRECT_ANSWERS
+        ? prev.filter((_, i) => i !== index)
+        : prev,
+    );
+  };
+
+  const updateIncorrectAnswer = (index: number, value: string) => {
+    setIncorrectAnswers((prev) => {
+      const next = [...prev];
+      next[index] = value;
+      return next;
+    });
+  };
+
+  const multipleChoiceIsValid = () => {
+    const trimmedCorrect = correctAnswer.trim();
+    if (!trimmedCorrect) return false;
+    const nonEmptyOptions = [
+      trimmedCorrect,
+      ...incorrectAnswers.map((a) => a.trim()).filter(Boolean),
+    ];
+    const uniqueTexts = new Set(nonEmptyOptions);
+    return uniqueTexts.size >= 2;
+  };
+
+  const trueFalseIsValid = () =>
+    correctAnswer === "True" || correctAnswer === "False";
+
+  const canSave =
+    questionText.trim().length > 0 &&
+    (questionType === "multiple-choice"
+      ? multipleChoiceIsValid()
+      : trueFalseIsValid());
 
   const handleSave = () => {
-    // Construct the BuilderQuestion object
+    if (!canSave) return;
     const newQuestion: BuilderQuestion = {
       id: crypto.randomUUID(),
-      text: questionText,
+      text: questionText.trim(),
       type: questionType as "multiple-choice" | "true-false",
       points: Number(points),
-      options: [correctAnswer, ...incorrectAnswers],
-      correctAnswer: correctAnswer,
+      options:
+        questionType === "multiple-choice"
+          ? [
+              correctAnswer.trim(),
+              ...incorrectAnswers.map((a) => a.trim()).filter(Boolean),
+            ]
+          : undefined,
+      correctAnswer:
+        questionType === "multiple-choice"
+          ? correctAnswer.trim()
+          : correctAnswer,
     };
     onSave(newQuestion);
   };
@@ -91,7 +157,7 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
       {/* Question Type */}
       <div className="grid gap-2">
         <Label className="text-[15px] font-medium">Question Type</Label>
-        <Select value={questionType} onValueChange={setQuestionType}>
+        <Select value={questionType} onValueChange={handleQuestionTypeChange}>
           <SelectTrigger className="bg-card/50">
             <SelectValue placeholder="Select type" />
           </SelectTrigger>
@@ -121,7 +187,6 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
         <Label className="text-lg font-medium">Answers</Label>
 
         <div className="rounded-lg border bg-card/30 p-4 grid gap-6">
-          
           {/* TRUE / FALSE MODE */}
           {questionType === "true-false" && (
             <div className="grid gap-3">
@@ -129,10 +194,7 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
                 Correct Answer
               </Label>
 
-              <Select
-                value={correctAnswer}
-                onValueChange={setCorrectAnswer}
-              >
+              <Select value={correctAnswer} onValueChange={setCorrectAnswer}>
                 <SelectTrigger className="bg-card">
                   <SelectValue placeholder="Select True or False" />
                 </SelectTrigger>
@@ -161,24 +223,46 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
                 />
               </div>
 
-              {/* Possible Answers */}
+              {/* Incorrect options: minimum one (two choices total with correct); extras can be removed */}
               {incorrectAnswers.map((ans, idx) => (
                 <div key={idx} className="grid gap-2">
-                  <Label className="text-muted-foreground font-medium">
-                    Possible Answer
-                  </Label>
+                  <div className="flex items-center justify-between gap-2">
+                    <Label className="text-muted-foreground font-medium">
+                      Incorrect option {idx + 1}
+                    </Label>
+                    {idx >= MIN_INCORRECT_ANSWERS &&
+                      incorrectAnswers.length > MIN_INCORRECT_ANSWERS && (
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          size="icon"
+                          className="h-8 w-8 shrink-0 text-muted-foreground hover:text-destructive"
+                          onClick={() => removeIncorrectAnswer(idx)}
+                          aria-label={`Remove option ${idx + 1}`}
+                        >
+                          <X className="h-4 w-4" />
+                        </Button>
+                      )}
+                  </div>
 
                   <Input
                     value={ans}
-                    onChange={(e) => {
-                      const newArr = [...incorrectAnswers];
-                      newArr[idx] = e.target.value;
-                      setIncorrectAnswers(newArr);
-                    }}
+                    onChange={(e) => updateIncorrectAnswer(idx, e.target.value)}
                     className="bg-muted/30"
                   />
                 </div>
               ))}
+
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                className="w-fit gap-1.5"
+                onClick={addIncorrectAnswer}
+              >
+                <Plus className="h-4 w-4" />
+                Add answer
+              </Button>
             </>
           )}
         </div>
@@ -188,7 +272,9 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
         <Button variant="outline" onClick={onCancel}>
           Cancel
         </Button>
-        <Button onClick={handleSave}>Save changes</Button>
+        <Button onClick={handleSave} disabled={!canSave}>
+          Save changes
+        </Button>
       </div>
     </div>
   );
