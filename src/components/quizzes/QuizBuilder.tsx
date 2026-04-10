@@ -10,6 +10,7 @@ import { QuizDetails } from "./builder/QuizDetails";
 import { QuestionList } from "./builder/QuestionList";
 import { QuizData, BuilderQuestion, QuizTypeOption, transformBuilderQuestions } from "@/types/quiz";
 import { QuizBuilderSidebar } from "./builder/QuizBuilderSidebar";
+import { quizService } from "@/services/quizService";
 
 type Tab = "details" | "questions";
 
@@ -30,9 +31,6 @@ export default function QuizBuilder() {
     questions: [],
   });
   const [questions, setQuestions] = useState<BuilderQuestion[]>([]);
-  const [selectedQuizType, setSelectedQuizType] = useState<QuizTypeOption>(
-    mockQuizTypes[0],
-  );
   const [selectedSection, setSelectedSection] = useState(mockSections[0]);
 
   const handlePreview = async () => {
@@ -43,7 +41,7 @@ export default function QuizBuilder() {
     const transformedQuestions = transformBuilderQuestions(questions);
 
     const quiz: QuizData = {
-      _id: `QUIZ${crypto.randomUUID().slice(0, 6).toUpperCase()}`,
+      _id: "",
       quizTitle: quizData.quizTitle ?? "",
       quizStatus: "Draft",
       section: quizData.section ?? "",
@@ -55,7 +53,13 @@ export default function QuizBuilder() {
       questions: transformedQuestions,
     };
 
-    console.log(quiz);
+    try {
+      const createdQuiz = await quizService.createQuiz(quiz);
+      console.log("Created quiz:", createdQuiz);
+      router.push(`/courses/${courseId}/quizzes`); //should navigate to editor mode in the future
+    } catch (error) {
+      console.error("Failed to create quiz:", error);
+    }
   }
 
   return (

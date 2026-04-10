@@ -22,6 +22,15 @@ export const quizService = {
     return response.data;
   },
 
+  createQuiz: async (quiz: QuizData): Promise<QuizData> => {
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/quiz`,
+      quiz,
+      { withCredentials: true },
+    );
+    return response.data;
+  },
+
   deleteQuizById: async (quizId: string): Promise<void> => {
     await axios.delete(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/quiz/${quizId}`,
@@ -38,4 +47,5 @@ export const quizService = {
 
     return response.data;
   },
+
 };
