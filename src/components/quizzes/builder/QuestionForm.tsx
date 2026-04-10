@@ -23,7 +23,7 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
   const [authorship, setAuthorship] = useState("manual");
   const [questionText, setQuestionText] = useState("");
   const [questionType, setQuestionType] = useState("multiple-choice");
-  const [points, setPoints] = useState("5");
+  const [points, setPoints] = useState(5);
 
   // State for answers
   const [correctAnswer, setCorrectAnswer] = useState("");
@@ -34,7 +34,8 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
     const newQuestion: BuilderQuestion = {
       id: crypto.randomUUID(),
       text: questionText,
-      type: questionType as "multiple-choice" | "true-false" | "short-answer",
+      type: questionType as "multiple-choice" | "true-false",
+      points: Number(points),
       options: [correctAnswer, ...incorrectAnswers],
       correctAnswer: correctAnswer,
     };
@@ -111,41 +112,75 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
           type="number"
           className="w-[200px] bg-card/50"
           value={points}
-          onChange={(e) => setPoints(e.target.value)}
+          onChange={(e) => setPoints(Number(e.target.value))}
         />
       </div>
 
       {/* Answers Section */}
       <div className="grid gap-4 pt-2">
         <Label className="text-lg font-medium">Answers</Label>
-        <div className="rounded-lg border bg-card/30 p-4 grid gap-6">
-          {/* Correct Answer */}
-          <div className="grid gap-2">
-            <Label className="text-blue-500 font-medium">Correct Answer</Label>
-            <Input
-              value={correctAnswer}
-              onChange={(e) => setCorrectAnswer(e.target.value)}
-              className="border-blue-500/50 focus-visible:ring-blue-500/50"
-            />
-          </div>
 
-          {/* Possible Answers */}
-          {incorrectAnswers.map((ans, idx) => (
-            <div key={idx} className="grid gap-2">
+        <div className="rounded-lg border bg-card/30 p-4 grid gap-6">
+          
+          {/* TRUE / FALSE MODE */}
+          {questionType === "true-false" && (
+            <div className="grid gap-3">
               <Label className="text-muted-foreground font-medium">
-                Possible Answer
+                Correct Answer
               </Label>
-              <Input
-                value={ans}
-                onChange={(e) => {
-                  const newArr = [...incorrectAnswers];
-                  newArr[idx] = e.target.value;
-                  setIncorrectAnswers(newArr);
-                }}
-                className="bg-muted/30"
-              />
+
+              <Select
+                value={correctAnswer}
+                onValueChange={setCorrectAnswer}
+              >
+                <SelectTrigger className="bg-card">
+                  <SelectValue placeholder="Select True or False" />
+                </SelectTrigger>
+
+                <SelectContent>
+                  <SelectItem value="True">True</SelectItem>
+                  <SelectItem value="False">False</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
-          ))}
+          )}
+
+          {/* MULTIPLE CHOICE MODE */}
+          {questionType === "multiple-choice" && (
+            <>
+              {/* Correct Answer */}
+              <div className="grid gap-2">
+                <Label className="text-blue-500 font-medium">
+                  Correct Answer
+                </Label>
+
+                <Input
+                  value={correctAnswer}
+                  onChange={(e) => setCorrectAnswer(e.target.value)}
+                  className="border-blue-500/50 focus-visible:ring-blue-500/50"
+                />
+              </div>
+
+              {/* Possible Answers */}
+              {incorrectAnswers.map((ans, idx) => (
+                <div key={idx} className="grid gap-2">
+                  <Label className="text-muted-foreground font-medium">
+                    Possible Answer
+                  </Label>
+
+                  <Input
+                    value={ans}
+                    onChange={(e) => {
+                      const newArr = [...incorrectAnswers];
+                      newArr[idx] = e.target.value;
+                      setIncorrectAnswers(newArr);
+                    }}
+                    className="bg-muted/30"
+                  />
+                </div>
+              ))}
+            </>
+          )}
         </div>
       </div>
 
