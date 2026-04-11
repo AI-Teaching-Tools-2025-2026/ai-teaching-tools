@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { MoreHorizontal, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -62,6 +62,7 @@ export default function QuizTable() {
   const [quizToDelete, setQuizToDelete] = useState<QuizData | null>(null);
 
   const params = useParams();
+  const router = useRouter();
   const courseId = params.courseId as string | undefined;
 
   const getPreviewHref = (quizId: string) =>
@@ -173,6 +174,9 @@ export default function QuizTable() {
     try {
       const newQuiz = await quizService.duplicateQuizById(quizId);
       setQuizzes((prev) => [...prev, newQuiz]);
+      if (courseId) {
+        router.push(`/courses/${courseId}/quizzes/${newQuiz._id}/edit`);
+      }
     } catch (error) {
       console.error("Failed to duplicate quiz", error);
     }
@@ -460,7 +464,7 @@ export default function QuizTable() {
 
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem
-                            onClick={() => console.log("Edit quiz", quiz._id)}
+                            onClick={() => router.push(`/courses/${courseId}/quizzes/${quiz._id}/edit`)}
                           >
                             Edit
                           </DropdownMenuItem>

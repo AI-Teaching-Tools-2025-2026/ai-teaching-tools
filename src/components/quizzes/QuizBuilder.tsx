@@ -18,6 +18,7 @@ import {
   QuizData,
   BuilderQuestion,
   transformBuilderQuestions,
+  transformQuestionsToBuilder,
 } from "@/types/quiz";
 import { QuizBuilderSidebar } from "./builder/QuizBuilderSidebar";
 import { quizService } from "@/services/quizService";
@@ -25,24 +26,34 @@ import QuizPreview from "./QuizPreview";
 
 type Tab = "details" | "questions";
 
-export default function QuizBuilder() {
+interface QuizBuilderProps {
+  initialQuiz?: QuizData;
+}
+
+export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
   const router = useRouter();
   const params = useParams();
   const courseId = params.courseId as string;
   const [activeTab, setActiveTab] = useState<Tab>("details");
-  const [quizData, setQuizData] = useState<Partial<QuizData>>({
-    quizTitle: "",
-    quizStatus: "Draft",
-    section: "",
-    courseId,
-    createdAt: "",
-    description: "",
-    dueDate: "",
-    totalPoints: 0,
-    questions: [],
-  });
-  const [questions, setQuestions] = useState<BuilderQuestion[]>([]);
-  const [selectedSection, setSelectedSection] = useState(mockSections[0]);
+  const [quizData, setQuizData] = useState<Partial<QuizData>>(
+    initialQuiz || {
+      quizTitle: "",
+      quizStatus: "Draft",
+      section: "",
+      courseId,
+      createdAt: "",
+      description: "",
+      dueDate: "",
+      totalPoints: 0,
+      questions: [],
+    },
+  );
+  const [questions, setQuestions] = useState<BuilderQuestion[]>(
+    initialQuiz ? transformQuestionsToBuilder(initialQuiz.questions) : [],
+  );
+  const [selectedSection, setSelectedSection] = useState(
+    mockSections.find((s) => s === initialQuiz?.section) || mockSections[0],
+  );
   const [previewOpen, setPreviewOpen] = useState(false);
 
   const previewQuiz = useMemo((): QuizData => {
@@ -69,16 +80,16 @@ export default function QuizBuilder() {
     setPreviewOpen(true);
   };
 
-  const handleCreateQuiz = async () => {
+  const handleSaveQuiz = async () => {
     const transformedQuestions = transformBuilderQuestions(questions);
 
     const quiz: QuizData = {
-      _id: "",
+      _id: initialQuiz?._id || "",
       quizTitle: quizData.quizTitle ?? "",
       quizStatus: "Draft",
-      section: quizData.section ?? "",
+      section: selectedSection ?? "",
       courseId,
-      createdAt: new Date().toISOString(),
+      createdAt: initialQuiz?.createdAt || new Date().toISOString(),
       description: quizData.description ?? "",
       dueDate: quizData.dueDate ?? "",
       totalPoints: quizData.totalPoints ?? 0,
@@ -86,11 +97,27 @@ export default function QuizBuilder() {
     };
 
     try {
-      const createdQuiz = await quizService.createQuiz(quiz);
-      console.log("Created quiz:", createdQuiz);
-      router.push(`/courses/${courseId}/quizzes`); //should navigate to editor mode in the future
+      if (initialQuiz?._id) {
+        const updatedQuiz = await quizService.updateQuiz(initialQuiz._id, quiz);
+        console.log("Updated quiz:", updatedQuiz);
+        router.push(`/courses/${courseId}/quizzes`); 
+      } else {
+        const createdQuiz = await quizService.createQuiz(quiz);
+        console.log("Created quiz:", createdQuiz);
+        router.push(`/courses/${courseId}/quizzes/${createdQuiz._id}/edit`);
+      }
     } catch (error) {
-      console.error("Failed to create quiz:", error);
+      console.error("Failed to save quiz:", error);
+    }
+  };
+
+  const handleDeleteQuiz = async () => {
+    if (!initialQuiz?._id) return;
+    try {
+      await quizService.deleteQuizById(initialQuiz._id);
+      router.push(`/courses/${courseId}/quizzes`);
+    } catch (error) {
+      console.error("Failed to delete quiz:", error);
     }
   };
 
@@ -174,10 +201,10 @@ export default function QuizBuilder() {
         {/* Sidebar */}
         <QuizBuilderSidebar
           onPreview={handlePreview}
-          onCreateQuiz={handleCreateQuiz}
-          onUpdateQuiz={() => console.log("Updating...")}
-          onDelete={() => console.log("Deleting...")}
+          onSaveQuiz={handleSaveQuiz}
+          onDelete={handleDeleteQuiz}
           onPublish={() => console.log("Publishing...")}
+          isEditing={!!initialQuiz}
         />
       </div>
     </>
