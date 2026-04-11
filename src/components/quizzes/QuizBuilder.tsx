@@ -23,6 +23,7 @@ import {
 import { QuizBuilderSidebar } from "./builder/QuizBuilderSidebar";
 import { quizService } from "@/services/quizService";
 import QuizPreview from "./QuizPreview";
+import { toast } from "sonner";
 
 type Tab = "details" | "questions";
 
@@ -99,14 +100,15 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
     try {
       if (initialQuiz?._id) {
         const updatedQuiz = await quizService.updateQuiz(initialQuiz._id, quiz);
-        console.log("Updated quiz:", updatedQuiz);
+        toast.success("Quiz updated successfully");
         router.push(`/courses/${courseId}/quizzes`); 
       } else {
         const createdQuiz = await quizService.createQuiz(quiz);
-        console.log("Created quiz:", createdQuiz);
+        toast.success("Quiz created successfully");
         router.push(`/courses/${courseId}/quizzes/${createdQuiz._id}/edit`);
       }
     } catch (error) {
+      toast.error("Failed to save quiz. Please try again.");
       console.error("Failed to save quiz:", error);
     }
   };
@@ -115,8 +117,10 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
     if (!initialQuiz?._id) return;
     try {
       await quizService.deleteQuizById(initialQuiz._id);
+      toast.success("Quiz deleted successfully");
       router.push(`/courses/${courseId}/quizzes`);
     } catch (error) {
+      toast.error("Failed to delete quiz. Please try again.");
       console.error("Failed to delete quiz:", error);
     }
   };
