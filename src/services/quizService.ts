@@ -1,4 +1,4 @@
-import { QuizData, Question, Answer } from "@/types/quiz";
+import { QuizData } from "@/types/quiz";
 import axios from "axios";
 
 export const quizService = {

@@ -14,29 +14,31 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  // Future card content?
+  // CardDescription,
+  // CardHeader,
+  // CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
-const stats = [
-  {
-    label: "Students enrolled",
-    value: "—",
-    hint: "Sync roster from your LMS when ready",
-  },
-  {
-    label: "Quizzes this term",
-    value: "—",
-    hint: "Build from the quiz workspace",
-  },
-  {
-    label: "Question bank items",
-    value: "—",
-    hint: "Reuse across assessments",
-  },
-] as const;
+// TODO: Are stats something that is within the scope of this project?
+// const stats = [
+//   {
+//     label: "Students enrolled",
+//     value: "—",
+//     hint: "Sync roster from your LMS when ready",
+//   },
+//   {
+//     label: "Quizzes this term",
+//     value: "—",
+//     hint: "Build from the quiz workspace",
+//   },
+//   {
+//     label: "Question bank items",
+//     value: "—",
+//     hint: "Reuse across assessments",
+//   },
+// ] as const;
 
 export default function CourseDashboardPage() {
   const params = useParams();
