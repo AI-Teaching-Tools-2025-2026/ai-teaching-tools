@@ -67,6 +67,35 @@ export const transformBuilderQuestions = (
   });
 };
 
+// Convert Question back to BuilderQuestion
+export const transformQuestionsToBuilder = (
+  questions: Question[],
+): BuilderQuestion[] => {
+  return questions.map((q) => {
+    let type: "multiple-choice" | "true-false" = "multiple-choice";
+
+    if (
+      q.answers.length === 2 &&
+      q.answers.every((a) => a.text === "True" || a.text === "False")
+    ) {
+      type = "true-false";
+    }
+
+    const correctAnswer = q.answers.find((a) => a.isCorrect)?.text;
+    const options =
+      type === "multiple-choice" ? q.answers.map((a) => a.text) : undefined;
+
+    return {
+      id: q.questionId.toString(),
+      text: q.question,
+      type,
+      points: q.questionPoints,
+      options,
+      correctAnswer,
+    };
+  });
+};
+
 export interface QuizTypeOption {
   id: string;
   name: string;

@@ -67,9 +67,10 @@ const columnDefs: ColDef[] = [
     minWidth: 110,
     valueFormatter: (params) => `${params.value}%`,
     cellStyle: (params) => {
-      if (params.value >= 90) return { color: "green", fontWeight: "600" };
-      if (params.value >= 70) return { color: "#ca8a04" };
-      return { color: "red" };
+      if (params.value >= 90)
+        return { color: "green", fontWeight: "600" } as any;
+      if (params.value >= 70) return { color: "#ca8a04" } as any;
+      return { color: "red" } as any;
     },
   },
   {

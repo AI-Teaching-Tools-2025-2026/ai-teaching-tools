@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
+import { toast } from "sonner";
 import { MoreHorizontal, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -62,6 +63,7 @@ export default function QuizTable() {
   const [quizToDelete, setQuizToDelete] = useState<QuizData | null>(null);
 
   const params = useParams();
+  const router = useRouter();
   const courseId = params.courseId as string | undefined;
 
   const getPreviewHref = (quizId: string) =>
@@ -79,6 +81,7 @@ export default function QuizTable() {
         const data = await quizService.getAllQuizzes(courseId);
         setQuizzes(data);
       } catch (error) {
+        toast.error("Failed to load quizzes");
         console.error("Failed to load quizzes:", error);
       } finally {
         setLoading(false);
@@ -164,16 +167,24 @@ export default function QuizTable() {
       await quizService.deleteQuizById(quizId);
       setQuizzes((prev) => prev.filter((q) => q._id !== quizId));
       setSelectedQuizzes((prev) => prev.filter((id) => id !== quizId));
+      toast.success("Quiz deleted successfully");
     } catch (error) {
+      toast.error("Failed to delete quiz");
       console.error("Failed to delete quiz", error);
     }
   };
 
   const handleDuplicate = async (quizId: string) => {
     try {
+      toast.info("Duplicating quiz...", { id: "duplicate-toast" });
       const newQuiz = await quizService.duplicateQuizById(quizId);
       setQuizzes((prev) => [...prev, newQuiz]);
+      toast.success("Quiz duplicated successfully", { id: "duplicate-toast" });
+      if (courseId) {
+        router.push(`/courses/${courseId}/quizzes/${newQuiz._id}/edit`);
+      }
     } catch (error) {
+      toast.error("Failed to duplicate quiz", { id: "duplicate-toast" });
       console.error("Failed to duplicate quiz", error);
     }
   };
@@ -460,7 +471,11 @@ export default function QuizTable() {
 
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem
-                            onClick={() => console.log("Edit quiz", quiz._id)}
+                            onClick={() =>
+                              router.push(
+                                `/courses/${courseId}/quizzes/${quiz._id}/edit`,
+                              )
+                            }
                           >
                             Edit
                           </DropdownMenuItem>

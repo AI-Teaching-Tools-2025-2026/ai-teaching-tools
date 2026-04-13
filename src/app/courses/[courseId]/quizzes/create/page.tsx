@@ -22,7 +22,7 @@ export default function QuizBuilderPage() {
         </Button>
 
         <h1 className="text-3xl font-semibold tracking-tight text-foreground">
-          Quiz Builder
+          Create Quiz
         </h1>
       </div>
 
