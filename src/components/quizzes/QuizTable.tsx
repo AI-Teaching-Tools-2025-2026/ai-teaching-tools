@@ -471,7 +471,11 @@ export default function QuizTable() {
 
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem
-                            onClick={() => router.push(`/courses/${courseId}/quizzes/${quiz._id}/edit`)}
+                            onClick={() =>
+                              router.push(
+                                `/courses/${courseId}/quizzes/${quiz._id}/edit`,
+                              )
+                            }
                           >
                             Edit
                           </DropdownMenuItem>

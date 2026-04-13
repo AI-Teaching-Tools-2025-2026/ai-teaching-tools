@@ -101,7 +101,7 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
       if (initialQuiz?._id) {
         const updatedQuiz = await quizService.updateQuiz(initialQuiz._id, quiz);
         toast.success("Quiz updated successfully");
-        // router.push(`/courses/${courseId}/quizzes`); 
+        // router.push(`/courses/${courseId}/quizzes`);
       } else {
         const createdQuiz = await quizService.createQuiz(quiz);
         toast.success("Quiz created successfully");
