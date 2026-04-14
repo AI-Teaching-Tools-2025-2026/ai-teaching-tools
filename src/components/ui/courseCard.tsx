@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+
 import {
   Card,
   CardContent,
@@ -14,15 +15,11 @@ export default function CourseCard({ course }: any) {
     <Link href={`/courses/${course._id}`} className="inline-block">
       <Card className="max-w-[345px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
         <div className="relative w-full h-[140px]">
-          {/* <Image
+          <Image
             src={course.imageSrc || "/blueCourseCover.png"}
-            alt="placeholder alt text"
-            fill
-            className="object-cover"
-          /> */}
-          <img
-            src={course.imageSrc || "/blueCourseCover.png"}
-            alt={course.courseTitle}
+            alt={course.courseTitle || "Course Cover"}
+            width={345}
+            height={140}
             className="w-full h-full object-cover"
           />
         </div>
