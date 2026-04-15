@@ -7,8 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --fix",
-    "fastapi-dev": "cd api && python -m uvicorn main:app --reload --port 8000",
-    "start-all": "concurrently \"npm run dev\" \"npm run fastapi-dev\""
+    "postinstall": "cd api && pip install -r requirements.txt",
+    "backend": "cd api && python -m uvicorn main:app --reload --port 8000",
+    "backend-mac": "cd api && python3 -m uvicorn main:app --reload --port 8000",
+    "start-all": "concurrently \"npm run dev\" \"npm run backend\"",
+    "start-all-mac": "concurrently \"npm run dev\" \"npm run backend-mac\""
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.11",
