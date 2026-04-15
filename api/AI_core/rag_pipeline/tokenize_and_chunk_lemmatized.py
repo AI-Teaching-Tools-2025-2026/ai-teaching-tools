@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import List, Dict, Tuple, Optional, Set
 import spacy
 from collections import defaultdict
-from research_terminology import is_research_term, RESEARCH_TERMINOLOGY
+from backend.AI_core.rag_pipeline.research_terminology import is_research_term, RESEARCH_TERMINOLOGY
 
 
 class TextTokenizer:

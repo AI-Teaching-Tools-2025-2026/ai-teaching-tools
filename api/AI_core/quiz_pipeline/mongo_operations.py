@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from config import (
+from backend.AI_core.quiz_pipeline.config import (
     MONGO_COLLECTION,
     MONGO_DB_NAME,
     MONGO_URI,

@@ -11,8 +11,8 @@ import json
 import unittest
 from pathlib import Path
 
-from schema_validator import validate_quiz, validate_question
-from config import OUTPUT_DIR, MONGO_URI
+from backend.AI_core.quiz_pipeline.schema_validator import validate_quiz, validate_question
+from backend.AI_core.quiz_pipeline.config import OUTPUT_DIR, MONGO_URI
 
 
 # =====================================================================
@@ -223,7 +223,7 @@ class TestMongoRetrieval(unittest.TestCase):
     def setUpClass(cls):
         """Try to connect to MongoDB. Skip all tests if unreachable."""
         try:
-            from mongo_operations import (
+            from backend.AI_core.quiz_pipeline.mongo_operations import (
                 get_quiz,
                 get_quizzes_for_chapter,
                 get_all_quizzes,

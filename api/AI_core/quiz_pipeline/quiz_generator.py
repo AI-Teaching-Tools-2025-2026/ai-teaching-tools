@@ -52,7 +52,7 @@ from typing import Any
 
 import anthropic
 
-from config import (
+from backend.AI_core.quiz_pipeline.config import (
     ANTHROPIC_API_KEY,
     ANSWERS_PER_QUESTION,
     CHAPTER_FILE_TEMPLATE,
@@ -64,7 +64,7 @@ from config import (
     TEXTBOOK_DIR,
     TOTAL_CHAPTERS,
 )
-from schema_validator import validate_quiz
+from backend.AI_core.quiz_pipeline.schema_validator import validate_quiz
 
 # ---------------------------------------------------------------------------
 # Logging
