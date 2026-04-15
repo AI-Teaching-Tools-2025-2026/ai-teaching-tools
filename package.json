@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --fix",
-    "postinstall": "cd api && pip install -r requirements.txt",
     "backend": "cd api && python -m uvicorn main:app --reload --port 8000",
     "backend-mac": "cd api && python3 -m uvicorn main:app --reload --port 8000",
     "start-all": "concurrently \"npm run dev\" \"npm run backend\"",
