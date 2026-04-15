@@ -21,8 +21,6 @@ export default function Navbar() {
         {},
         { withCredentials: true },
       );
-
-      router.push("/courses");
     } catch (error: any) {
       console.error("Logout failed", error);
       alert("Logout failed. Try again.");
