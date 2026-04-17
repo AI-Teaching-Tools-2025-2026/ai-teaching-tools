@@ -131,3 +131,35 @@ async def update_user(request: Request, user_data: UserUpdate, db = Depends(get_
     )
 
     return {"message": "User updated successfully"}
+
+@auth_router.delete("/delete")
+async def delete_user(request: Request, response: Response, db = Depends(get_instructor_db)):
+    token = request.cookies.get("access_token")
+    if not token:
+        raise HTTPException(status_code=401, detail="not authenticated")
+
+    user_id = verify_access_token(token)
+    if not user_id:
+        raise HTTPException(status_code=401, detail="invalid or expired token")
+
+    users = db["users"]
+    courses = db["courses"]
+    quizzes = db["quizzes"]
+
+    user = await users.find_one({"_id": user_id})
+    if not user:
+        raise HTTPException(status_code=404, detail="user not found")
+
+    # delete all quizzes and courses associated with user
+    user_courses = await courses.find({"userID": user_id}).to_list(length=None)
+    course_ids = [c["_id"] for c in user_courses]
+    if course_ids:
+        await quizzes.delete_many({"courseId": {"$in": course_ids}})
+    
+    await courses.delete_many({"userID": user_id})
+
+    await users.delete_one({"_id": user_id})
+
+    response.delete_cookie("access_token", path="/")
+
+    return {"message": "User and all associated data deleted successfully"}

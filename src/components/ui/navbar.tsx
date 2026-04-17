@@ -1,5 +1,4 @@
 "use client";
-import axios from "axios";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,6 +19,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Settings, LogOut, User, Pencil } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { authService } from "@/services/authService";
 
 export default function Navbar() {
   const router = useRouter();
@@ -30,18 +30,14 @@ export default function Navbar() {
   } | null>(null);
 
   const fetchUser = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/user`,
-          { withCredentials: true } 
-        );
-
-        setUser(res.data);
-      } catch (err) {
-        console.error("Failed to fetch user", err);
-        setUser(null);
-      }
-    };
+    try {
+      const data = await authService.fetchUser();
+      setUser(data);
+    } catch (err) {
+      console.error("Failed to fetch user", err);
+      setUser(null);
+    }
+  };
 
   useEffect(() => {
     fetchUser();
@@ -49,16 +45,10 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/logout`,
-        {},
-        { withCredentials: true },
-      );
-
-      router.push("/"); 
-    } catch (error: any) {
+      await authService.logout();
+      router.push("/");
+    } catch (error) {
       console.error("Logout failed", error);
-      alert("Logout failed. Try again.");
     }
   };
 

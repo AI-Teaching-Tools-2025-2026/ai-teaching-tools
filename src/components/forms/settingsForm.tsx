@@ -1,5 +1,4 @@
 "use client";
-import axios from "axios";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
@@ -8,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Pencil, User } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { toast } from "sonner";
+import { authService } from "@/services/authService";
+import { useRouter } from "next/navigation";
+import SubmissionModal from "@/components/modal/submissionModal";
 
 type Props = {
   user: {
@@ -27,6 +29,8 @@ export default function SettingsForm({ user, onClose, onUpdated }: Props) {
     const [errors, setErrors] = useState<string[]>([]);
     const [editingUsername, setEditingUsername] = useState(false);
     const [editingEmail, setEditingEmail] = useState(false);
+    const [deleteOpen, setDeleteOpen] = useState(false);
+    const router = useRouter();
 
     const hasChanges =
         username !== (user?.username || "") ||
@@ -73,16 +77,12 @@ export default function SettingsForm({ user, onClose, onUpdated }: Props) {
         }
 
         try {
-            await axios.put(
-                `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/update`,
-                {
-                    username,
-                    email,
-                    current_password: currentPassword || undefined,
-                    new_password: newPassword || undefined,
-                },
-                { withCredentials: true }
-                );
+            await authService.updateUser({
+                username,
+                email,
+                current_password: currentPassword,
+                new_password: newPassword,
+            });
             toast.success("Profile updated successfully");
             onUpdated(); 
             onClose();
@@ -94,6 +94,18 @@ export default function SettingsForm({ user, onClose, onUpdated }: Props) {
                 toast.error("Failed to update profile. Please try again.");
             }
             console.error("Update user failed:", error);
+        }
+    };
+
+    const handleDeleteAccount = async () => {
+        try {
+            await authService.deleteUser();
+            toast.success("Account deleted");
+            router.push("/");
+        } catch (error: any) {
+            const detail = error?.response?.data?.detail;
+            toast.error(detail || "Failed to delete account");
+            console.error(error);
         }
     };
 
@@ -198,10 +210,21 @@ export default function SettingsForm({ user, onClose, onUpdated }: Props) {
 
             {/* DELETE */}
             <div className="border-t pt-4">
-                <Button variant="destructive" className="cursor-pointer w-full">
+                <Button 
+                    variant="destructive" 
+                    className="cursor-pointer w-full"
+                    onClick={() => setDeleteOpen(true)}
+                >
                     Delete Account
                 </Button>
             </div>
+
+            <SubmissionModal
+                isOpen={deleteOpen}
+                onOpenChange={setDeleteOpen}
+                body="This will permanently delete your account and associated courses and quizzes. This action cannot be undone."
+                onSubmit={handleDeleteAccount}
+            />
         </div>
     );
 }
