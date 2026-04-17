@@ -110,16 +110,18 @@ export default function Navbar() {
                     <User className="h-5 w-5" />
                   </AvatarFallback>
                 </Avatar>
-                <p className="text-sm">Hi, {user ? user.username : "Loading..."}</p>
+                <p className="text-sm">
+                  Hi, {user ? user.username : "Loading..."}
+                </p>
                 <p className="text-sm"> {user ? user.email : ""}</p>
               </div>
               <DropdownMenuSeparator className="bg-neutral-600" />
-              <DropdownMenuItem 
+              <DropdownMenuItem
                 className="text-neutral-50 focus:bg-neutral-600 focus:text-neutral-50 cursor-pointer"
                 onClick={() => setIsSheetOpen(true)}
               >
-                  <Pencil className="mr-2 h-4 w-4" />
-                  <span>Edit Profile</span>
+                <Pencil className="mr-2 h-4 w-4" />
+                <span>Edit Profile</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator className="bg-neutral-600" />
               <DropdownMenuItem

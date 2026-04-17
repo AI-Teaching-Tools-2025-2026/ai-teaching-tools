@@ -69,7 +69,9 @@ export default function CoursesPage() {
               <CourseCard
                 course={course}
                 onEdit={(updated: any) => {
-                  setCourses((prev) => prev.map((c) => (c._id === updated._id ? updated : c)));
+                  setCourses((prev) =>
+                    prev.map((c) => (c._id === updated._id ? updated : c)),
+                  );
                 }}
               />
             </div>

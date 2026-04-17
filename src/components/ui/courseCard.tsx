@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MoreVertical } from "lucide-react";
-import AddCourses from "@/components/forms/addCourses";
+import EditCourse from "@/components/forms/editCourse";
 import {
   Sheet,
   SheetTrigger,
@@ -26,7 +26,7 @@ export default function CourseCard({ course, onEdit }: any) {
   return (
     <div className="inline-block relative">
       <Link href={`/courses/${course._id}`} className="inline-block">
-  <Card className="w-[360px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer relative">
+        <Card className="w-[360px] overflow-hidden hover:shadow-lg transition-shadow cursor-pointer relative">
           {/* color square (replaces image) */}
           <div
             style={{ backgroundColor: course.cardColor || "#2563eb" }}
@@ -67,7 +67,7 @@ export default function CourseCard({ course, onEdit }: any) {
             <SheetTitle>Edit Course</SheetTitle>
           </SheetHeader>
           <div className="px-4">
-            <AddCourses
+            <EditCourse
               course={course}
               onSuccess={(updated: any) => {
                 setIsSheetOpen(false);

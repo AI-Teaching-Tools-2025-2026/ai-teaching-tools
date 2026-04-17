@@ -8,15 +8,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 type Props = {
-  onSuccess?: (newCourse: any) => void;
-  course?: any;
+  onSuccess?: (updatedCourse: any) => void;
+  course: any;
 };
 
-export default function AddCourses({ onSuccess, course }: Props) {
+export default function EditCourse({ onSuccess, course }: Props) {
   const [courseTitle, setCourseTitle] = useState("");
   const [courseTerm, setCourseTerm] = useState("");
   const [courseDescription, setCourseDescription] = useState("");
-  const [file, setFile] = useState<File | null>(null);
   const [cardColor, setCardColor] = useState<string>("#2563eb");
   const [loading, setLoading] = useState(false);
 
@@ -27,31 +26,23 @@ export default function AddCourses({ onSuccess, course }: Props) {
     courseDescription: "",
   });
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files?.[0]) {
-      setFile(e.target.files[0]);
-    } else {
-      setFile(null);
-    }
-  };
-
   useEffect(() => {
     if (course) {
       setCourseTitle(course.courseTitle || "");
       setCourseTerm(course.courseTerm || "");
       setCourseDescription(course.courseDescription || "");
       setCardColor(course.cardColor || "#2563eb");
-      // Note: image/file not prefilled
     }
   }, [course]);
+
+  const inputClass = (error: string) =>
+    error ? "border-red-500 focus:border-red-500 focus:ring-red-500" : "";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Reset errors
     setErrors({ courseTitle: "", courseTerm: "", courseDescription: "" });
 
-    // Validate fields
     const newErrors = {
       courseTitle: !courseTitle.trim() ? "Please provide a course title" : "",
       courseTerm: !courseTerm.trim() ? "Please provide a course term" : "",
@@ -60,7 +51,7 @@ export default function AddCourses({ onSuccess, course }: Props) {
         : "",
     };
 
-    const hasErrors = Object.values(newErrors).some((e) => e);
+    const hasErrors = Object.values(newErrors).some((v) => v);
     if (hasErrors) {
       setErrors(newErrors);
       return;
@@ -70,59 +61,33 @@ export default function AddCourses({ onSuccess, course }: Props) {
       setLoading(true);
 
       const payload = {
-        textbookID: file ? file.name : "",
+        textbookID: course?.textbookID || "",
         courseTitle,
         courseTerm,
         courseDescription,
-        imageSrc: "",
+        imageSrc: course?.imageSrc || "",
         cardColor,
       };
 
-      let response;
-      // If editing an existing course (course prop provided), call update
-      // We'll infer edit mode if the form element contains a data-course-id attribute set by parent
-      const formEl = (e.target as HTMLElement).closest("form");
-      const dataCourseId = formEl?.getAttribute("data-course-id");
-
-      if (dataCourseId) {
-        response = await axios.put(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${dataCourseId}`,
-          payload,
-          { withCredentials: true },
-        );
-      } else {
-        response = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/create_course`,
-          payload,
-          { withCredentials: true },
-        );
-      }
+      const response = await axios.put(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${course._id}`,
+        payload,
+        { withCredentials: true },
+      );
 
       if (onSuccess) onSuccess(response.data);
-      // Broadcast an application-level event so other parts of the app can react
+
       try {
         window.dispatchEvent(
           new CustomEvent("course:changed", { detail: response.data }),
         );
       } catch (e) {
-        // ignore if SSR or unsupported environment
+        // ignore
       }
-
-      // Reset form
-      setCourseTitle("");
-      setCourseTerm("");
-      setCourseDescription("");
-      setFile(null);
-      setCardColor("#2563eb");
-      setErrors({ courseTitle: "", courseTerm: "", courseDescription: "" });
     } finally {
       setLoading(false);
     }
   };
-
-  // Helper for red border
-  const inputClass = (error: string) =>
-    error ? "border-red-500 focus:border-red-500 focus:ring-red-500" : "";
 
   return (
     <form
@@ -131,10 +96,9 @@ export default function AddCourses({ onSuccess, course }: Props) {
       autoComplete="off"
       data-course-id={course?._id}
     >
-      <h2 className="mb-4 text-lg font-semibold">Course</h2>
+      <h2 className="mb-4 text-lg font-semibold">Edit Course</h2>
 
       <div className="grid gap-4">
-        {/* Course Title */}
         <div className="grid gap-1.5">
           <Label htmlFor="courseTitle">Course Name / Textbook</Label>
           <Input
@@ -149,7 +113,6 @@ export default function AddCourses({ onSuccess, course }: Props) {
           )}
         </div>
 
-        {/* Course Term */}
         <div className="grid gap-1.5">
           <Label htmlFor="courseTerm">Course Term</Label>
           <Input
@@ -164,7 +127,6 @@ export default function AddCourses({ onSuccess, course }: Props) {
           )}
         </div>
 
-        {/* Course Description */}
         <div className="grid gap-1.5">
           <Label htmlFor="courseDescription">Course Description</Label>
           <Textarea
@@ -180,16 +142,6 @@ export default function AddCourses({ onSuccess, course }: Props) {
           )}
         </div>
 
-        {/* File Upload */}
-        <div className="grid gap-1.5">
-          <Label htmlFor="courseFile">Upload Material</Label>
-          <Input id="courseFile" type="file" onChange={handleFileChange} />
-          <p className="text-sm text-muted-foreground">
-            Please Upload a Textbook Here
-          </p>
-        </div>
-
-        {/* Card Color */}
         <div className="grid gap-1.5">
           <Label htmlFor="cardColor">Card Color</Label>
           <input
@@ -205,7 +157,6 @@ export default function AddCourses({ onSuccess, course }: Props) {
         </div>
       </div>
 
-      {/* Submit Button */}
       <div className="mt-6 flex items-center justify-end gap-3">
         <Button type="submit" disabled={loading}>
           {loading ? "Saving..." : "Save"}
