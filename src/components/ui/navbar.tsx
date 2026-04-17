@@ -22,7 +22,7 @@ export default function Navbar() {
         { withCredentials: true },
       );
 
-      router.push("/courses");
+      router.push("/"); 
     } catch (error: any) {
       console.error("Logout failed", error);
       alert("Logout failed. Try again.");

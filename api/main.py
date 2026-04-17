@@ -1,3 +1,9 @@
+import sys
+import os
+
+# This tells Vercel to treat the 'api' folder as the root for imports
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
@@ -13,7 +19,7 @@ async def lifespan(app: FastAPI):
     yield
     app.db.close()
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(lifespan=lifespan, root_path="/api")
 
 app.add_middleware(
     CORSMiddleware,

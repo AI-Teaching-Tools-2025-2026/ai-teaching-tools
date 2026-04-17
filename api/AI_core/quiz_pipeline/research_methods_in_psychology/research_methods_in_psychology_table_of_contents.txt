@@ -1,0 +1,115 @@
+Research Methods in Psychology
+
+Research Methods in Psychology
+4th edition
+RAJIV S. JHANGIANI; I-CHANT A. CHIANG; CARRIE CUTTLER; AND DANA C. LEIGHTON
+KWANTLEN POLYTECHNIC UNIVERSITY
+SURREY, B.C
+Research Methods in Psychology by Rajiv S. Jhangiani, I-Chant A. Chiang, Carrie Cuttler, & Dana C. Leighton is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License, except where otherwise noted.
+This adaptation constitutes the fourth edition of this textbook, and builds upon the second Canadian edition by Rajiv S. Jhangiani (Kwantlen Polytechnic University) and I-Chant A. Chiang (Quest University Canada), the second American edition by Dana C. Leighton (Texas A&M University-Texarkana), and the third American edition by Carrie Cuttler (Washington State University) and feedback from several peer reviewers coordinated by the Rebus Community. This edition is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+Contents
+Acknowledgements ix
+About this Book xi
+About the Authors of the Current Edition xvi
+Preface xviii
+Chapter I. The Science of Psychology
+1. Methods of Knowing 3
+2. Understanding Science 6
+3. Goals of Science 10
+4. Science and Common Sense 12
+5. Experimental and Clinical Psychologists 15
+6. Key Takeaways and Exercises 19
+Chapter II. Overview of the Scientific Method
+7. A Model of Scientific Research in Psychology 25
+8. Finding a Research Topic 28
+9. Generating Good Research Questions 36
+10. Developing a Hypothesis 40
+11. Designing a Research Study 45
+12. Analyzing the Data 49
+13. Drawing Conclusions and Reporting the Results 52
+14. Key Takeaways and Exercise 54
+Chapter III. Research Ethics
+15. Moral Foundations of Ethical Research 59
+16. From Moral Principles to Ethics Codes 65
+17. Putting Ethics Into Practice 74
+18. Key Takeaways and Exercises 79
+Chapter IV. Psychological Measurement
+19. Understanding Psychological Measurement 83
+20. Reliability and Validity of Measurement 92
+21. Practical Strategies for Psychological Measurement 99
+22. Key Takeaways and Exercises 105
+Chapter V. Experimental Research
+23. Experiment Basics 109
+24. Experimental Design 117
+25. Experimentation and Validity 125
+26. Practical Considerations 130
+27. Key Takeaways and Exercises 138
+Chapter VI. Non-Experimental Research
+28. Overview of Non-Experimental Research 143
+29. Correlational Research 148
+30. Complex Correlation 157
+31. Qualitative Research 163
+32. Observational Research 169
+33. Key Takeaways and Exercises 179
+Chapter VII. Survey Research
+34. Overview of Survey Research 185
+35. Constructing Surveys 188
+36. Conducting Surveys 198
+37. Key Takeaways and Exercises 204
+Chapter VIII. Quasi-Experimental Research
+38. One-Group Designs 209
+39. Non-Equivalent Groups Designs 215
+40. Key Takeaways and Exercises 219
+Chapter IX. Factorial Designs
+41. Setting Up a Factorial Experiment 223
+42. Interpreting the Results of a Factorial Experiment 229
+43. Key Takeaways and Exercises 238
+Chapter X. Single-Subject Research
+44. Overview of Single-Subject Research 241
+45. Single-Subject Research Designs 244
+46. The Single-Subject Versus Group “Debate” 254
+47. Key Takeaways and Exercises 259
+Chapter XI. Presenting Your Research
+48. American Psychological Association (APA) Style 263
+49. Writing a Research Report in American Psychological Association (APA) Style 272
+50. Other Presentation Formats 287
+51. Key Takeaways and Exercises 293
+Chapter XII. Descriptive Statistics
+52. Describing Single Variables 297
+53. Describing Statistical Relationships 309
+54. Expressing Your Results 321
+55. Conducting Your Analyses 332
+56. Key Takeaways and Exercises 337
+Chapter XIII. Inferential Statistics
+57. Understanding Null Hypothesis Testing 343
+58. Some Basic Null Hypothesis Tests 350
+59. Additional Considerations 366
+60. From the “Replicability Crisis” to Open Science Practices 374
+61. Key Takeaways and Exercises 382
+Glossary 385
+References 417
+
+
+
+About this Book | xv
+About the Authors of the Current Edition
+Rajiv S. Jhangiani
+Dr. Rajiv Jhangiani is the Associate Vice Provost, Open Education at Kwantlen Polytechnic University in British Columbia. He is an internationally known advocate for open education whose research and practice focuses on open educational resources, student-centered pedagogies, and the scholarship of teaching and learning. Rajiv is a co-founder of the Open Pedagogy Notebook, an Ambassador for the Center for Open Science, and serves on the BC Open Education Advisory Committee. He formerly served as an Open Education Advisor and Senior Open Education Research & Advocacy Fellow with BCcampus, an OER Research Fellow with the Open Education Group, a Faculty Workshop Facilitator with the Open Textbook Network, and a Faculty Fellow with the BC Open Textbook Project. A co-author of three open textbooks in Psychology, his most recent book is Open: The Philosophy and Practices that are Revolutionizing Education and Science (2017). You can find him online at @thatpsychprof or thatpsychprof.com
+Carrie Cuttler
+Dr. Carrie Cuttler received her Ph.D. in Psychology from the University of British Columbia. She has been teaching research methods and statistics for over a decade. She is currently an Assistant Professor in the Department of Psychology at Washington State University, where she primarily studies the acute and chronic effects of cannabis on cognition, mental health, and physical health. Dr. Cuttler was also an OER Research Fellow with the Center for Open Education and she conducts research on open educational resources. She has over 50 publications including the following two published books: A Student Guide for SPSS (1st and 2nd edition) and Research Methods in Psychology: Student Lab Guide. Finally, she edited another OER entitled Essentials of Abnormal Psychology. In her spare time, she likes to travel, hike, bike, run, and watch movies with her husband and son. You can find her online at @carriecuttler or carriecuttler.com xvi | About the Authors of the Current Edition
+Dana C. Leighton
+Dr. Dana C. Leighton is Assistant Professor of Psychology in the College of Arts, Science, and Education at Texas A&M University—Texarkana. He earned his Ph.D. from the University of Arkansas, and has 15 years experience teaching across the psychology curriculum at community colleges, liberal arts colleges, and research universities. Dr. Leighton’s social psychology research lab studies intergroup relations, and routinely includes undergraduate students as researchers. He is also Chair of the university’s Institutional Review Board. Recently he has been researching and writing about the use of open science research practices by undergraduate researchers to increase diversity, justice, and sustainability in psychological science. He has published on his teaching methods in eBooks from the Society for the Teaching of Psychology, presented his methods at regional and national conferences, and received grants to develop new teaching methods. His teaching interests are in undergraduate research, writing skills, and online student engagement. For more about Dr. Leighton see http://www.danaleighton.net and http://danaleighton.edublogs.org
+About the Authors of the Current Edition | xvii
+
+
+
+
+Preface
+Psychology, like most other sciences, has its own set of tools to investigate the important research questions of its field. Unlike other sciences that are older and more mature, psychology is a relatively new field and, like an adolescent, is learning and changing rapidly. Psychology researchers are learning and changing along with the emerging science. This textbook introduces students to the fundamental principles of what it is like to think like a psychology researcher in the contemporary world of psychology research.
+Historically, psychology developed practices and methods based on the established physical sciences. Unlike physical sciences, psychology had to grapple with the inherent variation among its subjects: people. To better account for this, we developed some practices and statistical methods that we (naïvely) considered to be foolproof. Over time we established a foundation of research findings that we considered solid.
+In recent years, psychology’s conversation has shifted to an introspective one, looking inward and re-examining the knowledge that we considered foundational. We began to find that some of that unshakable foundation was not as strong as we thought; some of the bedrock findings in psychology were being questioned and failed to be upheld in fuller scrutiny. As many introspective conversations do, this one caused a crisis of faith.
+Psychologists are now questioning if we really know what we thought we knew or if we simply got lucky. We are struggling to understand how what we choose to publish and not publish, what we choose to report and not report, and how we train our students as researchers is having an effect on what we call “knowledge” in psychology. We are beginning to question whether that knowledge represents real behaviour and mental processes in human beings, or simply represents the effects of our choice of methods. This has started a firestorm among psychology researchers, but it is one that needs to play out. For a book aimed at novice psychology undergraduates, it is tempting to gloss over these issues and proclaim that our “knowledge” is “truth.” That would be a disservice to our students though, who need to be critical questioners of research. Instead of shying away from this controversy, this textbook invites the reader to step right into the middle of it.
+With every step of the way, the research process in psychology is fraught with decisions, trade-offs, and uncertainty. We decide to study one variable and not another; we balance the costs of research against its benefits; we are uncertain whether our results will replicate. Every step is a decision that takes us in a different direction and closer to or further from the truth. Research is not an easy route to traverse, but we hope this textbook will be a hiking map that can at least inspire the direction students can take, and provide some absolute routes to begin traveling.
+As we wrote at the beginning of this preface, psychology is a young science. Like any adolescent, psychology is grappling with its identity as a science, learning to use better tools, understanding the importance of transparency, and is having more open conversations to improve its understanding of human behaviour. We will grow up and mature together. It is an exciting time to be part of that growth as psychology becomes a more mature science.
+xviii | Preface
