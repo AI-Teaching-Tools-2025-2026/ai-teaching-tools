@@ -113,7 +113,11 @@ function SubmissionModal({
           )}
 
           <div className="mt-4 flex w-full justify-end gap-2">
-            <Button variant="outline" className="cursor-pointer" onClick={() => onOpenChange(false)}>
+            <Button
+              variant="outline"
+              className="cursor-pointer"
+              onClick={() => onOpenChange(false)}
+            >
               Cancel
             </Button>
             <Button onClick={handleSubmit} disabled={isLoading}>
