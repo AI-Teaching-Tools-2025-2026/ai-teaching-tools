@@ -68,7 +68,7 @@ async def logout(response: Response):
     return {"message": "Logged out"}
 
 
-@auth_router.get("/username")
+@auth_router.get("/user")
 async def me(request: Request, db = Depends(get_instructor_db)):
     token = request.cookies.get("access_token")
     if not token:
@@ -81,5 +81,6 @@ async def me(request: Request, db = Depends(get_instructor_db)):
     user = await db["users"].find_one({"_id": user_id})
 
     return {
-        "username": user["username"]
+        "username": user["username"],
+        "email": user["email"]
     }
