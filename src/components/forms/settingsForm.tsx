@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { PasswordInput } from "@/components/ui/password-input";
@@ -6,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Pencil, User } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { toast } from "sonner";
 
 type Props = {
   user: {
@@ -13,9 +15,10 @@ type Props = {
     email: string;
   } | null;
   onClose: () => void;
+  onUpdated: () => void;
 };
 
-export default function SettingsForm({ user, onClose }: Props) {
+export default function SettingsForm({ user, onClose, onUpdated }: Props) {
     const [username, setUsername] = useState(user?.username || "");
     const [email, setEmail] = useState(user?.email || "");
     const [showPasswordFields, setShowPasswordFields] = useState(false);
@@ -52,29 +55,47 @@ export default function SettingsForm({ user, onClose }: Props) {
     };
 
     const handleSave = async () => {
-        const emailErrors = validateEmail(email);
-        let passwordErrors: string[] = [];
+        const errors: string[] = [];
 
-        if (showPasswordFields && newPassword) {
-            passwordErrors = validatePassword(newPassword);
+        if (!username?.trim()) {errors.push("Enter a valid username.");}
+
+        errors.push(...validateEmail(email));
+
+        const isPasswordFlow = showPasswordFields && newPassword;
+        if (isPasswordFlow) {
+            if (!currentPassword?.trim()) {errors.push("Enter your current password.");}
+            errors.push(...validatePassword(newPassword));
         }
 
-        const allErrors = [...emailErrors, ...passwordErrors];
-
-        if (allErrors.length > 0) {
-            setErrors(allErrors);
+        if (errors.length > 0) {
+            setErrors(errors);
             return;
         }
 
-        console.log({
-            username,
-            email,
-            currentPassword,
-            newPassword,
-        });
-
-        onClose();
-  };
+        try {
+            await axios.put(
+                `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/update`,
+                {
+                    username,
+                    email,
+                    current_password: currentPassword || undefined,
+                    new_password: newPassword || undefined,
+                },
+                { withCredentials: true }
+                );
+            toast.success("Profile updated successfully");
+            onUpdated(); 
+            onClose();
+        } catch (error: any) {
+            const detail = error?.response?.data?.detail;
+            if (detail) {
+                toast.error(detail);
+            } else {
+                toast.error("Failed to update profile. Please try again.");
+            }
+            console.error("Update user failed:", error);
+        }
+    };
 
     return (
         <div className="flex flex-col gap-2 border rounded-md p-4">
@@ -159,14 +180,14 @@ export default function SettingsForm({ user, onClose }: Props) {
                 <div className="text-destructive text-sm mt-2">
                 {errors.map((err, i) => (
                     <div key={i}>
-                    • <span className="font-bold">{err}</span>
+                        <span className="font-bold">{err}</span>
                     </div>
                 ))}
                 </div>
             )}
 
             {/* ACTIONS */}
-            <div className="flex justify-end gap-2 mt-6 mb-2">
+            <div className="flex justify-end gap-2 mt-6 mb-3">
                 <Button variant="outline" className="cursor-pointer" onClick={onClose}>
                     Cancel
                 </Button>

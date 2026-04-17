@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,7 +18,6 @@ import {
 import SettingsForm from "@/components/forms/settingsForm";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Settings, LogOut, User, Pencil } from "lucide-react";
-import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -29,8 +29,7 @@ export default function Navbar() {
     email: string;
   } | null>(null);
 
-  useEffect(() => {
-    const fetchUser = async () => {
+  const fetchUser = async () => {
       try {
         const res = await axios.get(
           `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/user`,
@@ -44,6 +43,7 @@ export default function Navbar() {
       }
     };
 
+  useEffect(() => {
     fetchUser();
   }, []);
 
@@ -93,6 +93,7 @@ export default function Navbar() {
                 <SettingsForm
                   user={user}
                   onClose={() => setIsSheetOpen(false)}
+                  onUpdated={fetchUser}
                 />
               </div>
             </SheetContent>

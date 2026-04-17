@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Response, Request, Depends
-from .models import UserLogin, UserCreate
+from .models import UserLogin, UserCreate, UserUpdate
 from .jwt_service import create_access_token, verify_access_token
 from configs.settings import settings
 from db.utils import get_instructor_db
@@ -84,3 +84,50 @@ async def me(request: Request, db = Depends(get_instructor_db)):
         "username": user["username"],
         "email": user["email"]
     }
+
+@auth_router.put("/update")
+async def update_user(request: Request, user_data: UserUpdate, db = Depends(get_instructor_db)):
+    token = request.cookies.get("access_token")
+    if not token:
+        raise HTTPException(status_code=401, detail="not authenticated")
+
+    user_id = verify_access_token(token)
+    if not user_id:
+        raise HTTPException(status_code=401, detail="invalid or expired token")
+
+    collection = db["users"]
+
+    user = await collection.find_one({"_id": user_id})
+    if not user:
+        raise HTTPException(status_code=404, detail="user not found")
+
+    update_fields = {}
+
+    if user_data.username is not None:
+        # check if taken
+        existing = await collection.find_one({
+            "username": user_data.username,
+            "_id": {"$ne": user_id}
+        })
+        if existing:
+            raise HTTPException(status_code=409, detail="This username already exists")
+
+        update_fields["username"] = user_data.username
+
+    if user_data.email is not None:
+        update_fields["email"] = user_data.email
+
+    if user_data.new_password is not None:
+        # verify current password
+        if not pwd_context.verify(user_data.current_password, user["hashed_password"]):
+            raise HTTPException(status_code=409, detail="Incorrect password")
+
+        # hash new password
+        update_fields["hashed_password"] = pwd_context.hash(user_data.new_password)
+
+    await collection.update_one(
+        {"_id": user_id},
+        {"$set": update_fields}
+    )
+
+    return {"message": "User updated successfully"}
