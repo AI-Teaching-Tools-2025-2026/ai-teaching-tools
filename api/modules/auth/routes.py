@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Response, Request, Depends
-from .models import UserLogin, UserCreate
+from .models import UserLogin, UserCreate, UserUpdate
 from .jwt_service import create_access_token, verify_access_token
 from configs.settings import settings
 from db.utils import get_instructor_db
@@ -68,7 +68,7 @@ async def logout(response: Response):
     return {"message": "Logged out"}
 
 
-@auth_router.get("/username")
+@auth_router.get("/user")
 async def me(request: Request, db = Depends(get_instructor_db)):
     token = request.cookies.get("access_token")
     if not token:
@@ -81,5 +81,85 @@ async def me(request: Request, db = Depends(get_instructor_db)):
     user = await db["users"].find_one({"_id": user_id})
 
     return {
-        "username": user["username"]
+        "username": user["username"],
+        "email": user["email"]
     }
+
+@auth_router.put("/update")
+async def update_user(request: Request, user_data: UserUpdate, db = Depends(get_instructor_db)):
+    token = request.cookies.get("access_token")
+    if not token:
+        raise HTTPException(status_code=401, detail="not authenticated")
+
+    user_id = verify_access_token(token)
+    if not user_id:
+        raise HTTPException(status_code=401, detail="invalid or expired token")
+
+    collection = db["users"]
+
+    user = await collection.find_one({"_id": user_id})
+    if not user:
+        raise HTTPException(status_code=404, detail="user not found")
+
+    update_fields = {}
+
+    if user_data.username is not None:
+        # check if taken
+        existing = await collection.find_one({
+            "username": user_data.username,
+            "_id": {"$ne": user_id}
+        })
+        if existing:
+            raise HTTPException(status_code=409, detail="This username already exists")
+
+        update_fields["username"] = user_data.username
+
+    if user_data.email is not None:
+        update_fields["email"] = user_data.email
+
+    if user_data.new_password is not None:
+        # verify current password
+        if not pwd_context.verify(user_data.current_password, user["hashed_password"]):
+            raise HTTPException(status_code=409, detail="Incorrect password")
+
+        # hash new password
+        update_fields["hashed_password"] = pwd_context.hash(user_data.new_password)
+
+    await collection.update_one(
+        {"_id": user_id},
+        {"$set": update_fields}
+    )
+
+    return {"message": "User updated successfully"}
+
+@auth_router.delete("/delete")
+async def delete_user(request: Request, response: Response, db = Depends(get_instructor_db)):
+    token = request.cookies.get("access_token")
+    if not token:
+        raise HTTPException(status_code=401, detail="not authenticated")
+
+    user_id = verify_access_token(token)
+    if not user_id:
+        raise HTTPException(status_code=401, detail="invalid or expired token")
+
+    users = db["users"]
+    courses = db["courses"]
+    quizzes = db["quizzes"]
+
+    user = await users.find_one({"_id": user_id})
+    if not user:
+        raise HTTPException(status_code=404, detail="user not found")
+
+    # delete all quizzes and courses associated with user
+    user_courses = await courses.find({"userID": user_id}).to_list(length=None)
+    course_ids = [c["_id"] for c in user_courses]
+    if course_ids:
+        await quizzes.delete_many({"courseId": {"$in": course_ids}})
+    
+    await courses.delete_many({"userID": user_id})
+
+    await users.delete_one({"_id": user_id})
+
+    response.delete_cookie("access_token", path="/")
+
+    return {"message": "User and all associated data deleted successfully"}
