@@ -40,7 +40,23 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    fetchUser();
+    let mounted = true;
+
+    const run = async () => {
+      try {
+        const data = await authService.fetchUser();
+        if (mounted) setUser(data);
+      } catch (err) {
+        console.error("Failed to fetch user", err);
+        if (mounted) setUser(null);
+      }
+    };
+
+    run();
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const handleLogout = async () => {
