@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,13 +9,15 @@ import { Button } from "@/components/ui/button";
 
 type Props = {
   onSuccess?: (newCourse: any) => void;
+  course?: any;
 };
 
-export default function AddCourses({ onSuccess }: Props) {
+export default function AddCourses({ onSuccess, course }: Props) {
   const [courseTitle, setCourseTitle] = useState("");
   const [courseTerm, setCourseTerm] = useState("");
   const [courseDescription, setCourseDescription] = useState("");
   const [file, setFile] = useState<File | null>(null);
+  const [cardColor, setCardColor] = useState<string>("#2563eb");
   const [loading, setLoading] = useState(false);
 
   // Validation state
@@ -32,6 +34,16 @@ export default function AddCourses({ onSuccess }: Props) {
       setFile(null);
     }
   };
+
+  useEffect(() => {
+    if (course) {
+      setCourseTitle(course.courseTitle || "");
+      setCourseTerm(course.courseTerm || "");
+      setCourseDescription(course.courseDescription || "");
+      setCardColor(course.cardColor || "#2563eb");
+      // Note: image/file not prefilled
+    }
+  }, [course]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,21 +75,43 @@ export default function AddCourses({ onSuccess }: Props) {
         courseTerm,
         courseDescription,
         imageSrc: "",
+        cardColor,
       };
 
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/create_course`,
-        payload,
-        { withCredentials: true },
-      );
+      let response;
+      // If editing an existing course (course prop provided), call update
+      // We'll infer edit mode if the form element contains a data-course-id attribute set by parent
+      const formEl = (e.target as HTMLElement).closest("form");
+      const dataCourseId = formEl?.getAttribute("data-course-id");
+
+      if (dataCourseId) {
+        response = await axios.put(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${dataCourseId}`,
+          payload,
+          { withCredentials: true },
+        );
+      } else {
+        response = await axios.post(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/create_course`,
+          payload,
+          { withCredentials: true },
+        );
+      }
 
       if (onSuccess) onSuccess(response.data);
+      // Broadcast an application-level event so other parts of the app can react
+      try {
+        window.dispatchEvent(new CustomEvent("course:changed", { detail: response.data }));
+      } catch (e) {
+        // ignore if SSR or unsupported environment
+      }
 
       // Reset form
       setCourseTitle("");
       setCourseTerm("");
       setCourseDescription("");
       setFile(null);
+      setCardColor("#2563eb");
       setErrors({ courseTitle: "", courseTerm: "", courseDescription: "" });
     } finally {
       setLoading(false);
@@ -93,8 +127,9 @@ export default function AddCourses({ onSuccess }: Props) {
       className="mx-auto max-w-3xl rounded-md border bg-background/40 p-6 shadow-sm"
       onSubmit={handleSubmit}
       autoComplete="off"
+      data-course-id={course?._id}
     >
-      <h2 className="mb-4 text-lg font-semibold">Add Course</h2>
+      <h2 className="mb-4 text-lg font-semibold">Course</h2>
 
       <div className="grid gap-4">
         {/* Course Title */}
@@ -151,12 +186,27 @@ export default function AddCourses({ onSuccess }: Props) {
             Please Upload a Textbook Here
           </p>
         </div>
+
+        {/* Card Color */}
+        <div className="grid gap-1.5">
+          <Label htmlFor="cardColor">Card Color</Label>
+          <input
+            id="cardColor"
+            type="color"
+            value={cardColor}
+            onChange={(e) => setCardColor(e.target.value)}
+            className="h-10 w-20 rounded-md border"
+          />
+          <p className="text-sm text-muted-foreground">
+            Pick a color for the course card.
+          </p>
+        </div>
       </div>
 
       {/* Submit Button */}
       <div className="mt-6 flex items-center justify-end gap-3">
         <Button type="submit" disabled={loading}>
-          {loading ? "Creating..." : "Create Course"}
+          {loading ? "Saving..." : "Save"}
         </Button>
       </div>
     </form>

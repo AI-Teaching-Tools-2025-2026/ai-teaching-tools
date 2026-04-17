@@ -63,9 +63,16 @@ export default function CoursesPage() {
 
       <div className="container mx-auto px-4 mt-25">
         <h1 className="text-2xl font-bold mt-8 text-center">Courses</h1>
-        <div className="flex gap-3 mt-8">
+        <div className="grid gap-4 mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {courses.map((course) => (
-            <CourseCard key={course._id} course={course} />
+            <div key={course._id} className="w-full">
+              <CourseCard
+                course={course}
+                onEdit={(updated: any) => {
+                  setCourses((prev) => prev.map((c) => (c._id === updated._id ? updated : c)));
+                }}
+              />
+            </div>
           ))}
         </div>
       </div>
