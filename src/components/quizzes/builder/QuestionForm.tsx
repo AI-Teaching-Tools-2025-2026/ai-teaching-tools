@@ -30,7 +30,7 @@ export function QuestionForm({ initialQuestion, onSave, onCancel }: QuestionForm
   const [questionType, setQuestionType] = useState(initialQuestion?.type || "multiple-choice");
   const [points, setPoints] = useState(initialQuestion?.points || 5);
 
-  // State for answers (multiple choice: correct + ≥1 incorrect so at least 2 options including correct)
+  // State for answers
   const [correctAnswer, setCorrectAnswer] = useState(initialQuestion?.correctAnswer || "");
   const [incorrectAnswers, setIncorrectAnswers] = useState<string[]>(() => {
     if (initialQuestion?.type === "multiple-choice" && initialQuestion.options) {

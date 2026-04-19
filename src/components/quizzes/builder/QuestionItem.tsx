@@ -68,7 +68,7 @@ export function QuestionItem({
               type="button"
               variant="ghost"
               size="icon"
-              className="text-muted-foreground hover:text-primary hover:bg-muted"
+              className="text-muted-foreground hover:text-primary hover:bg-muted cursor-pointer"
               aria-label="Edit question"
               onClick={() => setIsEditing(true)}
             >
@@ -76,9 +76,9 @@ export function QuestionItem({
             </Button>
             <Button
               type="button"
-              variant="ghost"
+              variant="destructive"
               size="icon"
-              className="text-muted-foreground hover:text-destructive hover:bg-muted"
+              className="bg-[#9E4042] hover:bg-[#9E4042]/90 text-muted-foreground hover:text-primary cursor-pointer"
               aria-label="Delete question"
               onClick={() => setIsDeleteModalOpen(true)}
             >
