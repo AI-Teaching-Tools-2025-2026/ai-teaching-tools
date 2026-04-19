@@ -1,131 +1,186 @@
 "use client";
 
-import React from "react";
-import { Trash2 } from "lucide-react";
+import React, { useState } from "react";
+import { Trash2, Pencil, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { BuilderQuestion } from "@/types/quiz";
+import { QuestionForm } from "./QuestionForm";
+import SubmissionModal from "@/components/modal/submissionModal";
 
 interface QuestionItemProps {
   question: BuilderQuestion;
   index: number;
   onDelete: (id: string) => void;
+  onUpdate: (updatedQuestion: BuilderQuestion) => void;
 }
 
 export function QuestionItem({
   question: q,
   index,
   onDelete,
+  onUpdate,
 }: QuestionItemProps) {
-  return (
-    <div className="w-full bg-card border border-border rounded-lg p-6 flex flex-col gap-4 group hover:border-ring transition-colors relative">
-      <div className="absolute right-4 top-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity z-10">
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
-          className="text-muted-foreground hover:text-destructive hover:bg-muted"
-          aria-label="Delete question"
-          onClick={() => onDelete(q.id)}
-        >
-          <Trash2 className="h-4 w-4" />
-        </Button>
-      </div>
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
-      <div className="flex flex-col gap-2">
-        <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-          Question {index + 1}
-        </label>
-        <input
-          type="text"
-          defaultValue={q.text}
-          className="bg-transparent border-none text-lg font-medium text-foreground focus:ring-0 px-0 w-full outline-none placeholder:text-muted-foreground"
-          placeholder="Enter the question text..."
+  const displayType =
+    q.type === "multiple-choice" ? "Multiple Choice" : "True/False";
+
+  const handleEditSave = (updatedQ: BuilderQuestion) => {
+    onUpdate(updatedQ);
+    setIsEditing(false);
+  };
+
+  const handleEditCancel = () => {
+    setIsEditing(false);
+  };
+
+  const confirmDelete = async () => {
+    onDelete(q.id);
+  };
+
+  if (isEditing) {
+    return (
+      <div className="w-full bg-card border border-border rounded-lg p-6 animate-in fade-in">
+        <h3 className="text-lg font-medium mb-4">Edit Question {index + 1}</h3>
+        <QuestionForm
+          initialQuestion={q}
+          onSave={handleEditSave}
+          onCancel={handleEditCancel}
         />
       </div>
+    );
+  }
 
-      <div className="flex flex-col gap-2 pl-4 border-l-2 border-border">
-        {q.type === "multiple-choice" &&
-          q.options?.map((opt, i) => {
-            const isCorrect = opt === q.correctAnswer;
-            return (
-              <div key={i} className="flex items-center gap-3">
-                <div
-                  className={cn(
-                    "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
-                    isCorrect
-                      ? "border-green-500 bg-green-500/20"
-                      : "border-border",
-                  )}
-                >
-                  {isCorrect && (
-                    <div className="h-2 w-2 rounded-full bg-green-500" />
-                  )}
-                </div>
-                <span
-                  className={cn(
-                    "text-sm",
-                    isCorrect ? "text-foreground" : "text-muted-foreground",
-                  )}
-                >
-                  {opt}
-                </span>
-              </div>
-            );
-          })}
-        {q.type === "true-false" && (
-          <div className="flex gap-4">
-            <div className="flex items-center gap-2">
-              <div
-                className={cn(
-                  "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
-                  q.correctAnswer === "True"
-                    ? "border-green-500 bg-green-500/20"
-                    : "border-border",
-                )}
-              >
-                {q.correctAnswer === "True" && (
-                  <div className="h-2 w-2 rounded-full bg-green-500" />
-                )}
-              </div>
-              <span
-                className={cn(
-                  "text-sm",
-                  q.correctAnswer === "True"
-                    ? "text-foreground"
-                    : "text-muted-foreground",
-                )}
-              >
-                True
+  return (
+    <>
+      <div className="w-full bg-card border border-border rounded-lg group hover:border-ring transition-colors overflow-hidden">
+        {/* Header - Clickable for accordion */}
+        <div
+          className="p-6 cursor-pointer relative"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {/* Action Buttons */}
+          <div className="absolute right-4 top-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity z-10" onClick={(e) => e.stopPropagation()}>
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              className="text-muted-foreground hover:text-primary hover:bg-muted"
+              aria-label="Edit question"
+              onClick={() => setIsEditing(true)}
+            >
+              <Pencil className="h-4 w-4" />
+            </Button>
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              className="text-muted-foreground hover:text-destructive hover:bg-muted"
+              aria-label="Delete question"
+              onClick={() => setIsDeleteModalOpen(true)}
+            >
+              <Trash2 className="h-4 w-4" />
+            </Button>
+          </div>
+
+          <div className="pr-20">
+            <div className="flex items-center gap-2 mb-2">
+              {isExpanded ? (
+                <ChevronUp className="h-4 w-4 text-muted-foreground" />
+              ) : (
+                <ChevronDown className="h-4 w-4 text-muted-foreground" />
+              )}
+              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                Question {index + 1} | {displayType}
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              <div
-                className={cn(
-                  "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
-                  q.correctAnswer === "False"
-                    ? "border-green-500 bg-green-500/20"
-                    : "border-border",
-                )}
-              >
-                {q.correctAnswer === "False" && (
-                  <div className="h-2 w-2 rounded-full bg-green-500" />
-                )}
-              </div>
-              <span
-                className={cn(
-                  "text-sm",
-                  q.correctAnswer === "False"
-                    ? "text-foreground"
-                    : "text-muted-foreground",
-                )}
-              >
-                False
-              </span>
+            
+            <p className="text-lg font-medium text-foreground leading-relaxed">
+              {q.text}
+            </p>
+          </div>
+        </div>
+
+        {/* Collapsible Answers Area */}
+        {isExpanded && (
+          <div className="px-6 pb-6 pt-2 border-t border-border bg-muted/10 animate-in slide-in-from-top-2">
+            <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50">
+              {q.type === "multiple-choice" &&
+                q.options?.map((opt, i) => {
+                  const isCorrect = opt === q.correctAnswer;
+                  return (
+                    <div key={i} className="flex items-center gap-3">
+                      <div
+                        className={cn(
+                          "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
+                          isCorrect
+                            ? "border-blue-500 bg-blue-500/20"
+                            : "border-border",
+                        )}
+                      >
+                        {isCorrect && (
+                          <div className="h-2 w-2 rounded-full bg-blue-500" />
+                        )}
+                      </div>
+                      <span
+                        className={cn(
+                          "text-sm font-medium",
+                          isCorrect ? "text-blue-500" : "text-muted-foreground",
+                        )}
+                      >
+                        {opt}
+                      </span>
+                    </div>
+                  );
+                })}
+              
+              {q.type === "true-false" && (
+                <div className="flex flex-col gap-3">
+                  {["True", "False"].map((opt) => {
+                    const isCorrect = opt === q.correctAnswer;
+                    return (
+                      <div key={opt} className="flex items-center gap-3">
+                        <div
+                          className={cn(
+                            "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
+                            isCorrect
+                              ? "border-blue-500 bg-blue-500/20"
+                              : "border-border",
+                          )}
+                        >
+                          {isCorrect && (
+                            <div className="h-2 w-2 rounded-full bg-blue-500" />
+                          )}
+                        </div>
+                        <span
+                          className={cn(
+                            "text-sm font-medium",
+                            isCorrect
+                              ? "text-blue-500"
+                              : "text-muted-foreground",
+                          )}
+                        >
+                          {opt}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
         )}
       </div>
-    </div>
+
+      <SubmissionModal
+        isOpen={isDeleteModalOpen}
+        onOpenChange={setIsDeleteModalOpen}
+        body="Are you sure you want to delete this question? This action cannot be undone."
+        onSubmit={confirmDelete}
+      />
+    </>
   );
 }

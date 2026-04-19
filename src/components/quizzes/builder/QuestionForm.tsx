@@ -19,21 +19,32 @@ import { BuilderQuestion } from "@/types/quiz";
 const MIN_INCORRECT_ANSWERS = 1;
 
 interface QuestionFormProps {
+  initialQuestion?: BuilderQuestion;
   onSave: (question: BuilderQuestion) => void;
   onCancel: () => void;
 }
 
-export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
+export function QuestionForm({ initialQuestion, onSave, onCancel }: QuestionFormProps) {
   const [authorship, setAuthorship] = useState("manual");
-  const [questionText, setQuestionText] = useState("");
-  const [questionType, setQuestionType] = useState("multiple-choice");
-  const [points, setPoints] = useState(5);
+  const [questionText, setQuestionText] = useState(initialQuestion?.text || "");
+  const [questionType, setQuestionType] = useState(initialQuestion?.type || "multiple-choice");
+  const [points, setPoints] = useState(initialQuestion?.points || 5);
 
   // State for answers (multiple choice: correct + ≥1 incorrect so at least 2 options including correct)
-  const [correctAnswer, setCorrectAnswer] = useState("");
-  const [incorrectAnswers, setIncorrectAnswers] = useState<string[]>(() =>
-    Array(MIN_INCORRECT_ANSWERS).fill(""),
-  );
+  const [correctAnswer, setCorrectAnswer] = useState(initialQuestion?.correctAnswer || "");
+  const [incorrectAnswers, setIncorrectAnswers] = useState<string[]>(() => {
+    if (initialQuestion?.type === "multiple-choice" && initialQuestion.options) {
+      const incorrects = initialQuestion.options.filter(
+        (opt) => opt !== initialQuestion.correctAnswer
+      );
+      if (incorrects.length >= MIN_INCORRECT_ANSWERS) return incorrects;
+      return [
+        ...incorrects,
+        ...Array(MIN_INCORRECT_ANSWERS - incorrects.length).fill(""),
+      ];
+    }
+    return Array(MIN_INCORRECT_ANSWERS).fill("");
+  });
 
   const handleQuestionTypeChange = (value: string) => {
     setQuestionType(value);
@@ -89,7 +100,7 @@ export function QuestionForm({ onSave, onCancel }: QuestionFormProps) {
   const handleSave = () => {
     if (!canSave) return;
     const newQuestion: BuilderQuestion = {
-      id: crypto.randomUUID(),
+      id: initialQuestion?.id || crypto.randomUUID(),
       text: questionText.trim(),
       type: questionType as "multiple-choice" | "true-false",
       points: Number(points),
