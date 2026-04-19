@@ -63,7 +63,10 @@ export function QuestionItem({
           onClick={() => setIsExpanded(!isExpanded)}
         >
           {/* Action Buttons */}
-          <div className="absolute right-4 top-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity z-10" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="absolute right-4 top-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity z-10"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Button
               type="button"
               variant="ghost"
@@ -97,7 +100,7 @@ export function QuestionItem({
                 Question {index + 1} | {displayType}
               </span>
             </div>
-            
+
             <p className="text-lg font-medium text-foreground leading-relaxed">
               {q.text}
             </p>
@@ -136,7 +139,7 @@ export function QuestionItem({
                     </div>
                   );
                 })}
-              
+
               {q.type === "true-false" && (
                 <div className="flex flex-col gap-3">
                   {["True", "False"].map((opt) => {

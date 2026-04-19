@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { toast } from "sonner";
 import axios from "axios";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -105,7 +106,7 @@ export default function AddCourses({ onSuccess, course }: Props) {
           new CustomEvent("course:changed", { detail: response.data }),
         );
       } catch (e) {
-        // ignore if SSR or unsupported environment
+        console.error("Failed to dispatch course:changed event:", e);
       }
 
       // Reset form
@@ -115,6 +116,11 @@ export default function AddCourses({ onSuccess, course }: Props) {
       setFile(null);
       setCardColor("#2563eb");
       setErrors({ courseTitle: "", courseTerm: "", courseDescription: "" });
+    } catch (e) {
+      console.error(e);
+      toast.error(
+        course?._id ? "Error updating course." : "Error creating course.",
+      );
     } finally {
       setLoading(false);
     }

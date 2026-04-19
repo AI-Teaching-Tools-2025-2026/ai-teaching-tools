@@ -82,7 +82,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
           new CustomEvent("course:changed", { detail: response.data }),
         );
       } catch (e) {
-        // ignore
+        console.error("Failed to dispatch course:changed event:", e);
       }
     } finally {
       setLoading(false);
