@@ -31,6 +31,11 @@ export function QuestionList({ questions, setQuestions }: QuestionListProps) {
           question={q}
           index={index}
           onDelete={handleDeleteQuestion}
+          onUpdate={(updatedQ) => {
+            setQuestions((prev) =>
+              prev.map((item) => (item.id === updatedQ.id ? updatedQ : item)),
+            );
+          }}
         />
       ))}
 

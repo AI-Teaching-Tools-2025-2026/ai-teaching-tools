@@ -14,7 +14,6 @@ import { MoreVertical } from "lucide-react";
 import EditCourse from "@/components/forms/editCourse";
 import {
   Sheet,
-  SheetTrigger,
   SheetContent,
   SheetHeader,
   SheetTitle,
