@@ -1,4 +1,3 @@
-
 from fastapi import APIRouter, Depends, HTTPException, Request, UploadFile, File
 from db.utils import get_instructor_db
 from modules.auth.jwt_service import verify_access_token
@@ -79,8 +78,8 @@ async def upload_textbook(
         "filename": file.filename,
         "title": Path(file.filename).stem.replace("_", " ").replace("-", " "),
         "sha256": sha,
-        "totalChapters": 0,          # updated after chapter extraction
-        "pipelineStatus": "uploaded", # uploaded → chapters_extracted → quizzes_generated
+        "totalChapters": 0,           # updated after chapter extraction
+        "pipelineStatus": "uploaded",  # uploaded → chapters_extracted → quizzes_seeded
         "uploadedAt": datetime.now(timezone.utc).isoformat(),
     }
     await db["textbooks"].insert_one(doc)
@@ -120,21 +119,10 @@ async def get_textbook(
 async def seed_quiz_bank(
     textbook_id: str,
     request: Request,
-    db=Depends(get_instructor_db),
-):
-    """
-    Read all generated quiz JSON files from ``generated_quizzes/``
-    and insert them into the ``question_bank`` collection, tagged
-    with this *textbookId*.
-
-    These are the MASTER copies.  When an instructor creates a course,
-    the course-creation flow copies the relevant quizzes from
-    ``question_bank`` into the ``quizzes`` collection so instructors
-    can edit them freely.
-    """
+    db=Depends(get_instructor_db),):
+    
     _get_current_user(request)
 
-    # Verify textbook exists
     tb = await db["textbooks"].find_one({"textbookId": textbook_id})
     if not tb:
         raise HTTPException(404, "Textbook not found")
@@ -152,7 +140,7 @@ async def seed_quiz_bank(
     if not json_files:
         raise HTTPException(404, "No generated quiz JSON files found")
 
-    inserted = 0
+    sections = []
     skipped = 0
     errors = []
 
@@ -167,23 +155,29 @@ async def seed_quiz_bank(
             skipped += 1
             continue
 
-        # Re-tag with the real textbookId
-        quiz["textbookId"] = textbook_id
-        # Keep the model source info
-        quiz["sourceModel"] = fp.parent.name  # "opus" or "sonnet"
-        quiz["sourceFile"] = fp.name
-
-        # Use textbookId + quizId as the dedup key
-        existing = await db["question_bank"].find_one({
-            "textbookId": textbook_id,
-            "quizId": quiz.get("quizId"),
+        sections.append({
+            "section":     quiz.get("section"),
+            "quizId":      quiz.get("quizId"),
+            "sourceModel": fp.parent.name,
+            "sourceFile":  fp.name,
+            "questions":   quiz.get("questions", []),
         })
-        if existing:
-            skipped += 1
-            continue
 
-        await db["question_bank"].insert_one(quiz)
-        inserted += 1
+  
+    bank_doc = {
+        "textbookId":    textbook_id,
+        "title":         tb.get("title", ""),
+        "sectionCount":  len(sections),
+        "questionCount": sum(len(s["questions"]) for s in sections),
+        "sections":      sections,
+        "seededAt":      datetime.now(timezone.utc).isoformat(),
+    }
+
+    await db["question_bank"].replace_one(
+        {"textbookId": textbook_id},
+        bank_doc,
+        upsert=True,
+    )
 
     # Update textbook pipeline status
     await db["textbooks"].update_one(
@@ -192,8 +186,9 @@ async def seed_quiz_bank(
     )
 
     return {
-        "textbookId": textbook_id,
-        "inserted": inserted,
-        "skipped": skipped,
-        "errors": errors,
+        "textbookId":    textbook_id,
+        "sectionCount":  bank_doc["sectionCount"],
+        "questionCount": bank_doc["questionCount"],
+        "skipped":       skipped,
+        "errors":        errors,
     }

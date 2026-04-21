@@ -1,31 +1,3 @@
-#!/usr/bin/env python3
-"""
-seed_textbook.py — One-shot script to compile a textbook into MongoDB
-
-  1. Hashes the textbook PDF → deterministic textbookId
-  2. Stores textbook metadata in the ``textbooks`` collection
-  3. Reads all generated quiz JSONs from ``generated_quizzes/``
-  4. Inserts them into the ``question_bank`` collection, tagged with textbookId
-  5. Creates a unique index on (textbookId, quizId) for dedup
-
-After this, when an instructor creates a course and picks this textbook,
-the course-creation endpoint copies quizzes from ``question_bank`` into
-the course-specific ``quizzes`` collection.
-
-Usage
-    # With defaults (reads the PDF from rag_pipeline/, uses MONGO_URI env var):
-    python seed_textbook.py
-
-    # Point at a specific PDF and Mongo:
-    python seed_textbook.py \\
-        --pdf path/to/textbook.pdf \\
-        --mongo "mongodb+srv://user:pass@cluster.mongodb.net" \\
-        --db instructor_main
-
-    # Dry run (shows what would happen, no writes):
-    python seed_textbook.py --dry-run
-"""
-
 from __future__ import annotations
 
 import argparse
@@ -44,8 +16,6 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 
-# ── Paths (relative to this script in AI_core/quiz_pipeline/) ─────────
-
 SCRIPT_DIR = Path(__file__).resolve().parent
 QUIZ_OUTPUT_DIR = SCRIPT_DIR / "generated_quizzes"
 
@@ -54,8 +24,6 @@ DEFAULT_PDF = (
     SCRIPT_DIR.parent / "rag_pipeline"
     / "Research-Methods-in-Psychology-1641401927 (1) copy.pdf"
 )
-
-# ── Helpers ───────────────────────────────────────────────────────────
 
 def hash_pdf(pdf_path: Path) -> str:
     """SHA-256 hash of the PDF file."""
@@ -132,23 +100,28 @@ def main():
         log.info("  [DRY RUN] Would store textbook metadata in MongoDB")
         log.info("")
         log.info("=" * 60)
-        log.info("STEP 2: Would seed %d quiz JSON files", len(json_files))
+        log.info("STEP 2: Would build 1 question_bank doc from %d quiz JSON files",
+                 len(json_files))
         log.info("=" * 60)
+        total_questions = 0
         for fp in json_files:
             quiz = json.loads(fp.read_text(encoding="utf-8"))
+            n_q = len(quiz.get("questions", []))
+            total_questions += n_q
             log.info(
-                "  %s/%s  →  quizId=%s  section=%s  questions=%d",
+                "  + %s/%s  →  quizId=%s  section=%s  questions=%d",
                 fp.parent.name,
                 fp.name,
                 quiz.get("quizId", "?"),
                 quiz.get("section", "?"),
-                len(quiz.get("questions", [])),
+                n_q,
             )
+        log.info("  Would upsert 1 question_bank doc: %d sections, %d questions",
+                 len(json_files), total_questions)
         log.info("")
         log.info("Run without --dry-run to actually write to MongoDB.")
         return
 
-    # ── Connect to MongoDB ───────────────────────────────────────────
 
     try:
         from pymongo import MongoClient
@@ -167,11 +140,13 @@ def main():
 
     if existing:
         log.info("  Textbook %s already exists in MongoDB — skipping insert", textbook_id)
+        textbook_title = existing.get("title", "")
     else:
+        textbook_title = args.pdf.stem.replace("_", " ").replace("-", " ")
         doc = {
             "textbookId": textbook_id,
             "filename": args.pdf.name,
-            "title": args.pdf.stem.replace("_", " ").replace("-", " "),
+            "title": textbook_title,
             "sha256": sha,
             "totalChapters": 13,
             "pipelineStatus": "uploaded",
@@ -182,20 +157,29 @@ def main():
 
     log.info("")
     log.info("=" * 60)
-    log.info("STEP 2: Seeding question bank")
+    log.info("STEP 2: Building question bank (one doc per textbook)")
     log.info("=" * 60)
     log.info("  Found %d quiz JSON files", len(json_files))
 
     qbank_coll = db["question_bank"]
 
-    # Create unique index
+    # Drop legacy multi-field index from prior schema, if it exists
+    try:
+        qbank_coll.drop_index("textbookId_quizId_unique")
+        log.info("  Dropped legacy index textbookId_quizId_unique")
+    except Exception:
+        pass  # Index does not exist — that is fine
+
+    # Unique index on textbookId (one question bank doc per textbook)
     qbank_coll.create_index(
-        [("textbookId", 1), ("quizId", 1)],
+        "textbookId",
         unique=True,
-        name="textbookId_quizId_unique",
+        name="textbookId_unique",
     )
 
-    inserted = 0
+    # ── Build the sections array ─────────────────────────────────────
+
+    sections = []
     skipped = 0
 
     for fp in json_files:
@@ -206,52 +190,44 @@ def main():
             skipped += 1
             continue
 
-        # Tag with real textbookId + source info
-        quiz["textbookId"] = textbook_id
-        quiz["sourceModel"] = fp.parent.name   # "opus" or "sonnet"
-        quiz["sourceFile"] = fp.name
-        quiz["seededAt"] = datetime.now(timezone.utc).isoformat()
+        sections.append({
+            "section":     quiz.get("section"),        # e.g. "Chapter 1"
+            "quizId":      quiz.get("quizId"),         # e.g. "QUIZ_SONNET_CH01"
+            "sourceModel": fp.parent.name,             # "opus" or "sonnet"
+            "sourceFile":  fp.name,
+            "questions":   quiz.get("questions", []),
+        })
+        log.info(
+            "  + %s/%s  →  quizId=%s  (%d questions)",
+            fp.parent.name,
+            fp.name,
+            quiz.get("quizId"),
+            len(quiz.get("questions", [])),
+        )
 
-        try:
-            qbank_coll.insert_one(quiz)
-            inserted += 1
-            log.info(
-                "  ✓ %s/%s  →  quizId=%s  (%d questions)",
-                fp.parent.name,
-                fp.name,
-                quiz.get("quizId"),
-                len(quiz.get("questions", [])),
-            )
-        except Exception as exc:
-            # Duplicate key = already seeded
-            log.info("  ○ %s/%s  →  already exists, skipped", fp.parent.name, fp.name)
-            skipped += 1
+    # ── Upsert the single question_bank document ─────────────────────
+
+    now_iso = datetime.now(timezone.utc).isoformat()
+    bank_doc = {
+        "textbookId":    textbook_id,
+        "title":         textbook_title,
+        "sectionCount":  len(sections),
+        "questionCount": sum(len(s["questions"]) for s in sections),
+        "sections":      sections,
+        "seededAt":      now_iso,
+    }
+
+    qbank_coll.replace_one(
+        {"textbookId": textbook_id},
+        bank_doc,
+        upsert=True,
+    )
 
     # Update pipeline status
     textbooks_coll.update_one(
         {"textbookId": textbook_id},
         {"$set": {"pipelineStatus": "quizzes_seeded"}},
     )
-
-
-    log.info("")
-    log.info("=" * 60)
-    log.info("DONE")
-    log.info("=" * 60)
-    log.info("  textbookId:  %s", textbook_id)
-    log.info("  Inserted:    %d quiz documents", inserted)
-    log.info("  Skipped:     %d (dupes or validation errors)", skipped)
-    log.info("")
-    log.info("  Next steps:")
-    log.info("    1. Use this textbookId when creating courses in the UI")
-    log.info("    2. The course creation endpoint will auto-copy these")
-    log.info("       quizzes into the course-specific quiz collection")
-    log.info("")
-    log.info("  To verify, run:")
-    log.info("    python seed_textbook.py --dry-run")
-    log.info("  Or in mongo shell:")
-    log.info('    db.question_bank.find({textbookId: "%s"}).count()', textbook_id)
-
 
 if __name__ == "__main__":
     main()
