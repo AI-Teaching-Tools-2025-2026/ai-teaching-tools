@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Trash2, Pencil, ChevronDown, ChevronUp } from "lucide-react";
+import { Trash2, Pencil, ChevronDown, ChevronUp, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { BuilderQuestion } from "@/types/quiz";
@@ -113,32 +113,41 @@ export function QuestionItem({
         {/* Collapsible Answers Area */}
         {isExpanded && (
           <div className="px-6 pb-6 pt-2 border-t border-border bg-muted/10 animate-in slide-in-from-top-2">
-            <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50">
+            <div className="flex flex-col gap-3 pl-2 mt-2">
               {q.type === "multiple-choice" &&
                 q.options?.map((opt, i) => {
                   const isCorrect = opt === q.correctAnswer;
                   return (
-                    <div key={i} className="flex items-center gap-3">
+                    <div
+                      key={i}
+                      className={cn(
+                        "flex items-center gap-3",
+                        isCorrect ? "bg-green-600/20 rounded-md p-1 -m-1" : "",
+                      )}
+                    >
                       <div
                         className={cn(
                           "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
                           isCorrect
-                            ? "border-blue-500 bg-blue-500/20"
+                            ? "border-green-600 bg-green-600/20"
                             : "border-border",
                         )}
                       >
                         {isCorrect && (
-                          <div className="h-2 w-2 rounded-full bg-blue-500" />
+                          <div className="h-2 w-2 rounded-full bg-green-600" />
                         )}
                       </div>
                       <span
                         className={cn(
                           "text-sm font-medium",
-                          isCorrect ? "text-blue-500" : "text-muted-foreground",
+                          isCorrect ? "text-white" : "text-muted-foreground",
                         )}
                       >
                         {opt}
                       </span>
+                      {isCorrect && (
+                        <Check className="h-4 w-4 text-green-500 ml-auto mr-2" />
+                      )}
                     </div>
                   );
                 })}
@@ -148,29 +157,38 @@ export function QuestionItem({
                   {["True", "False"].map((opt) => {
                     const isCorrect = opt === q.correctAnswer;
                     return (
-                      <div key={opt} className="flex items-center gap-3">
+                      <div
+                        key={opt}
+                        className={cn(
+                          "flex items-center gap-3",
+                          isCorrect
+                            ? "bg-green-600/20 rounded-md p-1 -m-1"
+                            : "",
+                        )}
+                      >
                         <div
                           className={cn(
                             "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
                             isCorrect
-                              ? "border-blue-500 bg-blue-500/20"
+                              ? "border-green-600 bg-green-600/20"
                               : "border-border",
                           )}
                         >
                           {isCorrect && (
-                            <div className="h-2 w-2 rounded-full bg-blue-500" />
+                            <div className="h-2 w-2 rounded-full bg-green-600" />
                           )}
                         </div>
                         <span
                           className={cn(
                             "text-sm font-medium",
-                            isCorrect
-                              ? "text-blue-500"
-                              : "text-muted-foreground",
+                            isCorrect ? "text-white" : "text-muted-foreground",
                           )}
                         >
                           {opt}
                         </span>
+                        {isCorrect && (
+                          <Check className="h-4 w-4 text-green-500 ml-auto mr-2" />
+                        )}
                       </div>
                     );
                   })}
