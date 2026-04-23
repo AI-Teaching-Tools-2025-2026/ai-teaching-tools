@@ -1,7 +1,5 @@
-"use client"
+"use client";
 
 export default function CreateQuestionBankPage() {
-    return (
-        <p>Hello world!</p>
-    )
+  return <p>Hello world!</p>;
 }

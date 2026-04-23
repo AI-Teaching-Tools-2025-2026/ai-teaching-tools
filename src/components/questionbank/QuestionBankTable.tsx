@@ -56,7 +56,7 @@ const MOCK_BANKS: QuestionBankData[] = [
     section: "Review",
     questionsCount: 120,
     lastModified: "2026-04-22T14:30:00Z",
-  }
+  },
 ];
 
 type FilterState = {
@@ -72,12 +72,14 @@ const DEFAULT_FILTERS: FilterState = {
 export default function QuestionBankTable() {
   const [banks, setBanks] = useState<QuestionBankData[]>(MOCK_BANKS);
   // const [loading, setLoading] = useState(true); // set to false since we mock
-  const loading = false; 
+  const loading = false;
   const [selectedBanks, setSelectedBanks] = useState<string[]>([]);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [showFilterTable, setShowFilterTable] = useState(false);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
-  const [bankToDelete, setBankToDelete] = useState<QuestionBankData | null>(null);
+  const [bankToDelete, setBankToDelete] = useState<QuestionBankData | null>(
+    null,
+  );
 
   const params = useParams();
   const router = useRouter();
@@ -110,13 +112,10 @@ export default function QuestionBankTable() {
     setFilters(DEFAULT_FILTERS);
   };
 
-  const hasActiveFilters =
-    filters.search ||
-    filters.section !== "all";
+  const hasActiveFilters = filters.search || filters.section !== "all";
 
   const allSelected =
-    selectedBanks.length === filteredBanks.length &&
-    filteredBanks.length > 0;
+    selectedBanks.length === filteredBanks.length && filteredBanks.length > 0;
 
   const toggleSelectAll = () => {
     if (allSelected) {
@@ -143,16 +142,16 @@ export default function QuestionBankTable() {
 
   const handleDuplicate = async (bankId: string) => {
     // TODO: Connect to backend duplicate endpoint
-    const bankToCopy = banks.find(b => b._id === bankId);
+    const bankToCopy = banks.find((b) => b._id === bankId);
     if (!bankToCopy) return;
-    
+
     const newBank = {
       ...bankToCopy,
       _id: `QB${Math.floor(Math.random() * 1000)}`,
       title: `${bankToCopy.title} (Copy)`,
-      lastModified: new Date().toISOString()
+      lastModified: new Date().toISOString(),
     };
-    
+
     setBanks((prev) => [...prev, newBank]);
     toast.success("Question Bank duplicated successfully");
   };

@@ -161,7 +161,10 @@ export function QuestionForm({
               </div>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="bank" id="bank" />
-                <Label htmlFor="bank" className="font-normal text-muted-foreground">
+                <Label
+                  htmlFor="bank"
+                  className="font-normal text-muted-foreground"
+                >
                   Question Bank
                 </Label>
               </div>

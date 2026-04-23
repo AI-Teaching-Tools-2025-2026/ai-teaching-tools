@@ -12,7 +12,11 @@ interface QuestionListProps {
   hideAuthorship?: boolean;
 }
 
-export function QuestionList({ questions, setQuestions, hideAuthorship }: QuestionListProps) {
+export function QuestionList({
+  questions,
+  setQuestions,
+  hideAuthorship,
+}: QuestionListProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleCreateQuestion = (newQuestion: BuilderQuestion) => {
