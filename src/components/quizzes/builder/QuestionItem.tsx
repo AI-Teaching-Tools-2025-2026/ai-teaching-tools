@@ -120,18 +120,18 @@ export function QuestionItem({
                         className={cn(
                           "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
                           isCorrect
-                            ? "border-blue-500 bg-blue-500/20"
+                            ? "border-green-600 bg-green-600/20"
                             : "border-border",
                         )}
                       >
                         {isCorrect && (
-                          <div className="h-2 w-2 rounded-full bg-blue-500" />
+                          <div className="h-2 w-2 rounded-full bg-green-600" />
                         )}
                       </div>
                       <span
                         className={cn(
                           "text-sm font-medium",
-                          isCorrect ? "text-blue-500" : "text-muted-foreground",
+                          isCorrect ? "text-white" : "text-muted-foreground",
                         )}
                       >
                         {opt}
