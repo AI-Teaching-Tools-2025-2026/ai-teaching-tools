@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { useRouter, useParams } from "next/navigation";
 import { mockSections } from "./mockData";
 import { QuizDetails } from "./builder/QuizDetails";
-import { QuestionList } from "./builder/QuestionList";
+import { QuestionList } from "../questions/QuestionList";
 import {
   QuizData,
   BuilderQuestion,
