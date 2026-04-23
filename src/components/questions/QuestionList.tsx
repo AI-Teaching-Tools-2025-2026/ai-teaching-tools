@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { Plus } from "lucide-react";
 import { BuilderQuestion } from "@/types/quiz";
-import { QuestionItem } from "../../questions/QuestionItem";
-import { QuestionForm } from "../../questions/QuestionForm";
+import { QuestionItem } from "./QuestionItem";
+import { QuestionForm } from "./QuestionForm";
 
 interface QuestionListProps {
   questions: BuilderQuestion[];

@@ -5,7 +5,7 @@ import { Trash2, Pencil, ChevronDown, ChevronUp, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { BuilderQuestion } from "@/types/quiz";
-import { QuestionForm } from "../../questions/QuestionForm";
+import { QuestionForm } from "./QuestionForm";
 import SubmissionModal from "@/components/modal/submissionModal";
 
 interface QuestionItemProps {
