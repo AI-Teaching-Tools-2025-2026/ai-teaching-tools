@@ -110,7 +110,7 @@ export function QuestionItem({
         {/* Collapsible Answers Area */}
         {isExpanded && (
           <div className="px-6 pb-6 pt-2 border-t border-border bg-muted/10 animate-in slide-in-from-top-2">
-            <div className="flex flex-col gap-3 pl-4 border-l-2 border-border/50">
+            <div className="flex flex-col gap-3 pl-2 mt-2">
               {q.type === "multiple-choice" &&
                 q.options?.map((opt, i) => {
                   const isCorrect = opt === q.correctAnswer;
@@ -150,19 +150,19 @@ export function QuestionItem({
                           className={cn(
                             "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
                             isCorrect
-                              ? "border-blue-500 bg-blue-500/20"
+                              ? "border-green-600 bg-green-600/20"
                               : "border-border",
                           )}
                         >
                           {isCorrect && (
-                            <div className="h-2 w-2 rounded-full bg-blue-500" />
+                            <div className="h-2 w-2 rounded-full bg-green-600" />
                           )}
                         </div>
                         <span
                           className={cn(
                             "text-sm font-medium",
                             isCorrect
-                              ? "text-blue-500"
+                              ? "text-white"
                               : "text-muted-foreground",
                           )}
                         >
