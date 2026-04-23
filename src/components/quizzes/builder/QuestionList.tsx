@@ -9,9 +9,10 @@ import { QuestionForm } from "./QuestionForm";
 interface QuestionListProps {
   questions: BuilderQuestion[];
   setQuestions: React.Dispatch<React.SetStateAction<BuilderQuestion[]>>;
+  hideAuthorship?: boolean;
 }
 
-export function QuestionList({ questions, setQuestions }: QuestionListProps) {
+export function QuestionList({ questions, setQuestions, hideAuthorship }: QuestionListProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleCreateQuestion = (newQuestion: BuilderQuestion) => {
@@ -36,6 +37,7 @@ export function QuestionList({ questions, setQuestions }: QuestionListProps) {
               prev.map((item) => (item.id === updatedQ.id ? updatedQ : item)),
             );
           }}
+          hideAuthorship={hideAuthorship}
         />
       ))}
 
@@ -46,6 +48,7 @@ export function QuestionList({ questions, setQuestions }: QuestionListProps) {
           <QuestionForm
             onSave={handleCreateQuestion}
             onCancel={() => setIsFormOpen(false)}
+            hideAuthorship={hideAuthorship}
           />
         </div>
       ) : (

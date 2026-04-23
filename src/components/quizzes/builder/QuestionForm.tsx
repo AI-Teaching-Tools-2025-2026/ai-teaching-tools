@@ -22,12 +22,14 @@ interface QuestionFormProps {
   initialQuestion?: BuilderQuestion;
   onSave: (question: BuilderQuestion) => void;
   onCancel: () => void;
+  hideAuthorship?: boolean;
 }
 
 export function QuestionForm({
   initialQuestion,
   onSave,
   onCancel,
+  hideAuthorship = false,
 }: QuestionFormProps) {
   const [authorship, setAuthorship] = useState("manual");
   const [questionText, setQuestionText] = useState(initialQuestion?.text || "");
@@ -134,35 +136,39 @@ export function QuestionForm({
   return (
     <div className="grid gap-6 py-4">
       {/* Question Authorship */}
-      <div className="grid gap-3">
-        <Label className="text-[15px] font-medium leading-none">
-          Question Authorship
-        </Label>
-        <RadioGroup
-          defaultValue="manual"
-          value={authorship}
-          onValueChange={setAuthorship}
-          className="flex flex-col gap-2"
-        >
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="manual" id="manual" />
-            <Label
-              htmlFor="manual"
-              className="font-normal text-muted-foreground"
+      {!hideAuthorship && (
+        <>
+          <div className="grid gap-3">
+            <Label className="text-[15px] font-medium leading-none">
+              Question Authorship
+            </Label>
+            <RadioGroup
+              defaultValue="manual"
+              value={authorship}
+              onValueChange={setAuthorship}
+              className="flex flex-col gap-2"
             >
-              Manual
-            </Label>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="manual" id="manual" />
+                <Label
+                  htmlFor="manual"
+                  className="font-normal text-muted-foreground"
+                >
+                  Manual
+                </Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="bank" id="bank" />
+                <Label htmlFor="bank" className="font-normal text-muted-foreground">
+                  Question Bank
+                </Label>
+              </div>
+            </RadioGroup>
           </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="bank" id="bank" />
-            <Label htmlFor="bank" className="font-normal text-muted-foreground">
-              Question Bank
-            </Label>
-          </div>
-        </RadioGroup>
-      </div>
 
-      <div className="h-px bg-border w-full" />
+          <div className="h-px bg-border w-full" />
+        </>
+      )}
 
       {/* Question Name */}
       <div className="grid gap-2">

@@ -13,6 +13,7 @@ interface QuestionItemProps {
   index: number;
   onDelete: (id: string) => void;
   onUpdate: (updatedQuestion: BuilderQuestion) => void;
+  hideAuthorship?: boolean;
 }
 
 export function QuestionItem({
@@ -20,6 +21,7 @@ export function QuestionItem({
   index,
   onDelete,
   onUpdate,
+  hideAuthorship,
 }: QuestionItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -49,6 +51,7 @@ export function QuestionItem({
           initialQuestion={q}
           onSave={handleEditSave}
           onCancel={handleEditCancel}
+          hideAuthorship={hideAuthorship}
         />
       </div>
     );
