@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Trash2, Pencil, ChevronDown, ChevronUp } from "lucide-react";
+import { Trash2, Pencil, ChevronDown, ChevronUp, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { BuilderQuestion } from "@/types/quiz";
@@ -142,6 +142,9 @@ export function QuestionItem({
                       >
                         {opt}
                       </span>
+                      {isCorrect && (
+                        <Check className="h-4 w-4 text-green-500 ml-auto mr-2" />
+                      )}
                     </div>
                   );
                 })}
@@ -180,6 +183,9 @@ export function QuestionItem({
                         >
                           {opt}
                         </span>
+                        {isCorrect && (
+                          <Check className="h-4 w-4 text-green-500 ml-auto mr-2" />
+                        )}
                       </div>
                     );
                   })}
