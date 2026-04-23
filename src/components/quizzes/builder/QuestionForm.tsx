@@ -57,7 +57,9 @@ export function QuestionForm({
     return Array(MIN_INCORRECT_ANSWERS).fill("");
   });
 
-  const handleQuestionTypeChange = (value: "multiple-choice" | "true-false") => {
+  const handleQuestionTypeChange = (
+    value: "multiple-choice" | "true-false",
+  ) => {
     setQuestionType(value);
 
     if (value === "multiple-choice") {

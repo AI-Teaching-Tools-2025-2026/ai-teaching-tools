@@ -115,13 +115,13 @@ export function QuestionItem({
                 q.options?.map((opt, i) => {
                   const isCorrect = opt === q.correctAnswer;
                   return (
-                    <div key={i} 
+                    <div
+                      key={i}
                       className={cn(
-                        "flex items-center gap-3", 
-                        isCorrect 
-                          ? "bg-green-600/20 rounded-md p-1 -m-1" 
-                          : ""
-                        )}>
+                        "flex items-center gap-3",
+                        isCorrect ? "bg-green-600/20 rounded-md p-1 -m-1" : "",
+                      )}
+                    >
                       <div
                         className={cn(
                           "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
@@ -154,13 +154,15 @@ export function QuestionItem({
                   {["True", "False"].map((opt) => {
                     const isCorrect = opt === q.correctAnswer;
                     return (
-                      <div key={opt} 
+                      <div
+                        key={opt}
                         className={cn(
-                          "flex items-center gap-3", 
-                          isCorrect 
-                            ? "bg-green-600/20 rounded-md p-1 -m-1" 
-                            : ""
-                          )}>
+                          "flex items-center gap-3",
+                          isCorrect
+                            ? "bg-green-600/20 rounded-md p-1 -m-1"
+                            : "",
+                        )}
+                      >
                         <div
                           className={cn(
                             "h-4 w-4 rounded-full border flex items-center justify-center shrink-0",
@@ -176,9 +178,7 @@ export function QuestionItem({
                         <span
                           className={cn(
                             "text-sm font-medium",
-                            isCorrect
-                              ? "text-white"
-                              : "text-muted-foreground",
+                            isCorrect ? "text-white" : "text-muted-foreground",
                           )}
                         >
                           {opt}
