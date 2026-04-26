@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from db.utils import get_instructor_db
 from .models import QuestionBankCreate
 from datetime import datetime
-from api.AI_core.question_bank_pipeline.question_bank_generator import generate_for_chapter
-from api.AI_core.question_bank_pipeline.pdfParser import pdfParser
+from AI_core.question_bank_pipeline.question_bank_generator import generate_for_chapter
+from AI_core.question_bank_pipeline.pdfParser import pdfParser
 from pydantic import ValidationError
 import uuid
 
@@ -115,7 +115,6 @@ async def generate_question_bank(courseId: str, filePath: str, db=Depends(get_in
         current_time = datetime.now().isoformat()
 
         question_bank.update({
-            "_id": f"QB{uuid.uuid4().hex[:6].upper()}",
             "courseID": courseId,
             "sourceFile": filePath,
             "createdAt": current_time,
@@ -124,7 +123,9 @@ async def generate_question_bank(courseId: str, filePath: str, db=Depends(get_in
         
         try:
             validated_qb = QuestionBankCreate(**question_bank)
-            await db["question_banks"].insert_one(validated_qb.model_dump(by_alias=True))
+            final_db_document = validated_qb.model_dump(by_alias=True)
+            final_db_document["_id"] = f"QB{uuid.uuid4().hex[:6].upper()}"
+            await db["question_banks"].insert_one(final_db_document)
             print(f"Successfully saved Question Bank for Chapter {chapter_num}")
             
         except ValidationError as e:
