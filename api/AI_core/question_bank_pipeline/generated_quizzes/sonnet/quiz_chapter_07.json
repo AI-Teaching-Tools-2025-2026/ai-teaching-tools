@@ -1,0 +1,448 @@
+{
+  "_id": "6014e87b94954cbea687c508",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 7",
+  "quizId": "QUIZ_SONNET_CH07",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "What are the two important characteristics that define survey research?",
+      "answers": [
+        {
+          "text": "Variables are measured using self-reports, and considerable attention is paid to sampling",
+          "isCorrect": true
+        },
+        {
+          "text": "Variables are manipulated experimentally, and data are collected in laboratory settings",
+          "isCorrect": false
+        },
+        {
+          "text": "Data are collected through observation, and small convenience samples are used",
+          "isCorrect": false
+        },
+        {
+          "text": "Participants are randomly assigned to conditions, and objective measures are used",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "In the Lerner et al. (2003) study on reactions to terrorist attacks, what was the main finding regarding emotional priming?",
+      "answers": [
+        {
+          "text": "Participants primed to feel anger perceived less risk than those primed to feel fear",
+          "isCorrect": true
+        },
+        {
+          "text": "Participants primed to feel fear perceived less risk than those primed to feel anger",
+          "isCorrect": false
+        },
+        {
+          "text": "There was no difference in risk perception between anger and fear conditions",
+          "isCorrect": false
+        },
+        {
+          "text": "Both anger and fear priming increased risk perceptions equally",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "What was the outcome of the 1936 presidential election polling that demonstrated the effectiveness of careful survey methodology?",
+      "answers": [
+        {
+          "text": "George Gallup correctly predicted Roosevelt's landslide victory using scientific methods with smaller samples",
+          "isCorrect": true
+        },
+        {
+          "text": "Literary Digest correctly predicted Landon's victory using their large straw poll",
+          "isCorrect": false
+        },
+        {
+          "text": "Both Gallup and Literary Digest made equally accurate predictions",
+          "isCorrect": false
+        },
+        {
+          "text": "Gallup incorrectly predicted Landon would win despite using scientific methods",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "According to the cognitive model of survey responding, what is the first step respondents engage in when answering a survey item?",
+      "answers": [
+        {
+          "text": "Interpreting the question",
+          "isCorrect": true
+        },
+        {
+          "text": "Retrieving relevant information from memory",
+          "isCorrect": false
+        },
+        {
+          "text": "Forming a tentative judgment",
+          "isCorrect": false
+        },
+        {
+          "text": "Editing their response",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "What is an item-order effect in survey research?",
+      "answers": [
+        {
+          "text": "When the order in which items are presented affects people's responses",
+          "isCorrect": true
+        },
+        {
+          "text": "When respondents always choose the first option presented",
+          "isCorrect": false
+        },
+        {
+          "text": "When items at the end of a survey are answered more accurately",
+          "isCorrect": false
+        },
+        {
+          "text": "When demographic items influence responses to substantive questions",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "In the study by Strack et al. (1988), what happened when the dating frequency item came before the life satisfaction item?",
+      "answers": [
+        {
+          "text": "The correlation between the two increased from −.12 to +.66",
+          "isCorrect": true
+        },
+        {
+          "text": "The correlation between the two decreased from +.66 to −.12",
+          "isCorrect": false
+        },
+        {
+          "text": "There was no change in the correlation between the two variables",
+          "isCorrect": false
+        },
+        {
+          "text": "The correlation became statistically insignificant",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "What does the acronym BRUSO stand for in the context of writing effective questionnaire items?",
+      "answers": [
+        {
+          "text": "Brief, Relevant, Unambiguous, Specific, and Objective",
+          "isCorrect": true
+        },
+        {
+          "text": "Balanced, Reliable, Unbiased, Simple, and Organized",
+          "isCorrect": false
+        },
+        {
+          "text": "Basic, Reasonable, Understandable, Short, and Open-ended",
+          "isCorrect": false
+        },
+        {
+          "text": "Broad, Responsive, Universal, Systematic, and Operational",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "What is a 'double-barrelled' questionnaire item?",
+      "answers": [
+        {
+          "text": "An item that asks about two conceptually separate issues but allows only one response",
+          "isCorrect": true
+        },
+        {
+          "text": "An item that provides two correct answers among the response options",
+          "isCorrect": false
+        },
+        {
+          "text": "An item that is asked twice in different sections of the survey",
+          "isCorrect": false
+        },
+        {
+          "text": "An item that requires respondents to answer both yes and no",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "According to the chapter, how many response options do five-point scales work best for?",
+      "answers": [
+        {
+          "text": "Unipolar scales where only one construct is tested",
+          "isCorrect": true
+        },
+        {
+          "text": "Bipolar scales where there is a dichotomous spectrum",
+          "isCorrect": false
+        },
+        {
+          "text": "All types of rating scales equally",
+          "isCorrect": false
+        },
+        {
+          "text": "Open-ended questions only",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "What is a true Likert scale as originally developed by Rensis Likert?",
+      "answers": [
+        {
+          "text": "A scale involving agreement/disagreement with multiple statements, where responses are summed to produce an attitude score",
+          "isCorrect": true
+        },
+        {
+          "text": "Any rating scale ranging from 1 to 5 or 1 to 7",
+          "isCorrect": false
+        },
+        {
+          "text": "A scale measuring only positive attitudes toward a topic",
+          "isCorrect": false
+        },
+        {
+          "text": "A visual-analog scale with endpoints labeled",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "What should generally be true of response categories for categorical variables in closed-ended items?",
+      "answers": [
+        {
+          "text": "They should be mutually exclusive and exhaustive",
+          "isCorrect": true
+        },
+        {
+          "text": "They should overlap to capture all possible nuances",
+          "isCorrect": false
+        },
+        {
+          "text": "They should include only the most common responses",
+          "isCorrect": false
+        },
+        {
+          "text": "They should be limited to exactly three options",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "According to the National Comorbidity Survey data presented, what is the lifetime prevalence of major depressive disorder in the total population?",
+      "answers": [
+        {
+          "text": "16.9%",
+          "isCorrect": true
+        },
+        {
+          "text": "5.7%",
+          "isCorrect": false
+        },
+        {
+          "text": "13.2%",
+          "isCorrect": false
+        },
+        {
+          "text": "8.0%",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "What is simple random sampling?",
+      "answers": [
+        {
+          "text": "A method where each individual in the population has an equal probability of being selected",
+          "isCorrect": true
+        },
+        {
+          "text": "A method where researchers select the most convenient participants",
+          "isCorrect": false
+        },
+        {
+          "text": "A method where the population is divided into strata before sampling",
+          "isCorrect": false
+        },
+        {
+          "text": "A method where participants volunteer to be in the study",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "What is stratified random sampling?",
+      "answers": [
+        {
+          "text": "The population is divided into subgroups and a random sample is taken from each subgroup",
+          "isCorrect": true
+        },
+        {
+          "text": "All members of specific subgroups are automatically included in the sample",
+          "isCorrect": false
+        },
+        {
+          "text": "Participants are selected based on their proximity to the researcher",
+          "isCorrect": false
+        },
+        {
+          "text": "The sample is stratified after data collection is complete",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "What is the key advantage of cluster sampling?",
+      "answers": [
+        {
+          "text": "It does not require a sampling frame and minimizes travel for face-to-face interviews",
+          "isCorrect": true
+        },
+        {
+          "text": "It guarantees that all subgroups are proportionally represented",
+          "isCorrect": false
+        },
+        {
+          "text": "It is the most statistically precise form of probability sampling",
+          "isCorrect": false
+        },
+        {
+          "text": "It eliminates all forms of sampling bias",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "Why was the Literary Digest's 1936 presidential poll inaccurate?",
+      "answers": [
+        {
+          "text": "Their mailing lists over-represented wealthier people who were more likely to vote for Landon",
+          "isCorrect": true
+        },
+        {
+          "text": "They used too small a sample size for their predictions",
+          "isCorrect": false
+        },
+        {
+          "text": "They failed to use any form of random sampling",
+          "isCorrect": false
+        },
+        {
+          "text": "They surveyed people too far in advance of the election",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "What is non-response bias?",
+      "answers": [
+        {
+          "text": "Bias that occurs when survey non-responders differ from responders in systematic ways",
+          "isCorrect": true
+        },
+        {
+          "text": "Bias that occurs when respondents give socially desirable answers",
+          "isCorrect": false
+        },
+        {
+          "text": "Bias that occurs when the sampling frame is incomplete",
+          "isCorrect": false
+        },
+        {
+          "text": "Bias that occurs when questions are worded poorly",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "In the Lahaut et al. (2002) study on alcohol consumption, what did researchers find about non-responders?",
+      "answers": [
+        {
+          "text": "Non-responders included an especially high proportion of abstainers, meaning initial estimates were too high",
+          "isCorrect": true
+        },
+        {
+          "text": "Non-responders drank significantly more alcohol than responders",
+          "isCorrect": false
+        },
+        {
+          "text": "There was no difference between responders and non-responders",
+          "isCorrect": false
+        },
+        {
+          "text": "Non-responders were more likely to be heavy drinkers",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "According to the chapter, approximately what sample size is considered adequate for most survey research?",
+      "answers": [
+        {
+          "text": "Between 100 and 1,000",
+          "isCorrect": true
+        },
+        {
+          "text": "Between 10 and 50",
+          "isCorrect": false
+        },
+        {
+          "text": "Between 5,000 and 10,000",
+          "isCorrect": false
+        },
+        {
+          "text": "At least 10% of the population",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "Which survey method typically has the highest response rate?",
+      "answers": [
+        {
+          "text": "In-person interviews",
+          "isCorrect": true
+        },
+        {
+          "text": "Telephone surveys",
+          "isCorrect": false
+        },
+        {
+          "text": "Mail surveys",
+          "isCorrect": false
+        },
+        {
+          "text": "Internet surveys",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

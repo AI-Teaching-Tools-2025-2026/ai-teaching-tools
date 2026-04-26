@@ -1,0 +1,694 @@
+Glossary
+α (alpha)
+The criterion that shows how low a p-value should be before the sample result is considered unlikely enough to reject the null hypothesis (Usually set to .05).
+ABA design
+Another term for reversal design.
+Abstract
+A brief summary of the study's research question, methods, results and conclusions.
+Alternating treatments design
+In this design two or more treatments are alternated relatively quickly on a regular schedule.
+Alternative hypothesis
+An alternative to the null hypothesis (often symbolized as H1), this hypothesis proposes that there is a relationship in the population and that the relationship in the sample reflects this relationship in the population.
+Analysis of variance (ANOVA)
+A statistical test used when there are more than two groups or condition means to be compared.
+Anonymity
+When a participants name and other personally identifiable information is not collected at all.
+APA Ethics Code
+Stands for the APA’s Ethical Principles of Psychologists and Code of Conduct. It was first published in 1953 and includes about 150 specific ethical standards that psychologists and their students are expected to follow.
+APA style
+A set of guidelines for writing in psychology and related fields.
+Applied behavior analysis
+An application of the principles of experimental analysis of behavior that plays an important role in
+Glossary | 385
+contemporary research on developmental disabilities, education, organizational behavior, and health, among many other applied areas.
+Applied research
+Research conducted primarily to address some practical problem.
+Autonomy
+A persons right to make their own choices and take their own actions free from coercion.
+Bar graphs
+A graphical presentation of data as bars of varying size, generally used to present and compare the mean scores for two or more groups or conditions.
+Baseline
+The beginning phase of an ABA design which acts as a kind of control condition in which the level of responding before any treatment is introduced.
+Basic research
+Research conducted primarily for the sake of achieving a more detailed and accurate understanding of human behavior, without necessarily trying to address any particular practical problem.
+Bayesian statistics
+An approach in which the researcher specifies the probability that the null hypothesis and any important alternative hypotheses are true before conducting the study, conducts the study, and then updates the probabilities based on the data.
+Behavioral measures
+Measures in which some other aspect of participants’ behavior is observed and recorded.
+Belmont Report
+A set of federal guidelines written in 1978 as a response to the abuses of the Tuskegee study that recognize three important principles in research with humans: justice, respect for persons, and beneficience, and that formed the basis for federal regulations applied to research.
+Beneficence
+Underscores the importance of maximizing the benefits of research while minimizing harms to participants and society.
+386 | Glossary
+Between-subjects experiment
+An experiment in which each participant is tested in only one condition.
+Between-subjects factorial design
+All of the independent variables are manipulated between subjects.
+Block randomization
+All the conditions occur once in the sequence before any of them is repeated.
+BRUSO
+An acronym that stands for “brief,” “relevant,” “unambiguous,” “specific,” and “objective,” which is used to create effective questionnaire items that are brief and to the point.
+Carryover effect
+An effect of being tested in one condition on participants’ behavior in later conditions.
+Case study
+An in-depth examination of an individual.
+Categorical variable
+A variable that represents a characteristic of an individual, such as chosen major, and is typically measured by assigning each individual's response to one of several categories (e.g., Psychology, English, Nursing, Engineering, etc.).
+Central tendency
+Is the middle of a distribution—the point around which the scores in the distribution tend to cluster. (Another term for central tendency is average.)
+Clinical practice of psychology
+The diagnosis and treatment of psychological disorders and related problems.
+Closed-ended items
+Questionnaire items that ask a question and provide a limited set of response options for participants to choose from.
+Cluster sampling
+A type of probability sampling in which larger clusters of individuals are randomly sampled and then individuals within each cluster are randomly sampled.
+Glossary | 387
+Coding
+A part of structured observation whereby the observers use a clearly defined set of guidelines to "code" behaviors—assigning specific behaviors they are observing to a category—and count the number of times or the duration that the behavior occurs.
+Cohen’s d
+The most widely used measure of effect size for differences between group or condition means, which is the difference between the two means divided by the standard deviation.
+Cohort effect
+Differences between the groups may reflect the generation that people come from rather than a direct effect of age.
+Complete counterbalancing
+A method in which an equal number of participants complete each possible order of conditions.
+Conceptual definition
+Describes the behaviors and internal processes that make up a psychological construct, along with how it relates to other variables.
+Concurrent validity
+A form of criterion validity, where the criterion is measured at the same time (concurrently) as the construct.
+Conditions
+The different levels of the independent variable to which participants are assigned.
+Confederate
+A helper who pretended to be a real participant in a study.
+Confidence intervals
+A range of values that is computed in such a way that some percentage of the time (usually 95%) the population parameter will lie within that range.
+Confidentiality
+An agreement not to disclose participants’ personal information without their consent or some appropriate legal authorization.
+388 | Glossary
+Confirmation bias
+Tendency to focus on cases that confirm our intuitive beliefs and to disregard cases that disconfirm our beliefs.
+Confounding variable
+An extraneous variable that varies systematically with the independent variable, and thus confuses the effect of the independent variable with the effect of the extraneous one.
+Confounds
+A specific type of extraneous variable that systematically varies along with the variables under investigation and therefore provides an alternative explanation for the results.
+Consent form
+The process of obtaining informed consent by having the participants read and sign the form.
+Construct validity
+One of the "big four" validities, whereby the research question is clearly operationalized by the study's methods.
+Constructs
+Psychological variables that represent an individual's mental state or experience, often not directly observable, such as personality traits, emotional states, attitudes, and abilities.
+Content analysis
+A family of systematic approaches to measurement using qualitative methods to analyze complex archival data.
+Content validity
+The extent to which a measure reflects all aspects of the construct of interest.
+Context effect (or contrast effect)
+Unintended influences on respondents’ answers because they are not related to the content of the item but to the context in which the item appears.
+Control
+Holding extraneous variables constant in order to separate the effect of the independent variable from the effect of the extraneous variables.
+Glossary | 389
+Control condition
+The condition in which participants do not receive the treatment.
+Convenience sampling
+A common method of non-probability sampling in which the sample consists of individuals who happen to be easily available and willing to participate (such as introductory psychology students).
+Convergent validity
+A form of criterion validity whereby new measures are correlated with existing established measures of the same construct.
+Converging evidence
+An idea that tells us to examine the pattern of flaws running through the research literature because the nature of this pattern can either support or undermine the conclusions we wish to draw.
+Converging operations
+When psychologists use multiple operational definitions of the same construct—either within a study or across studies.
+Correlation coefficient
+Describes the strength and direction of the relationship between two variables (often measured by Pearson's r).
+Correlation matrix
+Shows the correlation coefficient between pairs of variables in the study.
+Correlational research
+Research that is non-experimental because it focuses on the statistical relationship between two variables but does not include the manipulation of an independent variable.
+Counterbalancing
+Varying the order of the conditions in which participants are tested, to help solve the problem of order effects in within-subjects experiments.
+Criterion
+A variable that theoretically should be correlated with the construct being measured (plural: criteria).
+390 | Glossary
+Criterion validity
+The extent to which people’s scores on a measure are correlated with other variables (known as criteria) that one would expect them to be correlated with.
+Critical value
+The absolute value that a test statistic (e.g., F, t, etc.) must exceed to be considered statistically significant.
+Cronbach’s α
+A statistic that measures internal consistency among items in a measure.
+Cross-over interaction
+Means the independent variable has an effect at both levels but the effects are in opposite directions.
+Cross-sectional studies
+Studies that involve comparing two or more pre-existing groups of people (e.g., children at different stages of development).
+Cross-sequential studies
+Studies in which researchers follow people in different age groups in a smaller period of time.
+Data file
+Data that has been entered into a spreadsheet and formatted in order to be analyzed.
+Debriefing
+This is the process of informing research participants as soon as possible of the purpose of the study, revealing any deception, and correcting any other misconceptions they might have as a result of participating.
+Deception
+Misinforming participants about the purpose of a study, using confederates, using phony equipment like Milgram’s shock generator, and presenting participants with false feedback about their performance (e.g., telling them they did poorly on a test when they actually did well).
+Declaration of Helsinki
+An ethics code that was created by the World Medical Council in 1964.
+Demand characteristics
+Subtle cues that reveal to participants how the researcher expects them to respond in the experiment.
+Glossary | 391
+Dependent variable
+The variable the experimenter measures (it is the presumed effect).
+Dependent-samples t-test
+Used to compare two means for the same sample tested at two different times or under two different conditions (sometimes called the paired-samples t-test).
+Descriptive statistics
+Refers to a set of techniques for summarizing and displaying data.
+Difference score
+A method to reduce pairs of scores (e.g., pre- and post-test) to a single score by calculating the difference between them.
+Directionality problem
+The problem where two variables, X and Y, are statistically related either because X causes Y, or because Y causes X, and thus the causal direction of the effect cannot be known.
+Discriminant validity
+The extent to which scores on a measure of a construct are not correlated with measures of other, conceptually distinct, constructs and thus discriminate between them.
+Disguised naturalistic observation
+When researchers engage in naturalistic observation by making their observations as unobtrusively as possible so that participants are not aware that they are being studied.
+Disguised participant observation
+Researchers pretend to be members of the social group they are observing and conceal their true identity as researchers.
+Disproportionate stratified random sampling
+Is used to sample extra respondents from particularly small subgroups—allowing valid conclusions to be drawn about those subgroups.
+Distribution
+The way scores are distributed across levels of a variable.
+392 | Glossary
+Doctor of philosophy [Ph.D.]
+An academic degree earned through intensive study of a particular discipline and the completion of a set of research studies that contribute new knowledge to the academic literature.
+Double-blind peer review
+A process in which the reviewers of a research article do not know the identity of the researcher(s) and vice versa.
+Double-blind study
+A method to reduce experimenter bias, where neither the participant nor the experimenter is knowledgeable about the condition to which the participant is assigned.
+Edited volumes
+Books that are collections of chapters written by different authors on different aspects of the same topic, and overseen by one or more editors.
+Effect size
+Describes the strength of a statistical relationship.
+Empirical questions
+These are questions about the way the world actually is and, therefore, can be answered by systematically observing it.
+Empirical research report
+An article that presents the results of one or more new studies.
+Empirical research reports
+Research reports that describe one or more new empirical studies conducted by the authors.
+Empirically supported treatments
+A treatment that that has been shown through systematic observation to lead to better outcomes when compared to no-treatment or placebo control groups.
+Error bars
+Bars that represent the variability in each group or condition.
+Ethics
+The branch of philosophy that is concerned with morality—what it means to behave morally and how people can achieve that goal.
+Glossary | 393
+Exempt research
+Research on the effectiveness of normal educational activities, the use of standard psychological measures and surveys of a nonsensitive nature that are administered in a way that maintains confidentiality, and research using existing data from public sources.
+Expedited research
+Research reviewed by the IRB that is not anonymous and/or may involve potentially stigmatizing information, or invasive or uncomfortable procedures, but exposes participants to risks that are no greater than minimal risk (risks encountered by healthy people in daily life or during routine physical or psychological examinations).
+Experiment
+A type of study designed specifically to answer the question of whether there is a causal relationship between two variables.
+Experimental analysis of behavior
+A subfield of psychology (behaviorism) that focuses exclusively on the effects of rewards, punishments, and other external factors on behavior.
+Experimenter expectancy effect
+When the experimenter’s expectations about how participants “should” behave in the experiment affect how the participants behave.
+Exploratory analysis
+An analysis used to examine the possibility that there might be relationships in the data that you did not hypothesize.
+External validity
+Refers to the degree to which we can generalize the findings to other circumstances or settings, like the real-world environment.
+Extraneous variables
+Any variable other than the dependent and independent variable.
+Face validity
+The extent to which a measurement method appears, on superficial examination, to measure the construct of interest.
+394 | Glossary
+Factor analysis
+A complex statistical technique in which researchers study relationships among a large number of conceptually similar variables.
+Factorial ANOVA
+A statistical method to detect differences in the means between conditions when there are two or more independent variables in a factorial design. It allows the detection of main effects and interaction effects.
+Factorial design table
+Shows how each level of one independent variable is combined with each level of the others to produce all possible combinations in a factorial design.
+Factorial designs
+Experiments that include more than one independent variable in which each level of one independent variable is combined with each level of the others to produce all possible combinations.
+Falsifiable
+A scientific claim that must be expressed in such a way that there are observations that would—if they were made—count as evidence against the claim
+Fatigue effect
+An effect where participants perform a task worse in later conditions because they become tired or bored.
+Feasibility
+How likely is the research question going to be successfully answered depending on the amount of time, money, equipment and materials, technical knowledge and skill, and access to research participants there will be.
+Federal Policy for the Protection of Human Subjects
+A set of laws based on the Belmont Report that apply to research conducted, supported, or regulated by the federal government.
+Field experiment
+A type of field study where an independent variable is manipulated in a natural setting and extraneous variables are controlled as much as possible.
+Glossary | 395
+Field study
+A study that is conducted in a "real world" environment outside the laboratory.
+Figures
+Graphical depictions of data, such as pie charts, bar graphs, or scatterplots used to clearly and efficiently report a number of results.
+File drawer problem
+The problem of research results not being published that fail to find a statistically significant result. As a consequence, the published literature fails to contain a full representation of the positive and negative findings about a research question.
+Final manuscripts
+Manuscripts that are prepared by the author in their final form and submitted for publication.
+Focus groups
+Used in qualitative research which involves small groups of people who participate together in interviews focused on a particular topic or issue.
+Folk psychology
+Intuitive beliefs about people’s behavior, thoughts, and feelings.
+Frequency table
+A display of each value of a variable and the number of participants with that value.
+Greater than minimal risk research
+Research that poses greater than minimal risk to participants and must be reviewed by the full board of IRB members.
+Grounded theory
+Researchers start with the data and develop a theory or an interpretation that is “grounded in” those data.
+Group research
+Research that involves studying large numbers of participants and examining their behavior primarily in terms of group means, standard deviations, and so on.
+396 | Glossary
+HARKing
+Hypothesizing After the Results are Known: A practice where researchers analyze data without an a priori hypothesis, claiming afterward that a statistically significant result had been originally predicted.
+Hawthorne effect
+In the case of undisguised naturalistic observation, it is a type of reactivity when people know they are being observed and studied, they may act differently than they normally would.
+Heuristics
+Mental shortcuts in forming and maintaining our beliefs.
+High-level style
+Guidelines in the APA Publication Manual for the clear expression of ideas, including writing that is formal, straightforward, and avoids biased language.
+Histogram
+A graphical display of a frequency distribution.
+History
+Events outside of the pretest-posttest research design that might have influenced many or all of the participants between the pretest and the posttest.
+Hypothesis
+A specific prediction about a new phenomenon that should be observed if a particular theory is accurate.
+Hypothetico-deductive method
+A cyclical process of theory development, starting with an observed phenomenon, then developing or using a theory to make a specific prediction of what should happen if that theory is correct, testing that prediction, refining the theory in light of the findings, and using that refined theory to develop new hypotheses, and so on.
+Independent variable
+The variable the experimenter manipulates.
+Independent-samples t-test
+Used to compare the means of two separate samples (M1 and M2).
+Glossary | 397
+Inferential statistics
+A research method that allows researchers to draw conclusions or infer about a population based on data from a sample.
+Informed consent
+This means that researchers obtain and document people’s agreement to participate in a study after having informed them of everything that might reasonably be expected to affect their decision.
+Institutional review board (IRB)
+A committee that is responsible for reviewing research protocols for potential ethical problems.
+Instrumentation
+A potential threat to internal validity when the basic characteristics of the measuring instrument change over the course of the study.
+Inter-rater reliability
+The extent to which different observers are consistent in their judgments.
+Interaction
+When the effect of one independent variable depends on the level of another.
+Interestingness
+How interesting the question is to people generally or the scientific community. Three things need to be considered: Is the answer in doubt, fills a gap in research literature, and has important practical implications.
+Internal consistency
+The consistency of people’s responses across the items on a multiple-item measure.
+Internal validity
+Refers to the degree to which we can confidently infer a causal relationship between variables.
+Interrupted time-series design
+A set of measurements taken at intervals over a period of time that is "interrupted" by a treatment.
+Interrupted time-series design with nonequivalent group
+Involves taking a set of measurements at intervals over a period of time both before and after an intervention of interest in two or more nonequivalent groups.
+398 | Glossary
+Interval level
+A measurement that involves assigning scores using numerical scales in which intervals have the same interpretation throughout.
+Interviews
+A qualitative research method to collect lengthy and detailed information from participants using structured, semi-structured, or unstructured sets of open-ended questions.
+Item-order effect
+When the order in which the items are presented affects people’s responses.
+Justice
+The importance of conducting research in a way that distributes risks and benefits fairly across different groups at the societal level.
+Laboratory study
+A study that is conducted in the laboratory environment.
+Levels of measurement
+Four categories, or scales, of measurement (i.e., nominal, ordinal, interval, and ratio) that specify the types of information that a set of scores can have, and the types of statistical procedures that can be used with the scores.
+Line graphs
+Graphs used when the independent variable is measured in a more continuous manner (e.g., time) or to present correlations between quantitative variables when the independent variable has, or is organized into, a relatively small number of distinct levels.
+Linear relationships
+Relationships between two variables whereby the points on a scatterplot fall close to a single straight line.
+Literature review
+Describes relevant previous research on the topic and can be anywhere from several paragraphs to several pages in length.
+Longitudinal studies
+Studies in which one group of people are followed over time as they age.
+Glossary | 399
+Low-level style
+Is covered in Chapter 4 "The Mechanics of Style" through Chapter 7 "Reference Examples" of the Publication Manual, which includes all the specific guidelines pertaining to spelling, grammar, references and reference citations, numbers and statistics, figures and tables, and so on.
+Main effect
+The effect of one independent variable on the dependent variable—averaging across the levels of any other independent variable(s).
+Manipulate
+Changing the level, or condition, of the independent variable systematically so that different groups of participants are exposed to different levels of that variable, or the same group of participants is exposed to different levels at different times.
+Manipulation check
+Verifying the experimental manipulation worked by using a different measure of the construct the researcher is trying to manipulate.
+Matched-groups design
+An experiment design in which the participants in the various conditions are matched on the dependent variable or on some extraneous variable(s) prior the manipulation of the independent variable.
+Maturation
+Participants might have changed between the pretest and the posttest in ways that they were going to anyway because they are growing and learning.
+Mean
+The average of a distribution of scores (symbolized M) where the sum of the scores are divided by the number of scores.
+Mean squares between groups (MSB)
+An estimate of the population variance and is based on the differences among the sample means.
+Mean squares within groups (MSW)
+An estimate of the population variance and is based on the differences among the scores within each group.
+400 | Glossary
+Measurement
+Is the assignment of scores to individuals so that the scores represent some characteristic of the individuals.
+Median
+The midpoint of a distribution of scores in the sense that half the scores in the distribution are less than it and half are greater than it.
+Meta-analysis
+A review article that provides a statistical summary of all of the previous results.
+Mixed factorial design
+A design which manipulates one independent variable between subjects and another within subjects.
+Mixed-methods research
+Research that combines both quantitative and qualitative approaches.
+Mode
+The most frequently occurring score in a distribution.
+Monograph
+A coherent written presentation of a topic much like an extended review article written by a single author or a small group of authors.
+Multiple regression
+Involves measuring several variables (X1, X2, X3,…Xi), and using them to predict some outcome variable (Y).
+Multiple-baseline design
+In this design, multiple baselines are either established for one participant or one baseline is established for many participants.
+Multiple-treatment reversal design
+In this design the baseline phase is followed by separate phases in which different treatments are introduced.
+Mundane realism
+When the participants and the situation studied are similar to those that the researchers want to generalize to and participants encounter every day.
+Glossary | 401
+Naturalistic observation
+An observational method that involves observing people’s behavior in the environment in which it typically occurs.
+Negative relationship
+A relationship in which higher scores on one variable tend to be associated with lower scores on the other.
+No-treatment control condition
+The condition in which participants receive no treatment whatsoever.
+Nominal level
+A measurement used for categorical variables and involves assigning scores that are category labels.
+Non-experimental research
+A research that lacks the manipulation of an independent variable.
+Non-manipulated independent variable
+An independent variable that is measured but is non-manipulated.
+Non-probability sampling
+Occurs when the researcher cannot specify the probability that each member of the population will be selected for the sample.
+Non-response bias
+Occurs when there is a systemic difference between survey non-responders from survey responders.
+Nonequivalent groups design
+A between-subjects design in which participants have not been randomly assigned to conditions.
+Nonlinear relationships
+Relationships between two variables in which the points on a scatterplot do not fall close to a single straight line, but often fall along a curved line.
+Null hypothesis
+The idea that there is no relationship in the population and that the relationship in the sample reflects only sampling error (often symbolized H0 and read as “H-zero”).
+402 | Glossary
+Null hypothesis testing
+A formal approach to deciding between two interpretations of a statistical relationship in a sample.
+Nuremberg Code
+A set of 10 ethical principles for research written in 1947 in conjunction with the Nuremberg trials of Nazi physicians accused of war crimes against prisoners in concentration camps.
+Observational research
+Research that is non-experimental because it focuses on recording systemic observations of behavior in a natural or laboratory setting without manipulating anything.
+One-group posttest only design
+A treatment is implemented (or an independent variable is manipulated) and then a dependent variable is measured once after the treatment is implemented.
+One-group pretest-prottest design
+An experiment design in which the dependent variable is measured once before the treatment is implemented and once after it is implemented.
+One-sample t-test
+Used to compare a sample mean (M) with a hypothetical population mean (μ0) that provides some interesting standard of comparison.
+One-tailed test
+Where we reject the null hypothesis only if the t score for the sample is extreme in one direction that we specify before collecting the data.
+One-way ANOVA
+Used for between-subjects designs with a single independent variable.
+Open science practices
+A practice in which researchers openly share their research materials with other researchers in hopes of Increasing the transparency and openness of the scientific enterprise.
+Open-ended items
+Simply ask a question and allow participants to answer in whatever way they choose.
+Operational definition
+A definition of the variable in terms of precisely how it is to be measured.
+Glossary | 403
+Operationalization
+The specification of exactly how the research question will be studied in the experiment design.
+Oral presentation
+The presenter stands in front of an audience of other researchers and tells them about their research—usually with the help of a slide show.
+Order effect
+An effect that occurs when participants' responses in the various conditions are affected by the order of conditions to which they were exposed.
+Ordinal level
+A measurement that involves assigning scores so that they represent the rank order of the individuals.
+Outcome variable or Criterion variable
+The variable that is being predicted by a predictor variable in a regression equation.
+Outlier
+An extreme score that is much higher or lower than the rest of the scores in the distribution.
+p value
+The probability of obtaining the sample result or a more extreme result if the null hypothesis were true.
+p-hacking
+When researchers make various decisions in the research process to increase their chance of a statistically significant result (and type I error) by arbitrarily removing outliers, selectively choosing to report dependent variables, only presenting significant results, etc. until their results yield a desirable p value.
+Parameters
+Corresponding values in the population.
+Partial correlation
+A method of controlling extraneous variables by measuring them and including them in the statistical analysis.
+Participant observation
+Researchers become active participants in the group or situation they are studying.
+404 | Glossary
+Pearson’s Correlation Coefficient (or Pearson's r)
+A statistic that measures the strength of a correlation between quantitative variables.
+Percentage of non-overlapping data
+This is the percentage of responses in the treatment condition that are more extreme than the most extreme response in a relevant control condition.
+Percentile rank
+For any given score, the percentage of scores in the distribution that are lower than that score.
+Physiological measures
+Measures that involve recording any of a wide variety of physiological processes, including heart rate and blood pressure, galvanic skin response, hormone levels, and electrical activity and blood flow in the brain.
+Pilot test
+Is a small-scale study conducted to make sure that a new procedure works as planned.
+Placebo
+A simulated treatment that lacks any active ingredient or element that is hypothesized to make the treatment effective, but is otherwise identical to the treatment.
+Placebo control condition
+Condition in which the participants receive a placebo rather than the treatment.
+Placebo effect
+An effect that is due to the placebo rather than the treatment.
+Planned analysis
+Used to test a relationship that you expected in your hypothesis.
+Population
+A large group of people about whom researchers in psychology are usually interested in drawing conclusions, and from whom the sample is drawn.
+Positive relationship
+A relationship in which higher scores on one variable tend to be associated with higher scores on the other.
+Glossary | 405
+Post hoc comparisons
+An unplanned (not hypothesized) test of which pairs of group mean scores are different from which others.
+Poster
+Another way to present research at a conference by using a large size board which demonstrates and summarizes the researchers study.
+Poster session
+A one- to two-hour session that takes place in a large room at an professional conference site where dozens of research posters are presented.
+Posttest only nonequivalent groups design
+Participants in one group are exposed to a treatment, a nonequivalent group is not exposed to the treatment, and then the two groups are compared.
+Practical significance
+Refers to the importance or usefulness of the result in some real-world context.
+Practice effect
+An effect where participants perform a task better in later conditions because they have had a chance to practice it.
+Pre-screening
+A way to minimize risks in a study and to identify and eliminate participants who are at high risk.
+Predictive validity
+A form of validity whereby the criterion is measured at some point in the future (after the construct has been measured), to determine that the construct "predicts" the criterion.
+Predictor variable
+A variable in a regression equation that is hypothesized to be related to ("predicts") the value of an outcome or criterion variable.
+Pretest-posttest design with switching replication design
+In this design nonequivalent groups are administered a pretest of the dependent variable, then one group receives a treatment while a nonequivalent control group does not receive a treatment, the dependent variable is assessed again, and then the treatment is added to the control group, and finally the dependent variable is assessed one last time.
+406 | Glossary
+Pretest-posttest nonequivalent groups design
+In this design there is a treatment group that is given a pretest, receives a treatment, and then is given a posttest. Then, at the same time there is a nonequivalent control group that is given a pretest, does not receive the treatment, and then is given a posttest.
+Privacy
+A persons right to decide what information about them is shared with others.
+Probability sampling
+Occurs when the researcher can specify the probability that each member of the population will be selected for the sample.
+Professional conferences
+A conference that ranges from small- to large-scale events where researchers in psychology share their research with each other through presentations.
+Professional journals
+Are periodicals that publish original research articles.
+Proportionate stratified random sampling
+Is used to select a sample in which the proportion of respondents in each of various subgroups matches the proportion in the population.
+Protocol
+A detailed description of the research—that is reviewed by an independent committee.
+Pseudoscience
+Refers to activities and beliefs that are claimed to be scientific by their proponents—and may appear to be scientific at first glance—but are not.
+Psychological realism
+Where the same mental process is used in both the laboratory and in the real world.
+Psychometrics
+A subfield of psychology concerned with the theories and techniques of psychological measurement.
+PsycINFO
+A comprehensive electronic database covering thousands of professional journals and scholarly books
+Glossary | 407
+going back more than 100 years—that for most purposes its content is synonymous with the research literature in psychology.
+Qualitative research
+Research that begins with a less focused research question, collects large amounts of relatively “unfiltered” data from a relatively small number of individuals, describes data using nonstatistical techniques, such as grounded theory, thematic analysis, critical discourse analysis, or interpretative phenomenological analysis and aims to understand in detail the experience of the research participants.
+Quantitative research
+Research that typically starts with a focused research question or hypothesis, collects a small amount of numerical data from a large number of individuals, describes the resulting data using statistical techniques, and draws general conclusions about some large population.
+Quantitative variable
+A quantity, such as height, that is typically measured by assigning a number to each individual.
+Quota sampling
+A form of non-probability sampling in which subgroups in the sample are recruited to be proportional to those subgroups in the population.
+Random assignment
+Means using a random process to decide which participants are tested in which conditions.
+Random counterbalancing
+A method in which the order of the conditions is randomly determined for each participant.
+Randomized clinical trial
+An experiment that researches the effectiveness of psychotherapies and medical treatments.
+Range
+A measure of dispersion that measures the distance between the highest and lowest scores in a distribution.
+Rating scale
+An ordered set of responses that participants must choose from.
+408 | Glossary
+Ratio level
+A measurement that involves assigning scores in such a way that there is a true zero point that represents the complete absence of the quantity.
+Raw data
+Unanalyzed data that has several different forms—completed paper-and-pencil questionnaires, computer files filled with numbers or text, videos, or written notes which may have to be organized, coded, or combined in some way.
+Reactivity
+Refers to when a measure changes participants’ behavior.
+Reference citation
+An in text citation to the work in which that idea originally appeared and a full reference to that work in the reference list.
+Regression
+A statistical technique that allows researchers to predict the value of one variable given another.
+Regression to the mean
+Refers to the statistical fact that an individual who scores extremely high or extremely low on a variable on one occasion will tend to score less extremely on the next occasion.
+Reject the null hypothesis
+A decision made by researchers using null hypothesis testing which occurs when the sample relationship would be extremely unlikely.
+Reliability
+Refers to the consistency of a measure.
+Repeated-measures ANOVA
+Compares the means from the same participants tested under different conditions or at different times in which the dependent variable is measured multiple times for each participant.
+Replicability crisis
+A phrase that refers to the inability of researchers to replicate earlier research findings.
+Research literature
+All the published research in that field.
+Glossary | 409
+Respect for persons
+One of the Belmont report principles that emphasizes the need for participants to exercise autonomy and protection for those with reduced autonomy, often through informed consent.
+Respondents
+Participants in a survey or study.
+Restriction of Range
+When one or both variables have a limited range in the sample relative to the population, making the value of the correlation coefficient misleading.
+Results section
+Where you present the main results of the study, including the results of the statistical analyses.
+Retain the null hypothesis
+A decision made by researchers in null hypothesis testing which occurs when the sample relationship would not be extremely unlikely.
+Reversal design
+The most basic single-subject research design in which the researcher measures the dependent variable in three phases: Baseline, before a treatment is introduced (A); after the treatment is introduced (B); and then a return to baseline after removing the treatment (A). It is often called an ABA design.
+Review articles
+Articles that summarize previously published research on a topic and usually present new ways to organize or explain the results.
+Sample
+A smaller portion of the population the researcher would like to study.
+Sampling bias
+Occurs when a sample is selected in such a way that it is not representative of the entire population and therefore produces inaccurate results.
+Sampling error
+The random variability in a statistic from sample to sample.
+Sampling frame
+A list of all the members of the population from which to select the respondents.
+410 | Glossary
+Scatterplot
+A graph that presents correlations between two quantitative variables, one on the x-axis and one on the y-axis. Scores are plotted at the intersection of the values on each axis.
+Scholarly books
+Books written by researchers and practitioners mainly for use by other researchers and practitioners.
+Science
+The systematic study of the structure and behaviour of the physical and natural world through observation and experiment.
+Scientific Method
+The scientific method is a process of systematically collecting and evaluating evidence to test ideas and answer questions.
+Self-report measures
+Measures in which participants report on their own thoughts, feelings, and actions.
+Self-selection sampling
+A form of non-probability sampling in which individuals choose to take part in the research on their own accord, without being approached by the researcher directly.
+Simple effects
+Are a way of breaking down the interaction to figure out precisely what is going on.
+Simple random sampling
+A probability sampling method in which each individual in the population has an equal probability of being selected for the sample.
+Simple regression
+A statistical procedure which uses the value of one variable to predict another. Sometimes called "linear regression."
+Single factor multi level design
+When an experiment has one independent variable that is manipulated to produce more than two conditions.
+Single factor two-level design
+An experiment design involving a single independent variable with two conditions.
+Glossary | 411
+Single-subject research
+A type of quantitative research that involves studying in detail the behavior of each of a small number of participants.
+Skepticism
+Pausing to consider alternatives and to search for evidence—especially systematically collected empirical evidence—when there is enough at stake to justify doing so.
+Skewed
+When a histogram's peak is either shifted toward the upper end of its range and has a relatively long negative tail (Negatively Skewed) or the peak is shifted toward the lower end of its range and has a relatively long positive tail (Positively Skewed).
+Snowball sampling
+A form of non-probability sampling in which existing research participants help recruit additional participants for the study.
+Social validity
+Referred to as treatments that have substantial effects on important behaviors and that can be implemented reliably in the real-world contexts in which they occur.
+Socially desirable responding
+When participants respond in ways that they think are socially acceptable.
+Split-half correlation
+A score that is derived by splitting the items into two sets and examining the relationship between the two sets of scores in order to assess the internal consistency of a measure.
+Spontaneous remission
+The tendency for many medical and psychological problems to improve over time without any form of treatment.
+Spreading interactions
+Means there is an effect of one independent variable at one level of the other independent variable and there is either a weak effect or no effect of that independent variable at the other level of the other independent variable.
+412 | Glossary
+Spurious correlations
+Correlations that are a result not of the two variables being measured, but rather because of a third, unmeasured, variable that affects both of the measured variables.
+Standard deviation
+Is the average distance between the scores and the mean in a distribution.
+Standard error
+The standard deviation of the group divided by the square root of the sample size of the group.
+Statistical control
+Controlling potential third variables to rule out other plausible interpretations.
+Statistical power
+In research design, it means the probability of rejecting the null hypothesis given the sample size and expected relationship strength.
+Statistical validity
+Concerns the proper statistical treatment of data and the soundness of the researchers’ statistical conclusions.
+Statistically significant
+An effect that is unlikely due to random chance and therefore likely represents a real effect in the population.
+Statistics
+Descriptive data that involves measuring one or more variables in a sample and computing descriptive summary data (e.g., means, correlation coefficients) for those variables.
+Steady state strategy
+When the researcher waits until the participant’s behavior in one condition becomes fairly consistent from observation to observation before changing conditions.
+Stratified random sampling
+A common alternative to simple random sampling in which the population is divided into different subgroups or “strata” (usually based on demographic characteristics) and then a random sample is taken from each “stratum.”
+Glossary | 413
+Structured observation
+When a researcher makes careful observations of one or more specific behaviors in a particular setting that is more structured than the settings used in naturalistic or participant observation.
+Subject pool
+An established group of people who have agreed to be contacted about participating in research studies.
+Survey research
+A quantitative and qualitative method with two important characteristics; variables are measured using self-reports and considerable attention is paid to the issue of sampling.
+Switching replication with treatment removal design
+In this design the treatment is removed from the first group when it is added to the second group.
+Symmetrical
+When a histogram's left and right halves are mirror images of each other.
+Systematic empiricism
+Empiricism refers to learning based on observation, and scientists learn about the natural world systematically, by carefully planning, making, recording, and analyzing observations of it.
+t-test
+A test that involves looking at the difference between two means.
+Test statistic
+A statistic (e.g., F, t, etc.) that is computed to compare against what is expected in the null hypothesis, and thus helps find the p value.
+Test-retest reliability
+When researchers measure a construct that they assume to be consistent across time, then the scores they obtain should also be consistent across time.
+Testable and falsifiable
+The ability to test the hypothesis using the methods of science and the possibility to gather evidence that will disconfirm the hypothesis if it is indeed false.
+Testing
+A threat to internal validity that occurs when the measurement of the dependent variable during the pretest affects participants' responses at posttest.
+414 | Glossary
+Theoretical article
+A review article that is devoted primarily to presenting a new theory.
+Theoretical narrative
+A qualitative research method that involves an interpretation of the data in terms of the themes a researcher has identified.
+Theory
+A coherent explanation or interpretation of one or more phenomena.
+Third-variable problem
+Two variables, X and Y, can be statistically related not because X causes Y, or because Y causes X, but because some third variable, Z, causes both X and Y.
+Tolerance for uncertainty
+Accepting that there are many things that we simply do not know.
+Treatment
+Any intervention meant to change people’s behavior for the better.
+Treatment condition
+The condition in which participants receive the treatment.
+Triangulation
+The idea to use both quantitative and qualitative methods simultaneously to study the same general questions and to compare the results.
+Two-tailed test
+Where we reject the null hypothesis if the test statistic for the sample is extreme in either direction (+/-).
+Type I error
+A false positive in which the researcher concludes that their results are statistically significant when in reality there is no real effect in the population and the results are due to chance. In other words, rejecting the null hypothesis when it is true.
+Type II error
+A missed opportunity in which the researcher concludes that their results are not statistically
+Glossary | 415
+significant when in reality there is a real effect in the population and they just missed detecting it. In other words, retaining the null hypothesis when it is false.
+Undisguised naturalistic observation
+Where the participants are made aware of the researcher presence and monitoring of their behavior.
+Undisguised participant observation
+Researchers become a part of the group they are studying and they disclose their true identity as researchers to the group under investigation.
+Validity
+The extent to which the scores from a measure represent the variable they are intended to.
+Variability
+The extent to which the scores vary around their central tendency in a distribution.
+Variable
+A quantity or quality that varies across people or situations.
+Variance
+A measurement of the average distance of scores from the mean.
+Visual inspection
+This means plotting individual participants’ data, looking carefully at those plots, and making judgments about whether and to what extent the independent variable had an effect on the dependent variable.
+Wait-list control condition
+Condition in which participants are told that they will receive the treatment but must wait until the participants in the treatment condition have already received it.
+Within-subjects experiment
+An experiment in which each participant is tested under all conditions.
+Z score
+Is the difference between that individual’s score and the mean of the distribution, divided by the standard deviation of the distribution. It represents the number of standard deviations the score is from the mean.
+416 | Glossary

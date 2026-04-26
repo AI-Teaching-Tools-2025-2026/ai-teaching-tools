@@ -1,0 +1,448 @@
+{
+  "_id": "4a1a886d82584f68b6f8c4a7",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 4",
+  "quizId": "QUIZ_SONNET_CH04",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "In the MacDonald and Martineau study on mood and intentions to have unprotected sex, which variable was NOT directly measured?",
+      "answers": [
+        {
+          "text": "Self-esteem",
+          "isCorrect": false
+        },
+        {
+          "text": "Mood",
+          "isCorrect": false
+        },
+        {
+          "text": "Intentions to have unprotected sex",
+          "isCorrect": false
+        },
+        {
+          "text": "Actual sexual behavior",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "What is measurement defined as in psychological research?",
+      "answers": [
+        {
+          "text": "The assignment of scores to individuals so that the scores represent some characteristic of the individuals",
+          "isCorrect": true
+        },
+        {
+          "text": "The use of standardized instruments to collect data",
+          "isCorrect": false
+        },
+        {
+          "text": "The observation of behavior in controlled laboratory settings",
+          "isCorrect": false
+        },
+        {
+          "text": "The statistical analysis of numerical data",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "Which of the following is a key reason why psychological constructs cannot be directly observed?",
+      "answers": [
+        {
+          "text": "They are too complex to study scientifically",
+          "isCorrect": false
+        },
+        {
+          "text": "They often represent tendencies to think, feel, or act in certain ways",
+          "isCorrect": true
+        },
+        {
+          "text": "They can only be measured using physiological equipment",
+          "isCorrect": false
+        },
+        {
+          "text": "They are purely theoretical concepts with no behavioral manifestations",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "In the Rosenberg Self-Esteem Scale, how are items 3, 5, 8, 9, and 10 scored differently from items 1, 2, 4, 6, and 7?",
+      "answers": [
+        {
+          "text": "They use a different rating scale",
+          "isCorrect": false
+        },
+        {
+          "text": "They are weighted more heavily in the total score",
+          "isCorrect": false
+        },
+        {
+          "text": "Their scoring is reversed",
+          "isCorrect": true
+        },
+        {
+          "text": "They are optional items that may be skipped",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "What is a conceptual definition?",
+      "answers": [
+        {
+          "text": "A definition that describes how a variable will be measured",
+          "isCorrect": false
+        },
+        {
+          "text": "A definition that describes the behaviors and internal processes that make up a construct and how it relates to other variables",
+          "isCorrect": true
+        },
+        {
+          "text": "A dictionary definition of a psychological term",
+          "isCorrect": false
+        },
+        {
+          "text": "A statistical formula for calculating a construct score",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "In Bandura's Bobo doll study, the operational definition of physical aggression was:",
+      "answers": [
+        {
+          "text": "Children's self-reported feelings of anger",
+          "isCorrect": false
+        },
+        {
+          "text": "The number of specifically defined aggressive acts committed during a 20-minute period",
+          "isCorrect": true
+        },
+        {
+          "text": "Teachers' ratings of children's overall aggressiveness",
+          "isCorrect": false
+        },
+        {
+          "text": "Physiological measures of arousal during play",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "What is the purpose of using converging operations in psychological research?",
+      "answers": [
+        {
+          "text": "To reduce the cost of conducting research studies",
+          "isCorrect": false
+        },
+        {
+          "text": "To use multiple operational definitions that 'converge' on the same construct",
+          "isCorrect": true
+        },
+        {
+          "text": "To ensure that all researchers use identical measurement procedures",
+          "isCorrect": false
+        },
+        {
+          "text": "To combine different statistical analyses into a single result",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "At which level of measurement are category labels assigned without any implied ordering?",
+      "answers": [
+        {
+          "text": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "text": "Nominal",
+          "isCorrect": true
+        },
+        {
+          "text": "Interval",
+          "isCorrect": false
+        },
+        {
+          "text": "Ratio",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "Which level of measurement has equal intervals but lacks a true zero point?",
+      "answers": [
+        {
+          "text": "Nominal",
+          "isCorrect": false
+        },
+        {
+          "text": "Ordinal",
+          "isCorrect": false
+        },
+        {
+          "text": "Interval",
+          "isCorrect": true
+        },
+        {
+          "text": "Ratio",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "Why is IQ considered to be measured at the interval level rather than the ratio level?",
+      "answers": [
+        {
+          "text": "IQ scores cannot be ranked from lowest to highest",
+          "isCorrect": false
+        },
+        {
+          "text": "A score of 0 does not represent the complete absence of intelligence, and ratios are not meaningful",
+          "isCorrect": true
+        },
+        {
+          "text": "IQ tests use only categorical data",
+          "isCorrect": false
+        },
+        {
+          "text": "The differences between IQ scores are not equal throughout the scale",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "Test-retest reliability is most appropriately assessed for constructs that are:",
+      "answers": [
+        {
+          "text": "Expected to change rapidly over time",
+          "isCorrect": false
+        },
+        {
+          "text": "Assumed to be consistent across time",
+          "isCorrect": true
+        },
+        {
+          "text": "Measured only once in a research study",
+          "isCorrect": false
+        },
+        {
+          "text": "Categorical in nature",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "Internal consistency refers to:",
+      "answers": [
+        {
+          "text": "The consistency of scores across different time periods",
+          "isCorrect": false
+        },
+        {
+          "text": "The consistency of people's responses across items on a multiple-item measure",
+          "isCorrect": true
+        },
+        {
+          "text": "The consistency of different researchers' observations",
+          "isCorrect": false
+        },
+        {
+          "text": "The consistency between self-report and behavioral measures",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "What statistic represents the mean of all possible split-half correlations for a set of items?",
+      "answers": [
+        {
+          "text": "Cohen's kappa",
+          "isCorrect": false
+        },
+        {
+          "text": "Pearson's r",
+          "isCorrect": false
+        },
+        {
+          "text": "Cronbach's alpha",
+          "isCorrect": true
+        },
+        {
+          "text": "The standard deviation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "Face validity is best described as:",
+      "answers": [
+        {
+          "text": "The extent to which a measure covers the full range of a construct",
+          "isCorrect": false
+        },
+        {
+          "text": "The extent to which a measure appears 'on its face' to measure the construct of interest",
+          "isCorrect": true
+        },
+        {
+          "text": "The extent to which scores correlate with other relevant variables",
+          "isCorrect": false
+        },
+        {
+          "text": "The most important type of validity evidence",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "Which type of validity is demonstrated when a new measure of test anxiety is negatively correlated with exam performance?",
+      "answers": [
+        {
+          "text": "Face validity",
+          "isCorrect": false
+        },
+        {
+          "text": "Content validity",
+          "isCorrect": false
+        },
+        {
+          "text": "Criterion validity",
+          "isCorrect": true
+        },
+        {
+          "text": "Internal validity",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "When Cacioppo and Petty showed that scores on the Need for Cognition Scale were positively correlated with scores on existing measures of similar constructs, they were demonstrating:",
+      "answers": [
+        {
+          "text": "Discriminant validity",
+          "isCorrect": false
+        },
+        {
+          "text": "Convergent validity",
+          "isCorrect": true
+        },
+        {
+          "text": "Face validity",
+          "isCorrect": false
+        },
+        {
+          "text": "Test-retest reliability",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "Discriminant validity is demonstrated when:",
+      "answers": [
+        {
+          "text": "Multiple items on a scale are highly correlated with each other",
+          "isCorrect": false
+        },
+        {
+          "text": "Scores on a measure are NOT correlated with measures of conceptually distinct variables",
+          "isCorrect": true
+        },
+        {
+          "text": "A measure produces consistent scores over time",
+          "isCorrect": false
+        },
+        {
+          "text": "Different observers agree on their ratings of behavior",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "What is socially desirable responding?",
+      "answers": [
+        {
+          "text": "When participants respond in ways they believe are socially appropriate rather than truthfully",
+          "isCorrect": true
+        },
+        {
+          "text": "When participants respond in ways that please their friends",
+          "isCorrect": false
+        },
+        {
+          "text": "When researchers design questions that are easy to answer",
+          "isCorrect": false
+        },
+        {
+          "text": "When participants respond consistently across multiple measures",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "According to the chapter, why is it generally better for a measure to include multiple items rather than a single item?",
+      "answers": [
+        {
+          "text": "Multiple items are easier for participants to understand",
+          "isCorrect": false
+        },
+        {
+          "text": "Multiple items improve both content validity and reliability",
+          "isCorrect": true
+        },
+        {
+          "text": "Multiple items require less time to administer",
+          "isCorrect": false
+        },
+        {
+          "text": "Multiple items are always more valid than single items",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "The Ten-Item Personality Inventory (TIPI) measures all Big Five personality dimensions with only 10 items. A researcher might choose this measure when:",
+      "answers": [
+        {
+          "text": "Maximum reliability and validity are the highest priorities",
+          "isCorrect": false
+        },
+        {
+          "text": "Testing time is severely limited",
+          "isCorrect": true
+        },
+        {
+          "text": "Participants have limited reading ability",
+          "isCorrect": false
+        },
+        {
+          "text": "The study requires physiological measures",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

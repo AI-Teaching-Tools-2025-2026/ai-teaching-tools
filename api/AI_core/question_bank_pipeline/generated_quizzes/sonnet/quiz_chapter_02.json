@@ -1,0 +1,448 @@
+{
+  "_id": "80b6a2b3a50b44508cf08efe",
+  "courseId": "PSY_METHODS_01",
+  "section": "Chapter 2",
+  "quizId": "QUIZ_SONNET_CH02",
+  "questions": [
+    {
+      "questionId": 1,
+      "question": "According to the chapter, what is the primary purpose of the research literature in psychology?",
+      "answers": [
+        {
+          "text": "To provide self-help advice for the general public",
+          "isCorrect": false
+        },
+        {
+          "text": "To serve as a source of new research questions and a repository of published findings",
+          "isCorrect": true
+        },
+        {
+          "text": "To replace the need for new empirical studies",
+          "isCorrect": false
+        },
+        {
+          "text": "To offer encyclopedia entries on psychological topics",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 2,
+      "question": "Which of the following is NOT identified in the chapter as a common source of research ideas?",
+      "answers": [
+        {
+          "text": "Informal observations",
+          "isCorrect": false
+        },
+        {
+          "text": "Practical problems",
+          "isCorrect": false
+        },
+        {
+          "text": "Previous research",
+          "isCorrect": false
+        },
+        {
+          "text": "Personal horoscopes",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "questionId": 3,
+      "question": "What does the chapter say about Wikipedia as a source for scientific research?",
+      "answers": [
+        {
+          "text": "It is a highly reliable peer-reviewed source",
+          "isCorrect": false
+        },
+        {
+          "text": "It is unsuitable because authors are anonymous and content changes",
+          "isCorrect": true
+        },
+        {
+          "text": "It should be the primary source for literature reviews",
+          "isCorrect": false
+        },
+        {
+          "text": "It is acceptable if used alongside professional journals",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 4,
+      "question": "According to the chapter, what is double-blind peer review?",
+      "answers": [
+        {
+          "text": "A process where reviewers and authors do not know each other's identities",
+          "isCorrect": true
+        },
+        {
+          "text": "A review conducted by two editors simultaneously",
+          "isCorrect": false
+        },
+        {
+          "text": "A method where only the editor knows the author's identity",
+          "isCorrect": false
+        },
+        {
+          "text": "A review process conducted without reading the manuscript",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 5,
+      "question": "Which database does the chapter identify as the most important for searching psychology research literature?",
+      "answers": [
+        {
+          "text": "ERIC",
+          "isCorrect": false
+        },
+        {
+          "text": "PubMed",
+          "isCorrect": false
+        },
+        {
+          "text": "PsycINFO",
+          "isCorrect": true
+        },
+        {
+          "text": "JSTOR",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 6,
+      "question": "What does the chapter recommend regarding how recent sources should be for a literature review?",
+      "answers": [
+        {
+          "text": "Always use sources from the past 50 years",
+          "isCorrect": false
+        },
+        {
+          "text": "Focus on sources from the past five years, with exceptions for classic articles",
+          "isCorrect": true
+        },
+        {
+          "text": "Only use sources published in the current year",
+          "isCorrect": false
+        },
+        {
+          "text": "Age of sources does not matter in psychology",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 7,
+      "question": "According to the chapter, what is a theory in scientific research?",
+      "answers": [
+        {
+          "text": "An untested wild guess about a phenomenon",
+          "isCorrect": false
+        },
+        {
+          "text": "A coherent explanation of phenomena that goes beyond direct observation",
+          "isCorrect": true
+        },
+        {
+          "text": "A specific prediction about what will happen in a study",
+          "isCorrect": false
+        },
+        {
+          "text": "A collection of unrelated facts",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 8,
+      "question": "What is a hypothesis as defined in the chapter?",
+      "answers": [
+        {
+          "text": "A broad explanation of multiple phenomena",
+          "isCorrect": false
+        },
+        {
+          "text": "A specific prediction about a new phenomenon that should be observed if a theory is accurate",
+          "isCorrect": true
+        },
+        {
+          "text": "A general research idea before any testing",
+          "isCorrect": false
+        },
+        {
+          "text": "An alternative term for a research question",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 9,
+      "question": "What does the hypothetico-deductive method involve?",
+      "answers": [
+        {
+          "text": "Constructing a theory, deriving a hypothesis, testing it, and reevaluating the theory",
+          "isCorrect": true
+        },
+        {
+          "text": "Testing multiple theories without deriving hypotheses",
+          "isCorrect": false
+        },
+        {
+          "text": "Collecting data before formulating any theory",
+          "isCorrect": false
+        },
+        {
+          "text": "Proving theories through single experiments",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 10,
+      "question": "According to the chapter, which characteristic is NOT required for a good hypothesis?",
+      "answers": [
+        {
+          "text": "It must be testable and falsifiable",
+          "isCorrect": false
+        },
+        {
+          "text": "It must be logical and informed by previous research",
+          "isCorrect": false
+        },
+        {
+          "text": "It must predict that a relationship does not exist",
+          "isCorrect": true
+        },
+        {
+          "text": "It must make a positive statement about the existence of a relationship",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 11,
+      "question": "What is the difference between quantitative and categorical variables?",
+      "answers": [
+        {
+          "text": "Quantitative variables are qualities, while categorical variables are quantities",
+          "isCorrect": false
+        },
+        {
+          "text": "Quantitative variables are measured with numbers, while categorical variables are qualities assigned category labels",
+          "isCorrect": true
+        },
+        {
+          "text": "There is no difference between them",
+          "isCorrect": false
+        },
+        {
+          "text": "Quantitative variables cannot be measured",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 12,
+      "question": "What is an operational definition?",
+      "answers": [
+        {
+          "text": "A definition that describes how a variable will be precisely measured",
+          "isCorrect": true
+        },
+        {
+          "text": "A theoretical explanation of a construct",
+          "isCorrect": false
+        },
+        {
+          "text": "A general description of a research topic",
+          "isCorrect": false
+        },
+        {
+          "text": "A synonym for hypothesis",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 13,
+      "question": "According to the chapter, what is the primary advantage of experimental research over non-experimental research?",
+      "answers": [
+        {
+          "text": "It is easier to conduct",
+          "isCorrect": false
+        },
+        {
+          "text": "It allows researchers to determine causal relationships",
+          "isCorrect": true
+        },
+        {
+          "text": "It requires fewer participants",
+          "isCorrect": false
+        },
+        {
+          "text": "It is always conducted in natural settings",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 14,
+      "question": "What is a confound in experimental research?",
+      "answers": [
+        {
+          "text": "Any variable other than the dependent variable",
+          "isCorrect": false
+        },
+        {
+          "text": "An extraneous variable that varies systematically with the independent variable",
+          "isCorrect": true
+        },
+        {
+          "text": "The variable that the experimenter measures",
+          "isCorrect": false
+        },
+        {
+          "text": "A variable that is intentionally manipulated",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 15,
+      "question": "What does the chapter say about the relationship between internal and external validity?",
+      "answers": [
+        {
+          "text": "They are always positively correlated",
+          "isCorrect": false
+        },
+        {
+          "text": "There is typically a trade-off; high internal validity often means low external validity",
+          "isCorrect": true
+        },
+        {
+          "text": "They are unrelated concepts",
+          "isCorrect": false
+        },
+        {
+          "text": "External validity is always more important than internal validity",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 16,
+      "question": "Which of the following is a measure of central tendency?",
+      "answers": [
+        {
+          "text": "Standard deviation",
+          "isCorrect": false
+        },
+        {
+          "text": "Range",
+          "isCorrect": false
+        },
+        {
+          "text": "Mean",
+          "isCorrect": true
+        },
+        {
+          "text": "Variance",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 17,
+      "question": "What is the purpose of inferential statistics?",
+      "answers": [
+        {
+          "text": "To summarize data from a sample",
+          "isCorrect": false
+        },
+        {
+          "text": "To determine whether findings are statistically significant and can be generalized to a population",
+          "isCorrect": true
+        },
+        {
+          "text": "To calculate the mean of a distribution",
+          "isCorrect": false
+        },
+        {
+          "text": "To organize data into categories",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 18,
+      "question": "What is a Type I error?",
+      "answers": [
+        {
+          "text": "Concluding there is no effect when there actually is one in the population",
+          "isCorrect": false
+        },
+        {
+          "text": "Concluding there is an effect when in reality there is none (false positive)",
+          "isCorrect": true
+        },
+        {
+          "text": "Using the wrong statistical test",
+          "isCorrect": false
+        },
+        {
+          "text": "Failing to collect enough data",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 19,
+      "question": "According to the chapter, why do scientists avoid the word 'prove' when discussing theories?",
+      "answers": [
+        {
+          "text": "Because it sounds too informal",
+          "isCorrect": false
+        },
+        {
+          "text": "Because results may reflect errors, other theories may explain the same findings, and theories are always subject to revision",
+          "isCorrect": true
+        },
+        {
+          "text": "Because theories can never be tested",
+          "isCorrect": false
+        },
+        {
+          "text": "Because the word 'prove' is not in the scientific vocabulary",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionId": 20,
+      "question": "What are the two most prestigious ways to report research findings mentioned in the chapter?",
+      "answers": [
+        {
+          "text": "Publishing in peer-reviewed journals and presenting at conferences",
+          "isCorrect": true
+        },
+        {
+          "text": "Writing blog posts and creating podcasts",
+          "isCorrect": false
+        },
+        {
+          "text": "Publishing in popular magazines and writing self-help books",
+          "isCorrect": false
+        },
+        {
+          "text": "Posting on social media and creating YouTube videos",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
