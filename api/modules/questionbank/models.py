@@ -21,3 +21,9 @@ class QuestionBankCreate(BaseModel):
     lastModified: str
     questionCount: int
     questions: List[Question]
+
+class QuestionBankGenerated(BaseModel):
+    title: str
+    chapter: str
+    questionCount: int
+    questions: List[Question]

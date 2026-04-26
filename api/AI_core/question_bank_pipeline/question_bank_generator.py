@@ -1,43 +1,25 @@
 from __future__ import annotations
-
 import sys
 from pathlib import Path
-
 project_root = Path(__file__).resolve().parent.parent.parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
-
-import argparse
 import json
 import logging
-import time
-import uuid
-from datetime import datetime, timezone
-from typing import Any
-
 import anthropic
+from typing import Any
 from dotenv import load_dotenv
 from pydantic import ValidationError
-from pymongo import MongoClient
 
 load_dotenv()
 
 from api.AI_core.question_bank_pipeline.config import (
     ANTHROPIC_API_KEY,
     ANSWERS_PER_QUESTION,
-    CHAPTER_FILE_TEMPLATE,
-    COURSE_ID,
     MAX_TOKENS,
-    MODELS,
-    OUTPUT_DIR,
-    QUESTIONS_PER_CHAPTER,
-    TEXTBOOK_DIR,
-    TOTAL_CHAPTERS,
-    MONGO_URI,
-    MONGO_DB_NAME,
-    MONGO_COLLECTION
+    QUESTIONS_PER_CHAPTER
 )
-from api.modules.questionbank.models import QuestionBankCreate
+from api.modules.questionbank.models import QuestionBankGenerated
 
 # ---------------------------------------------------------------------------
 # Logging & Globals
@@ -49,8 +31,11 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-client: anthropic.Anthropic | None = None
-db_client: MongoClient | None = None
+if not ANTHROPIC_API_KEY:
+    log.error("ANTHROPIC_API_KEY is not set.")
+    sys.exit(1)
+
+client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 # ---------------------------------------------------------------------------
 # Prompt Builders
@@ -89,11 +74,11 @@ def _build_system_prompt() -> str:
         "Return ONLY the JSON array. No preamble, no trailing text."
     )
 
-def _build_user_message(chapter_text: str, chapter_num: int) -> str:
-    """User message containing the full chapter text."""
+def _build_user_message(textbook_name: str, chapter_num: str, chapter_title: str, chapter_text: str) -> str:
+    """User message containing the dynamic title, chapter details, and full chapter text."""
     return (
-        f"Below is the FULL text of Chapter {chapter_num} from the textbook "
-        f"'Research Methods in Psychology'. Generate {QUESTIONS_PER_CHAPTER} "
+        f"Below is the FULL text of Chapter {chapter_num}: '{chapter_title}' from the textbook "
+        f"'{textbook_name}'. Generate {QUESTIONS_PER_CHAPTER} "
         f"multiple-choice questions based ONLY on this content.\n\n"
         f"--- BEGIN CHAPTER {chapter_num} ---\n"
         f"{chapter_text}\n"
@@ -101,27 +86,8 @@ def _build_user_message(chapter_text: str, chapter_num: int) -> str:
     )
 
 # ---------------------------------------------------------------------------
-# API & Database Operations
+# API Operations
 # ---------------------------------------------------------------------------
-
-def save_to_mongodb(question_bank: dict[str, Any]):
-    """Upserts the question bank into MongoDB based on Title/Chapter/Course."""
-    if db_client is None:
-        log.warning("  Skipping MongoDB sync: No connection.")
-        return
-
-    db = db_client[MONGO_DB_NAME]
-    collection = db[MONGO_COLLECTION]
-
-    # Matching criteria for upsert
-    query = {
-        "title": question_bank["title"],
-        "chapter": question_bank["chapter"],
-        "courseID": question_bank["courseID"]
-    }
-    
-    collection.replace_one(query, question_bank, upsert=True)
-    log.info("  Synced to MongoDB -> %s", MONGO_COLLECTION)
 
 def call_anthropic(model: str, system_prompt: str, user_message: str) -> str:
     """Send a single request to the Anthropic Messages API."""
@@ -146,107 +112,73 @@ def call_anthropic(model: str, system_prompt: str, user_message: str) -> str:
 # Main Generation Logic
 # ---------------------------------------------------------------------------
 
-def generate_for_chapter(chapter_num: int, model_label: str, model_id: str, dry_run: bool = False):
-    log.info("Chapter %02d  |  Model: %s", chapter_num, model_label)
+def generate_for_chapter(textbook_name: str, chapter_num: str, chapter_title: str, chapter_text: str, model_id: str = "claude-3-5-sonnet-20241022") -> dict[str, Any] | None:
+    """
+    Generates and validates a question bank for a specific chapter.
+    Returns the validated dictionary, or None if validation fails.
+    """
+    log.info(f"Generating questions for: {textbook_name} | Chapter {chapter_num}: {chapter_title}")
 
-    # 1. Load chapter text
-    filename = CHAPTER_FILE_TEMPLATE.format(chapter_num=chapter_num)
-    filepath = TEXTBOOK_DIR / filename
-    if not filepath.exists():
-        raise FileNotFoundError(f"Chapter file not found: {filepath}")
-    
-    chapter_text = filepath.read_text(encoding="utf-8")
-
-    # 2. Build prompts
+    # 1. Build & Call
     system_prompt = _build_system_prompt()
-    user_message = _build_user_message(chapter_text, chapter_num)
-
-    if dry_run:
-        log.info("  [DRY RUN] Would send %d chars to %s", len(user_message), model_id)
-        return None
-
-    # 3. Call API
+    user_message = _build_user_message(textbook_name, chapter_num, chapter_title, chapter_text)
     raw_response = call_anthropic(model_id, system_prompt, user_message)
 
-    # 4. Parse & Clean JSON
+    # 2. Parse JSON
     text = raw_response.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+    if text.startswith("json"):
+        text = text[4:].strip()
     
     try:
-        questions = json.loads(text)
+        questions_array = json.loads(text)
     except json.JSONDecodeError as exc:
+        log.error(f"LLM output is not valid JSON: {text}")
         raise ValueError(f"LLM output is not valid JSON: {exc}")
 
-    # 5. Build full Document
-    now_iso = datetime.now(timezone.utc).isoformat(timespec='milliseconds').replace('+00:00', 'Z')
-    question_bank: dict[str, Any] = {
-        "_id": f"QB{uuid.uuid4().hex[:6].upper()}",
-        "title": f"Research Methods in Psychology - Chapter {chapter_num}",
+    # 3. Build Partial Document
+    question_bank = {
+        "title": f"{textbook_name} - Chapter {chapter_num}: {chapter_title}",
         "chapter": str(chapter_num),
-        "courseID": COURSE_ID,
-        "sourceFile": filename,
-        "createdAt": now_iso,
-        "lastModified": now_iso,
-        "questionCount": len(questions),
-        "questions": questions,
+        "questionCount": len(questions_array),
+        "questions": questions_array,
     }
 
-    # 6. Validate using Pydantic
+    # 4. Validate using Pydantic
     try:
-        QuestionBankCreate(**question_bank)
-        log.info("  OK: Validated successfully (%d questions)", len(questions))
+        validated_data = QuestionBankGenerated(**question_bank)
+        log.info(f"  OK: Validated successfully ({len(questions_array)} questions)")
+        # Return as a standard dictionary for MongoDB insertion later
+        return validated_data.model_dump() 
     except ValidationError as e:
-        log.error("  VALIDATION FAILED for Chapter %d: %s", chapter_num, e.json())
-        question_bank["_validation_errors"] = e.errors()
-        # We don't save to Mongo if validation fails
-        return
+        log.error(f"  VALIDATION FAILED for Chapter {chapter_num}:\n{e.json()}")
+        # Returning None allows the router to handle the failure gracefully (e.g., skip or retry)
+        return None
 
-    # 7. Save to local disk
-    out_dir = OUTPUT_DIR / model_label
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / f"chapter_{chapter_num:02d}.json"
-    out_path.write_text(json.dumps(question_bank, indent=2, ensure_ascii=False), encoding="utf-8")
-    log.info("  Saved locally -> %s", out_path)
-
-    # 8. Sync to MongoDB
-    save_to_mongodb(question_bank)
-
-def run(chapters: list[int] | None = None, models: list[str] | None = None, dry_run: bool = False):
-    global client, db_client
-
-    if not ANTHROPIC_API_KEY and not dry_run:
-        log.error("ANTHROPIC_API_KEY is not set.")
-        sys.exit(1)
-
-    if not dry_run:
-        client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-        db_client = MongoClient(MONGO_URI)
-        db_client.admin.command('ping')
-        log.info("  Connected to MongoDB")
-
-    chapter_nums = chapters or list(range(1, TOTAL_CHAPTERS + 1))
-    model_labels = models or list(MODELS.keys())
-
-    for model_label in model_labels:
-        model_id = MODELS[model_label]
-        for ch in chapter_nums:
-            try:
-                generate_for_chapter(ch, model_label, model_id, dry_run)
-            except Exception as exc:
-                log.error("  FAILED Chapter %02d / %s: %s", ch, model_label, exc)
-
-            if not dry_run:
-                time.sleep(2) # Respect rate limits
-
-    log.info("=" * 60)
-    log.info("Pipeline Complete.")
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate question banks and sync to MongoDB.")
-    parser.add_argument("--chapters", nargs="+", type=int, help="Chapter numbers (e.g. 1 2)")
-    parser.add_argument("--model", choices=list(MODELS.keys()), help="Specify 'opus' or 'sonnet'")
-    parser.add_argument("--dry-run", action="store_true", help="Print prompts without calling API")
-    args = parser.parse_args()
+if __name__ == "__main__":    
+    sample_textbook_name = "Research Methods in Psychology"
+    sample_chapter_num = "1"
+    sample_chapter_title = "The Science of Psychology"
+    sample_text = "This is a placeholder for chapter text. In research, a hypothesis is a testable prediction..."
     
-    run(chapters=args.chapters, models=[args.model] if args.model else None, dry_run=args.dry_run)
+    try:
+        # Call the generation function with the correct keyword arguments
+        result_dict = generate_for_chapter(
+            textbook_name=sample_textbook_name, 
+            chapter_num=sample_chapter_num, 
+            chapter_title=sample_chapter_title,
+            chapter_text=sample_text
+        )
+        
+        # If the LLM generates bad output or Pydantic fails, result_dict will be None
+        if result_dict:
+            # Output to file for inspection
+            output_file = Path("test_question_bank.json")
+            output_file.write_text(json.dumps(result_dict, indent=2), encoding="utf-8")
+            log.info(f"Test complete! Wrote sample question bank to {output_file.absolute()}")
+        else:
+            log.warning("Test failed: generator returned None (likely a validation error).")
+            
+    except Exception as e:
+        log.error(f"Test failed: {e}")

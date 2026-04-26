@@ -1,5 +1,4 @@
 from pypdf import PdfReader
-import json
 
 # Define constants for identifying just chapters
 SKIP_SECTIONS_START = ["Preface"]
@@ -65,7 +64,7 @@ def readOutline(reader, chapterData, textbookLastPage):
         )
 
 
-def pdfPaser(textbookFileName):
+def pdfParser(textbookFileName):
     # Set up reader for textbook
     # TODO: Update this so that we can grab the user's uploaded textbook rather than just specifying a file path
     reader = PdfReader(textbookFileName or "researchTextbook.pdf")
@@ -112,7 +111,6 @@ def pdfPaser(textbookFileName):
         }
 
     textbookData["chapters"] = chapterData
-    textbookJson = json.dumps(textbookData)
 
     # f = open("output.json", "w", encoding="utf-8")
     # f.write(textbookJson)
@@ -120,4 +118,4 @@ def pdfPaser(textbookFileName):
 
     reader.close()
 
-    return textbookJson
+    return textbookData
