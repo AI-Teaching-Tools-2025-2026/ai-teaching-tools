@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from db.utils import get_instructor_db
 from .models import QuestionBankCreate
 from datetime import datetime
-from api.questionBankPipeline.question_bank_generator import generate_for_chapter
-from api.questionBankPipeline.pdfParser import pdfParser
+from questionBankPipeline.question_bank_generator import generate_for_chapter
+from questionBankPipeline.pdfParser import pdfParser
 from pydantic import ValidationError
 import uuid
 

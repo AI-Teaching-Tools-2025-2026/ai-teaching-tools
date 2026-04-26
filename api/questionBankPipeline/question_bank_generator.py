@@ -13,13 +13,13 @@ from pydantic import ValidationError
 
 load_dotenv()
 
-from api.AI_core.config import (
+from questionBankPipeline.config import (
     ANTHROPIC_API_KEY,
     ANSWERS_PER_QUESTION,
     MAX_TOKENS,
     QUESTIONS_PER_CHAPTER
 )
-from api.modules.questionbank.models import QuestionBankGenerated
+from modules.questionbank.models import QuestionBankGenerated
 
 # ---------------------------------------------------------------------------
 # Logging & Globals
