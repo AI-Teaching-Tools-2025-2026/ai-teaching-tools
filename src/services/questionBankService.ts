@@ -57,4 +57,20 @@ export const questionBankService = {
 
         return response.data;
     },
+
+    generateQuestionBanks: async (courseId: string, filePath: string): Promise<{ message: string }> => {
+        const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/question_bank/generate_question_banks`,
+        null, 
+        {
+            params: { 
+                courseId, 
+                filePath 
+            },
+            withCredentials: true,
+        }
+        );
+
+        return response.data;
+    },
 };

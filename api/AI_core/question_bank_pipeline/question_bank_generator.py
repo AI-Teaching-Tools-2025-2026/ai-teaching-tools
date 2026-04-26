@@ -112,7 +112,7 @@ def call_anthropic(model: str, system_prompt: str, user_message: str) -> str:
 # Main Generation Logic
 # ---------------------------------------------------------------------------
 
-def generate_for_chapter(textbook_name: str, chapter_num: str, chapter_title: str, chapter_text: str, model_id: str = "claude-3-5-sonnet-20241022") -> dict[str, Any] | None:
+def generate_for_chapter(textbook_name: str, chapter_num: str, chapter_title: str, chapter_text: str, model_id: str = "claude-sonnet-4-6") -> dict[str, Any] | None:
     """
     Generates and validates a question bank for a specific chapter.
     Returns the validated dictionary, or None if validation fails.
