@@ -2,6 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from db.utils import get_instructor_db
 from .models import QuestionBankCreate
 from datetime import datetime
+from api.AI_core.question_bank_pipeline.question_bank_generator import generate_for_chapter
+from api.AI_core.question_bank_pipeline.pdfParser import pdfParser
+from pydantic import ValidationError
 import uuid
 
 question_bank_router = APIRouter(prefix="/question_bank", tags=["Question Bank"])
@@ -85,3 +88,48 @@ async def duplicate_question_bank(questionBankId: str, db=Depends(get_instructor
     await db["question_banks"].insert_one(question_bank)
     
     return question_bank
+
+@question_bank_router.post("/generate_question_banks")
+async def generate_question_bank(courseId: str, filePath: str, db=Depends(get_instructor_db)):
+    
+    parsed_data = pdfParser(filePath) 
+    
+    textbook_name = parsed_data["textbookName"]
+    chapters = parsed_data["chapters"]
+
+    for chapter_data in chapters:
+        chapter_num = chapter_data["chapterNum"]
+        chapter_title = chapter_data["chapterTitle"]
+        chapter_text = chapter_data["text"]
+        
+        question_bank = generate_for_chapter(
+            textbook_name=textbook_name, 
+            chapter_num=chapter_num, 
+            chapter_title=chapter_title, 
+            chapter_text=chapter_text
+        ) 
+        
+        if question_bank is None:
+            continue
+
+        current_time = datetime.now().isoformat()
+
+        question_bank.update({
+            "_id": f"QB{uuid.uuid4().hex[:6].upper()}",
+            "courseID": courseId,
+            "sourceFile": filePath,
+            "createdAt": current_time,
+            "lastModified": current_time,
+        })
+        
+        try:
+            validated_qb = QuestionBankCreate(**question_bank)
+            await db["question_banks"].insert_one(validated_qb.model_dump(by_alias=True))
+            print(f"Successfully saved Question Bank for Chapter {chapter_num}")
+            
+        except ValidationError as e:
+            print(f"CRITICAL VALIDATION FAILED for Chapter {chapter_num}. Not saving to DB.")
+            print(e.errors())
+            continue
+    
+    return {"message": "Question Banks generated successfully"}
