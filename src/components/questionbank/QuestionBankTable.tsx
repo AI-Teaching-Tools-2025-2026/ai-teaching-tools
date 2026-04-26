@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { toast } from "sonner";
@@ -10,6 +10,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import SubmissionModal from "@/components/modal/submissionModal";
 import { cn } from "@/lib/utils";
+import { questionBankService } from "@/services/questionBankService";
+import { QuestionBank } from "@/types/questionBank";
 import {
   Table,
   TableBody,
@@ -32,62 +34,52 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-// TODO: Replace with actual Question Bank types when backend endpoints are ready
-type QuestionBankData = {
-  _id: string;
-  title: string;
-  section: string;
-  questionsCount: number;
-  lastModified: string;
-};
-
-// Mock data since no endpoints exist yet
-const MOCK_BANKS: QuestionBankData[] = [
-  {
-    _id: "QB001",
-    title: "Chapter 1: Intro to Psychology",
-    section: "Chapter 1",
-    questionsCount: 45,
-    lastModified: "2026-04-20T10:00:00Z",
-  },
-  {
-    _id: "QB002",
-    title: "Midterm Review Pool",
-    section: "Review",
-    questionsCount: 120,
-    lastModified: "2026-04-22T14:30:00Z",
-  },
-];
-
 type FilterState = {
   search: string;
-  section: string;
+  chapter: string;
 };
 
 const DEFAULT_FILTERS: FilterState = {
   search: "",
-  section: "all",
+  chapter: "all",
 };
 
 export default function QuestionBankTable() {
-  const [banks, setBanks] = useState<QuestionBankData[]>(MOCK_BANKS);
-  // const [loading, setLoading] = useState(true); // set to false since we mock
-  const loading = false;
+  const [banks, setBanks] = useState<QuestionBank[]>([]);  
+  const [loading, setLoading] = useState(true);  
   const [selectedBanks, setSelectedBanks] = useState<string[]>([]);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [showFilterTable, setShowFilterTable] = useState(false);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
-  const [bankToDelete, setBankToDelete] = useState<QuestionBankData | null>(
-    null,
-  );
+  const [bankToDelete, setBankToDelete] = useState<QuestionBank | null>(null);
 
   const params = useParams();
   const router = useRouter();
   const courseId = params.courseId as string | undefined;
 
-  const sections = useMemo(
+  useEffect(() => {
+    const loadBanks = async () => {
+      if (!courseId) {
+        setLoading(false);
+        return;
+      }
+      try {
+        const data = await questionBankService.getAllQuestionBanks(courseId);
+        setBanks(data);
+      } catch (error) {
+        toast.error("Failed to load question banks");
+        console.error("Failed to load question banks:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadBanks();
+  }, [courseId]);
+
+  const chapters = useMemo(
     () =>
-      Array.from(new Set(banks.map((b) => b.section).filter(Boolean))).sort(),
+      Array.from(new Set(banks.map((b) => b.chapter).filter(Boolean))).sort(),
     [banks],
   );
 
@@ -97,7 +89,7 @@ export default function QuestionBankTable() {
         const search = filters.search.toLowerCase();
         if (!bank.title.toLowerCase().includes(search)) return false;
       }
-      if (filters.section !== "all" && bank.section !== filters.section)
+      if (filters.chapter !== "all" && bank.chapter !== filters.chapter)
         return false;
       return true;
     });
@@ -107,12 +99,12 @@ export default function QuestionBankTable() {
     key: K,
     value: FilterState[K],
   ) => setFilters((prev) => ({ ...prev, [key]: value }));
-
+  
   const clearFilters = () => {
     setFilters(DEFAULT_FILTERS);
   };
 
-  const hasActiveFilters = filters.search || filters.section !== "all";
+  const hasActiveFilters = filters.search || filters.chapter !== "all";
 
   const allSelected =
     selectedBanks.length === filteredBanks.length && filteredBanks.length > 0;
@@ -134,26 +126,33 @@ export default function QuestionBankTable() {
   };
 
   const handleDelete = async (bankId: string) => {
-    // TODO: Connect to backend delete endpoint
-    setBanks((prev) => prev.filter((b) => b._id !== bankId));
-    setSelectedBanks((prev) => prev.filter((id) => id !== bankId));
-    toast.success("Question Bank deleted successfully");
+    try {
+      await questionBankService.deleteQuestionBankById(bankId);
+      setBanks((prev) => prev.filter((b) => b._id !== bankId));
+      setSelectedBanks((prev) => prev.filter((id) => id !== bankId));
+      toast.success("Question Bank deleted successfully");
+    } catch (error) {
+      toast.error("Failed to delete question bank");
+      console.error("Failed to delete question bank", error);
+    }
   };
 
   const handleDuplicate = async (bankId: string) => {
-    // TODO: Connect to backend duplicate endpoint
-    const bankToCopy = banks.find((b) => b._id === bankId);
-    if (!bankToCopy) return;
-
-    const newBank = {
-      ...bankToCopy,
-      _id: `QB${Math.floor(Math.random() * 1000)}`,
-      title: `${bankToCopy.title} (Copy)`,
-      lastModified: new Date().toISOString(),
-    };
-
-    setBanks((prev) => [...prev, newBank]);
-    toast.success("Question Bank duplicated successfully");
+    try {
+      toast.info("Duplicating question bank...", { id: "duplicate-toast" });
+      const newBank = await questionBankService.duplicateQuestionBankById(
+        bankId,
+      );
+      setBanks((prev) => [...prev, newBank]);
+      toast.success("Question Bank duplicated successfully", {
+        id: "duplicate-toast",
+      });
+    } catch (error) {
+      toast.error("Failed to duplicate question bank", {
+        id: "duplicate-toast",
+      });
+      console.error("Failed to duplicate question bank", error);
+    }
   };
 
   return (
@@ -168,7 +167,7 @@ export default function QuestionBankTable() {
                   <Filter className="h-3.5 w-3.5 text-muted-foreground" />
                 </TableHead>
                 <TableHead className="w-[400px]">Title</TableHead>
-                <TableHead className="w-[200px]">Section</TableHead>
+                <TableHead className="w-[200px]">Chapter</TableHead>
                 <TableHead className="w-[120px]">
                   <div className="flex justify-end">
                     <Button
@@ -202,15 +201,15 @@ export default function QuestionBankTable() {
                 </TableCell>
                 <TableCell>
                   <Select
-                    value={filters.section}
-                    onValueChange={(v) => updateFilter("section", v)}
+                    value={filters.chapter}
+                    onValueChange={(v) => updateFilter("chapter", v)}
                   >
                     <SelectTrigger className="h-8">
-                      <SelectValue placeholder="All sections" />
+                      <SelectValue placeholder="All chapters" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="all">All sections</SelectItem>
-                      {sections.map((s) => (
+                      <SelectItem value="all">All chapters</SelectItem>
+                      {chapters.map((s) => (
                         <SelectItem key={s} value={s}>
                           {s}
                         </SelectItem>
@@ -270,7 +269,7 @@ export default function QuestionBankTable() {
                 />
               </TableHead>
               <TableHead className="w-[400px]">Title</TableHead>
-              <TableHead className="w-[200px]">Section</TableHead>
+              <TableHead className="w-[200px]">Chapter</TableHead>
               <TableHead className="w-[150px]">Questions</TableHead>
               <TableHead className="w-[200px]">Last Modified</TableHead>
               <TableHead className="w-[50px]" />
@@ -327,14 +326,14 @@ export default function QuestionBankTable() {
                       </Link>
                     </TableCell>
 
-                    {/* Section */}
+                    {/* Chapter */}
                     <TableCell className="text-muted-foreground">
-                      {bank.section}
+                      {bank.chapter}
                     </TableCell>
 
                     {/* Questions Count */}
                     <TableCell className="text-muted-foreground">
-                      {bank.questionsCount}
+                      {bank.questionCount}
                     </TableCell>
 
                     {/* Last Modified */}

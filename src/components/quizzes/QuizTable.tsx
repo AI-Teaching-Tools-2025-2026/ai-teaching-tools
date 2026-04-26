@@ -203,8 +203,8 @@ export default function QuizTable() {
                 <TableHead className="w-[300px]">Title</TableHead>
                 <TableHead className="w-[150px]">Section</TableHead>
                 <TableHead className="w-[150px]">Due Date</TableHead>
-                <TableHead className="w-[80px]">Points</TableHead>
-                <TableHead className="w-[80px]">Questions</TableHead>
+                <TableHead className="w-20">Points</TableHead>
+                <TableHead className="w-20">Questions</TableHead>
                 <TableHead className="w-[120px]">Status</TableHead>
                 <TableHead className="w-[120px]">
                   <div className="flex justify-end">
