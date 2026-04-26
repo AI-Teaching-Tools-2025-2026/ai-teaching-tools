@@ -13,7 +13,7 @@ from pydantic import ValidationError
 
 load_dotenv()
 
-from api.AI_core.question_bank_pipeline.config import (
+from api.AI_core.config import (
     ANTHROPIC_API_KEY,
     ANSWERS_PER_QUESTION,
     MAX_TOKENS,
