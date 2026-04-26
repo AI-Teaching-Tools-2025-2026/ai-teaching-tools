@@ -36,7 +36,7 @@ import matplotlib
 from openai import OpenAI
 
 # Local imports
-from backend.AI_core.rag_pipeline.research_terminology import RESEARCH_TERMINOLOGY
+from api.AI_core.rag_pipeline.research_terminology import RESEARCH_TERMINOLOGY
 
 
 class EmbeddingMetadataGenerator:
