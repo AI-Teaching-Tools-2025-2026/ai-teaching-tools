@@ -1,4 +1,5 @@
 from pypdf import PdfReader
+import json
 
 # Define constants for identifying just chapters
 SKIP_SECTIONS_START = ["Preface"]
@@ -7,7 +8,7 @@ SKIP_SECTIONS_END = ["Glossary", "Appendix", "Answer Key", "Index", "References"
 ################################################################################
 #   CODE CITATION - readOutline()
 #   Author: Mathieu Fenniak and pypdf contributors
-#   Link: https://pypdf.readthedocs.io/en/stable/user/handling-outlines.html#reading-simple-outlines 
+#   Link: https://pypdf.readthedocs.io/en/stable/user/handling-outlines.html#reading-simple-outlines
 #   Date: 04/25/2026
 #   Notes: Adapted the example code from "Reading Simple Outlines" documentation
 ################################################################################
@@ -64,20 +65,26 @@ def readOutline(reader, chapterData, textbookLastPage):
         )
 
 
-if __name__ == "__main__":
-    # Set up reader for textbook 
+def pdfPaser(textbookFileName):
+    # Set up reader for textbook
     # TODO: Update this so that we can grab the user's uploaded textbook rather than just specifying a file path
-    reader = PdfReader("researchTextbook.pdf")
+    reader = PdfReader(textbookFileName or "researchTextbook.pdf")
 
     if reader is None:
         exit()
 
+    meta = reader.metadata
+
     # Set up variables for readOutline()
-    chapterData = []    # This will be a list of dictionaries
-    textbookLastPage = reader.get_num_pages()   # This is a fallback if a ending page cannot be found
+    chapterData = []  # This will be a list of dictionaries
+    textbookLastPage = (
+        reader.get_num_pages()
+    )  # This is a fallback if a ending page cannot be found
 
     # Updates chapterData to have dictionaries for each chapter
     readOutline(reader, chapterData, textbookLastPage)
+
+    textbookData = {"textbookName": f"{meta.title}", "chapters": []}
 
     for i, chapter in enumerate(chapterData):
         # Print statement that can be commented out eventually
@@ -85,19 +92,32 @@ if __name__ == "__main__":
             f"Chapter {i + 1}: {chapter["chapterTitle"]}; Pages {chapter["startPage"]} - {chapter["endPage"]}"
         )
 
-        # TEMPORARY STUFF; WILL NEED TO REFACTOR FOR PROD 
-        outputDir = "newTextbookChapters"
-        # Open a new txt file for extracting text of chapter
-        filename = f"{outputDir}/chapter_{i+1}.txt"
-        f = open(filename, "w", encoding="utf-8")
+        chapterText = ""
 
-        # Actual extraction as per https://pypdf.readthedocs.io/en/stable/user/extract-text.html 
-        for i in range(chapter["startPage"], chapter["endPage"]):
-            page = reader.pages[i]
-            f.write(page.extract_text())
-        
-        f.close()
+        for j in range(chapter["startPage"], chapter["endPage"]):
+            page = reader.pages[j]
+            chapterText += (
+                page.extract_text()
+                .replace("\n", " ")
+                .encode("ascii", "ignore")
+                .decode("ascii")
+            )
 
-    # TODO: Write chapter textual data into MongoDB
+        chapterData[i] = {
+            "chapterNum": f"{i + 1}",
+            "chapterTitle": chapter["chapterTitle"],
+            "startPage": chapter["startPage"],
+            "endPage": chapter["endPage"],
+            "text": chapterText,
+        }
+
+    textbookData["chapters"] = chapterData
+    textbookJson = json.dumps(textbookData)
+
+    # f = open("output.json", "w", encoding="utf-8")
+    # f.write(textbookJson)
+    # f.close()
 
     reader.close()
+
+    return textbookJson
