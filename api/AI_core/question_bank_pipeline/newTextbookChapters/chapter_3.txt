@@ -1,0 +1,705 @@
+Reading in print? 
+Scan this QR code 
+to view the video 
+on your mobile 
+device. Or go to 
+youtu.be/
+o65l1YAVaYc 
+CHAPTER  III 
+RESEARCH ETHICS 
+In 1998 a me dical journal c alled The Lancet  published an ar ticle o f in terest to man y psy chologists. The 
+researchers claime d to ha ve sho wn a sta tistical r elationship be tween r eceiving the c ombined me asles, 
+mumps, and rubella (MMR) v accine and the de velopment o f a utism—suggesting fur thermore tha t the 
+vaccine might even cause autism. One result of this report was that many parents decided not to have their 
+children vaccinated, which o f course put them a t hig her risk f or measles, mumps, and rubella. H owever, 
+follow-up studies by other researchers consistently failed to find a statistical relationship between the MMR 
+vaccine and autism—and it is widely accepted now in the scientific community that there is no relationship. 
+In addition, several more serious pr oblems with the orig inal research were uncovered. Among them w ere 
+that the lead researcher stood to gain financially from his conclusions because he had patented a competing 
+measles vaccine. He had also used biased methods to select and test his research participants and had used 
+unapproved and medically unnecessary procedures on them. I n 2010 The Lancet retracted the article, and 
+the lead researcher’s right to practice medicine was revoked (Burns, 2010).1 
+In this chapter w e e xplore the e thics o f scien tific r esearch in psy chology. W e beg in wi th a g eneral 
+framework for thinking about the ethics of scientific research in psychology. Then we look at some specific 
+ethical c odes f or biome dical and beha vioral r esearchers — focusing on the E thics Code o f the Americ an 
+Psychological Associa tion. F inally, w e c onsider some pr actical tips f or c onducting e thical r esearch in 
+psychology. 
+One or more interactive elements has been excluded from this version of the text. You can view 
+them online here: https://kpu.pressbooks.pub/psychmethods4e/?p=46#oembed-1 
+Media Attributions 
+Vaccines Don’t Cause Autism: Healthcare Triage #12 by Healthcare Triage licensed under 
+a Standard YouTube Licence. 
+Notes 
+1. Burns, J. F. (2010, May 24). British medical council bars doctor who linked vaccine to autism. The New York Times. 
+Retrieved from: http://www.nytimes.com/2010/05/25/health/policy/25autism.html 
+Research Ethics  |  5715.  Moral Foundations of Ethical Research 
+Learning Objectives 
+1. Describe a simple framework for thinking about ethical issues in psychological research. 
+2. Give examples of several ethical issues that arise in psychological research—including ones that affect 
+research participants, the scientific community, and society more generally. 
+ 
+Ethics is the br anch of philosophy that is c oncerned with morality—what it means to beha ve morally and 
+how people can achieve that goal. It can also r efer to a se t of principles and pr actices that provide moral 
+guidance in a par ticular field. Ther e is an e thics of business, me dicine, teaching, and o f course, scientific 
+research. As the opening e xample illustrates, many kinds o f ethical issues c an arise in scien tific research, 
+especially when it involves human participants. For this reason, it is useful to begin with a general framework 
+for thinking through these issues. 
+A Framework for Thinking About Research Ethics 
+Table 3.1 pr esents a fr amework for thinking thr ough the e thical issues in volved in psy chological research. 
+The rows of Table 3.1 represent four general moral principles that apply to scientific research: weighing risks 
+against benefits, acting responsibly and wi th integrity, seeking justice, and r especting people’s rights and 
+dignity. (These principles ar e adapted from those in the Americ an Psychological Association [APA] Ethics 
+Code.) The c olumns of Table 3.1 r epresent three groups of people that are affected by scientific research: 
+the research participants, the scientific community, and society more generally. The idea is that a thorough 
+consideration o f the e thics o f an y r esearch pr oject must tak e in to ac count ho w e ach o f the f our mor al 
+principles applies to each of the three groups of people. 
+ 
+Table 3.1 A Framework for Thinking About Ethical Issues in Scientific Research 
+Moral Foundations of Ethical Research  |  59Who is affected? 
+Moral principle Research participants Scientific community Society 
+Weighing risks against benefits 
+Acting responsibly and with 
+integrity 
+Seeking justice 
+Respecting people’s rights and 
+dignity 
+Moral Principles 
+Let us look mor e closely at each of the moral principles and ho w they can be applied to each of the three 
+groups. 
+Weighing Risks Against Benefits 
+Scientific r esearch in psy chology c an be e thical onl y if i ts risks ar e out weighed b y i ts benefi ts. Among 
+the risks to r esearch participants are that a tr eatment might fail to help or e ven be harmful, a pr ocedure 
+might r esult in ph ysical or psy chological harm, and their rig ht to priv acy mig ht be viola ted. Among the 
+potential benefits are receiving a helpful treatment, learning about psychology, experiencing the satisfaction 
+of contributing to scien tific knowledge, and r eceiving money or c ourse credit for participating. Scientific 
+research can have risks and benefits to the scientific community and to society too (Rosenthal, 1994).1 A risk 
+to science is that if a research question is uninteresting or a study is poorly designed, then the time, money, 
+and effort spent on that research could have been spent on more productive research. A risk to socie ty is 
+that research results could be misunderstood or misapplied with harmful consequences. The research that 
+mistakenly linked the measles, mumps, and rubella (MMR) vaccine to autism resulted in both of these kinds 
+of harm. Of course, the benefits of scientific research to science and society are that it advances scientific 
+knowledge and can contribute to the welfare of society. 
+It is not ne cessarily easy to weigh the risks o f research against i ts benefits because the risks and benefi ts 
+may not be dir ectly c omparable. F or e xample, i t is c ommon f or the risks o f a stud y to be primaril y to 
+the research participants but the benefi ts primarily for science or socie ty. Consider, for example, Stanley 
+Milgram’s original study on obe dience to a uthority (Milgram, 1963).2 The participants were told tha t they 
+were taking par t in a stud y on the ef fects of punishment on le arning and w ere instructed to g ive electric 
+shocks to another par ticipant e ach time tha t par ticipant responded inc orrectly on a le arning task. W ith 
+each incorrect response, the shock be came stronger—eventually causing the other par ticipant (who was 
+in the ne xt r oom) to pr otest, c omplain about his he art, scr eam in pain, and finall y fall silen t and stop 
+responding. I f the first par ticipant hesi tated or e xpressed c oncern, the r esearcher said tha t he must 
+continue. In reality, the other par ticipant was a confederate of the researcher—a helper who pr etended to 
+60  |  Moral Foundations of Ethical Researchbe a r eal par ticipant—and the pr otests, complaints, and scr eams that the r eal par ticipant heard were an 
+audio recording that was activated when he flippe d the swi tch to administer the “ shocks.” The surprising 
+result of this study was that most of the real participants continued to administer the shocks right through 
+the confederate’s protests, complaints, and screams. Although this is considered one of the most important 
+results in psychology—with implications for understanding events like the Holocaust or the mistreatment of 
+prisoners by US soldiers at Abu Ghraib—it came at the cost of producing severe psychological stress in the 
+research participants. 
+Was It Worth It? 
+Much of the debate over the ethics of Milgram’s obedience study concerns the question of whether the 
+resulting scientific knowledge was worth the harm caused to the research participants. To get a better 
+sense of the harm, consider Milgram’s (1963) own description of it. 
+In a large number of cases, the degree of tension reached extremes that are rarely seen in 
+sociopsychological laboratory studies. Subjects were observed to sweat, tremble, stutter, bite their 
+lips, groan, and dig their fingernails into their flesh.…Fourteen of the 40 subjects showed definite 
+signs of nervous laughter and smiling. The laughter seemed entirely out of place, even bizarre. Full-
+blown uncontrollable seizures [of laughter] were observed for three subjects. On one occasion we 
+observed a seizure so violently convulsive that it was necessary to call a halt to the experiment (p. 
+375). 
+Milgram also noted that another observer reported that within 20 minutes one participant “was reduced to 
+a twitching, stuttering wreck, who was rapidly approaching the point of nervous collapse” (p. 377) 
+To Milgram’s credit, he went to great lengths to debrief his participants—including returning their mental 
+states to normal—and to show that most of them thought the research was valuable and they were glad to 
+have participated. 
+Acting Responsibly and With Integrity 
+Researchers must act responsibly and with integrity. This means carrying out their research in a thorough 
+and competent manner, meeting their professional obligations, and being truthful. Ac ting with integrity is 
+important be cause i t pr omotes trust, which is an essen tial elemen t o f all ef fective human r elationships. 
+Participants must be able to trust tha t researchers are being honest wi th them (e.g., about what the study 
+involves), will keep their promises (e.g., to maintain confidentiality), and will carry out their research in ways 
+that maximize benefits and minimize risk. An impor tant issue here is the use o f deception. Some research 
+questions (such as Milgram’s) are difficult or impossible to answer without deceiving research participants. 
+Thus acting with integrity can conflict with doing research that advances scientific knowledge and benefits 
+society. We will consider how psychologists generally deal with this conflict shortly. 
+Moral Foundations of Ethical Research  |  61The scien tific c ommunity and socie ty must also be able to trust tha t r esearchers ha ve c onducted their 
+research thoroughly and c ompetently and tha t they have reported on i t honestly. Again, the e xample at 
+the beg inning o f the chapter illustr ates wha t c an happen when this trust is viola ted. I n this c ase, other 
+researchers wasted resources on unne cessary follow-up research and pe ople avoided the MMR v accine, 
+putting their childr en a t incr eased risk o f me asles, mumps, and rubella. I ndeed, man y pe ople, including 
+children have died as a result of parents’ misinformed decisions not to vaccinate their children. 
+Seeking Justice 
+Researchers must c onduct their r esearch in a just manner . They should tr eat their par ticipants fairly, for 
+example, by giving them adequate compensation for their participation and making sur e that benefits and 
+risks ar e distri buted acr oss all par ticipants. F or e xample, in a stud y o f a ne w and poten tially beneficial 
+psychotherapy, some par ticipants might receive the psy chotherapy while others ser ve as a c ontrol group 
+that receives no tr eatment. If the psy chotherapy turns out to be ef fective, i t would be fair to o ffer i t to 
+participants in the control group when the study ends. 
+At a broader societal level, members of some groups have historically faced more than their fair share of the 
+risks of scientific research, including pe ople who ar e institutionalized, are disabled, or belong to r acial or 
+ethnic minorities. A particularly tragic example is the T uskegee syphilis study conducted by the US Public 
+Health Service from 1932 to 1972 (Reverby, 2009).3 The participants in this study were poor African American 
+men in the vicini ty o f T uskegee, Alabama, who w ere told tha t the y w ere being tr eated f or “bad blood. ” 
+Although they were given some free medical care, they were not treated for their syphilis. Instead, they were 
+observed to se e how the dise ase developed in un treated patients. Even after the use o f penicillin be came 
+the standard treatment for syphilis in the 1940s, these men continued to be denied treatment without being 
+given an opportunity to leave the study. The study was eventually discontinued only after details were made 
+known to the g eneral public by journalists and ac tivists. It is now widely recognized that researchers need 
+to consider issues of justice and fairness at the societal level. 
+ 
+“They Were Betrayed” 
+In 1997—65 years after the Tuskegee Syphilis Study began and 25 years after it ended—President Bill Clinton 
+formally apologized on behalf of the US government to those who were affected. Here is an excerpt from 
+the apology: 
+So today America does remember the hundreds of men used in research without their knowledge and 
+consent. We remember them and their family members. Men who were poor and African American, without 
+62  |  Moral Foundations of Ethical Researchresources and with few alternatives, they believed they had found hope when they were offered free 
+medical care by the United States Public Health Service. They were betrayed. 
+Read the full text of the apology at http://www.cdc.gov/tuskegee/clintonp.htm. 
+Respecting People’s Rights and Dignity 
+Researchers must r espect people’s rights and digni ty as human beings. One elemen t of this is r especting 
+their autonomy—their right to mak e their o wn choices and tak e their o wn actions free from coercion. Of 
+fundamental importance here is the concept of informed consent. This means that researchers obtain and 
+document people’s agreement to participate in a study after having informed them of everything that might 
+reasonably be expected to affect their decision. Consider the par ticipants in the Tuskegee study. Although 
+they agr eed to par ticipate in the stud y, the y w ere not told tha t the y had syphilis but w ould be denie d 
+treatment for it. Had they been told this basic fact about the study, it seems likely that they would not have 
+agreed to participate. Likewise, had participants in Milgram’s study been told that they might be “reduced 
+to a twitching, stuttering wreck,” it seems likely that many of them would not have agreed to participate. In 
+neither of these studies did participants give true informed consent. 
+Another element of respecting people’s rights and dignity is respecting their privacy—their right to decide 
+what inf ormation about them is shar ed wi th others. This me ans tha t r esearchers must 
+maintain confidentiality, which is essen tially an agr eement not to disclose par ticipants’ personal 
+information without their consent or some appr opriate legal authorization. Even more ideally participants 
+can main tain anonymity, which is when their name and other personall y iden tifiable inf ormation is not 
+collected at all. 
+Unavoidable Ethical Conflict 
+It may already be clear that ethical conflict in psychological research is unavoidable. Because there is little, 
+if any, psychological research that is c ompletely risk-free, there will almost al ways be a c onflict between 
+risks and benefits. Research that is beneficial to one group (e.g., the scientific community) can be harmful to 
+another (e.g., the research participants), creating especially difficult tradeoffs. We have also seen that being 
+completely truthful wi th research participants can make it difficult or impossi ble to c onduct scientifically 
+valid studies on important questions. 
+Of c ourse, man y e thical c onflicts ar e fair ly e asy to r esolve. N early e veryone w ould agr ee tha t de ceiving 
+research participants and then subje cting them to ph ysical harm w ould not be justifie d by filling a small 
+gap in the r esearch literature. But many ethical conflicts are not easy to resolve, and competent and well-
+meaning researchers can disagree about ho w to r esolve them. Consider , for example, an ac tual study on 
+Moral Foundations of Ethical Research  |  63“personal space” conducted in a public men’s room (Middlemist, Knowles, & Matter, 1976).4 The researchers 
+secretly observed their participants to see whether it took them longer to begin urinating when there was 
+another man ( a confederate of the r esearchers) at a ne arby urinal. W hile some cri tics found this to be an 
+unjustified assault on human digni ty (Koocher, 1977),5 the researchers had carefully considered the ethical 
+conflicts, resolved them as best the y could, and c oncluded that the benefi ts of the r esearch out weighed 
+the risks (Middlemist, Kno wles, & Ma tter, 19 77).6 For e xample, the y had in terviewed some pr eliminary 
+participants and found that none of them was bothered by the fact that they had been observed. 
+The point here is that although it may not be possible to eliminate ethical conflict completely, it is possible 
+to deal with it in responsible and constructive ways. In general, this means thoroughly and carefully thinking 
+through the ethical issues that are raised, minimizing the risks, and weighing the risks against the benefits. It 
+also means being able to explain one’s ethical decisions to others, seeking feedback on them, and ultimately 
+taking responsibility for them. 
+Notes 
+1. Rosenthal, R. M. (1994). Science and ethics in conducting, analyzing, and reporting psychological 
+research. Psychological Science, 5, 127–133. 
+2. Milgram, S. (1963). Behavioral study of obedience. Journal of Abnormal and Social Psychology, 67, 371–378. 
+3. Reverby, S. M. (2009). Examining Tuskegee: The infamous syphilis study and its legacy. Chapel Hill, NC: University of 
+North Carolina Press. 
+4. Middlemist, R. D., Knowles, E. S., & Matter, C. F. (1976). Personal space invasions in the lavatory: Suggestive evidence 
+for arousal. Journal of Personality and Social Psychology, 33, 541–546. 
+5. Koocher, G. P. (1977). Bathroom behavior and human dignity. Journal of Personality and Social Psychology, 35, 120–121. 
+6. Middlemist, R. D., Knowles, E. S., & Matter, C. F. (1977). What to do and what to report: A reply to Koocher. Journal of 
+Personality and Social Psychology, 35, 122–125. 
+64  |  Moral Foundations of Ethical Research16.  From Moral Principles to Ethics Codes 
+Learning Objectives 
+1. Describe the history of ethics codes for scientific research with human participants. 
+2. Summarize the American Psychological Association Ethics Code—especially as it relates to informed 
+consent, deception, debriefing, research with nonhuman animals, and scholarly integrity. 
+ 
+The general moral principles o f weighing risks against benefi ts, acting with integrity, seeking justice, and 
+respecting pe ople’s rig hts and digni ty pr ovide a useful star ting poin t f or thinking about the e thics o f 
+psychological research because essentially everyone agrees on them. As we have seen, however, even people 
+who agree on these general principles can disagree about specific ethical issues that arise in the c ourse of 
+conducting research. This is wh y there also exist more detailed and enforceable ethics codes that provide 
+guidance on important issues that arise frequently. In this section, we begin with a brief historical overview 
+of such ethics codes and then look closel y at the one tha t is most r elevant to psychological research—that 
+of the American Psychological Association (APA). 
+Historical Overview 
+One o f the e arliest e thics c odes w as the  Nuremberg Code—a se t o f 10 principles wri tten in 1947 in 
+conjunction with the trials of Nazi physicians accused of shockingly cruel research on concentration camp 
+prisoners during W orld War II. I t provided a standar d against which to c ompare the beha vior of the men 
+on trial—man y o f whom w ere e ventually c onvicted and ei ther imprisone d or sen tenced to de ath. The 
+Nuremberg Code w as particularly clear about the impor tance of carefully weighing risks against benefi ts 
+and the ne ed for informed consent. The Declaration of Helsinki is a similar e thics code that was created 
+by the W orld M edical Council in 1964. Among the standar ds tha t i t adde d to the Nur emberg Code w as 
+that r esearch wi th human par ticipants should be base d on a wri tten protocol—a de tailed description o f 
+the research—that is reviewed by an independent committee. The Declaration of Helsinki has been revised 
+several times, most recently in 2004. 
+In the Uni ted S tates, c oncerns about the T uskegee stud y and others le d to the public ation in 19 78 o f a 
+set of federal guidelines called the Belmont Report. The Belmont Report explicitly recognized the principle 
+of se eking justice, including the impor tance o f c onducting r esearch in a w ay tha t distri butes risks and 
+benefits fairly across different groups at the societal level. It also recognized the importance of respect for 
+persons, which acknowledges individuals’ a utonomy and pr otection for those wi th diminished autonomy 
+From Moral Principles to Ethics Codes  |  65(e.g., prisoners, children), and translates to the need for informed consent. Finally, it recognized the principle 
+of beneficence, which underscores the importance of maximizing the benefits of research while minimizing 
+harms to par ticipants and socie ty. The Belmon t R eport be came the basis o f a se t o f la ws—the 
+Federal Policy for the Protection of Human Subjects—that appl y to r esearch c onducted, suppor ted, or 
+regulated by the federal government. An extremely important part of these regulations is that universities, 
+hospitals, and other insti tutions tha t r eceive suppor t fr om the f ederal g overnment must establish 
+an institutional review board (IRB)—a committee that is r esponsible for reviewing research protocols for 
+potential ethical problems. An IRB must c onsist of at least five people with varying backgrounds, including 
+members of different professions, scientists and nonscientists, men and women, and at least one person not 
+otherwise affiliated with the institution. The IRB helps to make sure that the risks of the proposed research 
+are minimized, the benefits outweigh the risks, the research is carried out in a fair manner, and the informed 
+consent procedure is adequate. 
+The f ederal r egulations also distinguish r esearch tha t poses thr ee le vels o f risk. Exempt research is the 
+lowest le vel or risk and includes r esearch on the ef fectiveness o f normal e ducational ac tivities, the use 
+of standard psychological measures and sur veys of a nonsensi tive nature that are administered in a w ay 
+that main tains c onfidentiality, and r esearch using e xisting da ta fr om public sour ces. I t is c alled e xempt 
+because once approved, it is exempt from regular, continuous review. Expedited research poses a somewhat 
+higher risk than exempt, but still exposes participants to risks that are no greater than minimal risk ( those 
+encountered b y he althy pe ople in dail y lif e or during r outine ph ysical or psy chological e xaminations). 
+Expedited review is done b y by one member o f the IRB or b y a separate committee under the a uthority of 
+the IRB that can only approve minimal risk r esearch (many departments of psychology have such separate 
+committees). Finally, research that does not qualify for exempt or expedited review is greater than minimal 
+risk research must be reviewed by the full board of IRB members. 
+Ethics Codes 
+The link tha t f ollows the list— from the Of fice o f H uman S ubjects R esearch a t the N ational I nstitutes o f 
+Health—allows you to r ead the e thics codes discussed in this se ction in their en tirety. They are all hig hly 
+recommended and, with the exception of the Federal Policy, short and easy to read. 
+• The Nuremberg Code 
+• The Declaration of Helsinki 
+• The Belmont Report 
+• Federal Policy for the Protection of Human Subjects 
+https://www.hhs.gov/ohrp/international/ethical-codes-and-research-standards/index.html 
+66  |  From Moral Principles to Ethics CodesAPA Ethics Code 
+The APA’s Ethical Principles of Psychologists and Code of Conduct  (also known as the  APA Ethics Code) was 
+first publishe d in 1953 and has be en r evised se veral times sinc e then, most r ecently in 2010 . It includes 
+about 150 specific ethical standards that psychologists and their studen ts are expected to follow. Much of 
+the APA Ethics Code c oncerns the clinic al practice of psychology—advertising one’s services, setting and 
+collecting fees, having personal r elationships with clients, and so on. F or our purposes, the most r elevant 
+part is Standard 8: R esearch and Publication . Althoug h Standard 8  is r eproduced her e in i ts en tirety, w e 
+will c onsider some o f i ts most impor tant aspe cts—informed c onsent, de ception, debriefing, the use o f 
+nonhuman animal subjects, and scholarly integrity—in more detail. 
+ 
+APA Ethics Code Standard 8: Research and Publication 
+8.01 Institutional Approval 
+When institutional approval is required, psychologists provide accurate information about their research 
+proposals and obtain approval prior to conducting the research. They conduct the research in accordance 
+with the approved research protocol. 
+8.02 Informed Consent to Research 
+3. When obtaining informed consent as required in Standard 3.10, Informed Consent, psychologists 
+inform participants about (1) the purpose of the research, expected duration, and procedures; (2) their 
+right to decline to participate and to withdraw from the research once participation has begun; (3) the 
+foreseeable consequences of declining or withdrawing; (4) reasonably foreseeable factors that may be 
+expected to influence their willingness to participate such as potential risks, discomfort, or adverse 
+effects; (5) any prospective research benefits; (6) limits of confidentiality; (7) incentives for 
+participation; and (8) whom to contact for questions about the research and research participants’ 
+rights. They provide opportunity for the prospective participants to ask questions and receive 
+answers. (See also Standards 8.03, Informed Consent for Recording Voices and Images in Research; 
+8.05, Dispensing With Informed Consent for Research; and 8.07, Deception in Research.) 
+4. Psychologists conducting intervention research involving the use of experimental treatments clarify 
+to participants at the outset of the research (1) the experimental nature of the treatment; (2) the 
+services that will or will not be available to the control group(s) if appropriate; (3) the means by which 
+assignment to treatment and control groups will be made; (4) available treatment alternatives if an 
+individual does not wish to participate in the research or wishes to withdraw once a study has begun; 
+and (5) compensation for or monetary costs of participating including, if appropriate, whether 
+reimbursement from the participant or a third-party payor will be sought. (See also Standard 8.02a, 
+Informed Consent to Research.) 
+8.03 Informed Consent for Recording Voices and Images in Research 
+From Moral Principles to Ethics Codes  |  67Psychologists obtain informed consent from research participants prior to recording their voices or images 
+for data collection unless (1) the research consists solely of naturalistic observations in public places, and it 
+is not anticipated that the recording will be used in a manner that could cause personal identification or 
+harm, or (2) the research design includes deception, and consent for the use of the recording is obtained 
+during debriefing. (See also Standard 8.07, Deception in Research.) 
+8.04 Client/Patient, Student, and Subordinate Research Participants 
+1. When psychologists conduct research with clients/patients, students, or subordinates as 
+participants, psychologists take steps to protect the prospective participants from adverse 
+consequences of declining or withdrawing from participation. 
+2. When research participation is a course requirement or an opportunity for extra credit, the 
+prospective participant is given the choice of equitable alternative activities. 
+8.05 Dispensing With Informed Consent for Research 
+Psychologists may dispense with informed consent only (1) where research would not reasonably be 
+assumed to create distress or harm and involves (a) the study of normal educational practices, curricula, or 
+classroom management methods conducted in educational settings; (b) only anonymous questionnaires, 
+naturalistic observations, or archival research for which disclosure of responses would not place 
+participants at risk of criminal or civil liability or damage their financial standing, employability, or 
+reputation, and confidentiality is protected; or (c) the study of factors related to job or organization 
+effectiveness conducted in organizational settings for which there is no risk to participants’ employability, 
+and confidentiality is protected or (2) where otherwise permitted by law or federal or institutional 
+regulations. 
+8.06 Offering Inducements for Research Participation 
+1. Psychologists make reasonable efforts to avoid offering excessive or inappropriate financial or other 
+inducements for research participation when such inducements are likely to coerce participation. 
+2. When offering professional services as an inducement for research participation, psychologists clarify 
+the nature of the services, as well as the risks, obligations, and limitations. (See also Standard 6.05, 
+Barter With Clients/Patients.) 
+8.07 Deception in Research 
+1. Psychologists do not conduct a study involving deception unless they have determined that the use of 
+deceptive techniques is justified by the study’s significant prospective scientific, educational, or 
+applied value and that effective nondeceptive alternative procedures are not feasible. 
+2. Psychologists do not deceive prospective participants about research that is reasonably expected to 
+cause physical pain or severe emotional distress. 
+3. Psychologists explain any deception that is an integral feature of the design and conduct of an 
+experiment to participants as early as is feasible, preferably at the conclusion of their participation, 
+but no later than at the conclusion of the data collection, and permit participants to withdraw their 
+data. (See also Standard 8.08, Debriefing.) 
+8.08 Debriefing 
+1. Psychologists provide a prompt opportunity for participants to obtain appropriate information about 
+68  |  From Moral Principles to Ethics Codesthe nature, results, and conclusions of the research, and they take reasonable steps to correct any 
+misconceptions that participants may have of which the psychologists are aware. 
+2. If scientific or humane values justify delaying or withholding this information, psychologists take 
+reasonable measures to reduce the risk of harm. 
+3. When psychologists become aware that research procedures have harmed a participant, they take 
+reasonable steps to minimize the harm. 
+8.09 Humane Care and Use of Animals in Research 
+1. Psychologists acquire, care for, use, and dispose of animals in compliance with current federal, state, 
+and local laws and regulations, and with professional standards. 
+2. Psychologists trained in research methods and experienced in the care of laboratory animals 
+supervise all procedures involving animals and are responsible for ensuring appropriate consideration 
+of their comfort, health, and humane treatment. 
+3. Psychologists ensure that all individuals under their supervision who are using animals have received 
+instruction in research methods and in the care, maintenance, and handling of the species being used, 
+to the extent appropriate to their role. (See also Standard 2.05, Delegation of Work to Others.) 
+4. Psychologists make reasonable efforts to minimize the discomfort, infection, illness, and pain of 
+animal subjects. 
+5. Psychologists use a procedure subjecting animals to pain, stress, or privation only when an alternative 
+procedure is unavailable and the goal is justified by its prospective scientific, educational, or applied 
+value. 
+6. Psychologists perform surgical procedures under appropriate anesthesia and follow techniques to 
+avoid infection and minimize pain during and after surgery. 
+7. When it is appropriate that an animal’s life be terminated, psychologists proceed rapidly, with an 
+effort to minimize pain and in accordance with accepted procedures. 
+8.10 Reporting Research Results 
+5. Psychologists do not fabricate data. (See also Standard 5.01a, Avoidance of False or Deceptive 
+Statements.) 
+6. If psychologists discover significant errors in their published data, they take reasonable steps to 
+correct such errors in a correction, retraction, erratum, or other appropriate publication means. 
+8.11 Plagiarism 
+Psychologists do not present portions of another’s work or data as their own, even if the other work or data 
+source is cited occasionally. 
+8.12 Publication Credit 
+8. Psychologists take responsibility and credit, including authorship credit, only for work they have 
+actually performed or to which they have substantially contributed. (See also Standard 8.12b, 
+Publication Credit.) 
+9. Principal authorship and other publication credits accurately reflect the relative scientific or 
+professional contributions of the individuals involved, regardless of their relative status. Mere 
+possession of an institutional position, such as department chair, does not justify authorship credit. 
+Minor contributions to the research or to the writing for publications are acknowledged 
+From Moral Principles to Ethics Codes  |  69appropriately, such as in footnotes or in an introductory statement. 
+10. Except under exceptional circumstances, a student is listed as principal author on any multiple-
+authored article that is substantially based on the student’s doctoral dissertation. Faculty advisors 
+discuss publication credit with students as early as feasible and throughout the research and 
+publication process as appropriate. (See also Standard 8.12b, Publication Credit.) 
+8.13 Duplicate Publication of Data 
+Psychologists do not publish, as original data, data that have been previously published. This does not 
+preclude republishing data when they are accompanied by proper acknowledgment. 
+8.14 Sharing Research Data for Verification 
+1. After research results are published, psychologists do not withhold the data on which their 
+conclusions are based from other competent professionals who seek to verify the substantive claims 
+through reanalysis and who intend to use such data only for that purpose, provided that the 
+confidentiality of the participants can be protected and unless legal rights concerning proprietary 
+data preclude their release. This does not preclude psychologists from requiring that such individuals 
+or groups be responsible for costs associated with the provision of such information. 
+2. Psychologists who request data from other psychologists to verify the substantive claims through 
+reanalysis may use shared data only for the declared purpose. Requesting psychologists obtain prior 
+written agreement for all other uses of the data. 
+8.15 Reviewers 
+Psychologists who review material submitted for presentation, publication, grant, or research proposal 
+review respect the confidentiality of and the proprietary rights in such information of those who submitted 
+it. 
+Source: You can read the full APA Ethics Code at http://www.apa.org/ethics/code/index.aspx. 
+Informed Consent 
+Standards 8. 02 to 8. 05 ar e about inf ormed c onsent. Again, inf ormed c onsent me ans obtaining and 
+documenting people’s agreement to participate in a stud y, having informed them of everything that might 
+reasonably be expected to affect their decision. This includes details of the procedure, the risks and benefits 
+of the r esearch, the fac t that they have the rig ht to de cline to par ticipate or to wi thdraw from the stud y, 
+the c onsequences o f doing so, and an y legal limi ts to c onfidentiality. F or e xample, some sta tes r equire 
+researchers who learn of child abuse or other crimes to report this information to authorities. 
+Although the pr ocess o f obtaining inf ormed c onsent o ften in volves ha ving par ticipants r ead and sign 
+a consent form, i t is impor tant to understand tha t this is not all i t is. Althoug h having par ticipants read 
+and sign a c onsent form might be enoug h when they are competent adults wi th the necessary ability and 
+motivation, many participants do not actually read consent forms or read them but do not understand them. 
+70  |  From Moral Principles to Ethics CodesFor example, participants often mistake consent forms for legal documents and mistakenly believe that by 
+signing them the y g ive up their rig ht to sue the r esearcher (Mann, 1994 ).1 Even wi th c ompetent adults, 
+therefore, it is g ood practice to tell par ticipants about the risks and benefi ts, demonstrate the procedure, 
+ask them if the y have questions, and r emind them o f their rig ht to wi thdraw at any time—in addi tion to 
+having them read and sign a consent form. 
+Note also that there are situations in which informed consent is not necessary. These include situations in 
+which the research is not expected to cause any harm and the procedure is straightforward or the study is 
+conducted in the c ontext of people’s ordinary activities. For example, if you wanted to si t outside a public 
+building and obser ve whether people hold the door open f or people behind them, y ou would not ne ed to 
+obtain their informed consent. Similarly, if a college instructor wanted to compare two legitimate teaching 
+methods across two sections of his research methods course, he would not need to obtain informed consent 
+from his students. 
+Deception 
+Deception of participants in psychological research can take a variety of forms: misinforming participants 
+about the purpose o f a stud y, using c onfederates, using phon y equipment like Milgram’s shock g enerator, 
+and presenting participants with false feedback about their performance (e.g., telling them they did poorly 
+on a test when they actually did well). Deception also includes not informing participants of the full design 
+or true purpose o f the r esearch even if the y are not ac tively misinformed (Sieber, Iannuzzo, & R odriguez, 
+1995).2 For example, a study on incidental learning—learning without conscious effort—might involve having 
+participants read through a list of words in preparation for a “memory test” later. Although participants are 
+likely to assume that the memory test will require them to recall the words, it might instead require them to 
+recall the contents of the room or the appearance of the research assistant. 
+Some researchers have argued that deception of research participants is r arely if e ver ethically justified. 
+Among their arguments are that it prevents participants from giving truly informed consent, fails to respect 
+their dignity as human beings, has the poten tial to upse t them, mak es them distrustful and ther efore less 
+honest in their responding, and damages the reputation of researchers in the field (Baumrind, 1985).3 
+Note, however, that the AP A Ethics Code tak es a mor e moderate approach—allowing deception when the 
+benefits o f the stud y out weigh the risks, par ticipants c annot r easonably be e xpected to be harme d, the 
+research question cannot be answered without the use o f deception, and par ticipants are informed about 
+the deception as soon as possi ble. This approach acknowledges that not all f orms of deception are equally 
+bad. Compare, for example, Milgram’s study in which he deceived his participants in several significant ways 
+that resulted in their experiencing severe psychological stress with an incidental learning study in which a 
+“memory test” turns out to be slightly different from what participants were expecting. It also acknowledges 
+that some scientifically and socially important research questions can be dif ficult or impossi ble to answer 
+without deceiving participants. Knowing that a study concerns the extent to which they obey authority, act 
+aggressively toward a peer, or help a str anger is likely to change the way people behave so that the results 
+no longer generalize to the real world. 
+From Moral Principles to Ethics Codes  |  71Debriefing 
+Standard 8.08 is about debriefing. This is the process of informing research participants as soon as possible 
+of the purpose o f the study, revealing any deception, and correcting any other misconceptions they might 
+have as a r esult of participating. Debriefing also in volves minimizing harm tha t might have occurred. For 
+example, an experiment on the effects of being in a sad mood on memory might involve inducing a sad mood 
+in participants by having them think sad thoughts, watch a sad video, and/or listen to sad music. Debriefing 
+would be the time to r eturn participants’ moods to normal b y having them think happ y thoughts, watch a 
+happy video, or listen to happy music. 
+Nonhuman Animal Subjects 
+Standard 8. 09 is about the humane tr eatment and c are o f nonhuman animal subje cts. Althoug h most 
+contemporary research in psychology does not involve nonhuman animal subjects, a significant minority of 
+it does—especially in the study of learning and conditioning, behavioral neuroscience, and the development 
+of drug and surgical therapies for psychological disorders. 
+The use o f nonhuman animal subje cts in psy chological research is similar to the use o f deception in tha t 
+there are those who ar gue that i t is r arely, if e ver, ethically ac ceptable (Bowd & Shapir o, 1993).4 Clearly, 
+nonhuman animals ar e inc apable o f g iving inf ormed c onsent. Y et the y c an be subje cted to numer ous 
+procedures tha t ar e lik ely to c ause them suf fering. The y c an be c onfined, depriv ed o f f ood and w ater, 
+subjected to pain, oper ated on, and ultima tely euthanized. (Of course, they can also be obser ved benignly 
+in na tural or z oo-like se ttings.) Others poin t out tha t psy chological r esearch on nonhuman animals has 
+resulted in many important benefits to humans, including the development of behavioral therapies for many 
+disorders, more effective pain control methods, and antipsychotic drugs (Miller, 1985).5 It has also resulted 
+in benefits to nonhuman animals, including alterna tives to shooting and poisoning as me ans of controlling 
+them. 
+As with deception, the APA acknowledges that the benefits of research on nonhuman animals can outweigh 
+the costs, in which case it is ethically acceptable. However, researchers must use alternative methods when 
+they c an. W hen the y c annot, the y must ac quire and c are f or their subje cts humanel y and minimiz e the 
+harm to them. F or more information on the AP A’s position on nonhuman animal subje cts, see the w ebsite 
+of the AP A’s Commi ttee on Animal R esearch and E thics ( http://www.apa.org/science/leadership/care/
+index.aspx). 
+Scholarly Integrity 
+Standards 8.10 to 8.15 ar e about scholar ly in tegrity. These include the ob vious poin ts tha t r esearchers 
+must not fabric ate da ta or plag iarize. P lagiarism me ans using others’ w ords or ide as wi thout pr oper 
+72  |  From Moral Principles to Ethics Codesacknowledgment. Pr oper ackno wledgment g enerally me ans indic ating dir ect quota tions wi th quota tion 
+marks and providing a citation to the source of any quotation or idea used. Self-plagiarism is also considered 
+unethical and r efers to publishing the same ma terial more than onc e. In other w ords, researchers should 
+not borrow prior phr asing from their other publishe d works, just as studen ts should not submi t the same 
+work to more than one class. 
+The r emaining standar ds mak e some less ob vious but e qually impor tant poin ts. R esearchers should not 
+publish the same da ta a se cond time as thoug h i t w ere ne w, the y should shar e their da ta wi th other 
+researchers, and as pe er reviewers, they should k eep the unpublishe d research they review confidential. 
+Note that the authors’ names on publishe d research—and the order in which those names appe ar—should 
+reflect the importance of each person’s contribution to the research. It would be unethical, for example, to 
+include as an author someone who had made only minor contributions to the research (e.g., analyzing some 
+of the data) or for a faculty member to make himself or herself the first author on research that was largely 
+conducted by a student. 
+Notes 
+1. Mann, T. (1994). Informed consent for psychological research: Do subjects comprehend consent forms and understand 
+their legal rights? Psychological Science, 5, 140–143. 
+2. Sieber, J. E., Iannuzzo, R., & Rodriguez, B. (1995). Deception methods in psychology: Have they changed in 23 
+years? Ethics & Behavior, 5, 67–85. 
+3. Baumrind, D. (1985). Research using intentional deception: Ethical issues revisited. American Psychologist, 40, 165–174. 
+4. Bowd, A. D., & Shapiro, K. J. (1993). The case against animal laboratory research in psychology. Journal of Social Issues, 
+49, 133–142. 
+5. Miller, N. E. (1985). The value of behavioral research on animals. American Psychologist, 40, 423–440. 
+From Moral Principles to Ethics Codes  |  7317.  Putting Ethics Into Practice 
+Learning Objectives 
+1. Describe several strategies for identifying and minimizing risks and deception in psychological research. 
+2. Create thorough informed consent and debriefing procedures, including a consent form. 
+ 
+In this section, we look at some practical advice for conducting ethical research in psychology. Again, i t is 
+important to remember that ethical issues arise well before you begin to collect data and continue to arise 
+through publication and beyond. 
+Know and Accept Your Ethical Responsibilities 
+As the American Psychological Association (APA) Ethics Code notes in its introduction, “Lack of awareness or 
+misunderstanding of an ethical standard is not itself a defense to a charge of unethical conduct.” This is why 
+the very first thing that you must do as a new researcher is to know and accept your ethical responsibilities. 
+At a minimum, this me ans r eading and understanding the r elevant se ctions o f the AP A E thics Code, 
+distinguishing minimal risk from at-risk research, and knowing the specific policies and procedures of your 
+institution—including how to pr epare and submi t a r esearch protocol for institutional review board (IRB) 
+review. If you are conducting research as a c ourse requirement, there may be spe cific course standards, 
+policies, and pr ocedures. If any standard, policy, or pr ocedure is uncle ar—or you are unsure what to do 
+about an e thical issue tha t arises—you must se ek clarification. You can do this b y reviewing the r elevant 
+ethics c odes, r eading about ho w similar issues ha ve be en r esolved b y others, or c onsulting wi th mor e 
+experienced researchers, your IRB, or y our course instructor. Ultimately, you as the r esearcher must tak e 
+responsibility for the ethics of the research you conduct. 
+Identify and Minimize Risks 
+As you design your study, you must identify and minimize risks to participants. Start by listing all the risks, 
+including risks o f ph ysical and psy chological harm and viola tions o f c onfidentiality. R emember tha t i t is 
+easy for researchers to see risks as less serious than par ticipants do or e ven to overlook them completely. 
+For example, one student researcher wanted to test people’s sensitivity to violent images by showing them 
+gruesome photographs of crime and ac cident scenes. Because she w as an emer gency medical technician, 
+74  |  Putting Ethics Into Practicehowever, she greatly underestimated how disturbing these images were to most people. Remember too that 
+some risks might apply only to some par ticipants. For example, while most pe ople would have no problem 
+completing a survey about their fear of various crimes, those who have been a victim of one of those crimes 
+might become upset. This is wh y you should se ek input fr om a v ariety of people, including y our research 
+collaborators, more experienced researchers, and e ven from nonresearchers who mig ht be be tter able to 
+take the perspective of a participant. 
+Once you have identified the risks, you can often reduce or eliminate many of them. One way is to modify the 
+research design. For example, you might be able to shor ten or simplify the procedure to prevent boredom 
+and frustration. You might be able to replace upsetting or offensive stimulus materials (e.g., graphic accident 
+scene photos) with less upsetting or offensive ones (e.g., milder photos o f the sort people are likely to see 
+in the newspaper). A good example of modifying a research design is a 2009 r eplication of Milgram’s study 
+conducted by Jerry Burger. Instead of allowing his participants to continue administering shocks up to the 
+450-V maximum, the r esearcher always stopped the pr ocedure when the y were about to administer the 
+150-V shock (B urger, 2009).1 This made sense be cause in Milgr am’s study (a) participants’ severe negative 
+reactions occurred after this point and (b) most participants who administered the 150-V shock continued all 
+the way to the 450-V maximum. Thus the researcher was able to compare his results directly with Milgram’s 
+at every point up to the 150-V shock and also was able to estimate how many of his participants would have 
+continued to the maximum—but without subjecting them to the severe stress that Milgram did. (The results, 
+by the way, were that these contemporary participants were just as obedient as Milgram’s were.) 
+A second way to minimize risks is to use a  pre-screening procedure to identify and eliminate participants 
+who ar e a t hig h risk. Y ou c an do this in par t thr ough the inf ormed c onsent pr ocess. F or e xample, y ou 
+can w arn par ticipants tha t a sur vey includes questions about their f ear o f crime and r emind them tha t 
+they ar e fr ee to wi thdraw if the y think this mig ht upse t them. Pr escreening c an also in volve c ollecting 
+data to identify and eliminate participants. For example, Burger used an extensive pre-screening procedure 
+involving multiple questionnair es and an in terview wi th a clinic al psy chologist to iden tify and elimina te 
+participants with physical or psychological problems that put them at high risk. 
+A third way to minimiz e risks is to tak e active steps to main tain confidentiality. You should k eep signed 
+consent forms separately from any data that you collect and in such a way that no individual’s name can be 
+linked to their data. In addition, beyond people’s sex and age, you should only collect personal information 
+that you actually need to answ er your research question. I f people’s sexual orientation or e thnicity is not 
+clearly relevant to your research question, f or example, then do not ask them about i t. Be aware also tha t 
+certain data collection procedures can lead to unintentional violations of confidentiality. When participants 
+respond to an or al sur vey in a shopping mall or c omplete a questionnair e in a classr oom se tting, i t is 
+possible that their responses will be overheard or seen by others. If the responses are personal, it is better 
+to administer the sur vey or questionnaire individually in private or to use other te chniques to prevent the 
+unintentional sharing of personal information. 
+Putting Ethics Into Practice  |  75Identify and Minimize Deception 
+Remember tha t de ception c an tak e a v ariety o f f orms, not all o f which in volve ac tively misle ading 
+participants. It is also deceptive to allow participants to make incorrect assumptions (e.g., about what will be 
+on a “memory test”) or simply withhold information about the full design or purpose o f the study. It is best 
+to identify and minimize all forms of deception. 
+Remember that according to the APA Ethics Code, deception is ethically acceptable only if there is no way 
+to answer your research question without it. Therefore, if your research design includes any form of active 
+deception, you should consider whether it is truly necessary. Imagine, for example, that you want to know 
+whether the age of college professors affects students’ expectations about their teaching ability. You could 
+do this by telling participants that you will show them photos of college professors and ask them to rate each 
+one’s teaching ability. But if the photos are not really of college professors but of your own family members 
+and friends, then this w ould be de ception. This de ception could easily be elimina ted, however, by telling 
+participants instead to imagine that the photos are of college professors and to rate them as if they were. 
+In general, it is considered acceptable to wait until debriefing before you reveal your research question as 
+long as you describe the procedure, risks, and benefi ts during the informed consent process. For example, 
+you w ould not ha ve to tell par ticipants tha t y ou w anted to kno w whe ther the ag e o f c ollege pr ofessors 
+affects people’s expectations about them un til the stud y was over. Not only is this inf ormation unlikely to 
+affect people’s decision about whether or not to participate in the study, but it has the potential to invalidate 
+the results. Participants who kno w that age is the independen t variable might rate the older and y ounger 
+“professors” differently because they think y ou want them to. Alterna tively, they might be c areful to r ate 
+them the same so tha t the y do not appe ar pr ejudiced. B ut e ven this e xtremely mild f orm o f de ception 
+can be minimized by informing participants—orally, in writing, or both—that although you have accurately 
+described the procedure, risks, and benefi ts, you will wait to reveal the research question until afterward. 
+In essence, participants give their consent to be deceived or to have information withheld from them until 
+later. 
+Weigh the Risks Against the Benefits 
+Once the risks o f the r esearch ha ve be en iden tified and minimiz ed, y ou ne ed to w eigh them against 
+the benefi ts. This r equires iden tifying all the benefi ts. R emember to c onsider benefi ts to the r esearch 
+participants, to science, and to society. If you are a student researcher, remember that one of the benefits 
+is the knowledge you will gain about how to conduct scientific research in psychology—knowledge you can 
+then use to complete your studies and succeed in graduate school or in your career. 
+If the research poses minimal risk—no more than in people’s daily lives or routine physical or psychological 
+examinations—then even a small benefit to participants, science, or society is generally considered enough 
+to justify it. If it poses more than minimal risk, then ther e should be mor e benefits. If the research has the 
+potential to upse t some par ticipants, for example, then i t becomes more important that the stud y is w ell 
+designed and can answer a scientifically interesting research question or have clear practical implications. 
+76  |  Putting Ethics Into PracticeIt would be unethical to subject people to pain, fear, or embarrassment for no better reason than to satisfy 
+one’s personal curiosity. In general, psychological research that has the potential to cause harm that is more 
+than minor or lasts for more than a short time is rarely considered justified by its benefits. 
+Create Informed Consent and Debriefing Procedures 
+Once y ou ha ve se ttled on a r esearch design, y ou ne ed to cr eate y our inf ormed c onsent and debriefing 
+procedures. S tart b y de ciding whe ther inf ormed c onsent is ne cessary ac cording to AP A S tandard 8. 05. 
+If inf ormed c onsent is ne cessary, ther e ar e se veral things y ou should do. F irst, when y ou r ecruit 
+participants—whether it is thr ough word of mouth, poste d advertisements, or a par ticipant pool—provide 
+them with as much information about the study as you can. This will allow those who might find the study 
+objectionable to avoid it. Second, prepare a script or set of “talking points” to help you explain the study to 
+your participants in simple everyday language. This should include a description of the procedure, the risks 
+and benefits, and their rig ht to wi thdraw at any time. Third, create an informed consent form that covers 
+all the poin ts in S tandard 8.02a that participants can read and sign af ter you have described the stud y to 
+them. Your university, department, or course instructor may have a sample consent form that you can adapt 
+for your own study. If not, an I nternet search will turn up se veral samples. R emember that if appr opriate, 
+both the oral and written parts of the informed consent process should include the fact that you are keeping 
+some information about the design or purpose o f the stud y from them but tha t you will r eveal it during 
+debriefing. 
+Debriefing is similar to inf ormed consent in tha t you cannot necessarily expect participants to r ead and 
+understand written debriefing f orms. So again i t is best to wri te a script or se t of talking poin ts with the 
+goal o f being able to e xplain the stud y in simple, e veryday languag e. During the debriefing, y ou should 
+reveal the r esearch question and full design o f the stud y. F or e xample, if par ticipants ar e teste d under 
+only one c ondition, then y ou should e xplain what happened in the other c onditions. If you deceived your 
+participants, you should r eveal this as soon as possi ble, apolog ize f or the de ception, e xplain wh y i t was 
+necessary, and correct any misconceptions that participants might have as a result. Debriefing is also a good 
+time to pr ovide additional benefits to r esearch participants by giving them r elevant practical information 
+or referrals to other sources of help. For example, in a study of attitudes toward domestic abuse, you could 
+provide pamphlets about domestic abuse and r eferral information to the univ ersity counseling center for 
+those who might want it. 
+Remember to schedule plenty of time for the informed consent and debriefing pr ocesses. They cannot be 
+effective if you have to rush through them. 
+Get Approval 
+The next step is to get institutional approval for your research based on the specific policies and procedures 
+at y our insti tution or f or y our c ourse. This will g enerally r equire wri ting a pr otocol tha t descri bes the 
+Putting Ethics Into Practice  |  77purpose of the study, the research design and procedure, the risks and benefits, the steps taken to minimize 
+risks, and the inf ormed c onsent and debriefing pr ocedures. Do not think o f the insti tutional appr oval 
+process as mer ely an obstacle to o vercome but as an oppor tunity to think thr ough the e thics o f y our 
+research and to c onsult with others who ar e likely to have more experience or different perspectives than 
+you. If the IRB has questions or concerns about your research, address them promptly and in good faith. This 
+might even mean making further modifications to your research design and procedure before resubmitting 
+your protocol. 
+Follow Through 
+Your concern with ethics should not end when y our study receives institutional approval. It now becomes 
+important to stick to the pr otocol you submitted or to se ek additional approval for anything other than a 
+minor change. During the r esearch, you should moni tor your participants for unanticipated reactions and 
+seek feedback from them during debriefing. One cri ticism of Milgram’s study is tha t althoug h he did not 
+know ahead of time that his participants would have such severe negative reactions, he certainly knew after 
+he had teste d the first se veral par ticipants and should ha ve made adjustmen ts a t tha t poin t (Ba umrind, 
+1985).2 Be alert also for potential violations of confidentiality. Keep the consent forms and the data safe and 
+separate from each other and mak e sure that no one, in tentionally or unin tentionally, has ac cess to an y 
+participant’s personal information. 
+Finally, you must maintain your integrity through the publication process and beyond. Address publication 
+credit—who will be a uthors on the r esearch and the or der of authors—with your collaborators early and 
+avoid plag iarism in y our writing. Remember that your scientific goal is to le arn about the w ay the w orld 
+actually is and tha t y our scien tific dut y is to r eport on y our r esults honestl y and ac curately. So do not 
+be tempte d to fabric ate da ta or alter y our r esults in an y w ay. Besides, une xpected r esults ar e o ften as 
+interesting, or more so, than expected ones. 
+Notes 
+1. Burger, J. M. (2009). Replicating Milgram: Would people still obey today? American Psychologist, 64, 1–11. 
+2. Baumrind, D. (1985). Research using intentional deception: Ethical issues revisited. American Psychologist, 40, 165–174. 
+78  |  Putting Ethics Into Practice18.  Key Takeaways and Exercises 
+ 
+Key Takeaways 
+• A wide variety of ethical issues arise in psychological research. Thinking them through requires 
+considering how each of four moral principles (weighing risks against benefits, acting responsibly and 
+with integrity, seeking justice, and respecting people’s rights and dignity) applies to each of three groups 
+of people (research participants, science, and society). 
+• Ethical conflict in psychological research is unavoidable. Researchers must think through the ethical 
+issues raised by their research, minimize the risks, weigh the risks against the benefits, be able to explain 
+their ethical decisions, seek feedback about these decisions from others, and ultimately take 
+responsibility for them. 
+• There are several written ethics codes for research with human participants that provide specific 
+guidance on the ethical issues that arise most frequently. These codes include the Nuremberg Code, the 
+Declaration of Helsinki, the Belmont Report, and the Federal Policy for the Protection of Human Subjects. 
+• The APA Ethics Code is the most important ethics code for researchers in psychology. It includes many 
+standards that are relevant mainly to clinical practice, but Standard 8 concerns informed consent, 
+deception, debriefing, the use of nonhuman animal subjects, and scholarly integrity in research. 
+• Research conducted at universities, hospitals, and other institutions that receive support from the 
+federal government must be reviewed by an institutional review board (IRB)—a committee at the 
+institution that reviews research protocols to make sure they conform to ethical standards. 
+• Informed consent is the process of obtaining and documenting people’s agreement to participate in a 
+study, having informed them of everything that might reasonably be expected to affect their decision. 
+Although it often involves having them read and sign a consent form, it is not equivalent to reading and 
+signing a consent form. 
+• Although some researchers argue that deception of research participants is never ethically justified, the 
+APA Ethics Code allows for its use when the benefits of using it outweigh the risks, participants cannot 
+reasonably be expected to be harmed, there is no way to conduct the study without deception, and 
+participants are informed of the deception as soon as possible. 
+• It is your responsibility as a researcher to know and accept your ethical responsibilities. 
+• You can take several concrete steps to minimize risks and deception in your research. These include 
+making changes to your research design, prescreening to identify and eliminate high-risk participants, 
+and providing participants with as much information as possible during informed consent and debriefing. 
+• Your ethical responsibilities continue beyond IRB approval. You need to monitor participants’ reactions, 
+be alert for potential violations of confidentiality, and maintain scholarly integrity through the publication 
+process. 
+Key Takeaways and Exercises  |  79

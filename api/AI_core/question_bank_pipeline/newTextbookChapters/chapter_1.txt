@@ -1,0 +1,523 @@
+CHAPTER  I 
+THE SCIENCE OF PSYCHOLOGY 
+Many pe ople belie ve tha t w omen tend to talk mor e than men— with some e ven sugg esting tha t this 
+difference has a biolog ical basis. One widel y cited estimate is that women speak 20,000 words per day on 
+average and men spe ak only 7,000. This claim se ems plausible, but is i t true? A gr oup of psychologists led 
+by Matthias Mehl decided to find out. The y checked to se e if an yone had ac tually tried to c ount the dail y 
+number of words spoken by women and men. No one had. So these researchers conducted a study in which 
+female and male c ollege students (369 in all) w ore audio recorders while the y went about their liv es. The 
+result? The women spoke an average of 16,215 words per day and the men spok e an average of 15,669—an 
+extremely small difference that could easily be explained by chance. In an article in the journal Science, these 
+researchers summed up their findings as follows: “We therefore conclude, on the basis of available empirical 
+evidence, that the widespr ead and hig hly publicized stereotype about f emale talkativeness is unf ounded” 
+(Mehl, Vazire, Ramirez-Esparza, Slatcher, & Pennebaker, 2007, p. 82)1. 
+Psychology is usuall y define d as the scien tific stud y o f human beha vior and men tal pr ocesses, and this 
+example illustrates the f eatures that make i t scientific. In this chapter , we look closel y at these f eatures, 
+review the goals of psychology, and address several basic questions that students often have about it. Who 
+conducts scientific research in psychology? Why? Does scientific psychology tell us anything that common 
+sense does not? W hy should I bother to le arn the scien tific approach—especially if I w ant to be a clinic al 
+psychologist and not a r esearcher? These ar e e xtremely g ood questions, and answ ering them no w will 
+provide a solid foundation for learning the rest of the material in your course. 
+Notes 
+1. Mehl, M. R., Vazire, S., Ramirez-Esparza, N., Slatcher, R. B., & Pennebaker, J. W. (2007). Are women really more talkative 
+than men? Science, 317, 82. 
+The Science of Psychology  |  11.  Methods of Knowing 
+Learning Objectives 
+1. Describe the 5 methods of acquiring knowledge 
+2. Understand the benefits and problems with each. 
+ 
+Take a minute to ponder some of what you know and how you acquired that knowledge. Perhaps you know 
+that you should mak e your bed in the morning be cause your mother or fa ther told y ou this is wha t you 
+should do, per haps you know that swans are white because all o f the sw ans you have seen are white, or 
+perhaps you know that your friend is l ying to you because she is ac ting strange and won’t look you in the 
+eye. But should we trust knowledge from these sources? The methods of acquiring knowledge can be broken 
+down into five categories each with its own strengths and weaknesses. 
+Intuition 
+The first me thod o f kno wing is in tuition. W hen w e use our in tuition, w e ar e r elying on our guts, our 
+emotions, and/or our instincts to guide us. Rather than examining facts or using rational thought, intuition 
+involves believing what feels true. The problem with relying on intuition is that our intuitions can be wrong 
+because the y ar e driv en b y c ognitive and motiv ational biases r ather than log ical r easoning or scien tific 
+evidence. While the strange behavior of your friend may lead you to think s/he is lying to you it may just be 
+that s/he is holding in a bit of gas or is preoccupied with some other issue that is irrelevant to you. However, 
+weighing alternatives and thinking o f all the dif ferent possibilities can be par alyzing for some pe ople and 
+sometimes decisions based on intuition are actually superior to those base d on analysis (people interested 
+in this idea should read Malcolm Gladwell’s book Blink)1. 
+Authority 
+Perhaps one o f the most c ommon me thods o f ac quiring kno wledge is thr ough a uthority. This me thod 
+involves ac cepting ne w ide as be cause some a uthority figur e sta tes tha t the y ar e true. These a uthorities 
+include parents, the media, doctors, Priests and other religious authorities, the government, and professors. 
+While in an ide al w orld w e should be able to trust a uthority figur es, histor y has ta ught us other wise 
+and many instances of atrocities against humani ty are a consequence of people unquestioningly following 
+Methods of Knowing  |  3authority ( e.g., Salem W itch T rials, N azi W ar Crimes ). On a mor e benign le vel, while y our par ents ma y 
+have told y ou that you should mak e your bed in the morning, making y our bed provides the w arm damp 
+environment in which mi tes thriv e. Keeping the she ets open pr ovides a less hospi table environment f or 
+mites. These examples illustrate that the problem with using authority to obtain knowledge is that they may 
+be wrong, they may just be using their intuition to arrive at their conclusions, and they may have their own 
+reasons to misle ad you. Nevertheless, much o f the inf ormation we acquire is thr ough authority because 
+we don’t have time to question and independen tly r esearch e very pie ce o f knowledge we le arn thr ough 
+authority. But we can learn to e valuate the cr edentials of authority figures, to e valuate the me thods they 
+used to arrive at their conclusions, and evaluate whether they have any reasons to mislead us. 
+Rationalism 
+Rationalism involves using logic and reasoning to acquire new knowledge. Using this method premises are 
+stated and logical rules are followed to arrive at sound conclusions. For instance, if I am g iven the premise 
+that all swans are white and the premise that this is a swan then I can come to the rational conclusion that 
+this swan is whi te without actually seeing the swan. The problem with this method is that if the pr emises 
+are wrong or there is an error in logic then the conclusion will not be v alid. For instance, the premise that 
+all swans are white is incorrect; there are black swans in Australia. Also, unless formally trained in the rules 
+of logic it is easy to make an error. Nevertheless, if the pr emises are correct and logical rules are followed 
+appropriately then this is sound means of acquiring knowledge. 
+Empiricism 
+Empiricism in volves ac quiring kno wledge thr ough obser vation and e xperience. Onc e again man y o f y ou 
+may have belie ved that all sw ans are whi te be cause you have onl y e ver se en white swans. For c enturies 
+people belie ved the w orld is fla t be cause i t appe ars to be fla t. These e xamples and the man y visual 
+illusions that trick our senses illustrate the problems with relying on empiricism alone to derive knowledge. 
+We ar e limi ted in wha t w e c an e xperience and obser ve and our senses c an de ceive us. M oreover, our 
+prior e xperiences c an alter the w ay w e per ceive e vents. N evertheless, empiricism is a t the he art o f the 
+scientific method. Science relies on observations. But not just any observations, science relies on structured 
+observations which is known as systematic empiricism. 
+The Scientific Method 
+The scientific method is a pr ocess of systematically collecting and e valuating evidence to test ide as and 
+answer questions. W hile scien tists ma y use in tuition, a uthority, r ationalism, and empiricism to g enerate 
+new ideas they don’t stop there. Scientists go a step further by using systematic empiricism to make careful 
+4  |  Methods of Knowingobservations under v arious controlled conditions in or der to test their ide as and the y use r ationalism to 
+arrive at valid conclusions. While the scientific method is the most lik ely of all of the methods to produce 
+valid knowledge, like all me thods of acquiring knowledge it also has i ts drawbacks. One major pr oblem is 
+that it is not al ways feasible to use the scien tific method; this me thod can require considerable time and 
+resources. Another problem with the scientific method is that it cannot be used to answer all questions. As 
+described in the f ollowing section, the scientific method can only be used to address empirical questions. 
+This book and your research methods course are designed to provide you with an in-depth examination of 
+how psychologists use the scientific method to advance our understanding of human behavior and the mind. 
+ 
+Notes 
+1. Gladwell, M. E. (2005). Blink: The power of thinking without thinking. (9th ed.). New York: Little, Brown & Co. 
+Methods of Knowing  |  52.  Understanding Science 
+Learning Objectives 
+1. Define science. 
+2. Describe the three fundamental features of science. 
+3. Explain why psychology is a science. 
+4. Define pseudoscience and give some examples. 
+What Is Science? 
+Some pe ople ar e surprise d to le arn tha t psy chology is a  science. The y g enerally agr ee tha t astr onomy, 
+biology, and chemistr y are sciences but w onder what psychology has in c ommon with these other fields. 
+Before answering this question, ho wever, it is worth reflecting on what astronomy, biology, and chemistry 
+have in c ommon with each other. It is cle arly not their subje ct matter. Astronomers study celestial bodies, 
+biologists study living organisms, and chemists study matter and its properties. It is also not the equipment 
+and techniques that they use. F ew biologists would know what to do wi th a r adio telescope, for example, 
+and few chemists w ould know how to tr ack a moose popula tion in the wild. F or these and other r easons, 
+philosophers and scien tists who ha ve thoug ht de eply about this question ha ve c oncluded tha t wha t the 
+sciences have in common is a general approach to understanding the natural world. Psychology is a science 
+because i t tak es this same g eneral appr oach to understanding one aspe ct o f the na tural w orld: human 
+behavior. 
+Features of Science 
+The g eneral scien tific appr oach has thr ee fundamen tal f eatures ( Stanovich, 2010 )1. The first 
+is systematic empiricism. Empiricism r efers to le arning based on obser vation, and scien tists learn about 
+the natural world systematically, by c arefully planning, making, r ecording, and anal yzing obser vations of 
+it. As w e will se e, logical reasoning and e ven creativity play important roles in scienc e too, but scien tists 
+are unique in their insistenc e on che cking their ide as about the w ay the w orld is against their systema tic 
+observations. N otice, f or e xample, tha t M ehl and his c olleagues did not trust other pe ople’s ster eotypes 
+or e ven their o wn inf ormal obser vations. I nstead, the y systema tically r ecorded, c ounted, and c ompared 
+the number o f words spoken by a lar ge sample o f women and men. F urthermore, when their systema tic 
+observations turned out to conflict with people’s stereotypes, they trusted their systematic observations. 
+6  |  Understanding ScienceThe se cond f eature o f the scien tific appr oach—which f ollows in a str aightforward way fr om the first—is 
+that it is concerned with empirical questions. These are questions about the way the world actually is and, 
+therefore, can be answered by systematically observing it. The question of whether women talk more than 
+men is empiric al in this w ay. Either women really do talk mor e than men or the y do not, and this c an be 
+determined by systematically observing how much w omen and men ac tually talk. H aving said this, ther e 
+are many interesting and impor tant questions tha t are not empiric ally testable and tha t science is not in 
+a posi tion to answ er. Among these ar e questions about v alues—whether things ar e g ood or bad, just or 
+unjust, or beautiful or ugly, and how the world ought to be. So although the question of whether a stereotype 
+is accurate or inac curate is an empiric ally testable one tha t science can answer, the question—or , rather, 
+the value judgment—of whether it is wrong for people to hold inac curate stereotypes is not. S imilarly, the 
+question of whether criminal behavior has a genetic basis is an empirical question, but the question of what 
+actions ought to be c onsidered illegal is not. I t is especially important for researchers in psychology to be 
+mindful of this distinction. 
+The thir d f eature o f scienc e is tha t i t cr eates public kno wledge. Af ter asking their empiric al questions, 
+making their systema tic obser vations, and dr awing their c onclusions, scien tists publish their w ork. This 
+usually means writing an ar ticle for publication in a pr ofessional journal, in which the y put their r esearch 
+question in the c ontext o f pr evious r esearch, descri be in de tail the me thods the y use d to answ er their 
+question, and cle arly present their r esults and c onclusions. Increasingly, scientists are opting to publish 
+their w ork in open ac cess journals, in which the ar ticles ar e fr eely a vailable to all – scien tists and 
+nonscientists alike. This important choice allows publicly-funded research to create knowledge that is truly 
+public. 
+Publication is an essential feature of science for two reasons. One is that science is a social process—a large-
+scale collaboration among many researchers distributed across both time and space. Our current scientific 
+knowledge of most topics is based on many different studies conducted by many different researchers who 
+have shared their work publicly over many years. The second is that publication allows science to be self -
+correcting. Individual scientists understand tha t, despi te their best ef forts, their me thods c an be fla wed 
+and their conclusions incorrect. Publication allows others in the scientific community to detect and correct 
+these errors so that, over time, scientific knowledge increasingly reflects the way the world actually is. 
+A good example of the self -correcting nature of science is the “ Many L abs Replication Project” – a lar ge 
+and c oordinated ef fort b y pr ominent psy chological scien tists ar ound the w orld to a ttempt to r eplicate 
+findings from 13 classic and contemporary studies (Klein et al., 2013)2. One of the findings selected by these 
+researchers for replication was the fascinating effect, first reported by Simone Schnall and her c olleagues 
+at the University of Plymouth, that washing one’s hands leads people to view moral transgressions—ranging 
+from k eeping mone y inside a f ound w allet to using a ki tten f or se xual ar ousal—as less wr ong ( Schnall, 
+Benton, & Harvey, 2008)3. If reliable, this effect might help explain why so many religious traditions associate 
+physical cle anliness wi th mor al puri ty. H owever, despi te using the same ma terials and ne arly iden tical 
+procedures with a much lar ger sample, the “Man y Labs” researchers were unable to r eplicate the orig inal 
+finding (Johnson, Cheung, & Donnellan, 2013)4, suggesting that the original finding may have stemmed from 
+the relatively small sample size (which can lead to unreliable results) used in the original study. To be clear, 
+at this stage we are still unable to definitively conclude that the handwashing effect does not exist; however, 
+Understanding Science  |  7the ef fort tha t has g one in to testing i ts r eliability c ertainly demonstr ates the c ollaborative and c autious 
+nature of scientific progress. 
+For mor e on the r eplication crisis in psy chology se e: http://nobaproject.com/modules/the-replication-
+crisis-in-psychology 
+Science Versus Pseudoscience 
+Pseudoscience refers to ac tivities and beliefs tha t ar e claime d to be scien tific b y their pr oponents—and 
+may appear to be scien tific a t first g lance—but ar e not. Consider the the ory o f bior hythms ( not to be 
+confused with sleep cycles or cir cadian rhythms that do ha ve a scien tific basis). The ide a is tha t people’s 
+physical, intellectual, and emotional abilities run in cycles that begin when they are born and continue until 
+they die. Alleg edly, the ph ysical cycle has a period o f 23 days, the in tellectual cycle a period o f 33 da ys, 
+and the emotional c ycle a period o f 28 da ys. So, f or example, if y ou had the option o f when to sche dule 
+an exam, you would want to schedule it for a time when y our intellectual cycle will be at a high point. The 
+theory of biorhythms has been around for more than 100 years, and you can find numerous popular books 
+and websites about bior hythms, often containing impressive and scien tific-sounding terms lik e sinusoidal 
+wave and bioelectricity. The problem with biorhythms, however, is that scientific evidence indicates they do 
+not exist (Hines, 1998)5. 
+A set of beliefs or ac tivities can be said to be pseudoscien tific if ( a) its adherents claim or impl y that it is 
+scientific but (b) it lacks one or more of the three features of science. For instance, it might lack systematic 
+empiricism. Either there is no relevant scientific research or, as in the case of biorhythms, there is relevant 
+scientific research but it is ignored. It might also lack public knowledge. People who promote the beliefs or 
+activities might claim to ha ve conducted scientific research but ne ver publish tha t research in a w ay that 
+allows others to evaluate it. 
+A set of beliefs and activities might also be pseudoscientific because it does not address empirical questions. 
+The philosopher Kar l P opper w as espe cially c oncerned wi th this ide a (P opper, 200 2)6. H e ar gued mor e 
+specifically tha t an y scien tific claim must be e xpressed in such a w ay tha t ther e ar e obser vations tha t 
+would—if the y w ere made—c ount as e vidence against the claim. I n other w ords, scien tific claims must 
+be falsifiable. The claim that women talk more than men is falsifiable because systematic observations could 
+reveal either that they do talk mor e than men or tha t they do not. As an e xample of an unfalsifiable claim, 
+consider that many people who belie ve in e xtrasensory perception (ESP) and other psy chic powers claim 
+that such po wers c an disappe ar when the y ar e obser ved too closel y. This mak es i t so tha t no possi ble 
+observation would count as evidence against ESP. If a careful test of a self-proclaimed psychic showed that 
+she pr edicted the futur e a t be tter-than-chance le vels, this w ould be c onsistent wi th the claim tha t she 
+had psychic powers. But if she faile d to predict the future at better-than-chance levels, this would also be 
+consistent with the claim because her powers can supposedly disappear when they are observed too closely. 
+Why should we concern ourselves with pseudoscience? There are at least three reasons. One is that learning 
+about pseudoscience helps bring the fundamen tal features of science—and their importance—into sharper 
+focus. A se cond is tha t bior hythms, psy chic po wers, astr ology, and man y other pseudoscien tific beliefs 
+8  |  Understanding Scienceare widel y held and ar e pr omoted on the I nternet, on tele vision, and in books and magazines. F ar fr om 
+being harmless, the promotion of these beliefs often results in great personal toll as, for example, believers 
+in pseudoscienc e opt f or “tr eatments” such as home opathy f or serious me dical c onditions inste ad o f 
+empirically-supported treatments. Learning what makes them pseudoscientific can help us to iden tify and 
+evaluate such beliefs and pr actices when we encounter them. A thir d reason is that many pseudosciences 
+purport to explain some aspect of human behavior and mental processes, including biorhythms, astrology, 
+graphology (hand writing anal ysis), and magne t ther apy f or pain c ontrol. I t is impor tant f or studen ts o f 
+psychology to distinguish their own field clearly from this “pseudo psychology.” 
+ 
+The Skeptic’s Dictionary 
+An excellent source for information on pseudoscience is The Skeptic’s Dictionary (http://www.skepdic.com). 
+Among the pseudoscientific beliefs and practices you can learn about are the following: 
+• Cryptozoology. The study of “hidden” creatures like Bigfoot, the Loch Ness monster, and the chupacabra. 
+• Pseudoscientific psychotherapies. Past-life regression, rebirthing therapy, and bioscream therapy, 
+among others. 
+• Homeopathy. The treatment of medical conditions using natural substances that have been diluted 
+sometimes to the point of no longer being present. 
+• Pyramidology. Odd theories about the origin and function of the Egyptian pyramids (e.g., that they were 
+built by extraterrestrials) and the idea that pyramids, in general, have healing and other special powers. 
+Another excellent online resource is Neurobonkers (http://neurobonkers.com), which regularly posts articles 
+that investigate claims that pertain specifically to psychological science. 
+Notes 
+1. Stanovich, K. E. (2010). How to think straight about psychology (9th ed.). Boston, MA: Allyn & Bacon. 
+2. Klein, R. A., Ratliff, K. A., Vianello, M., Adams, R. B., Bahník, S., Bernstein, M. J., . . . Nosek, B. A. (2013). Investigating 
+variation in replicability: A “many labs” replication project. Social Psychology, 45(3), 142-152. doi: 10.1027/1864-9335/
+a000178 
+3. Schnall, S., Benton, J., & Harvey, S. (2008). With a clean conscience: Cleanliness reduces the severity of moral 
+judgments. Psychological Science, 19(12), 1219-1222. doi: 10.1111/j.1467-9280.2008.02227.x 
+4. Johnson, D. J., Cheung, F., & Donnellan, M. B. (2013). Does cleanliness influence moral judgments? A direct replication 
+of Schnall, Benton, and Harvey (2008). Social Psychology, 45(3), 209-215. doi: 10.1027/1864-9335/a000186 
+5. Hines, T. M. (1998). Comprehensive review of biorhythm theory. Psychological Reports, 83, 19–64. 
+6. Popper, K. R. (2002). Conjectures and refutations: The growth of scientific knowledge. New York, NY: Routledge. 
+Understanding Science  |  93.  Goals of Science 
+Learning Objectives 
+1. Describe the three goals of science and give an example for each. 
+2. Distinguish between basic research and applied research. 
+The Broader Purposes of Scientific Research in Psychology 
+People have always been curious about the na tural world, including themselves and their behavior (in fact, 
+this is probably why you are studying psychology in the first place). Science grew out of this natural curiosity 
+and has be come the best w ay to achie ve detailed and ac curate knowledge. Keep in mind tha t most o f the 
+phenomena and theories that fill psychology textbooks are the products of scientific research. In a typical 
+introductory psychology textbook, for example, one can learn about specific cortical areas for language and 
+perception, principles of classical and operant conditioning, biases in reasoning and judgment, and people’s 
+surprising tendency to obey those in positions of authority. And scientific research continues because what 
+we know right now only scratches the surface of what we can know. 
+The Three Goals of Science 
+The first and most basic goal of science is to describe. This goal is achieved by making careful observations. 
+As an e xample, per haps I am in terested in be tter understanding the me dical c onditions tha t me dical 
+marijuana patients use marijuana to treat. In this case, I could try to access records at several large medical 
+marijuana licensing centers to see which conditions people are getting licensed to use medical marijuana. Or 
+I could survey a large sample of medical marijuana patients and ask them to report which medical conditions 
+they use marijuana to treat or manage. Indeed, research involving surveys of medical marijuana patients has 
+been conducted and has found that the primary symptom medical marijuana patients use marijuana to treat 
+is pain, followed by anxiety and depression (Sexton, Cuttler, Finnell, & Mischley, 2016).1. 
+The second goal of science is to predict. Once we have observed with some regularity that two behaviors 
+or e vents ar e systema tically r elated to one another w e c an use tha t inf ormation to pr edict whe ther an 
+event or beha vior will oc cur in a c ertain situation. Once I kno w that most me dical marijuana pa tients use 
+marijuana to treat pain I can use that information to predict that an individual who uses me dical marijuana 
+likely experiences pain. Of course, my predictions will not be 100% accurate but if the relationship between 
+medical marijuana use and pain is strong then my predictions will have greater than chance accuracy. 
+10  |  Goals of ScienceThe third and ultimate goal of science is to explain. This goal involves determining the causes of behavior. 
+For example, researchers might try to understand the me chanisms through which marijuana reduces pain. 
+Does marijuana r educe inflamma tion which in turn r educes pain ? Or does marijuana simpl y r educe the 
+distress associated with pain r ather than r educing pain i tself? As y ou can see these questions tap a t the 
+underlying mechanisms and causal relationships. 
+Basic versus Applied Research 
+Scientific r esearch is o ften classifie d as being ei ther basic or applie d. Basic research in psy chology is 
+conducted primaril y f or the sak e o f achie ving a mor e de tailed and ac curate understanding o f human 
+behavior, without necessarily trying to address any particular practical problem. The research of Mehl and 
+his colleagues falls in to this c ategory. Applied research is conducted primarily to addr ess some pr actical 
+problem. Research on the effects of cell phone use on driving, for example, was prompted by safety concerns 
+and has le d to the enac tment o f laws to limi t this pr actice. Althoug h the distinc tion be tween basic and 
+applied research is convenient, it is not always clear-cut. For example, basic research on sex differences in 
+talkativeness could eventually have an ef fect on ho w marriage therapy is pr acticed, and applie d research 
+on the ef fect of cell phone use on driving c ould produce new insights into basic pr ocesses of perception, 
+attention, and action. 
+Notes 
+1. Sexton, M., Cuttler, C., Finnell, J., & Mischley, L (2016). A cross-sectional survey of medical cannabis users: Patterns of 
+use and perceived efficacy. Cannabis and Cannabinoid Research, 1, 131-138. doi: 10.1089/can.2016.0007. 
+Goals of Science  |  114.  Science and Common Sense 
+Learning Objectives 
+1. Explain the limitations of common sense when it comes to achieving a detailed and accurate 
+understanding of human behavior. 
+2. Give several examples of common sense or folk psychology that are incorrect. 
+3. Define skepticism and its role in scientific psychology. 
+Can We Rely on Common Sense? 
+Some people wonder whether the scien tific approach to psy chology is ne cessary. Can w e not r each the 
+same conclusions based on common sense or intuition? Certainly we all have intuitive beliefs about people’s 
+behavior, thoughts, and feelings—and these beliefs are collectively referred to as folk psychology. Although 
+much of our folk psychology is probably reasonably accurate, it is clear that much of it is not. For example, 
+most pe ople belie ve tha t ang er c an be r elieved b y “le tting i t out”—per haps b y punching some thing or 
+screaming loudly. Scientific research, however, has shown that this approach tends to le ave people feeling 
+more angry, not less (Bushman, 2002)1. Likewise, most people believe that no one would confess to a crime 
+that they  had not committed unless perhaps that person was being physically tortured. But again, extensive 
+empirical research has sho wn that false c onfessions are surprising ly common and oc cur for a v ariety of 
+reasons (Kassin & Gudjonsson, 2004)2. 
+ 
+Some Great Myths 
+In 50 Great Myths of Popular Psychology, psychologist Scott Lilienfeld and colleagues discuss several widely 
+held commonsense beliefs about human behavior that scientific research has shown to be incorrect (Lilienfeld, 
+Lynn, Ruscio, & Beyerstein, 2010)3. Here is a short list: 
+• “People use only 10% of their brain power.” 
+• “Most people experience a midlife crisis in their 40’s or 50’s.” 
+• “Students learn best when teaching styles are matched to their learning styles.” 
+• “Low self-esteem is a major cause of psychological problems.” 
+12  |  Science and Common Sense• “Psychiatric admissions and crimes increase during full moons.” 
+How Could We Be So Wrong? 
+How can so many of our intuitive beliefs about human behavior be so wrong? Notice that this is an empirical 
+question, and i t just so happens tha t psychologists have conducted scientific research on i t and identified 
+many c ontributing fac tors ( Gilovich, 1991) 4. One is tha t f orming de tailed and ac curate beliefs r equires 
+powers of obser vation, memor y, and anal ysis to an e xtent that we do not na turally possess. I t would be 
+nearly impossible to count the number o f words spoken by the women and men w e happen to enc ounter, 
+estimate the number o f words they spoke per da y, average these numbers f or both gr oups, and c ompare 
+them—all in our he ads. This is wh y we tend to r ely on men tal shor tcuts (what psychologists r efer to as 
+heuristics) in forming and maintaining our beliefs. F or example, if a belief is widel y shared—especially if it 
+is endorsed by “experts”—and it makes intuitive sense, w e tend to assume i t is true. This is c ompounded 
+by the fac t that we then tend to f ocus on c ases that confirm our in tuitive beliefs and not on c ases that 
+dis-confirm them. This is c alled confirmation bias. For example, once we begin to believe that women are 
+more talkative than men, w e tend to notic e and r emember talkative women and silen t men but ignor e or 
+forget silent women and talka tive men. W e also hold inc orrect beliefs in par t because it would be nic e if 
+they were true. F or e xample, man y pe ople belie ve tha t c alorie-reducing die ts ar e an ef fective long-term 
+treatment for obesity, yet a thorough review of the scientific evidence has shown that they are not (Mann et 
+al., 2007)5. People may continue to believe in the effectiveness of dieting in part because it gives them hope 
+for losing weight if they are obese or makes them feel good about their own “self-control” if they are not. 
+Scientists—especially psychologists—understand that they are just as susceptible as anyone else to intuitive 
+but incorrect beliefs. This is wh y they cultivate an a ttitude of skepticism. Being sk eptical does not me an 
+being cynical or distrustful, nor does i t mean questioning e very belief or claim one c omes across (which 
+would be impossi ble an yway). I nstead, i t me ans pa using to c onsider alterna tives and to se arch f or 
+evidence—especially systematically collected empirical evidence—when there is enoug h at stake to justif y 
+doing so. F or example, imagine that you read a magazine ar ticle that claims tha t giving children a w eekly 
+allowance is a good way to help them develop financial responsibility. This is an interesting and potentially 
+important claim ( especially if y ou have children of your own). Taking an a ttitude of skepticism, however, 
+would mean pausing to ask whether it might be instead that receiving an allowance merely teaches children 
+to spend money—perhaps even to be more materialistic. Taking an attitude of skepticism would also mean 
+asking wha t e vidence suppor ts the orig inal claim. I s the a uthor a scien tific r esearcher? I s an y scien tific 
+evidence cited? If the issue was important enough, it might also mean turning to the research literature to 
+see if anyone else had studied it. 
+Because ther e is o ften not enoug h e vidence to full y e valuate a belief or claim, scien tists also cultiv ate a 
+tolerance for uncertainty. The y ac cept tha t ther e ar e man y things tha t the y simpl y do not kno w. F or 
+example, it turns out tha t there is no scien tific evidence that receiving an allowance causes children to be 
+Science and Common Sense  |  13more financiall y responsible, nor is ther e any scientific e vidence that i t causes them to be ma terialistic. 
+Although this kind o f unc ertainty c an be pr oblematic fr om a pr actical perspe ctive—for e xample, making 
+it dif ficult to de cide wha t to do when our childr en ask f or an allo wance—it is e xciting fr om a scien tific 
+perspective. If we do not know the answer to an interesting and empirically testable question, science, and 
+perhaps even you as a researcher, may be able to provide the answer. 
+Notes 
+1. Bushman, B. J. (2002). Does venting anger feed or extinguish the flame? Catharsis, rumination, distraction, anger, and 
+aggressive responding. Personality and Social Psychology Bulletin, 28, 724–731. 
+2. Kassin, S. M., & Gudjonsson, G. H. (2004). The psychology of confession evidence: A review of the literature and issues. 
+Psychological Science in the Public Interest, 5, 33–67. 
+3. Lilienfeld, S. O., Lynn, S. J., Ruscio, J., & Beyerstein, B. L. (2010). 50 great myths of popular psychology. Malden, MA: 
+Wiley-Blackwell. 
+4. Gilovich, T. (1991). How we know what isn’t so: The fallibility of human reason in everyday life. New York, NY: Free Press. 
+5. Mann, T., Tomiyama, A. J., Westling, E., Lew, A., Samuels, B., & Chatman, J. (2007). Medicare’s search for effective 
+obesity treatments: Diets are not the answer. American Psychologist, 62, 220–233. 
+14  |  Science and Common Sense5.  Experimental and Clinical Psychologists 
+Learning Objectives 
+1. Define the clinical practice of psychology and distinguish it from experimental psychology. 
+2. Explain how science is relevant to clinical practice. 
+3. Define the concept of an empirically supported treatment and give some examples. 
+Who Conducts Scientific Research in Psychology? 
+Experimental Psychologists 
+Scientific r esearch in psy chology is g enerally c onducted b y pe ople wi th doc toral degr ees ( usually 
+the doctor of philosophy [Ph.D.]) and master’s degrees in psychology and related fields, often supported by 
+research assistants with bachelor’s degrees or other r elevant training. Some of them work for government 
+agencies (e.g., doing r esearch on the impac t o f public policies ), na tional associa tions (e.g., the Americ an 
+Psychological Associa tion), non-pr ofit or ganizations ( e.g., N ational Allianc e on M ental Illness ), or in the 
+private sector (e.g., in product marketing and development; organizational behavior). However, the majority 
+of them ar e college and univ ersity faculty, who o ften collaborate with their gr aduate and under graduate 
+students. Althoug h some r esearchers ar e tr ained and lic ensed as clinicians f or men tal he alth 
+work—especially those who c onduct r esearch in clinic al psy chology—the majori ty ar e not. I nstead, the y 
+have expertise in one or more of the many other subfields of psychology: behavioral neuroscience, cognitive 
+psychology, developmental psychology, personality psychology, social psychology, and so on. Doctoral-level 
+researchers might be emplo yed to c onduct research full-time or, like many college and univ ersity faculty 
+members, to conduct research in addition to teaching classes and serving their institution and community 
+in other ways. 
+Of course, people also c onduct research in psy chology because they enjoy the in tellectual and te chnical 
+challenges in volved and the sa tisfaction o f c ontributing to scien tific kno wledge o f human beha vior. You 
+might find tha t y ou en joy the pr ocess too. I f so, y our c ollege or univ ersity mig ht o ffer oppor tunities to 
+get involved in ong oing research as ei ther a r esearch assistant or a par ticipant. Of c ourse, you might find 
+that y ou do not en joy the pr ocess o f c onducting scien tific r esearch in psy chology. B ut a t le ast y ou will 
+have a be tter understanding o f where scientific knowledge in psy chology comes from, an appr eciation of 
+its str engths and limi tations, and an a wareness o f ho w i t c an be applie d to sol ve pr actical pr oblems in 
+psychology and everyday life. 
+Experimental and Clinical Psychologists  |  15 
+Scientific Psychology Blogs 
+A fun and easy way to follow current scientific research in psychology is to read any of the many excellent 
+blogs devoted to summarizing and commenting on new findings. Among them are the following: 
+Research Digest, http://digest.bps.org.uk/ 
+Talk Psych, http://www.talkpsych.com/ 
+Brain Blogger, http://brainblogger.com/ 
+Mind Hacks, http://mindhacks.com/ 
+PsyBlog, http://www.spring.org.uk 
+You can also browse to http://www.researchblogging.org, select psychology as your topic, and read entries 
+from a wide variety of blogs. 
+Clinical Psychologists 
+Psychology is the scientific study of behavior and mental processes. But it is also the application of scientific 
+research to “help pe ople, or ganizations, and c ommunities func tion be tter” ( American P sychological 
+Association, 2011) 1. B y far the most c ommon and widel y kno wn applic ation is the 
+clinical practice of psychology—the diagnosis and tr eatment o f psy chological disor ders and r elated 
+problems. Let us use the term  clinical practice broadly to r efer to the ac tivities of clinical and c ounseling 
+psychologists, school psy chologists, marriag e and famil y ther apists, lic ensed clinic al social w orkers, and 
+others who work with people individually or in small groups to identify and help address their psychological 
+problems. I t is impor tant to c onsider the r elationship be tween scien tific r esearch and clinic al pr actice 
+because many students are especially interested in clinical practice, perhaps even as a career. 
+The main poin t is tha t psy chological disor ders and other beha vioral pr oblems ar e par t o f the na tural 
+world. This means that questions about their nature, causes, and consequences are empirically testable and 
+therefore subject to scientific study. As with other questions about human beha vior, we cannot rely on our 
+intuition or common sense for detailed and accurate answers. Consider, for example, that dozens of popular 
+books and thousands o f websites claim that adult children of alcoholics have a distinct personality profile, 
+including low self-esteem, feelings of powerlessness, and dif ficulties with intimacy. Although this sounds 
+plausible, scientific research has demonstrated that adult children of alcoholics are no more likely to have 
+these problems than an ybody else (Lilienf eld et al., 2010 )2. Similarly, questions about whe ther a par ticular 
+psychotherapy is effective are empirically testable questions that can be answered by scientific research. If a 
+new psychotherapy is an effective treatment for depression, then systematic observation should reveal that 
+depressed people who receive this psychotherapy improve more than a similar gr oup of depressed people 
+16  |  Experimental and Clinical Psychologistswho do not r eceive this psychotherapy (or who receive some alternative treatment). Treatments that have 
+been shown to work in this way are called empirically supported treatments. 
+ 
+Empirically Supported Treatments 
+An empirically supported treatment is one that has been studied scientifically and shown to result in greater 
+improvement than no treatment, a placebo, or some alternative treatment. These include many forms of 
+psychotherapy, which can be as effective as standard drug therapies. Among the forms of psychotherapy with 
+strong empirical support are the following: 
+• Acceptance and committment therapy (ACT). for depression, mixed anxiety disorders, psychosis, chronic 
+pain, and obsessive-compulsive disorder. 
+• Behavioral couples therapy. For alcohol use disorders. 
+• Cognitive behavioral therapy (CBT). For many disorders including eating disorders, depression, anxiety 
+disorders, etc. 
+• Exposure therapy. For post-traumatic stress disorder and phobias. 
+• Exposure therapy with response prevention. For obsessive-compulsive disorder. 
+• Family-based treatment. For eating disorders. 
+For a more complete list, see the following website, which is maintained by Division 12 of the American 
+Psychological Association, the Society for Clinical Psychology: http://www.div12.org/psychological-treatments 
+ 
+Many in the clinic al psychology community have argued that their field has not paid enoug h attention to 
+scientific research—for example, by failing to use empiric ally supported treatments—and have suggested 
+a variety of changes in the w ay clinicians ar e trained and tr eatments are evaluated and put in to practice. 
+Others believe that these claims ar e exaggerated and the sugg ested changes are unnecessary (Norcross, 
+Beutler, & Le vant, 2005) 3. On both sides o f the deba te, ho wever, ther e is agr eement tha t a scien tific 
+approach to clinical psychology is essential if the goal is to diagnose and treat psychological problems based 
+on detailed and accurate knowledge about those pr oblems and the most ef fective treatments for them. So 
+not only is it important for scientific research in clinical psychology to continue, but it is also important for 
+clinicians who never conduct a scientific study themselves to be scientifically literate so that they can read 
+and evaluate new research and make treatment decisions based on the best available evidence. 
+Notes 
+1. American Psychological Association. (2011). About APA. Retrieved from http://www.apa.org/about 
+Experimental and Clinical Psychologists  |  172. Lilienfeld, S. O., Lynn, S. J., Ruscio, J., & Beyerstein, B. L. (2010). 50 great myths of popular psychology. Malden, MA: 
+Wiley-Blackwell. 
+3. Norcross, J. C., Beutler, L. E., & Levant, R. F. (Eds.). (2005). Evidence-based practices in mental health: Debate and 
+dialogue on the fundamental questions. Washington, DC: American Psychological Association. 
+18  |  Experimental and Clinical Psychologists6.  Key Takeaways and Exercises 
+Key Takeaways 
+• Knowledge is acquired in many ways including intuition, authority, rationalism, empiricism, and the 
+scientific method 
+• Science is a general way of understanding the natural world. Its three fundamental features are 
+systematic empiricism, empirical questions, and public knowledge. 
+• Psychology is a science because it takes the scientific approach to understanding human behavior. 
+• Pseudoscience refers to beliefs and activities that are claimed to be scientific but lack one or more of the 
+three features of science. It is important to distinguish the scientific approach to understanding human 
+behavior from the many pseudoscientific approaches. 
+• Psychologists conduct research in order to describe basic phenomenon, to make predictions about 
+future behaviors, and to explain the causes of behavior. 
+• Basic research is conducted to learn about human behavior for its own sake, and applied research is 
+conducted to solve some practical problem. Both are valuable, and the distinction between the two is not 
+always clear-cut. 
+• People’s intuitions about human behavior, also known as folk psychology, often turn out to be wrong. This 
+is one primary reason that psychology relies on science rather than common sense. 
+• Researchers in psychology cultivate certain critical-thinking attitudes. One is skepticism. They search for 
+evidence and consider alternatives before accepting a claim about human behavior as true. Another is 
+tolerance for uncertainty. They withhold judgment about whether a claim is true or not when there is 
+insufficient evidence to decide. 
+• Scientific research in psychology is conducted mainly by people with doctoral degrees in psychology and 
+related fields, most of whom are college and university faculty members. They do so for professional and 
+for personal reasons, as well as to contribute to scientific knowledge about human behavior. Most 
+psychologists are experimental psychologists and they conduct research. 
+• The clinical practice of psychology—the diagnosis and treatment of psychological problems—is one 
+important application of the scientific discipline of psychology. 
+• Scientific research is relevant to clinical practice because it provides detailed and accurate knowledge 
+about psychological problems and establishes whether treatments are effective. 
+Exercises 
+• Practice: Consider three things you know and determine how you acquired that knowledge (authority, 
+intuition, rationalism, empiricism, the scientific method). 
+• Practice: Try to generate different research questions to describe, predict, and explain a phenomenon 
+that interests you. 
+Key Takeaways and Exercises  |  19• Practice: Based on your own experience or on things you have already learned about psychology, list 
+three basic research questions and three applied research questions of interest to you. 
+• Practice: List three empirical questions about human behavior. List three nonempirical questions about 
+human behavior. 
+• Practice: For each of the following intuitive beliefs about human behavior, list three reasons that it might 
+be true and three reasons that it might not be true: 
+◦ You cannot truly love another person unless you love yourself. 
+◦ People who receive “crisis counseling” immediately after experiencing a traumatic event are better 
+able to cope with that trauma in the long term. 
+◦ Studying is most effective when it is always done in the same location. 
+• Watch the following video, in which psychologist Scott Lilienfeld talks about confirmation bias, tunnel 
+vision, and using evidence to evaluate the world around us: 
+One or more interactive elements has been excluded from this version of the text. You can view them 
+online here: https://kpu.pressbooks.pub/psychmethods4e/?p=250#oembed-2 
+◦ Reading in print? Go to https://youtu.be/gKVe0-pWjA0 or scan this QR code with your phone: 
+• Discussion: Consider the following psychological claim. “People’s choice of spouse is strongly influenced 
+by their perception of their own parents. Some choose a spouse who is similar in some way to one of 
+their parents. Others choose a spouse who is different from one of their parents.” Is this claim falsifiable? 
+Why or why not? 
+• Discussion: People sometimes suggest that psychology cannot be a science because either (a) human 
+behavior cannot be predicted with perfect accuracy or (b) much of its subject matter (e.g., thoughts and 
+feelings) cannot be observed directly. Do you agree or disagree with each of these ideas? Why? 
+• Watch the following video by PHD Comics for an overview of open access publishing and why it matters: 
+One or more interactive elements has been excluded from this version of the text. You can view 
+them online here: https://kpu.pressbooks.pub/psychmethods4e/?p=250#oembed-1 
+◦ Reading in print? Go to https://youtu.be/L5rVH1KGBCY or scan this QR code with your phone: 
+20  |  Key Takeaways and Exercises• Discussion: Some clinicians argue that what they do is an “art form” based on intuition and personal 
+experience and therefore cannot be evaluated scientifically. Write a paragraph about how satisfied you 
+would be with such a clinician and why from each of three perspectives: 
+◦ a potential client of the clinician 
+◦ a judge who must decide whether to allow the clinician to testify as an expert witness in a child 
+abuse case 
+◦ an insurance company representative who must decide whether to reimburse the clinician for their 
+services 
+• Practice: Create a short list of questions that a client could ask a clinician to determine whether they pay 
+sufficient attention to scientific research. 
+Video Attributions 
+• ESC 2017 – Scott Lilienfeld: “Tunnel Vision: Confirmation Bias” © ESC European Skeptics Congress is 
+licensed under a CC BY (Attribution) license 
+• “Open Access Explained!” by Piled Higher and Deeper (PHD Comics). CC BY (Attribution) 
+Key Takeaways and Exercises  |  21

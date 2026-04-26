@@ -1,0 +1,1154 @@
+CHAPTER  VI 
+NON-EXPERIMENTAL RESEARCH 
+What do the following classic studies have in common? 
+• Stanley Milgram found that about two thirds of his research participants were willing to administer 
+dangerous shocks to another person just because they were told to by an authority figure (Milgram, 
+1963)1. 
+• Elizabeth Loftus and Jacqueline Pickrell showed that it is relatively easy to “implant” false memories in 
+people by repeatedly asking them about childhood events that did not actually happen to them (Loftus 
+& Pickrell, 1995)2. 
+• John Cacioppo and Richard Petty evaluated the validity of their Need for Cognition Scale—a measure of 
+the extent to which people like and value thinking—by comparing the scores of university professors 
+with those of factory workers (Cacioppo & Petty, 1982)3. 
+• David Rosenhan found that confederates who went to psychiatric hospitals claiming to have heard 
+voices saying things like “empty” and “thud” were labeled as schizophrenic by the hospital staff and 
+kept there even though they behaved normally in all other ways (Rosenhan, 1973)4. 
+The answer for purposes o f this chapter is tha t they are not e xperiments. In this chapter , we look mor e 
+closely at non-experimental research. We beg in wi th a g eneral defini tion of non-experimental research, 
+along with a discussion of when and why non-experimental research is more appropriate than experimental 
+research. W e then look separ ately a t t wo impor tant t ypes o f non-e xperimental r esearch: c orrelational 
+research and observational research. 
+Notes 
+1. Milgram, S. (1963). Behavioral study of obedience. Journal of Abnormal and Social Psychology, 67, 371–378. 
+2. Loftus, E. F., & Pickrell, J. E. (1995). The formation of false memories. Psychiatric Annals, 25, 720–725. 
+3. Cacioppo, J. T., & Petty, R. E. (1982). The need for cognition. Journal of Personality and Social Psychology, 42, 116–131. 
+4. Rosenhan, D. L. (1973). On being sane in insane places. Science, 179, 250–258. 
+Non-Experimental Research  |  14128.  Overview of Non-Experimental Research 
+Learning Objectives 
+1. Define non-experimental research, distinguish it clearly from experimental research, and give several 
+examples. 
+2. Explain when a researcher might choose to conduct non-experimental research as opposed to 
+experimental research. 
+What Is Non-Experimental Research? 
+Non-experimental research is research that lacks the manipulation of an independent variable. Rather than 
+manipulating an independent variable, researchers conducting non-experimental research simply measure 
+variables as they naturally occur (in the lab or real world). 
+Most r esearchers in psy chology c onsider the distinc tion be tween e xperimental and non-e xperimental 
+research to be an e xtremely important one. This is be cause althoug h experimental research can provide 
+strong evidence that changes in an independen t variable cause differences in a dependen t variable, non-
+experimental research generally cannot. As we will see, however, this inabili ty to make causal conclusions 
+does not me an that non-experimental research is less impor tant than e xperimental research. It is simpl y 
+used in cases where experimental research is not able to be carried out. 
+When to Use Non-Experimental Research 
+As w e sa w in the last chapter , e xperimental r esearch is appr opriate when the r esearcher has a spe cific 
+research question or h ypothesis about a c ausal r elationship be tween t wo v ariables—and i t is possi ble, 
+feasible, and e thical to manipula te the independen t v ariable. I t stands to r eason, ther efore, tha t non-
+experimental research is appropriate—even necessary—when these conditions are not met. There are many 
+times in which non-experimental research is preferred, including when: 
+• the research question or hypothesis relates to a single variable rather than a statistical relationship 
+between two variables (e.g., how accurate are people’s first impressions?). 
+• the research question pertains to a non-causal statistical relationship between variables (e.g., is there a 
+correlation between verbal intelligence and mathematical intelligence?). 
+• the research question is about a causal relationship, but the independent variable cannot be 
+Overview of Non-Experimental Research  |  143manipulated or participants cannot be randomly assigned to conditions or orders of conditions for 
+practical or ethical reasons (e.g., does damage to a person’s hippocampus impair the formation of long-
+term memory traces?). 
+• the research question is broad and exploratory, or is about what it is like to have a particular 
+experience (e.g., what is it like to be a working mother diagnosed with depression?). 
+Again, the choic e be tween the e xperimental and non-e xperimental appr oaches is g enerally dic tated b y 
+the na ture o f the r esearch question. R ecall the thr ee g oals o f scienc e ar e to descri be, to pr edict, and 
+to e xplain. I f the g oal is to e xplain and the r esearch question per tains to c ausal r elationships, then the 
+experimental approach is t ypically preferred. If the g oal is to descri be or to pr edict, a non-e xperimental 
+approach is appr opriate. But the t wo approaches can also be use d to addr ess the same r esearch question 
+in c omplementary w ays. F or e xample, in Milgr am’s orig inal ( non-experimental) obe dience stud y, he w as 
+primarily interested in one v ariable—the extent to which par ticipants obeyed the researcher when he told 
+them to shock the c onfederate—and he obser ved all par ticipants perf orming the same task under the 
+same conditions. However, Milgram subsequently conducted experiments to explore the factors that affect 
+obedience. He manipulated several independent variables, such as the distanc e between the experimenter 
+and the participant, the participant and the confederate, and the location of the study (Milgram, 1974)1. 
+Types of Non-Experimental Research 
+Non-experimental r esearch falls in to t wo br oad c ategories: c orrelational r esearch and obser vational 
+research. 
+The most c ommon type of non-experimental research conducted in psy chology is c orrelational research. 
+Correlational r esearch is c onsidered non-e xperimental be cause i t f ocuses on the sta tistical r elationship 
+between two variables but does not include the manipulation of an independent variable. More specifically, 
+in correlational research, the r esearcher me asures t wo v ariables wi th li ttle or no a ttempt to c ontrol 
+extraneous v ariables and then assesses the r elationship be tween them. As an e xample, a r esearcher 
+interested in the relationship between self-esteem and school achievement could collect data on students’ 
+self-esteem and their GPAs to see if the two variables are statistically related. 
+Observational r esearch is non-e xperimental be cause i t f ocuses on making obser vations o f beha vior in 
+a na tural or labor atory se tting wi thout manipula ting an ything. Milgram’s orig inal obe dience stud y w as 
+non-experimental in this w ay. H e w as primaril y in terested in the e xtent to which par ticipants obe yed 
+the researcher when he told them to shock the c onfederate and he obser ved all par ticipants performing 
+the same task under the same c onditions. The stud y b y Lo ftus and Pickr ell descri bed a t the beg inning 
+of this chapter is also a g ood e xample o f obser vational r esearch. The v ariable w as whe ther par ticipants 
+“remembered” having experienced mildly traumatic childhood events (e.g., getting lost in a shopping mall) 
+that the y had not ac tually e xperienced but tha t the r esearchers ask ed them about r epeatedly. I n this 
+particular stud y, ne arly a thir d o f the par ticipants “ remembered” a t le ast one e vent. ( As wi th Milgr am’s 
+original study, this study inspired several later experiments on the factors that affect false memories). 
+144  |  Overview of Non-Experimental Research 
+Cross-Sectional, Longitudinal, and Cross-Sequential Studies 
+When psychologists wish to study change over time (for example, when developmental psychologists wish 
+to study aging) they usually take one of three non-experimental approaches: cross-sectional, longitudinal, 
+or cross-sequential. Cross-sectional studies involve comparing two or more pre-existing groups of people 
+(e.g., children at different stages of development). What makes this approach non-experimental is that there 
+is no manipulation of an independent variable and no random assignment of participants to groups. Using 
+this design, developmental psychologists compare groups of people of different ages (e.g., young adults 
+spanning from 18-25 years of age versus older adults spanning 60-75 years of age) on various dependent 
+variables (e.g., memory, depression, life satisfaction). Of course, the primary limitation of using this design 
+to study the effects of aging is that differences between the groups other than age may account for 
+differences in the dependent variable. For instance, differences between the groups may reflect the 
+generation that people come from (a cohort effect) rather than a direct effect of age. For this reason, 
+longitudinal studies, in which one group of people is followed over time as they age, offer a superior means 
+of studying the effects of aging. However, longitudinal studies are by definition more time consuming and 
+so require a much greater investment on the part of the researcher and the participants. A third approach, 
+known as cross-sequential studies, combines elements of both cross-sectional and longitudinal studies. 
+Rather than measuring differences between people in different age groups or following the same people 
+over a long period of time, researchers adopting this approach choose a smaller period of time during which 
+they follow people in different age groups. For example, they might measure changes over a ten year period 
+among participants who at the start of the study fall into the following age groups: 20 years old, 30 years 
+old, 40 years old, 50 years old, and 60 years old. This design is advantageous because the researcher reaps 
+the immediate benefits of being able to compare the age groups after the first assessment. Further, by 
+following the different age groups over time they can subsequently determine whether the original 
+differences they found across the age groups are due to true age effects or cohort effects. 
+ 
+The t ypes o f r esearch w e ha ve discusse d so far ar e all quan titative, r eferring to the fac t tha t the da ta 
+consist of numbers that are analyzed using statistical techniques. But as you will learn in this chapter, many 
+observational research studies ar e more qualitative in na ture. In qualitative research, the da ta are usually 
+nonnumerical and therefore cannot be analyzed using statistical techniques. Rosenhan’s observational study 
+of the e xperience of people in psy chiatric wards was primarily qualitative. The da ta were the notes tak en 
+by the “ pseudopatients”—the pe ople pretending to ha ve he ard v oices—along wi th their hospi tal records. 
+Rosenhan’s anal ysis c onsists mainl y o f a wri tten description o f the e xperiences o f the pseudopa tients, 
+supported by several concrete examples. To illustrate the hospital staff’s tendency to “depersonalize” their 
+patients, he noted, “Upon being admitted, I and other pseudopatients took the initial physical examinations 
+in a semi-public r oom, wher e staf f members w ent about their o wn business as if w e w ere not ther e” 
+(Rosenhan, 1973, p. 256 )2. Qualitative data has a separ ate set of analysis tools depending on the r esearch 
+Overview of Non-Experimental Research  |  145question. For example, thematic analysis would focus on themes tha t emerge in the da ta or c onversation 
+analysis would focus on the way the words were said in an interview or focus group. 
+Internal Validity Revisited 
+Recall tha t in ternal v alidity is the e xtent to which the design o f a stud y suppor ts the c onclusion tha t 
+changes in the independen t v ariable c aused an y obser ved dif ferences in the dependen t v ariable. Figure 
+6.1 shows ho w e xperimental, quasi-e xperimental, and non-e xperimental ( correlational) r esearch v ary in 
+terms of internal validity. Experimental research tends to be hig hest in internal validity because the use of 
+manipulation (of the independent variable) and control (of extraneous variables) help to rule out alternative 
+explanations for the observed relationships. If the average score on the dependent variable in an experiment 
+differs across conditions, it is qui te likely that the independen t variable is r esponsible for that difference. 
+Non-experimental (correlational) r esearch is lo west in in ternal v alidity be cause these designs fail to use 
+manipulation or c ontrol. Quasi-experimental r esearch ( which will be descri bed in mor e de tail in a 
+subsequent chapter ) falls in the middle be cause i t c ontains some, but not all, o f the f eatures o f a true 
+experiment. For instance, it may fail to use r andom assignment to assign par ticipants to gr oups or fail to 
+use counterbalancing to c ontrol for potential order effects. Imagine, for example, that a r esearcher finds 
+two similar schools, star ts an anti-bullying program in one, and then finds f ewer bullying incidents in that 
+“treatment school” than in the “control school.” While a comparison is being made with a control condition, 
+the inability to randomly assign children to schools c ould still mean that students in the tr eatment school 
+differed from students in the control school in some other way that could explain the difference in bullying 
+(e.g., there may be a selection effect). 
+Figure 6.1 Internal Validity of Correlation, Quasi-Experimental, and Experimental Studies. Experiments are generally high 
+in internal validity, quasi-experiments lower, and correlation (non-experimental) studies lower still. 
+Notice also in  Figure 6.1  that ther e is some o verlap in the in ternal v alidity o f e xperiments, quasi-
+experiments, and c orrelational ( non-experimental) studies. F or e xample, a poor ly designe d e xperiment 
+that includes man y c onfounding v ariables c an be lo wer in in ternal v alidity than a w ell-designed quasi-
+experiment with no obvious confounding variables. Internal validity is also only one of several validities that 
+one might consider, as noted in Chapter 5. 
+146  |  Overview of Non-Experimental ResearchNotes 
+1. Milgram, S. (1974). Obedience to authority: An experimental view. New York, NY: Harper & Row. 
+2. Rosenhan, D. L. (1973). On being sane in insane places. Science, 179, 250–258. 
+Overview of Non-Experimental Research  |  14729.  Correlational Research 
+Learning Objectives 
+1. Define correlational research and give several examples. 
+2. Explain why a researcher might choose to conduct correlational research rather than experimental 
+research or another type of non-experimental research. 
+3. Interpret the strength and direction of different correlation coefficients. 
+4. Explain why correlation does not imply causation. 
+What Is Correlational Research? 
+Correlational r esearch is a t ype o f non-e xperimental r esearch in which the r esearcher me asures t wo 
+variables (binary or continuous) and assesses the statistical relationship (i.e., the correlation) between them 
+with little or no effort to control extraneous variables. There are many reasons that researchers interested 
+in sta tistical r elationships be tween v ariables w ould choose to c onduct a c orrelational stud y r ather than 
+an experiment. The first is tha t they do not belie ve that the sta tistical relationship is a c ausal one or ar e 
+not interested in c ausal relationships. Recall t wo goals of science are to descri be and to pr edict and the 
+correlational research strategy allows researchers to achieve both of these goals. Specifically, this strategy 
+can be used to describe the strength and direction of the relationship between two variables and if there is 
+a relationship between the variables then the researchers can use scores on one variable to predict scores 
+on the other ( using a sta tistical technique called regression, which is discusse d further in the se ction on 
+Complex Correlation in this chapter). 
+Another reason that researchers would choose to use a c orrelational study rather than an e xperiment is 
+that the sta tistical relationship of interest is thoug ht to be c ausal, but the r esearcher cannot manipulate 
+the independent variable because it is impossible, impractical, or unethical. For example, while a researcher 
+might be in terested in the r elationship be tween the fr equency pe ople use c annabis and their memor y 
+abilities they cannot ethically manipulate the fr equency that people use c annabis. As such, the y must r ely 
+on the c orrelational research strategy; they must simpl y measure the fr equency that people use c annabis 
+and measure their memory abilities using a standar dized test of memory and then de termine whether the 
+frequency people use cannabis is statistically related to memory test performance. 
+Correlation is also used to establish the reliability and validity of measurements. For example, a researcher 
+might evaluate the v alidity of a brief e xtraversion test b y administering i t to a lar ge group of participants 
+along with a long er extraversion test that has already been shown to be v alid. This researcher might then 
+check to se e whe ther par ticipants’ sc ores on the brief test ar e str ongly c orrelated wi th their sc ores on 
+148  |  Correlational Researchthe longer one. N either test sc ore is thoug ht to c ause the other , so ther e is no independen t variable to 
+manipulate. I n fac t, the terms  independent variable  and dependent variabl e do not appl y to this kind o f 
+research. 
+Another strength of correlational research is tha t it is o ften higher in e xternal validity than e xperimental 
+research. R ecall ther e is t ypically a tr ade-off be tween in ternal v alidity and e xternal v alidity. As gr eater 
+controls are added to experiments, internal validity is increased but often at the expense of external validity 
+as artificial conditions are introduced that do not exist in reality. In contrast, correlational studies typically 
+have low internal validity because nothing is manipula ted or c ontrolled but the y often have high external 
+validity. Since nothing is manipulated or controlled by the experimenter the results are more likely to reflect 
+relationships that exist in the real world. 
+Finally, extending upon this trade-off between internal and external validity, correlational research can help 
+to provide converging evidence for a the ory. If a the ory is suppor ted by a true e xperiment that is hig h in 
+internal v alidity as w ell as b y a c orrelational stud y tha t is hig h in e xternal v alidity then the r esearchers 
+can ha ve mor e c onfidence in the v alidity o f their the ory. As a c oncrete e xample, c orrelational studies 
+establishing that there is a r elationship between watching violent television and aggr essive behavior have 
+been complemented by experimental studies c onfirming that the r elationship is a c ausal one (B ushman & 
+Huesmann, 2001)1. 
+ 
+Does Correlational Research Always Involve Quantitative Variables? 
+A common misconception among beginning researchers is that correlational research must involve two 
+quantitative variables, such as scores on two extraversion tests or the number of daily hassles and number 
+of symptoms people have experienced. However, the defining feature of correlational research is that the 
+two variables are measured—neither one is manipulated—and this is true regardless of whether the 
+variables are quantitative or categorical. Imagine, for example, that a researcher administers the Rosenberg 
+Self-Esteem Scale to 50 American college students and 50 Japanese college students. Although this “feels” 
+like a between-subjects experiment, it is a correlational study because the researcher did not manipulate 
+the students’ nationalities. The same is true of the study by Cacioppo and Petty comparing college faculty 
+and factory workers in terms of their need for cognition. It is a correlational study because the researchers 
+did not manipulate the participants’ occupations. 
+Figure 6.2 shows data from a hypothetical study on the relationship between whether people make a daily 
+list of things to do (a “to-do list”) and stress. Notice that it is unclear whether this is an experiment or a 
+correlational study because it is unclear whether the independent variable was manipulated. If the 
+researcher randomly assigned some participants to make daily to-do lists and others not to, then it is an 
+experiment. If the researcher simply asked participants whether they made daily to-do lists, then it is a 
+correlational study. The distinction is important because if the study was an experiment, then it could be 
+Correlational Research  |  149concluded that making the daily to-do lists reduced participants’ stress. But if it was a correlational study, it 
+could only be concluded that these variables are statistically related. Perhaps being stressed has a negative 
+effect on people’s ability to plan ahead (the directionality problem). Or perhaps people who are more 
+conscientious are more likely to make to-do lists and less likely to be stressed (the third-variable problem). 
+The crucial point is that what defines a study as experimental or correlational is not the variables being 
+studied, nor whether the variables are quantitative or categorical, nor the type of graph or statistics used to 
+analyze the data. What defines a study is how the study is conducted. 
+ 
+Figure 6.2 Results of a Hypothetical Study on Whether People Who Make Daily To-Do Lists Experience Less Stress Than 
+People Who Do Not Make Such Lists 
+Data Collection in Correlational Research 
+Again, the defining f eature o f c orrelational r esearch is tha t nei ther v ariable is manipula ted. I t does not 
+matter how or where the variables are measured. A researcher could have participants come to a laboratory 
+to complete a computerized backward digit span task and a c omputerized risky decision-making task and 
+then assess the r elationship between par ticipants’ sc ores on the t wo tasks. Or a r esearcher c ould g o to 
+a shopping mall to ask pe ople about their a ttitudes to ward the en vironment and their shopping habi ts 
+and then assess the r elationship between these two variables. Both of these studies would be correlational 
+because no independent variable is manipulated. 
+150  |  Correlational ResearchCorrelations Between Quantitative Variables 
+Correlations between quantitative variables are often presented using scatterplots. Figure 6.3 shows some 
+hypothetical data on the r elationship between the amoun t of stress people are under and the number o f 
+physical symptoms they have. Each point in the scatterplot represents one person’s score on both variables. 
+For example, the cir cled point in Figure 6.3 r epresents a person whose str ess score was 10 and who had 
+three physical symptoms. T aking all the poin ts into account, one c an see that people under mor e stress 
+tend to ha ve more physical symptoms. This is a g ood example of a positive relationship, in which hig her 
+scores on one variable tend to be associated with higher scores on the other. In other words, they move in 
+the same direction, either both up or both do wn. A negative relationship is one in which hig her scores on 
+one variable tend to be associa ted with lower scores on the other . In other w ords, they move in opposi te 
+directions. There is a nega tive relationship between stress and immune system func tioning, for example, 
+because higher stress is associated with lower immune system functioning. 
+ 
+Figure 6.3 Scatterplot Showing a Hypothetical Positive Relationship Between Stress and Number of Physical Symptoms. The 
+circled point represents a person whose stress score was 10 and who had three physical symptoms. Pearson’s r for these data 
+is +.51. 
+The str ength o f a c orrelation be tween quan titative v ariables is t ypically me asured using a sta tistic 
+called Pearson’s Correlation Coefficient (or Pearson's r). As Figure 6.4 shows, Pearson’s r ranges from −1.00 
+(the strongest possible negative relationship) to +1.00 (the strongest possible positive relationship). A value 
+of 0 me ans ther e is no r elationship be tween the t wo v ariables. W hen P earson’s r is 0 , the poin ts on a 
+scatterplot form a shapeless “ cloud.” As i ts value moves toward −1.00 or +1.00, the poin ts come closer and 
+closer to falling on a single straight line. Correlation coefficients near ±.10 are considered small, values near 
+Correlational Research  |  151± .30 are considered medium, and values near ±.50 are considered large. Notice that the sign of Pearson’s r is 
+unrelated to i ts strength. Pearson’s r values of +.30 and −.30 , for example, are equally strong; it is just tha t 
+one represents a moderate positive relationship and the other a moder ate negative relationship. With the 
+exception of reliability coefficients, most correlations that we find in P sychology are small or moder ate in 
+size. The website http://rpsychologist.com/d3/correlation/, created by Kristoffer Magnusson, provides an 
+excellent interactive visualization of correlations that permits you to adjust the str ength and direction of a 
+correlation while witnessing the corresponding changes to the scatterplot. 
+ 
+Figure 6.4 Range of Pearson’s r, From −1.00 (Strongest Possible Negative Relationship), Through 0 (No Relationship), to +1.00 
+(Strongest Possible Positive Relationship) 
+There are two common situations in which the value of Pearson’s r can be misleading. Pearson’s r is a good 
+measure onl y f or line ar r elationships, in which the poin ts ar e best appr oximated b y a str aight line. I t is 
+not a g ood measure for nonlinear relationships, in which the poin ts are better approximated by a cur ved 
+line. F igure 6.5, f or e xample, shows a h ypothetical r elationship be tween the amoun t o f sle ep pe ople g et 
+per nig ht and their le vel o f depr ession. I n this e xample, the line tha t best appr oximates the poin ts is a 
+curve—a kind of upside-down “U”—because people who get about eight hours of sleep tend to be the le ast 
+depressed. Those who g et too li ttle sleep and those who g et too much sle ep tend to be mor e depressed. 
+Even though Figure 6.5 shows a fairly strong relationship between depression and sleep, Pearson’s r would 
+be close to z ero because the poin ts in the sc atterplot are not well fit by a sing le straight line. This me ans 
+that it is important to make a scatterplot and confirm that a relationship is approximately linear before using 
+Pearson’s r. Nonlinear relationships are fairly common in psychology, but measuring their strength is beyond 
+the scope of this book. 
+ 
+152  |  Correlational ResearchFigure 6.5 Hypothetical Nonlinear Relationship Between Sleep and Depression 
+The other c ommon situations in which the v alue of Pearson’s r can be misle ading is when one or both o f 
+the v ariables ha ve a limi ted r ange in the sample r elative to the popula tion. This pr oblem is r eferred to 
+as restriction of range. Assume, f or example, that there is a str ong negative correlation between people’s 
+age and their enjoyment of hip hop music as shown by the scatterplot in Figure 6.6. Pearson’s r here is −.77. 
+However, if we were to collect data only from 18- to 24-year-olds—represented by the shaded area of Figure 
+6.6—then the relationship would seem to be quite weak. In fact, Pearson’s r for this restricted range of ages 
+is 0. It is a g ood idea, therefore, to design studies to a void restriction of range. For example, if ag e is one 
+of your primary variables, then y ou can plan to c ollect data from people of a wide r ange of ages. Because 
+restriction of range is not al ways anticipated or e asily avoidable, however, it is g ood practice to e xamine 
+your data for possible restriction of range and to interpret Pearson’s r in light of it. (There are also statistical 
+methods to correct Pearson’s r for restriction of range, but they are beyond the scope of this book). 
+ 
+Correlational Research  |  153Figure 6.6 Hypothetical Data Showing How a Strong Overall Correlation Can Appear to Be Weak When One Variable Has a 
+Restricted Range. The overall correlation here is −.77, but the correlation for the 18- to 24-year-olds (in the blue box) is 0. 
+Correlation Does Not Imply Causation 
+You have probably heard repeatedly that “Correlation does not impl y causation.” An amusing e xample of 
+this comes from a 2012 study that showed a positive correlation (Pearson’s r = 0.79) between the per capita 
+chocolate consumption of a na tion and the number o f Nobel prizes awarded to ci tizens of that nation2. It 
+seems clear, however, that this does not mean that eating chocolate causes people to win Nobel prizes, and 
+it would not make sense to try to increase the number of Nobel prizes won by recommending that parents 
+feed their children more chocolate. 
+There ar e t wo r easons tha t c orrelation does not impl y c ausation. The first is c alled 
+the directionality problem. Tw o v ariables, X and Y, c an be sta tistically r elated be cause X causes Y or 
+because Y causes X. Consider , f or e xample, a stud y sho wing tha t whe ther or not pe ople e xercise is 
+statistically r elated to ho w happ y the y ar e—such tha t pe ople who e xercise ar e happier on a verage than 
+people who do not. This statistical relationship is consistent with the idea that exercising causes happiness, 
+but it is also consistent with the idea that happiness causes exercise. Perhaps being happy gives people more 
+energy or leads them to seek opportunities to socialize with others by going to the gym. The second reason 
+that correlation does not impl y causation is called the third-variable problem. Two variables, X and Y, can 
+be statistically related not be cause X causes Y, or be cause Y causes X, but be cause some thir d variable, Z, 
+causes both X and Y. For example, the fact that nations that have won more Nobel prizes tend to have higher 
+chocolate consumption probably reflects geography in that European countries tend to have higher rates of 
+per capita chocolate consumption and invest more in education and technology (once again, per capita) than 
+many other c ountries in the w orld. Similarly, the sta tistical relationship between exercise and happiness 
+could mean that some thir d variable, such as ph ysical health, causes both o f the others. Being ph ysically 
+154  |  Correlational Researchhealthy could cause people to e xercise and c ause them to be happier . Correlations that are a r esult of a 
+third-variable are often referred to as spurious correlations. 
+Some e xcellent and amusing e xamples o f spurious c orrelations c an be f ound a t 
+http://www.tylervigen.com (Figure 6.7  provides one such example). 
+ 
+Figure 6.7 Example of a Spurious Correlation. Source: http://tylervigen.com/spurious-correlations (CC-BY 4.0) 
+“Lots of Candy Could Lead to Violence” 
+Although researchers in psychology know that correlation does not imply causation, many journalists do not. 
+One website about correlation and causation, http://jonathan.mueller.faculty.noctrl.edu/100/
+correlation_or_causation.htm, links to dozens of media reports about real biomedical and psychological 
+research. Many of the headlines suggest that a causal relationship has been demonstrated when a careful 
+reading of the articles shows that it has not because of the directionality and third-variable problems. 
+One such article is about a study showing that children who ate candy every day were more likely than other 
+children to be arrested for a violent offense later in life. But could candy really “lead to” violence, as the 
+headline suggests? What alternative explanations can you think of for this statistical relationship? How could 
+the headline be rewritten so that it is not misleading? 
+As you have learned by reading this book, there are various ways that researchers address the directionality 
+and third-variable problems. The most effective is to conduct an experiment. For example, instead of simply 
+measuring how much people exercise, a researcher could bring people into a laboratory and randomly assign 
+half of them to run on a treadmill for 15 minutes and the rest to sit on a couch for 15 minutes. Although this 
+seems like a minor change to the research design, it is extremely important. Now if the exercisers end up in 
+Correlational Research  |  155more positive moods than those who did not exercise, it cannot be because their moods affected how much 
+they exercised (because it was the researcher who used random assignment to determine how much they 
+exercised). Likewise, it cannot be because some third variable (e.g., physical health) affected both how much 
+they exercised and what mood they were in. Thus experiments eliminate the directionality and third-variable 
+problems and allow researchers to draw firm conclusions about causal relationships. 
+Media Attributions 
+• Nicholas Cage and Pool Drownings © Tyler Viegen is licensed under a CC BY (Attribution) license 
+Notes 
+1. Bushman, B. J., & Huesmann, L. R. (2001). Effects of televised violence on aggression. In D. Singer & J. Singer (Eds.), 
+Handbook of children and the media (pp. 223–254). Thousand Oaks, CA: Sage. 
+2. Messerli, F. H. (2012). Chocolate consumption, cognitive function, and Nobel laureates. New England Journal of 
+Medicine, 367, 1562-1564. 
+156  |  Correlational Research30.  Complex Correlation 
+Learning Objectives 
+1. Explain some reasons that researchers use complex correlational designs. 
+2. Create and interpret a correlation matrix. 
+3. Describe how researchers can use partial correlation and multiple regression to statistically control for 
+third variables. 
+ 
+As w e ha ve alr eady se en, r esearchers c onduct c orrelational studies r ather than e xperiments when the y 
+are in terested in nonc ausal r elationships or when the y ar e in terested in c ausal r elationships but the 
+independent variable cannot be manipulated for practical or ethical reasons. In this section, we look at some 
+approaches to c omplex correlational research that involve measuring several variables and assessing the 
+relationships among them. 
+Assessing Relationships Among Multiple Variables 
+Most complex correlational research involves measuring several variables—either binary or continuous—and 
+then assessing the sta tistical r elationships among them. F or e xample, r esearchers N athan Radclif fe and 
+William Klein studied a sample of middle-aged adults to see how their level of optimism (measured by using 
+a short questionnaire called the Lif e Orientation Test) relates to se veral other v ariables related to ha ving 
+a heart attack (Radcliffe & Klein, 200 2)1. These include d their he alth, their kno wledge of heart attack risk 
+factors, and their beliefs about their o wn risk o f having a he art attack. They found that more optimistic 
+participants w ere he althier (e.g., the y e xercised mor e and had lo wer blood pr essure), kne w about he art 
+attack risk factors, and correctly believed their own risk to be lower than that of their peers. 
+In another e xample, Ernest Jouriles and his c olleagues me asured adolesc ents’ e xperiences o f ph ysical 
+and psychological relationship aggression and their psy chological distress. Because measures of physical 
+aggression (such as the Conflict in Adolescent Dating Relationships Inventory and the Relationship Violence 
+Interview) often tend to result in highly skewed distributions, the researchers transformed their measures 
+of ph ysical aggr ession in to a dichotomous ( i.e., binar y) me asure (0 = did not oc cur, 1 = did oc cur). The y 
+did the same wi th their me asures of psychological aggression and then me asured the c orrelations among 
+these variables, finding that adolescents who experienced physical aggression were moderately likely to also 
+have experienced psychological aggression and tha t experiencing psychological aggression was related to 
+symptoms of psychological distress. (Jouriles, Garrido, Rosenfield, & McDonald, 2009)2 
+Complex Correlation  |  157This approach is often used to assess the v alidity of new psychological measures. For example, when John 
+Cacioppo and Richar d P etty cr eated their N eed f or Cogni tion Sc ale—a me asure o f the e xtent to which 
+people like to think and value thinking—they used it to measure the need for cognition for a large sample of 
+college students, along with three other variables: intelligence, socially desirable responding (the tendency 
+to g ive wha t one thinks is the “ appropriate” r esponse), and dogma tism ( Caccioppo & P etty, 1982) 3. The 
+results o f this stud y ar e summariz ed in  Table 6.1, which is a  correlation matrix showing the c orrelation 
+(Pearson’s r) between every possi ble pair o f variables in the stud y. For example, the c orrelation between 
+the need for cognition and intelligence was +.39, the correlation between intelligence and socially desirable 
+responding was +.02, and so on. (Only half the matrix is filled in because the other half would contain exactly 
+the same inf ormation. Also, be cause the c orrelation be tween a v ariable and i tself is al ways + 1.00, these 
+values are replaced with dashes throughout the matrix.) In this case, the overall pattern of correlations was 
+consistent with the researchers’ ideas about how scores on the need for cognition should be related to these 
+other constructs. 
+ 
+Table 6.1 Correlation Matrix Showing Correlations Among the Need for Cognition and Thr ee Other Variables 
+Based on Research by Cacioppo and Petty (1982) 
+Need for cognition Intelligence Social desirability Dogmatism 
+Need for cognition — 
+Intelligence +.39 — 
+Social desirability +.08 +.02 — 
+Dogmatism −.27 −.23 +.03 — 
+Factor Analysis 
+When researchers study relationships among a lar ge number o f conceptually similar v ariables, they often 
+use a complex statistical technique called factor analysis. In essence, factor analysis organizes the variables 
+into a smaller number o f clusters, such tha t they are strongly correlated wi thin each cluster but w eakly 
+correlated between clusters. Each cluster is then in terpreted as multiple measures of the same underlying 
+construct. These underlying constructs are also called “factors.” For example, when people perform a wide 
+variety of mental tasks, factor analysis typically organizes them into two main factors—one that researchers 
+interpret as mathematical intelligence (arithmetic, quantitative estimation, spatial reasoning, and so on) and 
+another that they interpret as verbal intelligence (grammar, reading comprehension, vocabulary, and so on). 
+The Big Five personality factors have been identified through factor analyses of people’s scores on a lar ge 
+number of more specific traits. For example, measures of warmth, gregariousness, activity level, and positive 
+emotions tend to be hig hly correlated with each other and ar e interpreted as r epresenting the c onstruct 
+of extraversion. As a final e xample, researchers Peter Rentfrow and Samuel Gosling ask ed more than 1,700 
+university students to rate how much they liked 14 different popular genres of music (Rentfrow & Gosling, 
+2008)4. They then submitted these 14 variables to a factor analysis, which identified four distinct factors. The 
+158  |  Complex Correlationresearchers called them Reflective and Complex (blues, jazz, classical, and folk), Intense and Rebellious (rock, 
+alternative, and he avy metal), Upbeat and Conventional  (country, soundtrack, religious, pop), and Energetic 
+and Rhythmic (rap/hip-hop, soul/funk, and electronica); see Table 6.2. 
+ 
+Table 6.2 F actor Loadings of the 14 M usic Genres on F our Varimax-Rotated Principal Components. Based on 
+Research by Rentfrow and Gosling (2003) 
+Music-preference dimension 
+Genre Reflective and 
+Complex 
+Intense and 
+Rebellious 
+Upbeat and 
+Conventional 
+Energetic and 
+Rhythmic 
+Blues .85 .01 -.09 .12 
+Jazz .83 .04 .07 .15 
+Classical .66 .14 .02 -.13 
+Folk .64 .09 .15 -.16 
+Rock .17 .85 -.04 -.07 
+Alternative .02 .80 .13 .04 
+Heavy metal .07 .75 -.11 .04 
+Country -.06 .05 .72 -.03 
+Sound tracks .01 .04 .70 .17 
+Religious .23 -.21 .64 -.01 
+Pop -.20 .06 .59 .45 
+Rap/hip-hop -.19 -.12 .17 .79 
+Soul/funk .39 -.11 .11 .69 
+Electronica/dance -.02 .15 -.01 .60 
+Note. N = 1,704. All factor loadings .40 or larger are in italics; the highest factor loadings for each dimension are listed 
+in boldface type. 
+ 
+Two additional points about factor analysis are worth making here. One is tha t factors are not categories. 
+Factor anal ysis does not tell us tha t pe ople ar e either extraverted or conscientious or tha t the y 
+like either “reflective and complex” music or “intense and rebellious” music. Instead, factors are constructs 
+that operate independently of each other. So people who are high in extraversion might be hig h or low in 
+conscientiousness, and people who like reflective and complex music mig ht or mig ht not also lik e intense 
+and rebellious music. The se cond point is tha t factor analysis reveals only the under lying structure of the 
+variables. It is up to researchers to interpret and label the factors and to explain the origin of that particular 
+factor struc ture. F or e xample, one r eason tha t e xtraversion and the other B ig F ive oper ate as separ ate 
+factors is tha t the y appe ar to be c ontrolled b y dif ferent g enes (P lomin, De Fries, M cClean, & M cGuffin, 
+2008)5. 
+Complex Correlation  |  159Exploring Causal Relationships 
+Another important use of complex correlational research is to explore possible causal relationships among 
+variables. This mig ht se em surprising g iven the o ft-quoted sa ying tha t “ correlation does not impl y 
+causation.” It is true tha t correlational research cannot unambiguously establish tha t one v ariable causes 
+another. Comple x c orrelational r esearch, ho wever, c an o ften be use d to rule out other pla usible 
+interpretations. The primary way of doing this is through the statistical control of potential third variables. 
+Instead o f c ontrolling these v ariables thr ough r andom assignmen t or b y holding them c onstant as in 
+an e xperiment, the r esearcher inste ad me asures them and includes them in the sta tistical anal ysis 
+called partial corr elation. U sing this te chnique, r esearchers c an e xamine the r elationship be tween t wo 
+variables, while statistically controlling for one or more potential third variables. 
+For example, assume a r esearcher was interested in the r elationship between watching violent television 
+shows and aggr essive behavior but she w as concerned that socioeconomic status (SES) might represent a 
+third variable that is driving this relationship. In this case, she could conduct a study in which she measures 
+the amoun t o f violen t tele vision tha t par ticipants w atch in their e veryday lif e, the number o f ac ts o f 
+aggression that they have engaged in, and their SES. She could first examine the correlation between violent 
+television viewing and aggr ession. Let’s say she f ound a c orrelation of +.35, which w ould be c onsidered a 
+moderate sized positive correlation. Next, she c ould use par tial correlation to r eexamine this r elationship 
+after statistically controlling for SES. This te chnique would allow her to e xamine the relationship between 
+the part of violent television viewing that is independen t of SES and the par t of aggressive behavior that 
+is independen t o f SES. I f she f ound tha t the par tial c orrelation be tween violen t tele vision vie wing and 
+aggression while c ontrolling f or SES w as +.34, tha t w ould sugg est tha t the r elationship be tween violen t 
+television viewing and aggression is largely independent of SES (i.e., SES is not a thir d variable driving this 
+relationship). On the other hand, if she f ound tha t af ter sta tistically c ontrolling f or SES the c orrelation 
+between violen t tele vision vie wing and aggr ession dr opped to +. 03, then tha t would sugg est tha t SES is 
+indeed a third variable that is driving the relationship. If, however, she found that statistically controlling for 
+SES reduced the magnitude of the correlation from +.35 to +.20, then this would suggest that SES accounts 
+for some, but not all, of the relationship between television violence and aggression. It is important to note 
+that while par tial c orrelation provides an impor tant tool f or researchers to sta tistically c ontrol f or third 
+variables, researchers using this te chnique are still limi ted in their abili ty to arriv e at causal conclusions 
+because this te chnique does not tak e c are o f the dir ectionality pr oblem and ther e ma y be other thir d 
+variables driving the relationship that the researcher did not consider and statistically control. 
+Regression 
+Once a r elationship between two variables has be en established, researchers can use tha t information to 
+make predictions about the v alue of one v ariable g iven the v alue of another v ariable. For, instance, once 
+we ha ve establishe d tha t ther e is a c orrelation be tween I Q and GP A w e c an use pe ople’s I Q sc ores to 
+predict their GPA. Thus, while correlation coefficients can be used to describe the strength and direction of 
+relationships between variables, regression is a statistical technique that allows researchers to predict one 
+160  |  Complex Correlationvariable given another. Regression can also be used to describe more complex relationships between more 
+than two variables. Typically the variable that is used to make the prediction is referred to as the predictor 
+variable and the v ariable that is being pr edicted is c alled the outcome variable or cri terion variable. This 
+regression equation has the following general form: 
+ 
+Y = b1X1 
+ 
+ Y in this formula represents the person’s predicted score on the outcome variable, b1  represents the slope 
+of the line depic ting the r elationship between two variables (or the r egression weight), and X 1 represents 
+the person’s score on the pr edictor variable. You can see that to pr edict a person ’s score on the outc ome 
+variable (Y), one simply needs to multiply their score on the predictor variable (X) by the regression weight 
+(b1 ) 
+While simple r egression involves using one v ariable to pr edict another , multiple r egression involves 
+measuring several variables (X1, X2, X3,…Xi), and using them to predict some outcome variable (Y). Multiple 
+regression can also be use d to simply describe the relationship between a sing le outcome variable (Y) and 
+a se t o f pr edictor v ariables ( X1, X 2, X3,…X i). The r esult o f a multiple r egression anal ysis is an e quation 
+that expresses the outcome variable as an addi tive combination of the predictor variables. This regression 
+equation has the following general form: 
+ 
+Y = b1X1+ b2X2+ b3X3+ … + biXi 
+ 
+The r egression w eights ( b1, b2, and so on ) indic ate ho w lar ge a c ontribution a pr edictor v ariable mak es, 
+on average, to the pr ediction of the outc ome variable. Specifically, they indicate how much the outc ome 
+variable changes for each one-unit change in the predictor variable. 
+The advantage of multiple regression is that it can show whether a predictor variable makes a contribution 
+to an outc ome variable over and above  the contributions made b y other pr edictor variables (i.e., it can be 
+used to show whether a predictor variable is related to an outcome variable after statistically controlling for 
+other predictor variables). As a hypothetical example, imagine that a researcher wants to know how income 
+and health relate to happiness. This is tricky be cause income and he alth are themselves related to e ach 
+other. Thus if people with greater incomes tend to be happier, then perhaps this is only because they tend 
+to be healthier. Likewise, if people who are healthier tend to be happier , perhaps this is onl y because they 
+tend to make more money. But a multiple regression analysis including both income and health as predictor 
+variables would show whether each one makes a contribution to the prediction of happiness when the other 
+is taken into account (when it is sta tistically controlled). In other w ords, multiple r egression would allow 
+the researcher to e xamine whether that part of income that is unr elated to he alth predicts or r elates to 
+happiness as well as whether that part of health that is unrelated to income predicts or relates to happiness. 
+Complex Correlation  |  161Research like this, b y the w ay, has sho wn both inc ome and he alth make extremely small c ontributions to 
+happiness except in the case of severe poverty or illness (Diener, 20006). 
+The e xamples discusse d in this se ction onl y scr atch the surfac e o f ho w r esearchers use c omplex 
+correlational r esearch to e xplore possi ble c ausal r elationships among v ariables. I t is impor tant to k eep 
+in mind, ho wever, that purely correlational approaches cannot unambiguously establish tha t one v ariable 
+causes another. The best they can do is show patterns of relationships that are consistent with some causal 
+interpretations and inconsistent with others. 
+Notes 
+1. Radcliffe, N. M., & Klein, W. M. P. (2002). Dispositional, unrealistic, and comparative optimism: Differential relations 
+with knowledge and processing of risk information and beliefs about personal risk. Personality and Social Psychology 
+Bulletin, 28, 836–846. 
+2. Jouriles, E. N., Garrido, E., Rosenfield, D., & McDonald, R. (2009). Experiences of psychological and physical aggression 
+in adolescent romantic relationships: Links to psychological distress. Child Abuse & Neglect, 33(7), 451–460. 
+3. Cacioppo, J. T., & Petty, R. E. (1982). The need for cognition. Journal of Personality and Social Psychology, 42, 116–131. 
+4. Rentfrow, P. J., & Gosling, S. D. (2008). The do re mi’s of everyday life: The structure and personality correlates of 
+music preferences. Journal of Personality and Social Psychology, 84, 1236–1256. 
+5. Plomin, R., DeFries, J. C., McClearn, G. E., & McGuffin, P. (2008). Behavioral genetics (5th ed.). New York, NY: Worth. 
+6. Diener, E. (2000). Subjective well-being: The science of happiness, and a proposal for a national index. American 
+Psychologist, 55, 34–43. 
+162  |  Complex Correlation31.  Qualitative Research 
+Learning Objectives 
+1. List several ways in which qualitative research differs from quantitative research in psychology. 
+2. Describe the strengths and weaknesses of qualitative research in psychology compared with quantitative 
+research. 
+3. Give examples of qualitative research in psychology. 
+What Is Qualitative Research? 
+This te xtbook is primaril y about  quantitative research, in par t be cause most studies c onducted in 
+psychology ar e quan titative in na ture. Quan titative r esearchers t ypically star t wi th a f ocused r esearch 
+question or h ypothesis, c ollect a small amoun t o f numeric al da ta fr om a lar ge number o f individuals, 
+describe the r esulting da ta using sta tistical te chniques, and dr aw g eneral c onclusions about some lar ge 
+population. Although this me thod is b y far the most c ommon approach to c onducting empirical research 
+in psychology, there is an important alternative called qualitative research. Qualitative research originated 
+in the disciplines o f an thropology and sociolog y but is no w use d to stud y psy chological topics as w ell. 
+Qualitative r esearchers g enerally beg in wi th a less f ocused r esearch question, c ollect lar ge amoun ts o f 
+relatively “ unfiltered” da ta fr om a r elatively small number o f individuals, and descri be their da ta using 
+nonstatistical te chniques, such as gr ounded the ory, thema tic anal ysis, cri tical disc ourse anal ysis, or 
+interpretative phenomenological analysis. They are usually less concerned with drawing general conclusions 
+about human behavior than with understanding in detail the experience of their research participants. 
+Consider, for example, a stud y by researcher Per Lindqvist and his c olleagues, who w anted to le arn how 
+the families of teenage suicide victims cope with their loss (Lindq vist, Johansson, & Karlsson, 2008)1. They 
+did not have a specific research question or h ypothesis, such as, W hat percentage of family members join 
+suicide support groups? Instead, they wanted to understand the variety of reactions that families had, with 
+a focus on wha t i t is lik e from their perspectives. To address this question, the y interviewed the families 
+of 10 teenage suicide victims in their homes in rur al Sweden. The interviews were relatively unstructured, 
+beginning with a general request for the families to talk about the vic tim and ending wi th an invitation to 
+talk about an ything else tha t they wanted to tell the in terviewer. One o f the most impor tant themes tha t 
+emerged from these interviews was that even as life returned to “normal,” the families continued to struggle 
+with the question of why their loved one committed suicide. This struggle appeared to be especially difficult 
+for families in which the suicide was most unexpected. 
+Qualitative Research  |  163The Purpose of Qualitative Research 
+Again, this te xtbook is primaril y about quan titative r esearch in psy chology. The str ength o f quan titative 
+research is i ts abili ty to pr ovide pr ecise answ ers to spe cific r esearch questions and to dr aw g eneral 
+conclusions about human behavior. This method is how we know that people have a strong tendency to obey 
+authority figures, for example, and that female undergraduate students are not substantially more talkative 
+than male undergraduate students. But while quantitative research is good at providing precise answers to 
+specific research questions, it is not nearly as good at generating novel and interesting research questions. 
+Likewise, while quantitative research is good at drawing general conclusions about human behavior, it is not 
+nearly as good at providing detailed descriptions of the behavior of particular groups in particular situations. 
+And quantitative research is not v ery good at communicating what it is ac tually like to be a member o f a 
+particular group in a particular situation. 
+But the r elative w eaknesses o f quan titative r esearch ar e the r elative str engths o f quali tative r esearch. 
+Qualitative r esearch c an help r esearchers to g enerate ne w and in teresting r esearch questions and 
+hypotheses. The r esearch of Lindqvist and c olleagues, for example, suggests that there may be a g eneral 
+relationship between how unexpected a suicide is and how consumed the family is with trying to understand 
+why the te en committed suicide. This r elationship can now be e xplored using quan titative research. But 
+it is uncle ar whether this question w ould have arisen at all wi thout the researchers sitting down with the 
+families and listening to wha t they themselves wanted to sa y about their e xperience. Qualitative research 
+can also pr ovide rich and de tailed descriptions o f human beha vior in the r eal-world contexts in which i t 
+occurs. Among qualitative researchers, this depth is o ften referred to as “thick description” (Geertz, 1973)2.
+Similarly, qualitative research can convey a sense o f what it is actually like to be a member o f a par ticular 
+group or in a par ticular situation—what qualitative researchers often refer to as the “liv ed experience” of 
+the research participants. Lindqvist and colleagues, for example, describe how all the families spontaneously 
+offered to sho w the in terviewer the vic tim’s bedroom or the plac e where the suicide oc curred—revealing 
+the importance of these physical locations to the families. It seems unlikely that a quantitative study would 
+have discovered this detail. 
+ 
+Table 6.3 Some contrasts between qualitative and quantitative research 
+Qualitative Quantitative 
+1. In-depth information about relatively few people 1. Less depth information with larger samples 
+2. Conclusions are based on interpretations drawn by the 
+investigator 2. Conclusions are based on statistical analyses 
+3. Global and exploratory 3. Specific and focused 
+164  |  Qualitative ResearchData Collection and Analysis in Qualitative Research 
+Data collection approaches in qualitative research are quite varied and can involve naturalistic observation, 
+participant obser vation, ar chival da ta, ar twork, and man y other things. B ut one o f the most c ommon 
+approaches, espe cially f or psy chological r esearch, is to c onduct interviews. I nterviews in quali tative 
+research c an be unstruc tured—consisting o f a small number o f g eneral questions or pr ompts tha t allow 
+participants to talk about wha t is of interest to them—or struc tured, where there is a stric t script that the 
+interviewer does not deviate from. Most interviews are in between the two and are called semi-structured 
+interviews, where the researcher has a few consistent questions and can follow up by asking more detailed 
+questions about the topics that come up. Such interviews can be lengthy and detailed, but they are usually 
+conducted with a relatively small sample. The unstruc tured interview was the approach used by Lindqvist 
+and colleagues in their research on the families of suicide victims because the researchers were aware that 
+how much was disclosed about such a sensitive topic should be led by the families, not by the researchers. 
+Another appr oach use d in quali tative r esearch involves small gr oups o f pe ople who par ticipate tog ether 
+in in terviews f ocused on a par ticular topic or issue, kno wn as focus gr oups. The in teraction among 
+participants in a f ocus gr oup c an some times bring out mor e inf ormation than c an be le arned in a one-
+on-one in terview. The use o f f ocus gr oups has be come a standar d te chnique in business and industr y 
+among those who w ant to understand c onsumer tastes and pr eferences. The c ontent of all f ocus group 
+interviews is usuall y recorded and tr anscribed to facili tate later analyses. However, we know from social 
+psychology that group dynamics are often at play in any group, including focus groups, and it is useful to be 
+aware of those possi bilities. For example, the desir e to be lik ed by others c an lead participants to pr ovide 
+inaccurate answers that they believe will be perceived favorably by the other participants. The same may be 
+said for personality characteristics. For example, highly extraverted participants can sometimes dominate 
+discussions within focus groups. 
+Data Analysis in Qualitative Research 
+Although quan titative and quali tative r esearch g enerally dif fer along se veral impor tant dimensions ( e.g., 
+the specificity of the r esearch question, the t ype of data collected), it is the me thod of data analysis that 
+distinguishes them mor e clearly than an ything else. T o illustrate this ide a, imagine a te am of researchers 
+that conducts a series of unstructured interviews with people recovering from alcohol use disorder to learn 
+about the role of their religious faith in their recovery. Although this project sounds like qualitative research, 
+imagine further that once they collect the data, they code the data in terms o f how often each participant 
+mentions God ( or a “hig her po wer”), and the y then use descriptiv e and inf erential sta tistics to find out 
+whether those who mention God more often are more successful in abstaining from alcohol. Now it sounds 
+like quantitative research. In other w ords, the quan titative-qualitative distinction depends mor e on wha t 
+researchers do with the data they have collected than with why or how they collected the data. 
+But what does qualitative data analysis look like? Just as ther e are many ways to collect data in qualitative 
+research, ther e ar e man y w ays to anal yze da ta. H ere w e f ocus on one g eneral appr oach 
+Qualitative Research  |  165called grounded theory (Glaser & Strauss, 1967)3. This approach was developed within the field of sociology 
+in the 1960s and has gr adually gained popularity in psychology. Remember that in quantitative research, it 
+is typical for the r esearcher to star t with a the ory, derive a h ypothesis from that theory, and then c ollect 
+data to test tha t specific hypothesis. In qualitative research using grounded theory, researchers start with 
+the data and de velop a the ory or an in terpretation that is “ grounded in” those da ta. They do this anal ysis 
+in stages. First, they identify ideas that are repeated throughout the da ta. Then the y organize these ide as 
+into a smaller number o f broader themes. F inally, they write a theoretical narrative—an interpretation of 
+the data in terms of the themes that they have identified. This theoretical narrative focuses on the subjective 
+experience of the par ticipants and is usuall y suppor ted by many direct quotations from the par ticipants 
+themselves. 
+As an e xample, consider a stud y by researchers Laura Abrams and L aura Curran, who use d the gr ounded 
+theory approach to study the experience of postpartum depression symptoms among low-income mothers 
+(Abrams & Curran, 2009)4. Their data were the result of unstructured interviews with 19 participants. Table 
+6.4 shows the fiv e br oad themes the r esearchers iden tified and the mor e spe cific r epeating ide as tha t 
+made up e ach o f those themes. I n their r esearch r eport, the y pr ovide numer ous quota tions fr om their 
+participants, such as this one from “Destiny:” 
+Well, just recently my apartment was broken into and the fact that his Medicaid for some reason was 
+cancelled so a lot of things was happening within the last two weeks all at one time. So that in itself I 
+don’t want to say almost drove me mad but it put me in a funk.…Like I really was depressed. (p. 357) 
+Their theoretical narrative focused on the par ticipants’ experience of their symptoms, not as an abstr act 
+“affective disorder” but as closel y tied to the dail y struggle of raising children alone under o ften difficult 
+circumstances. 
+ 
+Table 6.4 Themes and Repeating Ideas in a Study of Postpartum Depression Among Low-Income 
+Mothers. Based on Research by Abrams and Curran (2009). 
+Theme Repeating ideas 
+Ambivalence “I wasn’t prepared for this baby,” “I didn’t want to have any more children.” 
+Caregiving overload “Please stop crying,” “I need a break,” “I can’t do this anymore.” 
+Juggling “No time to breathe,” “Everyone depends on me,” “Navigating the maze.” 
+Mothering alone “I really don’t have any help,” “My baby has no father.” 
+Real-life worry “I don’t have any money,” “Will my baby be OK?” “It’s not safe here.” 
+The Quantitative-Qualitative “Debate” 
+Given their differences, it may come as no surprise that quantitative and qualitative research in psychology 
+and related fields do not c oexist in c omplete harmony. Some quan titative researchers criticize qualitative 
+methods on the grounds that they lack objectivity, are difficult to evaluate in terms of reliability and validity, 
+166  |  Qualitative Researchand do not allow generalization to people or situations other than those actually studied. At the same time, 
+some qualitative researchers criticize quantitative methods on the grounds that they overlook the richness 
+of human behavior and experience and instead answer simple questions about easily quantifiable variables. 
+In general, however, qualitative researchers are well aware of the issues of objectivity, reliability, validity, and 
+generalizability. In fact, they have developed a number o f frameworks for addressing these issues ( which 
+are be yond the sc ope o f our discussion ). And in g eneral, quan titative r esearchers ar e w ell a ware o f the 
+issue of oversimplification. They do not belie ve that all human beha vior and experience can be adequately 
+described in terms of a small number of variables and the statistical relationships among them. Instead, they 
+use simplification as a strategy for uncovering general principles of human behavior. 
+Many researchers from both the quan titative and quali tative c amps now agree that the t wo approaches 
+can and should be c ombined in to wha t has c ome to be c alled mixed-methods research (Todd, N erlich, 
+McKeown, & Clar ke, 2004)5. (In fact, the studies b y Lindqvist and c olleagues and b y Abrams and Curr an 
+both c ombined quan titative and quali tative appr oaches.) One appr oach to c ombining quan titative and 
+qualitative r esearch is to use quali tative r esearch f or h ypothesis g eneration and quan titative r esearch 
+for h ypothesis testing. Again, while a quali tative stud y mig ht sugg est tha t families who e xperience an 
+unexpected suicide have more difficulty resolving the question o f why, a well-designed quantitative study 
+could test a h ypothesis b y me asuring these spe cific v ariables in a lar ge sample. A se cond appr oach to 
+combining quan titative and quali tative r esearch is r eferred to as  triangulation. The ide a is to use both 
+quantitative and quali tative methods simultaneously to stud y the same g eneral questions and to c ompare 
+the r esults. I f the r esults o f the quan titative and quali tative me thods c onverge on the same g eneral 
+conclusion, they reinforce and enrich each other. If the results diverge, then they suggest an interesting new 
+question: Why do the results diverge and how can they be reconciled? 
+Using qualitative research can often help clarif y quantitative results via triangula tion. Trenor, Yu, Waight, 
+Zerda, and Sha (2008)6 investigated the experience of female engineering students at a university. In the first 
+phase, female engineering students were asked to c omplete a sur vey, where they rated a number o f their 
+perceptions, including their sense of belonging.  Their results were compared across the student ethnicities, 
+and statistically, the various ethnic groups showed no differences in their ratings of their sense of belonging. 
+ One might look at that result and conclude that ethnicity does not have anything to do with one’s sense of 
+belonging.  However, in the second phase, the authors also conducted interviews with the students, and in 
+those interviews, many minority students reported how the diversity of cultures at the university enhanced 
+their sense o f belonging. Without the quali tative component, we might have drawn the wr ong conclusion 
+about the quantitative results. 
+This example shows how qualitative and quantitative research work together to help us understand human 
+behavior. Some r esearchers ha ve char acterized quali tative r esearch as best f or iden tifying beha viors or 
+the phenomenon wher eas quan titative r esearch is best f or understanding me aning or iden tifying the 
+mechanism. H owever, B ryman (2012) 7 argues f or br eaking do wn the divide be tween these arbi trarily 
+different ways of investigating the same questions. 
+Qualitative Research  |  167Notes 
+1. Lindqvist, P., Johansson, L., & Karlsson, U. (2008). In the aftermath of teenage suicide: A qualitative study of the 
+psychosocial consequences for the surviving family members. BMC Psychiatry, 8, 26. Retrieved from 
+http://www.biomedcentral.com/1471-244X/8/26 
+2. Geertz, C. (1973). The interpretation of cultures. New York, NY: Basic Books. 
+3. Glaser, B. G., & Strauss, A. L. (1967). The discovery of grounded theory: Strategies for qualitative research. Chicago, IL: 
+Aldine. 
+4. Abrams, L. S., & Curran, L. (2009). “And you’re telling me not to stress?” A grounded theory study of postpartum 
+depression symptoms among low-income mothers. Psychology of Women Quarterly, 33, 351–362. 
+5. Todd, Z., Nerlich, B., McKeown, S., & Clarke, D. D. (2004) Mixing methods in psychology: The integration of qualitative 
+and quantitative methods in theory and practice. London, UK: Psychology Press. 
+6. Trenor, J.M., Yu, S.L., Waight, C.L., Zerda. K.S & Sha T.-L. (2008). The relations of ethnicity to female engineering 
+students’ educational experiences and college and career plans in an ethnically diverse learning environment. Journal 
+of Engineering Education, 97(4), 449-465. 
+7. Bryman, A. (2012). Social Research Methods, 4th ed. Oxford: OUP. 
+168  |  Qualitative Research32.  Observational Research 
+Learning Objectives 
+1. List the various types of observational research methods and distinguish between each. 
+2. Describe the strengths and weakness of each observational research method. 
+What Is Observational Research? 
+The term observational research is used to refer to several different types of non-experimental studies in 
+which behavior is systematically observed and recorded. The goal of observational research is to descri be 
+a v ariable or se t o f v ariables. M ore g enerally, the g oal is to obtain a snapshot o f spe cific char acteristics 
+of an individual, gr oup, or se tting. As descri bed pr eviously, obser vational r esearch is non-e xperimental 
+because nothing is manipulated or controlled, and as such we cannot arrive at causal conclusions using this 
+approach. The da ta that are collected in obser vational research studies ar e often qualitative in na ture but 
+they may also be quan titative or both ( mixed-methods). There are several different types of observational 
+methods that will be described below. 
+Naturalistic Observation 
+Naturalistic observation is an obser vational me thod tha t in volves obser ving pe ople’s beha vior in the 
+environment in which i t t ypically oc curs. Thus na turalistic obser vation is a t ype o f field r esearch ( as 
+opposed to a t ype o f labor atory r esearch). J ane Goodall’ s famous r esearch on chimpanz ees is a classic 
+example of naturalistic observation. Dr. Goodall spent three decades observing chimpanzees in their natural 
+environment in East Afric a. She e xamined such things as chimpanz ee’s social struc ture, mating patterns, 
+gender roles, family structure, and c are of offspring by observing them in the wild. H owever, naturalistic 
+observation could mor e simpl y in volve obser ving shoppers in a gr ocery stor e, childr en on a school 
+playground, or psychiatric inpatients in their wards. Researchers engaged in naturalistic observation usually 
+make their observations as unobtrusively as possible so that participants are not aware that they are being 
+studied. Such an approach is called disguised naturalistic observation. Ethically, this method is considered 
+to be ac ceptable if the par ticipants remain anonymous and the beha vior occurs in a public se tting where 
+people w ould not normall y ha ve an e xpectation o f priv acy. Gr ocery shoppers put ting i tems in to their 
+shopping carts, for example, are engaged in public behavior that is easily observable by store employees and 
+other shoppers. F or this r eason, most r esearchers would consider it ethically acceptable to obser ve them 
+Observational Research  |  169for a stud y. On the other hand, one o f the ar guments against the e thicality of the naturalistic observation 
+of “bathroom behavior” discussed earlier in the book is that people have a reasonable expectation of privacy 
+even in a public restroom and that this expectation was violated. 
+In cases where it is not e thical or pr actical to c onduct disguised naturalistic observation, researchers can 
+conduct undisguised na turalistic obser vation where the par ticipants ar e made a ware o f the r esearcher 
+presence and monitoring of their behavior. However, one concern with undisguised naturalistic observation 
+is reactivity. Reactivity refers to when a measure changes participants’ behavior. In the case of undisguised 
+naturalistic obser vation, the c oncern wi th r eactivity is tha t when pe ople kno w the y ar e being obser ved 
+and studie d, the y ma y ac t dif ferently than the y normall y w ould. This t ype o f r eactivity is kno wn as the 
+Hawthorne effect. For instance, you may act much differently in a bar if you know that someone is observing 
+you and r ecording y our beha viors and this w ould in validate the stud y. So disguise d obser vation is less 
+reactive and therefore can have higher validity because people are not aware that their behaviors are being 
+observed and recorded. However, we now know that people often become used to being observed and with 
+time they begin to behave naturally in the researcher’s presence. In other words, over time people habituate 
+to being observed. Think about reality shows like Big Brother or Survivor where people are constantly being 
+observed and recorded. While they may be on their best beha vior at first, in a fair ly short amount of time 
+they are flirting, having sex, wearing next to nothing, screaming at each other, and occasionally behaving in 
+ways that are embarrassing. 
+Participant Observation 
+Another appr oach to da ta c ollection in obser vational r esearch is par ticipant obser vation. 
+In participant observation, r esearchers be come ac tive par ticipants in the gr oup or si tuation the y ar e 
+studying. P articipant obser vation is v ery similar to na turalistic obser vation in tha t i t in volves obser ving 
+people’s beha vior in the en vironment in which i t t ypically oc curs. As wi th na turalistic obser vation, the 
+data tha t ar e c ollected c an include in terviews (usually unstruc tured), notes base d on their obser vations 
+and in teractions, documen ts, photogr aphs, and other ar tifacts. The onl y dif ference be tween na turalistic 
+observation and par ticipant obser vation is tha t r esearchers engag ed in par ticipant obser vation be come 
+active members of the group or situations they are studying. The basic rationale for participant observation 
+is that there may be important information that is only accessible to, or can be interpreted only by, someone 
+who is an active participant in the group or situation. Like naturalistic observation, participant observation 
+can be either disguised or undisguised. In disguised participant observation, the researchers pretend to be 
+members of the social group they are observing and conceal their true identity as researchers. 
+In a famous e xample o f disguise d par ticipant obser vation, Le on F estinger and his c olleagues infiltr ated 
+a doomsda y cult kno wn as the Se ekers, whose members belie ved tha t the apoc alypse w ould oc cur on 
+December 21, 1954. Interested in studying how members of the group would cope psychologically when the 
+prophecy inevitably failed, they carefully recorded the events and reactions of the cult members in the days 
+before and after the supposed end of the world. Unsurprisingly, the cult members did not give up their belief 
+but instead convinced themselves that it was their faith and efforts that saved the world from destruction. 
+170  |  Observational ResearchFestinger and his colleagues later published a book about this experience, which they used to illustrate the 
+theory of cognitive dissonance (Festinger, Riecken, & Schachter, 1956)1. 
+In contrast with undisguised participant observation, the researchers become a part of the group they are 
+studying and they disclose their true iden tity as researchers to the gr oup under investigation. Once again 
+there ar e impor tant e thical issues to c onsider wi th disguise d par ticipant obser vation. First no inf ormed 
+consent can be obtained and second deception is being use d. The researcher is deceiving the participants 
+by intentionally withholding information about their motiv ations for being a par t of the social gr oup they 
+are stud ying. B ut some times disguise d par ticipation is the onl y w ay to ac cess a pr otective gr oup (lik e a 
+cult). F urther, disguised par ticipant obser vation is less pr one to r eactivity than undisguise d par ticipant 
+observation. 
+Rosenhan’s study (1973)2 of the e xperience of people in a psy chiatric ward would be c onsidered disguised 
+participant observation because Rosenhan and his pseudopatients were admitted into psychiatric hospitals 
+on the pretense of being patients so that they could observe the way that psychiatric patients are treated by 
+staff. The staff and other patients were unaware of their true identities as researchers. 
+Another example of participant observation comes from a study by sociologist Amy Wilkins on a university-
+based religious organization that emphasized how happy its members were (Wilkins, 2008)3. Wilkins spent 
+12 months attending and participating in the group’s meetings and social events, and she interviewed several 
+group members. In her study, Wilkins identified several ways in which the group “enforced” happiness—for 
+example, b y c ontinually talking about happiness, disc ouraging the e xpression o f nega tive emotions, and 
+using happiness as a way to distinguish themselves from other groups. 
+One of the primary benefits of participant observation is that the researchers are in a much better position 
+to understand the vie wpoint and e xperiences of the pe ople they are studying when the y are a par t of the 
+social group. The primar y limi tation wi th this appr oach is tha t the mer e presence of the obser ver could 
+affect the behavior of the people being observed. While this is also a concern with naturalistic observation, 
+additional concerns arise when r esearchers become active members of the social gr oup they are studying 
+because that they may change the social d ynamics and/or influence the beha vior of the pe ople they are 
+studying. S imilarly, if the r esearcher ac ts as a par ticipant obser ver ther e c an be c oncerns wi th biases 
+resulting from developing relationships with the participants. Concretely, the researcher may become less 
+objective resulting in more experimenter bias. 
+Structured Observation 
+Another observational method is structured observation. Here the investigator makes careful observations 
+of one or mor e spe cific beha viors in a par ticular se tting tha t is mor e struc tured than the se ttings use d 
+in naturalistic or par ticipant observation. Often the se tting in which the obser vations are made is not the 
+natural setting. Instead, the researcher may observe people in the laboratory environment. Alternatively, the 
+researcher may observe people in a natural setting (like a classroom setting) that they have structured some 
+way, for instance by introducing some specific task participants are to engage in or by introducing a specific 
+social situation or manipulation. 
+Observational Research  |  171Structured observation is v ery similar to na turalistic observation and par ticipant observation in tha t in all 
+three cases researchers are observing naturally occurring behavior; however, the emphasis in struc tured 
+observation is on ga thering quantitative rather than quali tative data. Researchers using this appr oach are 
+interested in a limi ted se t o f beha viors. This allo ws them to quan tify the beha viors the y ar e obser ving. 
+In other w ords, structured observation is less g lobal than na turalistic or par ticipant observation because 
+the researcher engaged in struc tured obser vations is in terested in a small number o f specific behaviors. 
+Therefore, r ather than r ecording e verything tha t happens, the r esearcher onl y f ocuses on v ery spe cific 
+behaviors of interest. 
+Researchers R obert Le vine and Ar a N orenzayan use d struc tured obser vation to stud y dif ferences in the 
+“pace o f lif e” acr oss c ountries (Le vine & N orenzayan, 1999 )4. One o f their me asures in volved obser ving 
+pedestrians in a lar ge city to se e how long i t took them to w alk 60 f eet. They found that people in some 
+countries walked reliably faster than people in other countries. For example, people in Canada and Sweden 
+covered 60 f eet in just under 13 se conds on a verage, while pe ople in B razil and R omania took close to 
+17 se conds. W hen struc tured obser vation takes plac e in the c omplex and e ven chaotic “ real w orld,” the 
+questions of when, where, and under wha t conditions the observations will be made, and who e xactly will 
+be observed are important to consider. Levine and Norenzayan described their sampling process as follows: 
+“Male and f emale walking speed over a distanc e of 60 f eet was measured in a t least two locations 
+in main do wntown ar eas in e ach ci ty. M easurements w ere tak en during main business hours on 
+clear summer days. All locations were flat, unobstructed, had broad sidewalks, and were sufficiently 
+uncrowded to allo w pedestrians to mo ve at potentially maximum spe eds. To control for the ef fects 
+of socializing, only pedestrians walking alone were used. Children, individuals with obvious physical 
+handicaps, and window-shoppers were not timed. Thirty-five men and 35 women were timed in most 
+cities.” (p. 186). 
+Precise spe cification o f the sampling pr ocess in this w ay mak es da ta c ollection manag eable f or the 
+observers, and i t also provides some control over important extraneous variables. For example, by making 
+their obser vations on cle ar summer da ys in all c ountries, Le vine and N orenzayan c ontrolled f or ef fects 
+of the w eather on pe ople’s walking speeds. In Levine and N orenzayan’s study, measurement was relatively 
+straightforward. The y simpl y me asured out a 60- foot distanc e along a ci ty side walk and then use d a 
+stopwatch to time participants as they walked over that distance. 
+As another example, researchers Robert Kraut and Robert Johnston wanted to study bowlers’ reactions to 
+their shots, both when the y w ere facing the pins and then when the y turne d to ward their c ompanions 
+(Kraut & Johnston, 1979)5. But what “reactions” should they observe? Based on previous research and their 
+own pilot testing, Kr aut and Johnston created a list o f reactions that included “closed smile,” “open smile,” 
+“laugh,” “ neutral fac e,” “look do wn,” “look a way,” and “fac e c over” (covering one ’s fac e wi th one ’s hands ). 
+The observers committed this list to memor y and then pr acticed by coding the r eactions of bowlers who 
+had be en vide otaped. During the ac tual stud y, the obser vers spok e in to an a udio r ecorder, descri bing 
+the r eactions the y obser ved. Among the most in teresting r esults o f this stud y w as tha t bo wlers r arely 
+smiled while they still faced the pins. The y were much more likely to smile af ter they turned toward their 
+companions, sugg esting tha t smiling is not pur ely an e xpression o f happiness but also a f orm o f social 
+communication. 
+172  |  Observational ResearchIn yet another example (this one in a laboratory environment), Dov Cohen and his colleagues had observers 
+rate the emotional r eactions o f par ticipants who had just be en deli berately bumpe d and insulte d b y a 
+confederate after they dropped off a completed questionnaire at the end of a hallway. The confederate was 
+posing as someone who worked in the same building and who was frustrated by having to close a file drawer 
+twice in or der to permi t the par ticipants to w alk past them ( first to dr op off the questionnair e at the end 
+of the hall way and onc e again on their w ay back to the r oom where they believed the stud y they signed 
+up for was taking plac e). The t wo observers were positioned at different ends o f the hall way so tha t they 
+could read the participants’ body language and hear anything they might say. Interestingly, the researchers 
+hypothesized that participants from the southern United States, which is one of several places in the world 
+that has a “culture of honor,” would react with more aggression than participants from the northern United 
+States, a prediction that was in fact supported by the observational data (Cohen, Nisbett, Bowdle, & Schwarz, 
+1996)6. 
+When the obser vations require a judgmen t on the par t of the obser vers—as in the studies b y Kraut and 
+Johnston and Cohen and his c olleagues—a pr ocess r eferred to as  coding is t ypically r equired. Coding 
+generally r equires cle arly defining a se t o f tar get beha viors. The obser vers then c ategorize par ticipants 
+individually in terms of which behavior they have engaged in and the number of times they engaged in each 
+behavior. The obser vers mig ht even record the dur ation of each behavior. The tar get behaviors must be 
+defined in such a w ay that guides dif ferent observers to c ode them in the same w ay. This dif ficulty with 
+coding illustrates the issue o f interrater reliability, as men tioned in Chapter 4. R esearchers are expected 
+to demonstrate the interrater reliability of their coding procedure by having multiple raters code the same 
+behaviors independently and then sho wing that the dif ferent observers are in close agr eement. Kraut and 
+Johnston, f or e xample, vide o r ecorded a subse t o f their par ticipants’ r eactions and had t wo obser vers 
+independently code them. The two observers showed that they agreed on the reactions that were exhibited 
+97% of the time, indicating good interrater reliability. 
+One o f the primar y benefi ts o f struc tured obser vation is tha t i t is far mor e ef ficient than na turalistic 
+and par ticipant obser vation. S ince the r esearchers ar e f ocused on spe cific beha viors this r educes time 
+and e xpense. Also, o ften times the en vironment is struc tured to enc ourage the beha viors o f in terest 
+which again me ans tha t r esearchers do not ha ve to in vest as much time in w aiting f or the beha viors o f 
+interest to na turally occur. Finally, researchers using this appr oach can clearly exert greater control over 
+the environment. However, when r esearchers exert more control over the en vironment i t may make the 
+environment less natural which decreases external validity. It is less cle ar for instance whether structured 
+observations made in a labor atory environment will g eneralize to a r eal world environment. Furthermore, 
+since researchers engaged in structured observation are often not disguised there may be more concerns 
+with reactivity. 
+Case Studies 
+A case study is an in-depth e xamination of an individual. Some times case studies ar e also c ompleted on 
+social units (e.g., a cult ) and e vents (e.g., a na tural disaster). Most commonly in psy chology, however, case 
+Observational Research  |  173Reading in print? 
+Scan this QR code 
+to view the video 
+on your mobile 
+device. Or go to 
+youtu.be/
+KkaXNvzE4pk 
+studies provide a detailed description and analysis of an individual. Often the individual has a rare or unusual 
+condition or disorder or has damage to a specific region of the brain. 
+Like many observational research methods, case studies tend to be mor e qualitative in nature. Case study 
+methods involve an in-depth, and often a longitudinal examination of an individual. Depending on the focus 
+of the c ase study, individuals ma y or ma y not be obser ved in their na tural setting. If the na tural setting 
+is not wha t is o f in terest, then the individual ma y be br ought in to a ther apist’s o ffice or a r esearcher’s 
+lab f or stud y. Also, the bulk o f the c ase stud y r eport will f ocus on in-depth descriptions o f the person 
+rather than on statistical analyses. With that said some quantitative data may also be included in the write-
+up of a c ase study. For instance, an individual’ s depression score may be c ompared to norma tive scores 
+or their sc ore before and af ter treatment may be c ompared. As wi th other quali tative methods, a v ariety 
+of dif ferent methods and tools c an be use d to c ollect inf ormation on the c ase. For instanc e, interviews, 
+naturalistic observation, structured observation, psychological testing ( e.g., IQ test), and/or physiological 
+measurements (e.g., brain scans) may be used to collect information on the individual. 
+HM is one of the most notorious c ase studies in psychology. HM suffered from intractable and very severe 
+epilepsy. A sur geon loc alized HM’ s epilepsy to his me dial tempor al lobe and in 1953 he r emoved lar ge 
+sections o f his hippoc ampus in an a ttempt to stop the seizur es. The tr eatment w as a suc cess, in tha t 
+it r esolved his epilepsy and his I Q and personali ty were unaf fected. However, the doc tors soon r ealized 
+that HM e xhibited a str ange f orm o f amnesia, c alled an terograde amnesia. HM w as able to c arry out a 
+conversation and he c ould remember short strings o f letters, dig its, and w ords. Basically, his shor t term 
+memory w as pr eserved. H owever, HM c ould not c ommit ne w e vents to memor y. H e lost the abili ty to 
+transfer information from his short-term memory to his long term memory, something memory researchers 
+call consolidation. So while he c ould carry on a c onversation wi th someone, he w ould completely forget 
+the c onversation af ter i t ende d. This w as an e xtremely impor tant c ase stud y f or memor y r esearchers 
+because i t sugg ested tha t ther e’s a dissocia tion be tween shor t-term memor y and long-term memor y, i t 
+suggested that these were two different abilities sub-served by different areas of the brain. It also suggested 
+that the tempor al lobes ar e particularly important for consolidating new information (i.e., for transferring 
+information from short-term memory to long-term memory). 
+One or more interactive elements has been excluded from this version of the text. You can view 
+them online here: https://kpu.pressbooks.pub/psychmethods4e/?p=78#oembed-1 
+The history of psychology is filled with influential cases studies, such as Sigmund Freud’s 
+description of “Anna O.” (see Note 6.1 “The Case of “Anna O.””) and John Watson and Rosalie 
+Rayner’s description o f Little Al bert (Watson & Ra yner, 1920)7, who alleg edly learned to 
+fear a white rat—along with other furry objects—when the researchers repeatedly made a 
+loud noise every time the rat approached him. 
+ 
+174  |  Observational ResearchThe Case of “Anna O.” 
+Sigmund Freud used the case of a young woman he called “Anna O.” to illustrate many principles of his theory of 
+psychoanalysis (Freud, 1961)8. (Her real name was Bertha Pappenheim, and she was an early feminist who went 
+on to make important contributions to the field of social work.) Anna had come to Freud’s colleague Josef 
+Breuer around 1880 with a variety of odd physical and psychological symptoms. One of them was that for 
+several weeks she was unable to drink any fluids. According to Freud, 
+She would take up the glass of water that she longed for, but as soon as it touched her lips she would push 
+it away like someone suffering from hydrophobia.…She lived only on fruit, such as melons, etc., so as to 
+lessen her tormenting thirst. (p. 9) 
+But according to Freud, a breakthrough came one day while Anna was under hypnosis. 
+[S]he grumbled about her English “lady-companion,” whom she did not care for, and went on to describe, 
+with every sign of disgust, how she had once gone into this lady’s room and how her little dog—horrid 
+creature!—had drunk out of a glass there. The patient had said nothing, as she had wanted to be polite. 
+After giving further energetic expression to the anger she had held back, she asked for something to 
+drink, drank a large quantity of water without any difficulty, and awoke from her hypnosis with the glass 
+at her lips; and thereupon the disturbance vanished, never to return. (p.9) 
+Freud’s interpretation was that Anna had repressed the memory of this incident along with the emotion that it 
+triggered and that this was what had caused her inability to drink. Furthermore, he believed that her 
+recollection of the incident, along with her expression of the emotion she had repressed, caused the symptom 
+to go away. 
+As an illustration of Freud’s theory, the case study of Anna O. is quite effective. As evidence for the theory, 
+however, it is essentially worthless. The description provides no way of knowing whether Anna had really 
+repressed the memory of the dog drinking from the glass, whether this repression had caused her inability to 
+drink, or whether recalling this “trauma” relieved the symptom. It is also unclear from this case study how 
+typical or atypical Anna’s experience was. 
+ 
+Observational Research  |  175Figure 6.8 Anna O. “Anna O.” 
+was the subject of a famous case 
+study used by Freud to illustrate 
+the principles of psychoanalysis. 
+Source: http://en.wikipedia.org/
+wiki/File:Pappenheim_1882.jpg 
+Case studies are useful because they provide a level of detailed analysis not found in many other research 
+methods and greater insights may be gained from this more detailed analysis. As a result of the case study, 
+the r esearcher ma y gain a sharpene d understanding o f wha t mig ht be come impor tant to look a t mor e 
+extensively in futur e mor e c ontrolled r esearch. Case studies ar e also o ften the onl y w ay to stud y r are 
+conditions because it may be impossible to find a lar ge enough sample of individuals with the condition to 
+use quantitative methods. Although at first glance a case study of a rare individual might seem to tell us little 
+about ourselves, they often do pr ovide insights into normal beha vior. The c ase of HM pr ovided important 
+insights into the role of the hippocampus in memory consolidation. 
+However, it is important to note that while case studies can provide insights into certain areas and variables 
+to study, and can be useful in helping develop theories, they should never be used as evidence for theories. 
+In other w ords, case studies c an be use d as inspir ation to f ormulate theories and h ypotheses, but those 
+hypotheses and the ories then ne ed to be f ormally tested using mor e rigorous quantitative methods. The 
+reason case studies shouldn’t be used to provide support for theories is that they suffer from problems with 
+both internal and e xternal validity. Case studies lack the pr oper controls that true e xperiments contain. 
+As such, the y suffer from problems with internal validity, so the y cannot be use d to de termine causation. 
+For instance, during HM’s surgery, the surgeon may have accidentally lesioned another area of HM’s brain 
+(a possi bility sugg ested b y the disse ction o f HM’ s br ain f ollowing his de ath) and tha t lesion ma y ha ve 
+contributed to his inabili ty to c onsolidate new information. The fac t is, wi th case studies w e cannot rule 
+176  |  Observational Researchout these sorts of alternative explanations. So, as with all observational methods, case studies do not permit 
+determination of causation. In addition, because case studies are often of a sing le individual, and t ypically 
+an abnormal individual, r esearchers c annot g eneralize their c onclusions to other individuals. R ecall tha t 
+with most r esearch designs ther e is a tr ade-off between internal and e xternal validity. With case studies, 
+however, there are problems with both internal validity and external validity. So there are limits both to the 
+ability to determine causation and to g eneralize the results. A final limi tation of case studies is tha t ample 
+opportunity exists for the theoretical biases of the researcher to color or bias the case description. Indeed, 
+there have been accusations that the w oman who studie d HM destr oyed a lot o f her da ta that were not 
+published and she has be en called into question f or destroying contradictory data that didn’t support her 
+theory about how memories are consolidated. There is a fascinating New York Times article that describes 
+some o f the c ontroversies tha t ensue d af ter HM’ s de ath and anal ysis o f his br ain tha t c an be f ound a t: 
+https://www.nytimes.com/2016/08/07/magazine/the-brain-that-couldnt-remember.html?_r=0 
+Archival Research 
+Another approach that is often considered observational research involves analyzing archival data that have 
+already been collected for some other purpose. An e xample is a stud y by Brett Pelham and his c olleagues 
+on “implici t eg otism”—the tendenc y f or pe ople to pr efer pe ople, plac es, and things tha t ar e similar to 
+themselves (Pelham, Carvallo, & Jones, 2005)9. In one study, they examined Social Security records to show 
+that women with the names Virginia, Georgia, Louise, and Florence were especially likely to have moved to 
+the states of Virginia, Georgia, Louisiana, and Florida, respectively. 
+As wi th na turalistic obser vation, me asurement c an be mor e or less str aightforward when w orking wi th 
+archival data. For example, counting the number of people named Virginia who live in various states based 
+on Social Security records is relatively straightforward. But consider a study by Christopher Peterson and 
+his colleagues on the r elationship between optimism and he alth using da ta that had be en collected many 
+years before for a study on adult development (Peterson, Seligman, & Vaillant, 1988)10. In the 1940s, healthy 
+male c ollege students had c ompleted an open-ende d questionnair e about dif ficult w artime e xperiences. 
+In the la te 1980s, P eterson and his c olleagues r eviewed the men ’s questionnair e r esponses to obtain a 
+measure o f e xplanatory st yle—their habi tual w ays o f e xplaining bad e vents tha t happen to them. M ore 
+pessimistic pe ople tend to blame themsel ves and e xpect long-term nega tive c onsequences tha t af fect 
+many aspects of their lives, while more optimistic people tend to blame outside f orces and expect limited 
+negative c onsequences. T o obtain a me asure o f e xplanatory st yle f or e ach par ticipant, the r esearchers 
+used a pr ocedure in which all nega tive events mentioned in the questionnair e responses, and an y causal 
+explanations for them w ere identified and wri tten on inde x cards. These w ere given to a separ ate group 
+of raters who rated each explanation in terms of three separate dimensions of optimism-pessimism. These 
+ratings were then averaged to produce an explanatory style score for each participant. The researchers then 
+assessed the sta tistical relationship between the men ’s explanatory st yle as under graduate students and 
+archival measures of their he alth at approximately 60 y ears of age. The primar y result was that the mor e 
+optimistic the men were as undergraduate students, the healthier they were as older men. P earson’s r was 
++.25. 
+Observational Research  |  177This method is an e xample of content analysis—a family of systematic approaches to me asurement using 
+complex archival data. Just as structured observation requires specifying the behaviors of interest and then 
+noting them as they occur, content analysis requires specifying keywords, phrases, or ideas and then finding 
+all occurrences of them in the data. These occurrences can then be counted, timed (e.g., the amount of time 
+devoted to entertainment topics on the nightly news show), or analyzed in a variety of other ways. 
+Media Attributions 
+• What happens when you remove the hippocampus? – Sam Kean by TED-Ed licensed under a standard 
+YouTube License 
+• Pappenheim 1882 by unknown is in the Public Domain. 
+Notes 
+1. Festinger, L., Riecken, H., & Schachter, S. (1956). When prophecy fails: A social and psychological study of a modern 
+group that predicted the destruction of the world. University of Minnesota Press. 
+2. Rosenhan, D. L. (1973). On being sane in insane places. Science, 179, 250–258. 
+3. Wilkins, A. (2008). “Happier than Non-Christians”: Collective emotions and symbolic boundaries among evangelical 
+Christians. Social Psychology Quarterly, 71, 281–301. 
+4. Levine, R. V., & Norenzayan, A. (1999). The pace of life in 31 countries. Journal of Cross-Cultural Psychology, 30, 178–205. 
+5. Kraut, R. E., & Johnston, R. E. (1979). Social and emotional messages of smiling: An ethological approach. Journal of 
+Personality and Social Psychology, 37, 1539–1553. 
+6. Cohen, D., Nisbett, R. E., Bowdle, B. F., & Schwarz, N. (1996). Insult, aggression, and the southern culture of honor: An 
+"experimental ethnography." Journal of Personality and Social Psychology, 70(5), 945-960. 
+7. Watson, J. B., & Rayner, R. (1920). Conditioned emotional reactions. Journal of Experimental Psychology, 3, 1–14. 
+8. Freud, S. (1961). Five lectures on psycho-analysis. New York, NY: Norton. 
+9. Pelham, B. W., Carvallo, M., & Jones, J. T. (2005). Implicit egotism. Current Directions in Psychological Science, 14, 
+106–110. 
+10. Peterson, C., Seligman, M. E. P., & Vaillant, G. E. (1988). Pessimistic explanatory style is a risk factor for physical illness: 
+A thirty-five year longitudinal study. Journal of Personality and Social Psychology, 55, 23–27. 
+178  |  Observational Research33.  Key Takeaways and Exercises 
+Key Takeaways 
+• Non-experimental research is research that lacks the manipulation of an independent variable. 
+• There are two broad types of non-experimental research. Correlational research that focuses on 
+statistical relationships between variables that are measured but not manipulated; and observational 
+research in which participants are observed and their behavior is recorded without the researcher 
+interfering or manipulating any variables. 
+• In general, experimental research is high in internal validity, correlational research is low in internal 
+validity, and quasi-experimental research is in between. 
+• Correlational research involves measuring two variables and assessing the relationship between them, 
+with no manipulation of an independent variable. 
+• Correlation does not imply causation. A statistical relationship between two variables, X and Y, does not 
+necessarily mean that X causes Y. It is also possible that Y causes X, or that a third variable, Z, causes 
+both X and Y. 
+• While correlational research cannot be used to establish causal relationships between variables, 
+correlational research does allow researchers to achieve many other important objectives (establishing 
+reliability and validity, providing converging evidence, describing relationships, and making predictions) 
+• Correlation coefficients can range from -1 to +1. The sign indicates the direction of the 
+relationship between the variables and the numerical value indicates the strength of the relationship. 
+• Researchers often use complex correlational research to explore relationships among several variables in 
+the same study. 
+• Complex correlational research can be used to explore possible causal relationships among variables 
+using techniques such as partial correlation and multiple regression. Such designs can show patterns of 
+relationships that are consistent with some causal interpretations and inconsistent with others, but they 
+cannot unambiguously establish that one variable causes another. 
+• Qualitative research is an important alternative to quantitative research in psychology. It generally 
+involves asking broader research questions, collecting more detailed data (e.g., interviews), and using 
+non-statistical analyses. 
+• Many researchers conceptualize quantitative and qualitative research as complementary and advocate 
+combining them. For example, qualitative research can be used to generate hypotheses and quantitative 
+research to test them. 
+• There are several different approaches to observational research including naturalistic observation, 
+participant observation, structured observation, case studies, and archival research. 
+• Naturalistic observation is used to observe people in their natural setting; participant observation 
+involves becoming an active member of the group being observed; structured observation involves coding 
+a small number of behaviors in a quantitative manner; case studies are typically used to collect in-depth 
+information on a single individual; and archival research involves analyzing existing data. 
+Key Takeaways and Exercises  |  179Exercises 
+• Discussion: For each of the following studies, decide which type of research design it is and explain why. 
+◦ A researcher conducts detailed interviews with unmarried teenage fathers to learn about how they 
+feel and what they think about their role as fathers and summarizes their feelings in a written 
+narrative. 
+◦ A researcher measures the impulsivity of a large sample of drivers and looks at the statistical 
+relationship between this variable and the number of traffic tickets the drivers have received. 
+◦ A researcher randomly assigns patients with low back pain either to a treatment involving hypnosis 
+or to a treatment involving exercise. She then measures their level of low back pain after 3 months. 
+• Discussion: For each of the following, decide whether it is most likely that the study described is 
+experimental or non-experimental and explain why. 
+◦ A cognitive psychologist compares the ability of people to recall words that they were instructed to 
+“read” with their ability to recall words that they were instructed to “imagine.” 
+◦ A manager studies the correlation between new employees’ college grade point averages and their 
+first-year performance reports. 
+◦ An automotive engineer installs different stick shifts in a new car prototype, each time asking 
+several people to rate how comfortable the stick shift feels. 
+◦ A food scientist studies the relationship between the temperature inside people’s refrigerators and 
+the amount of bacteria on their food. 
+◦ A social psychologist tells some research participants that they need to hurry over to the next 
+building to complete a study. She tells others that they can take their time. Then she observes 
+whether they stop to help a research assistant who is pretending to be hurt. 
+• Practice: For each of the following statistical relationships, decide whether the directionality problem is 
+present and think of at least one plausible third variable. 
+◦ People who eat more lobster tend to live longer. 
+◦ People who exercise more tend to weigh less. 
+◦ College students who drink more alcohol tend to have poorer grades. 
+• Practice: Construct a correlation matrix for a hypothetical study including the variables of depression, 
+anxiety, self-esteem, and happiness. Include the Pearson’s r values that you would expect. 
+• Discussion: Imagine a correlational study that looks at intelligence, the need for cognition, and high 
+school students’ performance in a critical thinking course. A multiple regression analysis shows that 
+intelligence is not related to performance in the class but that the need for cognition is. Explain what this 
+study has shown in terms of what is related to good performance in the critical thinking course. 
+• Discussion: What are some ways in which a qualitative study of girls who play youth baseball would likely 
+differ from a quantitative study on the same topic? How would the data differ by interviewing girls one-
+on-one rather than conducting focus groups or surveys? 
+• Practice: Find and read a published case study in psychology. (Use case study as a key term in a PsycINFO 
+search.) Then do the following: 
+◦ Describe one problem related to internal validity. 
+180  |  Key Takeaways and Exercises◦ Describe one problem related to external validity. 
+◦ Generate one hypothesis suggested by the case study that might be interesting to test in a 
+subsequent study. 
+Key Takeaways and Exercises  |  181

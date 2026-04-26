@@ -1,0 +1,342 @@
+CHAPTER  IX 
+FACTORIAL DESIGNS 
+In Chapter 1 w e briefly described a stud y conducted by Simone Schnall and her c olleagues, in which the y 
+found that washing one’s hands le ads people to vie w moral transgressions as less wr ong (Schnall, Benton, 
+& Harvey, 2008)1. In a dif ferent but r elated study, Schnall and her c olleagues investigated whether feeling 
+physically disgusted causes people to make harsher moral judgments (Schnall, Haidt, Clore, & Jordan, 2008)2. 
+In this experiment, they manipulated participants’ feelings of disgust by testing them in either a clean room 
+or a messy room that contained dirty dishes, an overflowing wastebasket, and a chewed-up pen. They also 
+used a self -report questionnaire to me asure the amoun t of attention that people pay to their o wn bodily 
+sensations. They called this “private body consciousness.” They measured their primary dependent variable, 
+the harshness o f people’s moral judgments, by describing different behaviors (e.g., eating one’s dead dog, 
+failing to return a found wallet) and having participants rate the moral acceptability of each one on a sc ale 
+of 1 to 7. Finally, the researchers asked participants to rate their current level of disgust and other emotions. 
+The primary results of this study were that participants in the messy room were, in fact, more disgusted and 
+made harsher moral judgments than participants in the clean room—but only if they scored relatively high 
+in private body consciousness. 
+The research designs we have considered so far have been simple—focusing on a question about one variable 
+or about a r elationship between two variables. But in man y ways, the c omplex design o f this e xperiment 
+undertaken by Schnall and her c olleagues is mor e typical of research in psy chology. Fortunately, we have 
+already covered the basic elemen ts of such designs in pr evious chapters. I n this chapter , we look closel y 
+at ho w and wh y r esearchers use factorial designs , which ar e e xperiments tha t include mor e than one 
+independent variable. 
+Notes 
+1. Schnall, S., Benton, J., & Harvey, S. (2008). With a clean conscience: Cleanliness reduces the severity of moral 
+judgments. Psychological Science, 19(12), 1219-1222. doi: 10.1111/j.1467-9280.2008.02227.x 
+2. Schnall, S., Haidt, J., Clore, G. L., & Jordan, A. H. (2008). Disgust as embodied moral judgment. Personality and Social 
+Psychology Bulletin, 34, 1096–1109. 
+Factorial Designs  |  22141.  Setting Up a Factorial Experiment 
+Learning Objectives 
+1. Explain why researchers often include multiple independent variables in their studies. 
+2. Define factorial design, and use a factorial design table to represent and interpret simple factorial 
+designs. 
+ 
+Just as i t is c ommon for studies in psy chology to include multiple le vels of a sing le independent variable 
+(placebo, new drug, old drug), it is also common for them to include multiple independent variables. Schnall 
+and her c olleagues studied the ef fect of both disgust and priv ate body consciousness in the same stud y. 
+Researchers’ inclusion o f multiple independen t v ariables in one e xperiment is fur ther illustr ated b y the 
+following actual titles from various professional journals: 
+• The Effects of Temporal Delay and Orientation on Haptic Object Recognition 
+• Opening Closed Minds: The Combined Effects of Intergroup Contact and Need for Closure on 
+Prejudice 
+• Effects of Expectancies and Coping on Pain-Induced Intentions to Smoke 
+• The Effect of Age and Divided Attention on Spontaneous Recognition 
+• The Effects of Reduced Food Size and Package Size on the Consumption Behavior of Restrained and 
+Unrestrained Eaters 
+Just as including multiple le vels of a sing le independent variable allows one to answ er more sophisticated 
+research questions, so too does including multiple independen t v ariables in the same e xperiment. F or 
+example, inste ad o f c onducting one stud y on the ef fect o f disgust on mor al judgmen t and another on 
+the effect of private body consciousness on mor al judgment, Schnall and c olleagues were able to c onduct 
+one stud y tha t addr essed both questions. B ut including multiple independen t v ariables also allo ws the 
+researcher to answ er questions about whe ther the ef fect o f one independen t v ariable depends on the 
+level of another. This is r eferred to as an in teraction between the independen t variables. Schnall and her 
+colleagues, for example, observed an interaction between disgust and private body consciousness because 
+the effect of disgust depended on whether participants were high or low in private body consciousness. As 
+we will see, interactions are often among the most interesting results in psychological research. 
+Setting Up a Factorial Experiment  |  223Factorial Designs 
+Overview 
+By far the most c ommon appr oach to including multiple independen t v ariables ( which ar e o ften c alled 
+factors) in an e xperiment is the fac torial design. I n a  factorial design, e ach le vel o f one independen t 
+variable is combined with each level of the others to produce all possible combinations. Each combination, 
+then, be comes a c ondition in the e xperiment. I magine, f or e xample, an e xperiment on the ef fect o f c ell 
+phone use (y es vs. no ) and time o f da y ( day vs. nig ht) on driving abili ty. This is sho wn in 
+the factorial design table in Figure 9.1. The c olumns o f the table r epresent c ell phone use, and the r ows 
+represent time o f day. The f our cells of the table r epresent the f our possible combinations or c onditions: 
+using a c ell phone during the da y, not using a c ell phone during the da y, using a c ell phone a t night, and 
+not using a cell phone at night. This particular design is referred to as a 2 × 2 ( read “two-by-two”) factorial 
+design because it combines two variables, each of which has two levels. 
+If one of the independent variables had a third level (e.g., using a handheld cell phone, using a hands-free cell 
+phone, and not using a cell phone), then it would be a 3 × 2 factorial design, and there would be six distinct 
+conditions. Notice that the number o f possible conditions is the pr oduct of the numbers o f levels. A 2 × 2 
+factorial design has four conditions, a 3 × 2 factorial design has six conditions, a 4 × 5 factorial design would 
+have 20 c onditions, and so on. Also notic e that e ach number in the nota tion represents one fac tor, one 
+independent variable. So by looking at how many numbers are in the notation, you can determine how many 
+independent variables there are in the e xperiment. 2 x 2, 3 x 3, and 2 x 3 designs all ha ve two numbers in 
+the notation and therefore all have two independent variables. The numerical value of each of the numbers 
+represents the number of levels of each independent variable. A 2 means that the independent variable has 
+two levels, a 3 me ans that the independen t variable has thr ee levels, a 4 me ans it has f our levels, etc. To 
+illustrate a 3 x 3 design has t wo independent variables, each with three levels, while a 2 x 2 x 2 design has 
+three independent variables, each with two levels. 
+224  |  Setting Up a Factorial ExperimentFigure 9.1 Factorial Design Table Representing a 2 × 2 Factorial 
+Design 
+In principle, factorial designs can include any number of independent variables with any number of levels. 
+For example, an experiment could include the type of psychotherapy (cognitive vs. behavioral), the length of 
+the psychotherapy (2 weeks vs. 2 months), and the sex of the psychotherapist (female vs. male). This would 
+be a 2 × 2 × 2 fac torial design and would have eight conditions. Figure 9.2 shows one way to represent this 
+design. I n pr actice, i t is unusual f or ther e to be mor e than thr ee independen t variables wi th mor e than 
+two or thr ee levels each. This is f or at least t wo reasons: For one, the number o f conditions can quickly 
+become unmanageable. For example, adding a fourth independent variable with three levels (e.g., therapist 
+experience: low vs. medium vs. hig h) to the curr ent example would make it a 2 × 2 × 2 × 3 fac torial design 
+with 24 distinct conditions. Second, the number of participants required to populate all of these conditions 
+(while maintaining a reasonable ability to detect a real underlying effect) can render the design unf easible 
+(for more information, see the discussion about the importance of adequate statistical power in Chapter 13). 
+As a result, in the r emainder of this section, we will focus on designs wi th two independent variables. The 
+general principles discussed here extend in a straightforward way to more complex factorial designs. 
+Setting Up a Factorial Experiment  |  225Figure 9.2 Factorial Design Table Representing a 2 × 2 × 2 Factorial 
+Design 
+Assigning Participants to Conditions 
+Recall that in a simple between-subjects design, each participant is tested in only one condition. In a simple 
+within-subjects design, e ach participant is teste d in all c onditions. In a fac torial experiment, the de cision 
+to take the between-subjects or wi thin-subjects approach must be made separ ately for each independent 
+variable. In a between-subjects factorial design, all of the independent variables are manipulated between 
+subjects. For example, all par ticipants could be teste d either while using a c ell phone or while not using a 
+cell phone and ei ther during the da y or during the nig ht. This would mean that each participant would be 
+tested in one and onl y one condition. In a within-subjects factorial design, all of the independent variables 
+are manipulated within subjects. All par ticipants could be teste d both while using a c ell phone and while 
+not using a cell phone and both during the day and during the night. This would mean that each participant 
+would need to be tested in all four conditions. The advantages and disadvantages of these two approaches 
+are the same as those discusse d in Chapter 5. The between-subjects design is conceptually simpler, avoids 
+order/carryover effects, and minimizes the time and effort of each participant. The within-subjects design 
+is more efficient for the researcher and controls extraneous participant variables. 
+Since fac torial designs ha ve mor e than one independen t v ariable, i t is also possi ble to manipula te one 
+independent variable between subjects and another within subjects. This is called a mixed factorial design. 
+For example, a r esearcher might choose to tr eat cell phone use as a wi thin-subjects factor by testing the 
+same participants both while using a c ell phone and while not using a c ell phone (while counterbalancing 
+226  |  Setting Up a Factorial Experimentthe order of these two conditions). But they might choose to treat time of day as a between-subjects factor 
+by testing e ach participant either during the da y or during the nig ht (perhaps because this onl y requires 
+them to come in for testing once). Thus each participant in this mixed design would be tested in two of the 
+four conditions. 
+Regardless of whether the design is be tween subjects, within subjects, or mix ed, the ac tual assignment of 
+participants to conditions or orders of conditions is typically done randomly. 
+Non-Manipulated Independent Variables 
+In many factorial designs, one o f the independen t variables is a non-manipulated independent variable. 
+The r esearcher me asures i t but does not manipula te i t. The stud y b y Schnall and c olleagues is a g ood 
+example. One independent variable was disgust, which the researchers manipulated by testing participants 
+in a cle an room or a messy r oom. The other w as private body consciousness, a par ticipant variable which 
+the r esearchers simpl y me asured. Another e xample is a stud y b y H alle B rown and c olleagues in which 
+participants were exposed to several words that they were later asked to recall (Brown, Kosslyn, Delamater, 
+Fama, & Barsky , 1999)1. The manipula ted independent variable was the t ype of word. Some w ere negative 
+health-related w ords ( e.g., tumor, coronary), and others w ere not he alth r elated ( e.g., election, geometry). 
+The non-manipulated independent variable was whether participants were high or low in hypochondriasis 
+(excessive concern with ordinary bodily symptoms). The result of this study was that the participants high 
+in hypochondriasis were better than those low in hypochondriasis at recalling the health-related words, but 
+they were no better at recalling the non-health-related words. 
+Such studies ar e extremely common, and ther e are several points worth making about them. F irst, non-
+manipulated independen t v ariables ar e usuall y par ticipant v ariables (priv ate bod y c onsciousness, 
+hypochondriasis, self -esteem, g ender, and so on ), and as such, the y ar e b y defini tion be tween-subjects 
+factors. F or e xample, pe ople ar e ei ther lo w in h ypochondriasis or hig h in h ypochondriasis; the y c annot 
+be teste d in both o f these c onditions. Se cond, such studies ar e g enerally c onsidered to be e xperiments 
+as long as a t le ast one independen t v ariable is manipula ted, r egardless o f ho w man y non-manipula ted 
+independent variables are included. Third, it is important to remember that causal conclusions can only be 
+drawn about the manipulated independent variable. For example, Schnall and her c olleagues were justified 
+in c oncluding tha t disgust af fected the harshness o f their par ticipants’ mor al judgmen ts be cause the y 
+manipulated that variable and randomly assigned participants to the cle an or messy r oom. But they would 
+not have been justified in concluding that participants’ private body consciousness affected the harshness of 
+their participants’ moral judgments because they did not manipulate that variable. It could be, for example, 
+that having a stric t moral code and a heig htened awareness of one’s body are both c aused by some thir d 
+variable (e.g., neuroticism). Thus i t is impor tant to be a ware of which variables in a stud y are manipulated 
+and which are not. 
+Setting Up a Factorial Experiment  |  227Non-Experimental Studies With Factorial Designs 
+Thus far w e ha ve se en tha t fac torial e xperiments c an include manipula ted independen t v ariables or a 
+combination o f manipula ted and non-manipula ted independen t v ariables. B ut fac torial designs c an also 
+include only non-manipulated independent variables, in which case they are no longer experiments but are 
+instead non-experimental in nature. Consider a h ypothetical study in which a r esearcher simply measures 
+both the moods and the self -esteem of several participants—categorizing them as ha ving either a posi tive 
+or nega tive mood and as being ei ther hig h or lo w in self -esteem—along wi th their willingness to ha ve 
+unprotected sexual intercourse. This can be conceptualized as a 2 × 2 factorial design with mood (positive vs. 
+negative) and self-esteem (high vs. low) as non-manipulated between-subjects factors. Willingness to have 
+unprotected sex is the dependent variable. 
+Again, because neither independent variable in this example was manipulated, it is a non-experimental study 
+rather than an e xperiment. (The similar stud y b y Mac Donald and Mar tineau [ 2002]2 was an e xperiment 
+because the y manipula ted their par ticipants’ moods.) This is impor tant be cause, as al ways, one must be 
+cautious about inf erring causality from non-experimental studies be cause of the dir ectionality and thir d-
+variable problems. For example, an ef fect of participants’ moods on their willingness to ha ve unprotected 
+sex might be caused by any other variable that happens to be correlated with their moods. 
+Notes 
+1. Brown, H. D., Kosslyn, S. M., Delamater, B., Fama, A., & Barsky, A. J. (1999). Perceptual and memory biases for health-
+related information in hypochondriacal individuals. Journal of Psychosomatic Research, 47, 67–78. 
+2. MacDonald, T. K., & Martineau, A. M. (2002). Self-esteem, mood, and intentions to use condoms: When does low self-
+esteem lead to risky health behaviors? Journal of Experimental Social Psychology, 38, 299–306. 
+228  |  Setting Up a Factorial Experiment42.  Interpreting the Results of a Factorial 
+Experiment 
+Learning Objectives 
+1. Distinguish between main effects and interactions, and recognize and give examples of each. 
+2. Sketch and interpret bar graphs and line graphs showing the results of studies with simple factorial 
+designs. 
+3. Distinguish between main effects and simple effects, and recognize when an analysis of simple effects is 
+required. 
+Graphing the Results of Factorial Experiments 
+The results of factorial experiments with two independent variables can be gr aphed by representing one 
+independent v ariable on the  x-axis and r epresenting the other b y using dif ferent c olored bars or lines. 
+(The y-axis is al ways reserved f or the dependen t variable.) Figure 9.3 shows results f or t wo hypothetical 
+factorial e xperiments. The top panel sho ws the r esults o f a 2 × 2 design. Time o f da y (day vs. nig ht) is 
+represented by different locations on the x-axis, and cell phone use (no vs. yes) is represented by different-
+colored bars. (I t w ould also be possi ble to r epresent c ell phone use on the  x-axis and time o f da y as 
+different-colored bars. The choic e c omes do wn to which w ay se ems to c ommunicate the r esults most 
+clearly.) The bot tom panel o f Figure 9.3 shows the r esults of a 4 × 2 design in which one o f the v ariables 
+is quantitative. This variable, psychotherapy length, is r epresented along the x-axis, and the other v ariable 
+(psychotherapy type) is r epresented by dif ferently formatted lines. This is a line gr aph rather than a bar 
+graph because the variable on the x-axis is quantitative with a small number o f distinct levels. Line graphs 
+are also appropriate when representing measurements made over a time in terval (also referred to as time 
+series information) on the x-axis. 
+Interpreting the Results of a Factorial Experiment  |  229Figure 9.3 Two Ways to Plot the Results of a Factorial Experiment With Two 
+Independent Variables 
+Main Effects 
+In factorial designs, there are three kinds of results that are of interest: main effects, interaction effects, and 
+simple effects. A main effect is the effect of one independent variable on the dependent variable—averaging 
+across the le vels o f the other independen t v ariable. Thus ther e is one main ef fect to c onsider f or e ach 
+independent variable in the study. The top panel of Figure 9.3 shows a main effect of cell phone use because 
+driving performance was better, on average, when participants were not using cell phones than when the y 
+were. The blue bars ar e, on a verage, hig her than the r ed bars. I t also sho ws a main ef fect of time o f day 
+because driving performance was better during the day than during the night—both when participants were 
+using cell phones and when the y were not. Main ef fects are independent of each other in the sense tha t 
+whether or not there is a main effect of one independent variable says nothing about whether or not there 
+is a main ef fect o f the other . The bot tom panel o f Figure 9 .3, f or e xample, sho ws a cle ar main ef fect o f 
+psychotherapy length. The longer the psychotherapy, the better it worked. 
+230  |  Interpreting the Results of a Factorial ExperimentInteractions 
+There is an interaction effect (or just “interaction”) when the effect of one independent variable depends on 
+the level of another. Although this might seem complicated, you already have an intuitive understanding of 
+interactions. As an everyday example, assume your friend asks you to go to a movie with another friend. Your 
+response to her is, “well it depends on which movie you are going to see and who else is coming.” You really 
+want to see the big blockbuster summer hi t but have little interest in seeing the cheesy romantic comedy. 
+In other words, there is a main effect of type of movie on your decision. If your decision to go to see either 
+of these movies further depends on who she is bring ing with her then there is an interaction. For instance, 
+if you will go to see the cheesy romantic comedy if she brings her hot friend you want to get to know better, 
+but you will not g o to this mo vie if she brings an yone else, then ther e is an in teraction. Drug in teractions 
+are another g ood illustration of everyday interactions. Many older men tak e Viagara to assist them in the 
+bedroom, and many men take nitrates to treat angina or chest pain. So e ach of these drugs is beneficial on 
+its own (there are main effects of each on older men’s well-being). But the combination of these two drugs 
+can be lethal. In other words, there is a v ery important interaction between Viagara and heart medication 
+that older men need to be aware of to prevent their untimely demise. 
+Let’s no w c onsider some e xamples o f in teractions fr om r esearch. It pr obably w ould not surprise y ou to 
+hear tha t the ef fect o f r eceiving psy chotherapy is str onger among pe ople who ar e hig hly motiv ated to 
+change than among pe ople who ar e not motiv ated to chang e. This is an in teraction because the ef fect of 
+one independen t v ariable (whether or not one r eceives psy chotherapy) depends on the le vel o f another 
+(motivation to chang e). Schnall and her c olleagues also demonstr ated an in teraction be cause the ef fect 
+of whe ther the r oom w as cle an or messy on par ticipants’ mor al judgmen ts depende d on whe ther the 
+participants w ere lo w or hig h in priv ate bod y c onsciousness. I f the y w ere hig h in priv ate bod y 
+consciousness, then those in the messy r oom made harsher judgmen ts. If they were low in priv ate body 
+consciousness, then whether the room was clean or messy did not matter. 
+In man y studies, the primar y r esearch question is about an in teraction. The stud y b y B rown and her 
+colleagues was inspired by the idea that people with hypochondriasis are especially attentive to any negative 
+health-related inf ormation. This le d to the h ypothesis tha t pe ople hig h in h ypochondriasis w ould r ecall 
+negative health-related words more accurately than people low in hypochondriasis but recall non-health-
+related words about the same as people low in hypochondriasis. And of course, this is exactly what happened 
+in this study. 
+Types of Interactions 
+The effect of one independent variable can depend on the level of the other in several different ways. First, 
+there can be spreading interactions. Examples of spreading interactions are shown in the top t wo panels 
+of Figure 9.4. In the top panel, independen t variable “B” has an ef fect at level 1 of independent variable “A” 
+(there is a dif ference in the heig ht of the blue and r ed bars on the lef t side o f the gr aph) but no ef fect at 
+level 2 of independent variable “A.” (there is no difference in the height of the blue and red bars on the right 
+Interpreting the Results of a Factorial Experiment  |  231side of the gr aph). This is much lik e the stud y of Schnall and her c olleagues where there was an ef fect of 
+disgust for those high in private body consciousness but not for those low in private body consciousness. In 
+the middle panel, independen t variable “B” has a str onger effect at level 1 of independent variable “A” than 
+at level 2 (there is a larger difference in the height of the blue and red bars on the left side of the graph and 
+a smaller dif ference in the heig ht of the blue and r ed bars on the rig ht side o f the gr aph). This is lik e the 
+hypothetical driving e xample where there was a str ong effect of using a c ell phone a t night and a w eaker 
+effect of using a cell phone during the day. So to summarize, for spreading interactions there is an effect of 
+one independent variable at one level of the other independent variable and there is either a weak effect or 
+no effect of that independent variable at the other level of the other independent variable. 
+The second type of interaction that can be f ound is a cross-over interaction. A cross-over interaction is 
+depicted in the bot tom panel o f F igure 9 .4, independen t v ariable “B” again has an ef fect a t both le vels 
+of independen t v ariable “A,” but the ef fects ar e in opposi te dir ections. Another e xample o f a cr ossover 
+interaction c omes fr om a stud y b y Ka thy Gilliland on the ef fect o f c affeine on the v erbal test sc ores o f 
+introverts and e xtraverts (Gilliland, 1980)1. Introverts perform better than e xtraverts when the y have not 
+ingested an y c affeine. B ut e xtraverts perf orm be tter than in troverts when the y ha ve ing ested 4 mg o f 
+caffeine per kilogram of body weight. 
+232  |  Interpreting the Results of a Factorial ExperimentFigure 9.4 Bar Graphs Showing Three Types of Interactions. In the top panel, 
+one independent variable has an effect at one level of the second independent 
+variable but not at the other. In the middle panel, one independent variable 
+has a stronger effect at one level of the second independent variable than at 
+the other. In the bottom panel, one independent variable has the opposite 
+effect at one level of the second independent variable than at the other. 
+Figure 9.5 shows examples of these same kinds o f interactions when one o f the independen t variables is 
+Interpreting the Results of a Factorial Experiment  |  233quantitative and the r esults are plotted in a line gr aph. Note that the top t wo figures depict the two kinds 
+of spreading interactions that can be found while the bottom figure depicts a crossover interaction (the two 
+lines literally “cross over” each other). 
+234  |  Interpreting the Results of a Factorial ExperimentFigure 9.5 Line Graphs Showing Different Types of Interactions. In the top 
+panel, one independent variable has an effect at one level of the second 
+independent variable but not at the other. In the middle panel, one 
+independent variable has a stronger effect at one level of the second 
+independent variable than at the other. In the bottom panel, one 
+independent variable has the opposite effect at one level of the second 
+Interpreting the Results of a Factorial Experiment  |  235independent variable than at the other. [Image description] 
+ 
+Simple Effects 
+When researchers find an in teraction it suggests that the main ef fects may be a bi t misleading. Think o f 
+the example of a cr ossover interaction where introverts were found to perf orm better on a test o f verbal 
+test performance than e xtraverts when the y had not ing ested any caffeine, but e xtraverts were found to 
+perform better than in troverts when the y had ing ested 4 mg o f caffeine per kilogr am of body weight. To 
+examine the main effect of caffeine consumption, the researchers would have averaged across introversion 
+and extraversion and simpl y looked at whether overall those who ing ested caffeine had be tter or w orse 
+verbal memor y test perf ormance. Be cause the posi tive ef fect o f c affeine on e xtraverts w ould be wipe d 
+out b y the nega tive ef fects o f c affeine on the in troverts, no main ef fect o f c affeine c onsumption w ould 
+have been found. Similarly, to examine the main effect of personality, the researchers would have averaged 
+across the levels of the caffeine variable to look a t the effects of personality (introversion vs. extraversion) 
+independent of caffeine. In this c ase, the posi tive effects extraversion in the c affeine condition would be 
+wiped out by the negative effects of extraversion in the no caffeine condition. Does the absence of any main 
+effects mean that there is no effect of caffeine and no effect of personality? No of course not. The presence 
+of the in teraction indicates that the stor y is mor e complicated, that the ef fects of caffeine on v erbal test 
+performance depend on personali ty. This is wher e simple effects come into play. Simple effects are a way 
+of breaking down the interaction to figure out precisely what is going on. An interaction simply informs us 
+that the ef fects of at least one independen t variable depend on the le vel of another independen t variable. 
+Whenever an interaction is detected, researchers need to conduct additional analyses to determine where 
+that interaction is c oming from. Of c ourse one ma y be able to visualiz e and in terpret the in teraction on 
+a gr aph but a simple ef fects anal ysis pr ovides r esearchers wi th a mor e sophistic ated me ans o f br eaking 
+down the in teraction. Specifically, a simple ef fects analysis allows researchers to de termine the ef fects of 
+each independent variable at each level of the other independen t variable. So while the r esearchers would 
+average across the t wo levels of the personali ty variable to e xamine the ef fects of caffeine on v erbal test 
+performance in a main ef fects anal ysis, f or a simple ef fects anal ysis the r esearchers w ould e xamine the 
+effects of caffeine in introverts and then examine the effects of caffeine in extraverts. As we saw previously, 
+the researchers also examined the effects of personality in the no caffeine condition and found that in this 
+condition introverts performed better than e xtraverts. Finally, they examined the ef fects of personality in 
+the caffeine condition and found that extraverts performed better than introverts in this condition. For a 2 
+x 2 design like this, there will be two main effects the researchers can explore and four simple effects. 
+Schnall and c olleagues found a main ef fect of disgust on mor al judgments (those in a messy r oom made 
+harsher mor al judgmen ts). H owever, the y also disc overed an in teraction be tween priv ate bod y 
+consciousness and disgust. I n other words, the effect of disgust depended on private body consciousness. 
+The presence of this interaction suggests the main effect may be a bi t misleading. That is, it is not entirely 
+236  |  Interpreting the Results of a Factorial Experimentaccurate to say that those in a messy r oom made harsher mor al judgments because this was only true for 
+half of the participants. Using simple effects analyses, they were able to further demonstrate that for people 
+high in private body consciousness, there was an effect of disgust on moral judgments. Further, they found 
+that for those lo w in priv ate body consciousness there was no ef fect of disgust on mor al judgments. By 
+examining the ef fect of disgust a t each level of body consciousness using simple ef fects analyses, Schnall 
+and colleagues were able to better understand the nature of the interaction. 
+As described previously, Brown and colleagues found an interaction between type of words (health related 
+or not health related) and hypochondriasis (high or low) on word recall. To break down this interaction using 
+simple effects analyses they examined the effect of hypochondriasis at each level of word type. Specifically, 
+they examined the effect of hypochondriasis on recall of health-related words and then they subsequently 
+examined the effect of hypochondriasis on recall of non-health related words. They found that people high 
+in hypochondriasis were able to r ecall more health-related words than pe ople low in h ypochondriasis. In 
+contrast, there was no effect of hypochondriasis on the recall of non-health related words. 
+Once again examining simple effects provides a means of breaking down the interaction and therefore it is 
+only necessary to conduct these analyses when an interaction is present. When there is no interaction then 
+the main effects will tell the c omplete and accurate story. To summarize, rather than averaging across the 
+levels of the other independen t variable, as is done in a main ef fects analysis, simple ef fects analyses are 
+used to examine the effects of each independent variable at each level of the other independent variable(s). 
+So a researcher using a 2×2 design wi th four conditions would need to look a t 2 main ef fects and 4 simple 
+effects. A researcher using a 2×3 design with six conditions would need to look at 2 main effects and 5 simple 
+effects, while a r esearcher using a 3×3 design wi th nine c onditions would need to look a t 2 main ef fects 
+and 6 simple ef fects. As y ou can see, while the number o f main ef fects depends simpl y on the number o f 
+independent variables included (one main effect can be explored for each independent variable), the number 
+of simple effects analyses depends on the number of levels of the independent variables (because a separate 
+analysis of each independent variable  is conducted at each level of the other independent variable). 
+Image Descriptions 
+Figure 9.5 image description: Three panels, e ach showing a dif ferent line graph pattern. In the top panel, 
+one line r emains constant while the other g oes up. I n the middle panel, both lines g o up but a t different 
+rates. In the bottom panel, one line goes down and the other goes up so they cross. [Return to Figure 9.5] 
+Notes 
+1. Gilliland, K. (1980). The interactive effect of introversion-extraversion with caffeine induced arousal on verbal 
+performance. Journal of Research in Personality, 14, 482–492. 
+Interpreting the Results of a Factorial Experiment  |  237
