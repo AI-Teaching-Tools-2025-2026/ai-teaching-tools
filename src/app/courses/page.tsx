@@ -63,7 +63,7 @@ export default function CoursesPage() {
 
       <div className="container mx-auto px-4 mt-25">
         <h1 className="text-2xl font-bold mt-8 text-center">Courses</h1>
-        <div className="grid gap-4 mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid gap-4 mt-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {courses.map((course) => (
             <div key={course._id} className="w-full">
               <CourseCard
