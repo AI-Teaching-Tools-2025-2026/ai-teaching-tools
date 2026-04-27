@@ -1,4 +1,5 @@
-from fastapi import APIRouter, Depends, HTTPException
+import asyncio
+from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from db.utils import get_instructor_db
 from .models import QuestionBankCreate
 from datetime import datetime
@@ -89,10 +90,10 @@ async def duplicate_question_bank(questionBankId: str, db=Depends(get_instructor
     
     return question_bank
 
-@question_bank_router.post("/generate_question_banks")
-async def generate_question_bank(courseId: str, filePath: str, db=Depends(get_instructor_db)):
+async def process_question_bank_background(courseId: str, filePath: str, db):
+    print(f"Background task started for {filePath}")
     
-    parsed_data = pdfParser(filePath) 
+    parsed_data = await asyncio.to_thread(pdfParser, filePath) 
     
     textbook_name = parsed_data["textbookName"]
     chapters = parsed_data["chapters"]
@@ -102,7 +103,8 @@ async def generate_question_bank(courseId: str, filePath: str, db=Depends(get_in
         chapter_title = chapter_data["chapterTitle"]
         chapter_text = chapter_data["text"]
         
-        question_bank = generate_for_chapter(
+        question_bank = await asyncio.to_thread(
+            generate_for_chapter,
             textbook_name=textbook_name, 
             chapter_num=chapter_num, 
             chapter_title=chapter_title, 
@@ -132,5 +134,12 @@ async def generate_question_bank(courseId: str, filePath: str, db=Depends(get_in
             print(f"CRITICAL VALIDATION FAILED for Chapter {chapter_num}. Not saving to DB.")
             print(e.errors())
             continue
+            
+    print(f"Background task completed for {filePath}")
+
+@question_bank_router.post("/generate_question_banks")
+async def generate_question_bank(courseId: str, filePath: str, background_tasks: BackgroundTasks, db=Depends(get_instructor_db)):
     
-    return {"message": "Question Banks generated successfully"}
+    background_tasks.add_task(process_question_bank_background, courseId, filePath, db)
+    
+    return {"message": "Question Bank generation started in the background. This may take a few minutes."}
