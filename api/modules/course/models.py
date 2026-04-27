@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 class CourseCreate(BaseModel):
-    textbookID: str
+    textbookID: str | None = None
     courseTitle: str
     courseTerm: str
     courseDescription: str
