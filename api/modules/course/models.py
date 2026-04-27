@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 class CourseCreate(BaseModel):
-    textbookID: str
+    # textbookID: str | None = None
     courseTitle: str
     courseTerm: str
     courseDescription: str
@@ -10,7 +10,7 @@ class CourseCreate(BaseModel):
 
 
 class CourseUpdate(BaseModel):
-    textbookID: str | None = None
+    # textbookID: str | None = None
     courseTitle: str | None = None
     courseTerm: str | None = None
     courseDescription: str | None = None

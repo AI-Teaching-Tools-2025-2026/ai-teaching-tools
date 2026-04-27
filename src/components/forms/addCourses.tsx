@@ -17,7 +17,7 @@ export default function AddCourses({ onSuccess, course }: Props) {
   const [courseTitle, setCourseTitle] = useState("");
   const [courseTerm, setCourseTerm] = useState("");
   const [courseDescription, setCourseDescription] = useState("");
-  const [file, setFile] = useState<File | null>(null);
+  //const [file, setFile] = useState<File | null>(null);
   const [cardColor, setCardColor] = useState<string>("#2563eb");
   const [loading, setLoading] = useState(false);
 
@@ -28,13 +28,13 @@ export default function AddCourses({ onSuccess, course }: Props) {
     courseDescription: "",
   });
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files?.[0]) {
-      setFile(e.target.files[0]);
-    } else {
-      setFile(null);
-    }
-  };
+  // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (e.target.files?.[0]) {
+  //     setFile(e.target.files[0]);
+  //   } else {
+  //     setFile(null);
+  //   }
+  // };
 
   useEffect(() => {
     if (course) {
@@ -71,7 +71,7 @@ export default function AddCourses({ onSuccess, course }: Props) {
       setLoading(true);
 
       const payload = {
-        textbookID: file ? file.name : "",
+        //textbookID: file ? file.name : "",
         courseTitle,
         courseTerm,
         courseDescription,
@@ -113,7 +113,7 @@ export default function AddCourses({ onSuccess, course }: Props) {
       setCourseTitle("");
       setCourseTerm("");
       setCourseDescription("");
-      setFile(null);
+      //setFile(null);
       setCardColor("#2563eb");
       setErrors({ courseTitle: "", courseTerm: "", courseDescription: "" });
     } catch (e) {
@@ -187,13 +187,13 @@ export default function AddCourses({ onSuccess, course }: Props) {
         </div>
 
         {/* File Upload */}
-        <div className="grid gap-1.5">
+        {/* <div className="grid gap-1.5">
           <Label htmlFor="courseFile">Upload Material</Label>
           <Input id="courseFile" type="file" onChange={handleFileChange} />
           <p className="text-sm text-muted-foreground">
             Please Upload a Textbook Here
           </p>
-        </div>
+        </div> */}
 
         {/* Card Color */}
         <div className="grid gap-1.5">

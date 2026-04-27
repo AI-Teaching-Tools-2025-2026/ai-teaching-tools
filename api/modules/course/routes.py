@@ -20,7 +20,7 @@ async def create_course(course: CourseCreate, request: Request, db=Depends(get_i
     new_course = {
         "_id": str(ObjectId()),
         "userID": user_id,
-        "textbookID": course.textbookID,
+        # "textbookID": course.textbookID,
         "createdAt": datetime.utcnow().isoformat() + "Z",
         "courseTitle": course.courseTitle,
         "courseTerm": course.courseTerm,
