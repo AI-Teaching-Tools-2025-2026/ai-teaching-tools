@@ -20,10 +20,11 @@ import {
   transformBuilderQuestions,
   transformQuestionsToBuilder,
 } from "@/types/quiz";
-import { QuizBuilderSidebar } from "./builder/QuizBuilderSidebar";
+import { ActionSidebar, SidebarAction } from "@/components/shared/ActionSidebar";
 import { quizService } from "@/services/quizService";
 import QuizPreview from "./QuizPreview";
 import { toast } from "sonner";
+import { Eye, GraduationCap, RefreshCcw, SquarePen, Trash2 } from "lucide-react";
 
 type Tab = "details" | "questions";
 
@@ -203,12 +204,41 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
         </div>
 
         {/* Sidebar */}
-        <QuizBuilderSidebar
-          onPreview={handlePreview}
-          onSaveQuiz={handleSaveQuiz}
-          onDelete={handleDeleteQuiz}
-          onPublish={() => console.log("Publishing...")}
-          isEditing={!!initialQuiz}
+        <ActionSidebar
+          actions={[
+            {
+              label: "Preview",
+              icon: <Eye className="h-4 w-4 shrink-0" />,
+              onClick: handlePreview,
+              variant: "secondary",
+            },
+            {
+              label: initialQuiz ? "Update Quiz" : "Create Quiz",
+              icon: initialQuiz ? (
+                <RefreshCcw className="h-4 w-4 shrink-0" />
+              ) : (
+                <SquarePen className="h-4 w-4 shrink-0" />
+              ),
+              onClick: handleSaveQuiz,
+            },
+            {
+              label: "Publish Quiz",
+              icon: <GraduationCap className="h-4 w-4 shrink-0" />,
+              onClick: () => console.log("Publishing..."),
+              disabled: true,
+              className: "bg-blue-800 hover:bg-blue-900 text-white",
+            },
+            ...(initialQuiz
+              ? [
+                  {
+                    label: "Delete Quiz",
+                    icon: <Trash2 className="h-4 w-4 shrink-0" />,
+                    onClick: handleDeleteQuiz,
+                    className: "bg-[#9E4042] hover:bg-[#9E4042]/90 text-white",
+                  },
+                ]
+              : []),
+          ]}
         />
       </div>
     </>
