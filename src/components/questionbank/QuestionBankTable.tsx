@@ -359,7 +359,7 @@ export default function QuestionBankTable() {
                           <DropdownMenuItem
                             onClick={() =>
                               router.push(
-                                `/courses/${courseId}/question-banks/${bank._id}`,
+                                `/courses/${courseId}/question-banks/${bank._id}/edit`,
                               )
                             }
                           >
