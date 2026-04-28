@@ -14,6 +14,8 @@ import { Button } from "@/components/ui/button";
 import { Brain, FileText, X } from "lucide-react";
 import { useState } from "react";
 import { useParams } from "next/navigation";
+import { questionBankService } from "@/services/questionBankService";
+import { toast } from "sonner";
 
 export default function QuestionBankGenerateSheet() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -44,10 +46,21 @@ export default function QuestionBankGenerateSheet() {
     setSelectedFile(file);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     console.log("Course ID:", courseId);
     console.log("Selected file:", selectedFile?.name);
-    // Add your submission logic here
+    // TODO: Verify course ID is valid?
+
+    if (courseId && selectedFile?.name) {
+      try {
+        // Parameters = courseId: string, filePath: string
+        await questionBankService.generateQuestionBanks(courseId, selectedFile.name)
+        toast.loading("Uploading Textbook...")
+      } catch (error) {
+        toast.error("Failed to upload textbook. Pleaes try again.");
+        console.error("Failed to upload textbook:", error);
+      }
+    }
   };
 
   return (
