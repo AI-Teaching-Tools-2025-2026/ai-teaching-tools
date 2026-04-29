@@ -31,7 +31,7 @@ export function QuestionItem({
     q.type === "multiple-choice" ? "Multiple Choice" : "True/False";
 
   const handleEditSave = (updatedQuestions: BuilderQuestion[]) => {
-    if (updatedQuestions && updatedQuestions.length > 0) {
+    if (updatedQuestions.length > 0) {
       onUpdate(updatedQuestions[0]);
     }
     setIsEditing(false);
