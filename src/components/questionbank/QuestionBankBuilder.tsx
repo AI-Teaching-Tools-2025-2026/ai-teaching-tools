@@ -144,6 +144,8 @@ export default function QuestionBankBuilder({
               <QuestionList
                 questions={questions}
                 setQuestions={setQuestions}
+                hideAuthorship={true}
+                courseId={courseId}
               />
             )}
           </CardContent>

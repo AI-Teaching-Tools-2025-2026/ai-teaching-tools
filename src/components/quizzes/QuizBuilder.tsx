@@ -197,6 +197,7 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
                 <QuestionList
                   questions={questions}
                   setQuestions={setQuestions}
+                  courseId={courseId}
                 />
               )}
             </CardContent>

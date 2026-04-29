@@ -20,9 +20,10 @@ const MIN_INCORRECT_ANSWERS = 1;
 
 interface QuestionFormProps {
   initialQuestion?: BuilderQuestion;
-  onSave: (question: BuilderQuestion) => void;
+  onSave: (questions: BuilderQuestion[]) => void;
   onCancel: () => void;
   hideAuthorship?: boolean;
+  courseId?: string;
 }
 
 export function QuestionForm({
@@ -30,6 +31,7 @@ export function QuestionForm({
   onSave,
   onCancel,
   hideAuthorship = false,
+  courseId,
 }: QuestionFormProps) {
   const [authorship, setAuthorship] = useState("manual");
   const [questionText, setQuestionText] = useState(initialQuestion?.text || "");
@@ -132,7 +134,7 @@ export function QuestionForm({
           ? correctAnswer.trim()
           : correctAnswer,
     };
-    onSave(newQuestion);
+    onSave([newQuestion]);
   };
 
   return (
