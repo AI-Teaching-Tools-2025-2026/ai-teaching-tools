@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import SubmissionModal from "@/components/modal/submissionModal";
 
 type Props = {
   onSuccess?: (updatedCourse: any) => void;
@@ -16,10 +17,12 @@ export default function EditCourse({ onSuccess, course }: Props) {
   const [courseTitle, setCourseTitle] = useState("");
   const [courseTerm, setCourseTerm] = useState("");
   const [courseDescription, setCourseDescription] = useState("");
-  const [cardColor, setCardColor] = useState<string>("#2563eb");
+  const [cardColor, setCardColor] = useState("#2563eb");
   const [loading, setLoading] = useState(false);
 
-  // Validation state
+  // 🔴 modal state
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+
   const [errors, setErrors] = useState({
     courseTitle: "",
     courseTerm: "",
@@ -38,6 +41,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
   const inputClass = (error: string) =>
     error ? "border-red-500 focus:border-red-500 focus:ring-red-500" : "";
 
+  // ✅ UPDATE
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -51,8 +55,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
         : "",
     };
 
-    const hasErrors = Object.values(newErrors).some((v) => v);
-    if (hasErrors) {
+    if (Object.values(newErrors).some(Boolean)) {
       setErrors(newErrors);
       return;
     }
@@ -72,96 +75,136 @@ export default function EditCourse({ onSuccess, course }: Props) {
       const response = await axios.put(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${course._id}`,
         payload,
-        { withCredentials: true },
+        { withCredentials: true }
       );
 
-      if (onSuccess) onSuccess(response.data);
+      onSuccess?.(response.data);
 
-      try {
-        window.dispatchEvent(
-          new CustomEvent("course:changed", { detail: response.data }),
-        );
-      } catch (e) {
-        console.error("Failed to dispatch course:changed event:", e);
-      }
+      window.dispatchEvent(
+        new CustomEvent("course:changed", {
+          detail: response.data,
+        })
+      );
+    } catch (err) {
+      console.error("Update failed:", err);
     } finally {
       setLoading(false);
     }
   };
 
+  // ✅ DELETE
+  const handleDelete = async () => {
+    if (!course?._id) return;
+
+    await axios.delete(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${course._id}`,
+      { withCredentials: true }
+    );
+
+    // 🔴 send delete signal
+    onSuccess?.({ deletedId: course._id });
+
+    window.dispatchEvent(
+      new CustomEvent("course:deleted", {
+        detail: course._id,
+      })
+    );
+  };
+
   return (
-    <form
-      className="mx-auto max-w-3xl rounded-md border bg-background/40 p-6 shadow-sm"
-      onSubmit={handleSubmit}
-      autoComplete="off"
-      data-course-id={course?._id}
-    >
-      <h2 className="mb-4 text-lg font-semibold">Edit Course</h2>
+    <>
+      {/* 🔴 MODAL */}
+      <SubmissionModal
+        isOpen={deleteModalOpen}
+        onOpenChange={setDeleteModalOpen}
+        body={
+          <>
+            This will permanently delete{" "}
+            <span className="font-semibold">{courseTitle}</span>.
+            <br />
+            This action cannot be undone.
+          </>
+        }
+        onSubmit={handleDelete}
+      />
 
-      <div className="grid gap-4">
-        <div className="grid gap-1.5">
-          <Label htmlFor="courseTitle">Course Name / Textbook</Label>
-          <Input
-            id="courseTitle"
-            value={courseTitle}
-            onChange={(e) => setCourseTitle(e.target.value)}
-            placeholder="e.g. Introduction to Psychology"
-            className={inputClass(errors.courseTitle)}
-          />
-          {errors.courseTitle && (
-            <p className="text-red-500 text-sm">{errors.courseTitle}</p>
-          )}
+      <form
+        className="mx-auto max-w-3xl rounded-md border bg-background/40 p-6 shadow-sm"
+        onSubmit={handleSubmit}
+      >
+        <h2 className="mb-4 text-lg font-semibold">Edit Course</h2>
+
+        <div className="grid gap-4">
+          <div>
+            <Label>Course Name</Label>
+            <Input
+              value={courseTitle}
+              onChange={(e) => setCourseTitle(e.target.value)}
+              className={inputClass(errors.courseTitle)}
+            />
+            {errors.courseTitle && (
+              <p className="text-red-500 text-sm">
+                {errors.courseTitle}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <Label>Course Term</Label>
+            <Input
+              value={courseTerm}
+              onChange={(e) => setCourseTerm(e.target.value)}
+              className={inputClass(errors.courseTerm)}
+            />
+            {errors.courseTerm && (
+              <p className="text-red-500 text-sm">
+                {errors.courseTerm}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <Label>Description</Label>
+            <Textarea
+              value={courseDescription}
+              onChange={(e) => setCourseDescription(e.target.value)}
+              className={inputClass(errors.courseDescription)}
+            />
+            {errors.courseDescription && (
+              <p className="text-red-500 text-sm">
+                {errors.courseDescription}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <Label>Card Color</Label>
+            <input
+              type="color"
+              value={cardColor}
+              onChange={(e) => setCardColor(e.target.value)}
+              className="h-10 w-20 border rounded-md"
+            />
+          </div>
         </div>
 
-        <div className="grid gap-1.5">
-          <Label htmlFor="courseTerm">Course Term</Label>
-          <Input
-            id="courseTerm"
-            value={courseTerm}
-            onChange={(e) => setCourseTerm(e.target.value)}
-            placeholder="e.g. Fall 2026"
-            className={inputClass(errors.courseTerm)}
-          />
-          {errors.courseTerm && (
-            <p className="text-red-500 text-sm">{errors.courseTerm}</p>
-          )}
-        </div>
+        {/* ACTIONS */}
+        <div className="mt-6 flex justify-between">
+          <Button
+            type="button"
+            variant="destructive"
+            onClick={() => setDeleteModalOpen(true)}
+            className="cursor-pointer"
+            disabled={loading}
+          >
+            Delete Course
+          </Button>
 
-        <div className="grid gap-1.5">
-          <Label htmlFor="courseDescription">Course Description</Label>
-          <Textarea
-            id="courseDescription"
-            value={courseDescription}
-            onChange={(e) => setCourseDescription(e.target.value)}
-            placeholder="Short description of the course"
-            rows={4}
-            className={inputClass(errors.courseDescription)}
-          />
-          {errors.courseDescription && (
-            <p className="text-red-500 text-sm">{errors.courseDescription}</p>
-          )}
+          <Button type="submit" disabled={loading}>
+            {loading ? "Saving..." : "Save"}
+          </Button>
         </div>
-
-        <div className="grid gap-1.5">
-          <Label htmlFor="cardColor">Card Color</Label>
-          <input
-            id="cardColor"
-            type="color"
-            value={cardColor}
-            onChange={(e) => setCardColor(e.target.value)}
-            className="h-10 w-20 rounded-md border"
-          />
-          <p className="text-sm text-muted-foreground">
-            Pick a color for the course card.
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-6 flex items-center justify-end gap-3">
-        <Button type="submit" disabled={loading}>
-          {loading ? "Saving..." : "Save"}
-        </Button>
-      </div>
-    </form>
+      </form>
+    </>
   );
 }

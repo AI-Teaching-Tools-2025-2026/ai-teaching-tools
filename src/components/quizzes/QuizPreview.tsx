@@ -21,8 +21,10 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
       {/* Quiz header */}
       <Card>
         <CardHeader className="pb-2">
+          {/* Title + status */}
           <div className="flex flex-wrap items-center gap-2">
             <CardTitle className="text-xl">{quiz.quizTitle}</CardTitle>
+
             <Badge
               variant={
                 quiz.quizStatus === "Published" ? "default" : "secondary"
@@ -37,7 +39,16 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
               {quiz.quizStatus}
             </Badge>
           </div>
-          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-1">
+
+          {/* ✅ Description (NEW) */}
+          {quiz.description && (
+            <p className="text-sm text-muted-foreground mt-2">
+              {quiz.description}
+            </p>
+          )}
+
+          {/* Meta info */}
+          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-2">
             <span>Section: {quiz.section}</span>
             <span>Due: {formatDueDate(quiz.dueDate)}</span>
             <span>{quiz.totalPoints} pts</span>
@@ -51,6 +62,7 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
         <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
           Preview — correct answers shown
         </h2>
+
         {quiz.questions.length === 0 && (
           <Card>
             <CardContent className="py-8 text-center text-sm text-muted-foreground">
@@ -59,6 +71,7 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
             </CardContent>
           </Card>
         )}
+
         {quiz.questions.map((q, index) => (
           <Card key={q.questionId}>
             <CardHeader className="pb-2">
@@ -68,10 +81,12 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
                 </span>
                 {q.question}
               </CardTitle>
+
               <p className="text-sm text-muted-foreground pl-6">
                 {q.questionPoints} pt{q.questionPoints !== 1 ? "s" : ""}
               </p>
             </CardHeader>
+
             <CardContent className="pt-0 pl-6">
               <ul className="space-y-2">
                 {q.answers.map((answer, i) => (
@@ -96,7 +111,9 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
                         <div className="h-2 w-2 rounded-full bg-green-500" />
                       )}
                     </div>
+
                     <span className="min-w-0 flex-1">{answer.text}</span>
+
                     {answer.isCorrect && (
                       <span className="shrink-0 text-xs font-medium text-green-600 dark:text-green-400">
                         Correct
