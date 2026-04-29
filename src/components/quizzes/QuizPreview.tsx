@@ -40,7 +40,7 @@ export default function QuizPreview({ quiz }: QuizPreviewProps) {
             </Badge>
           </div>
 
-          {/* ✅ Description (NEW) */}
+          {/*   Description (NEW) */}
           {quiz.description && (
             <p className="text-sm text-muted-foreground mt-2">
               {quiz.description}

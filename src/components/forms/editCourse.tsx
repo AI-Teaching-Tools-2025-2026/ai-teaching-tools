@@ -20,7 +20,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
   const [cardColor, setCardColor] = useState("#2563eb");
   const [loading, setLoading] = useState(false);
 
-  // 🔴 modal state
+  //   modal state
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
 
   const [errors, setErrors] = useState({
@@ -41,7 +41,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
   const inputClass = (error: string) =>
     error ? "border-red-500 focus:border-red-500 focus:ring-red-500" : "";
 
-  // ✅ UPDATE
+  //   UPDATE
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -92,7 +92,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
     }
   };
 
-  // ✅ DELETE
+  //   DELETE
   const handleDelete = async () => {
     if (!course?._id) return;
 
@@ -101,7 +101,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
       { withCredentials: true },
     );
 
-    // 🔴 send delete signal
+    //   send delete signal
     onSuccess?.({ deletedId: course._id });
 
     window.dispatchEvent(
@@ -113,7 +113,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
 
   return (
     <>
-      {/* 🔴 MODAL */}
+      {/*   MODAL */}
       <SubmissionModal
         isOpen={deleteModalOpen}
         onOpenChange={setDeleteModalOpen}

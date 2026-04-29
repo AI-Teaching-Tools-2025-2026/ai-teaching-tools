@@ -7,6 +7,32 @@ import { XIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
+/**
+ * Example usage of the SubmissionModal component.
+ *
+ * This example demonstrates:
+ * - Managing the modal's open state with React's useState.
+ * - Triggering the modal via a button click.
+ * - Passing content through the `body` prop.
+ * - Handling asynchronous submission logic with `onSubmit`.
+ *
+ * const [modalOpen, setModalOpen] = useState(false);
+ *
+ * <Button onClick={() => setModalOpen(true)}>
+ *   Open Modal
+ * </Button>
+ *
+ * <SubmissionModal
+ *   isOpen={modalOpen}
+ *   onOpenChange={setModalOpen}
+ *   body="This is a preview of the SubmissionModal component."
+ *   onSubmit={async () => {
+ *     // Simulate async submission (e.g., API request)
+ *     await new Promise((resolve) => setTimeout(resolve, 500));
+ *   }}
+ * />
+ */
+
 type SubmissionModalProps = {
   isOpen: boolean;
   onOpenChange: (open: boolean) => void;
