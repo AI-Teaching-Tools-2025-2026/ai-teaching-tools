@@ -86,3 +86,22 @@ async def update_course(course_id: str, course_update: CourseUpdate, request: Re
     await db["courses"].update_one({"_id": course_id}, {"$set": update_data})
     updated = await db["courses"].find_one({"_id": course_id})
     return updated
+
+@courses_router.delete("/{course_id}")
+async def delete_course(course_id: str, request: Request, db=Depends(get_instructor_db)):
+    token = request.cookies.get("access_token")
+    if not token:
+        raise HTTPException(401, "not authenticated")
+
+    user_id = verify_access_token(token)
+    if not user_id:
+        raise HTTPException(401, "invalid or expired token")
+
+    # Ensure the user owns the course
+    existing = await db["courses"].find_one({"_id": course_id, "userID": user_id})
+    if not existing:
+        raise HTTPException(403, "Not authorized to delete this course or it does not exist")
+
+    await db["courses"].delete_one({"_id": course_id})
+
+    return {"message": "Course deleted successfully"}
