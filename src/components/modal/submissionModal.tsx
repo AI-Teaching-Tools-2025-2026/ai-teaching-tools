@@ -70,9 +70,7 @@ function SubmissionModal({
           </div>
 
           {body && (
-            <div className="mt-4 text-sm text-muted-foreground">
-              {body}
-            </div>
+            <div className="mt-4 text-sm text-muted-foreground">{body}</div>
           )}
 
           <div className="mt-4 flex w-full justify-end gap-2">

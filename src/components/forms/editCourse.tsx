@@ -75,7 +75,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
       const response = await axios.put(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${course._id}`,
         payload,
-        { withCredentials: true }
+        { withCredentials: true },
       );
 
       onSuccess?.(response.data);
@@ -83,7 +83,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
       window.dispatchEvent(
         new CustomEvent("course:changed", {
           detail: response.data,
-        })
+        }),
       );
     } catch (err) {
       console.error("Update failed:", err);
@@ -98,7 +98,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
 
     await axios.delete(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${course._id}`,
-      { withCredentials: true }
+      { withCredentials: true },
     );
 
     // 🔴 send delete signal
@@ -107,7 +107,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
     window.dispatchEvent(
       new CustomEvent("course:deleted", {
         detail: course._id,
-      })
+      }),
     );
   };
 
@@ -143,9 +143,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
               className={inputClass(errors.courseTitle)}
             />
             {errors.courseTitle && (
-              <p className="text-red-500 text-sm">
-                {errors.courseTitle}
-              </p>
+              <p className="text-red-500 text-sm">{errors.courseTitle}</p>
             )}
           </div>
 
@@ -157,9 +155,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
               className={inputClass(errors.courseTerm)}
             />
             {errors.courseTerm && (
-              <p className="text-red-500 text-sm">
-                {errors.courseTerm}
-              </p>
+              <p className="text-red-500 text-sm">{errors.courseTerm}</p>
             )}
           </div>
 
@@ -171,9 +167,7 @@ export default function EditCourse({ onSuccess, course }: Props) {
               className={inputClass(errors.courseDescription)}
             />
             {errors.courseDescription && (
-              <p className="text-red-500 text-sm">
-                {errors.courseDescription}
-              </p>
+              <p className="text-red-500 text-sm">{errors.courseDescription}</p>
             )}
           </div>
 
