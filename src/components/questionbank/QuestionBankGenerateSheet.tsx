@@ -54,8 +54,11 @@ export default function QuestionBankGenerateSheet() {
     if (courseId && selectedFile?.name) {
       try {
         // Parameters = courseId: string, filePath: string
-        await questionBankService.generateQuestionBanks(courseId, selectedFile.name)
-        toast.loading("Uploading Textbook...")
+        await questionBankService.generateQuestionBanks(
+          courseId,
+          selectedFile.name,
+        );
+        toast.loading("Uploading Textbook...");
       } catch (error) {
         toast.error("Failed to upload textbook. Pleaes try again.");
         console.error("Failed to upload textbook:", error);

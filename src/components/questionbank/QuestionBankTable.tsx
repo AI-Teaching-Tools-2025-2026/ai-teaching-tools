@@ -45,8 +45,8 @@ const DEFAULT_FILTERS: FilterState = {
 };
 
 export default function QuestionBankTable() {
-  const [banks, setBanks] = useState<QuestionBank[]>([]);  
-  const [loading, setLoading] = useState(true);  
+  const [banks, setBanks] = useState<QuestionBank[]>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedBanks, setSelectedBanks] = useState<string[]>([]);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
   const [showFilterTable, setShowFilterTable] = useState(false);
@@ -99,7 +99,7 @@ export default function QuestionBankTable() {
     key: K,
     value: FilterState[K],
   ) => setFilters((prev) => ({ ...prev, [key]: value }));
-  
+
   const clearFilters = () => {
     setFilters(DEFAULT_FILTERS);
   };
@@ -140,9 +140,8 @@ export default function QuestionBankTable() {
   const handleDuplicate = async (bankId: string) => {
     try {
       toast.info("Duplicating question bank...", { id: "duplicate-toast" });
-      const newBank = await questionBankService.duplicateQuestionBankById(
-        bankId,
-      );
+      const newBank =
+        await questionBankService.duplicateQuestionBankById(bankId);
       setBanks((prev) => [...prev, newBank]);
       toast.success("Question Bank duplicated successfully", {
         id: "duplicate-toast",
@@ -359,7 +358,7 @@ export default function QuestionBankTable() {
                           <DropdownMenuItem
                             onClick={() =>
                               router.push(
-                                `/courses/${courseId}/question-banks/${bank._id}`,
+                                `/courses/${courseId}/question-banks/${bank._id}/edit`,
                               )
                             }
                           >

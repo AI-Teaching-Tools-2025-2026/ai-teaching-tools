@@ -14,15 +14,17 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { BuilderQuestion } from "@/types/quiz";
+import { QuestionBankSelector } from "./QuestionBankSelector";
 
 /** Wrong options always include at least this many rows; with correct answer → minimum 2 options total. */
 const MIN_INCORRECT_ANSWERS = 1;
 
 interface QuestionFormProps {
   initialQuestion?: BuilderQuestion;
-  onSave: (question: BuilderQuestion) => void;
+  onSave: (questions: BuilderQuestion[]) => void;
   onCancel: () => void;
   hideAuthorship?: boolean;
+  courseId?: string;
 }
 
 export function QuestionForm({
@@ -30,6 +32,7 @@ export function QuestionForm({
   onSave,
   onCancel,
   hideAuthorship = false,
+  courseId,
 }: QuestionFormProps) {
   const [authorship, setAuthorship] = useState("manual");
   const [questionText, setQuestionText] = useState(initialQuestion?.text || "");
@@ -132,7 +135,7 @@ export function QuestionForm({
           ? correctAnswer.trim()
           : correctAnswer,
     };
-    onSave(newQuestion);
+    onSave([newQuestion]);
   };
 
   return (
@@ -140,7 +143,7 @@ export function QuestionForm({
       {/* Question Authorship */}
       {!hideAuthorship && (
         <>
-          <div className="grid gap-3">
+          <div className="grid gap-4">
             <Label className="text-[15px] font-medium leading-none">
               Question Authorship
             </Label>
@@ -148,22 +151,22 @@ export function QuestionForm({
               defaultValue="manual"
               value={authorship}
               onValueChange={setAuthorship}
-              className="flex flex-col gap-2"
+              className="flex flex-col gap-3"
             >
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <RadioGroupItem value="manual" id="manual" />
                 <Label
                   htmlFor="manual"
-                  className="font-normal text-muted-foreground"
+                  className="font-normal text-muted-foreground cursor-pointer text-sm"
                 >
                   Manual
                 </Label>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <RadioGroupItem value="bank" id="bank" />
                 <Label
                   htmlFor="bank"
-                  className="font-normal text-muted-foreground"
+                  className="font-normal text-muted-foreground cursor-pointer text-sm"
                 >
                   Question Bank
                 </Label>
@@ -171,145 +174,163 @@ export function QuestionForm({
             </RadioGroup>
           </div>
 
-          <div className="h-px bg-border w-full" />
+          <div className="h-px bg-border w-full my-4" />
         </>
       )}
 
-      {/* Question Name */}
-      <div className="grid gap-2">
-        <Label htmlFor="name" className="text-[15px] font-medium">
-          Question Name
-        </Label>
-        <Input
-          id="name"
-          value={questionText}
-          onChange={(e) => setQuestionText(e.target.value)}
-          className="bg-card/50"
+      {authorship === "bank" ? (
+        <QuestionBankSelector
+          courseId={courseId}
+          onAddQuestions={onSave}
+          onCancel={onCancel}
         />
-      </div>
+      ) : (
+        <>
+          {/* Question Name */}
+          <div className="grid gap-2">
+            <Label htmlFor="name" className="text-[15px] font-medium">
+              Question Name
+            </Label>
+            <Input
+              id="name"
+              value={questionText}
+              onChange={(e) => setQuestionText(e.target.value)}
+              className="bg-card/50"
+            />
+          </div>
 
-      {/* Question Type */}
-      <div className="grid gap-2">
-        <Label className="text-[15px] font-medium">Question Type</Label>
-        <Select value={questionType} onValueChange={handleQuestionTypeChange}>
-          <SelectTrigger className="bg-card/50">
-            <SelectValue placeholder="Select type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="multiple-choice">Multiple Choice</SelectItem>
-            <SelectItem value="true-false">True / False</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
+          {/* Question Type */}
+          <div className="grid gap-2">
+            <Label className="text-[15px] font-medium">Question Type</Label>
+            <Select
+              value={questionType}
+              onValueChange={handleQuestionTypeChange}
+            >
+              <SelectTrigger className="bg-card/50">
+                <SelectValue placeholder="Select type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="multiple-choice">Multiple Choice</SelectItem>
+                <SelectItem value="true-false">True / False</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
-      {/* Number of Points */}
-      <div className="grid gap-2">
-        <Label htmlFor="points" className="text-[15px] font-medium">
-          Number of Points
-        </Label>
-        <Input
-          id="points"
-          type="number"
-          className="w-[200px] bg-card/50"
-          value={points}
-          onChange={(e) => setPoints(Number(e.target.value))}
-        />
-      </div>
+          {/* Number of Points */}
+          <div className="grid gap-2">
+            <Label htmlFor="points" className="text-[15px] font-medium">
+              Number of Points
+            </Label>
+            <Input
+              id="points"
+              type="number"
+              className="w-[200px] bg-card/50"
+              value={points}
+              onChange={(e) => setPoints(Number(e.target.value))}
+            />
+          </div>
 
-      {/* Answers Section */}
-      <div className="grid gap-4 pt-2">
-        <Label className="text-lg font-medium">Answers</Label>
+          {/* Answers Section */}
+          <div className="grid gap-4 pt-2">
+            <Label className="text-lg font-medium">Answers</Label>
 
-        <div className="rounded-lg border bg-card/30 p-4 grid gap-6">
-          {/* TRUE / FALSE MODE */}
-          {questionType === "true-false" && (
-            <div className="grid gap-3">
-              <Label className="text-muted-foreground font-medium">
-                Correct Answer
-              </Label>
+            <div className="rounded-lg border bg-card/30 p-4 grid gap-6">
+              {/* TRUE / FALSE MODE */}
+              {questionType === "true-false" && (
+                <div className="grid gap-3">
+                  <Label className="text-muted-foreground font-medium">
+                    Correct Answer
+                  </Label>
 
-              <Select value={correctAnswer} onValueChange={setCorrectAnswer}>
-                <SelectTrigger className="bg-card">
-                  <SelectValue placeholder="Select True or False" />
-                </SelectTrigger>
+                  <Select
+                    value={correctAnswer}
+                    onValueChange={setCorrectAnswer}
+                  >
+                    <SelectTrigger className="bg-card">
+                      <SelectValue placeholder="Select True or False" />
+                    </SelectTrigger>
 
-                <SelectContent>
-                  <SelectItem value="True">True</SelectItem>
-                  <SelectItem value="False">False</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          )}
+                    <SelectContent>
+                      <SelectItem value="True">True</SelectItem>
+                      <SelectItem value="False">False</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
 
-          {/* MULTIPLE CHOICE MODE */}
-          {questionType === "multiple-choice" && (
-            <>
-              {/* Correct Answer */}
-              <div className="grid gap-2">
-                <Label className="text-blue-500 font-medium">
-                  Correct Answer
-                </Label>
-
-                <Input
-                  value={correctAnswer}
-                  onChange={(e) => setCorrectAnswer(e.target.value)}
-                  className="border-blue-500/50 focus-visible:ring-blue-500/50"
-                />
-              </div>
-
-              {/* Incorrect options: minimum one (two choices total with correct); extras can be removed */}
-              {incorrectAnswers.map((ans, idx) => (
-                <div key={idx} className="grid gap-2">
-                  <div className="flex items-center justify-between gap-2">
-                    <Label className="text-muted-foreground font-medium">
-                      Incorrect option {idx + 1}
+              {/* MULTIPLE CHOICE MODE */}
+              {questionType === "multiple-choice" && (
+                <>
+                  {/* Correct Answer */}
+                  <div className="grid gap-2">
+                    <Label className="text-blue-500 font-medium">
+                      Correct Answer
                     </Label>
-                    {idx >= MIN_INCORRECT_ANSWERS &&
-                      incorrectAnswers.length > MIN_INCORRECT_ANSWERS && (
-                        <Button
-                          type="button"
-                          variant="ghost"
-                          size="icon"
-                          className="h-8 w-8 shrink-0 text-muted-foreground hover:text-destructive"
-                          onClick={() => removeIncorrectAnswer(idx)}
-                          aria-label={`Remove option ${idx + 1}`}
-                        >
-                          <X className="h-4 w-4" />
-                        </Button>
-                      )}
+
+                    <Input
+                      value={correctAnswer}
+                      onChange={(e) => setCorrectAnswer(e.target.value)}
+                      className="border-blue-500/50 focus-visible:ring-blue-500/50"
+                    />
                   </div>
 
-                  <Input
-                    value={ans}
-                    onChange={(e) => updateIncorrectAnswer(idx, e.target.value)}
-                    className="bg-muted/30"
-                  />
-                </div>
-              ))}
+                  {/* Incorrect options: minimum one (two choices total with correct); extras can be removed */}
+                  {incorrectAnswers.map((ans, idx) => (
+                    <div key={idx} className="grid gap-2">
+                      <div className="flex items-center justify-between gap-2">
+                        <Label className="text-muted-foreground font-medium">
+                          Incorrect option {idx + 1}
+                        </Label>
+                        {idx >= MIN_INCORRECT_ANSWERS &&
+                          incorrectAnswers.length > MIN_INCORRECT_ANSWERS && (
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="icon"
+                              className="h-8 w-8 shrink-0 text-muted-foreground hover:text-destructive"
+                              onClick={() => removeIncorrectAnswer(idx)}
+                              aria-label={`Remove option ${idx + 1}`}
+                            >
+                              <X className="h-4 w-4" />
+                            </Button>
+                          )}
+                      </div>
 
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="w-fit gap-1.5"
-                onClick={addIncorrectAnswer}
-              >
-                <Plus className="h-4 w-4" />
-                Add answer
-              </Button>
-            </>
-          )}
-        </div>
-      </div>
+                      <Input
+                        value={ans}
+                        onChange={(e) =>
+                          updateIncorrectAnswer(idx, e.target.value)
+                        }
+                        className="bg-muted/30"
+                      />
+                    </div>
+                  ))}
 
-      <div className="flex justify-end gap-3 pt-4">
-        <Button variant="outline" onClick={onCancel}>
-          Cancel
-        </Button>
-        <Button onClick={handleSave} disabled={!canSave}>
-          Save changes
-        </Button>
-      </div>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="w-fit gap-1.5"
+                    onClick={addIncorrectAnswer}
+                  >
+                    <Plus className="h-4 w-4" />
+                    Add answer
+                  </Button>
+                </>
+              )}
+            </div>
+          </div>
+
+          <div className="flex justify-end gap-3 pt-4 border-t border-border mt-2">
+            <Button type="button" variant="outline" onClick={onCancel}>
+              Cancel
+            </Button>
+            <Button type="button" onClick={handleSave} disabled={!canSave}>
+              Save changes
+            </Button>
+          </div>
+        </>
+      )}
     </div>
   );
 }
