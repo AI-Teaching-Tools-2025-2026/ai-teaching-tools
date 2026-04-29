@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { BuilderQuestion } from "@/types/quiz";
+import { QuestionBankSelector } from "./QuestionBankSelector";
 
 /** Wrong options always include at least this many rows; with correct answer → minimum 2 options total. */
 const MIN_INCORRECT_ANSWERS = 1;
@@ -138,47 +139,55 @@ export function QuestionForm({
   };
 
   return (
-    <div className="grid gap-6 py-4">
-      {/* Question Authorship */}
-      {!hideAuthorship && (
-        <>
-          <div className="grid gap-3">
-            <Label className="text-[15px] font-medium leading-none">
-              Question Authorship
-            </Label>
-            <RadioGroup
-              defaultValue="manual"
-              value={authorship}
-              onValueChange={setAuthorship}
-              className="flex flex-col gap-2"
-            >
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="manual" id="manual" />
-                <Label
-                  htmlFor="manual"
-                  className="font-normal text-muted-foreground"
-                >
-                  Manual
-                </Label>
-              </div>
-              <div className="flex items-center space-x-2">
-                <RadioGroupItem value="bank" id="bank" />
-                <Label
-                  htmlFor="bank"
-                  className="font-normal text-muted-foreground"
-                >
-                  Question Bank
-                </Label>
-              </div>
-            </RadioGroup>
-          </div>
+      <div className="grid gap-6 py-4">
+        {/* Question Authorship */}
+        {!hideAuthorship && (
+          <>
+            <div className="grid gap-4">
+              <Label className="text-[15px] font-medium leading-none">
+                Question Authorship
+              </Label>
+              <RadioGroup
+                defaultValue="manual"
+                value={authorship}
+                onValueChange={setAuthorship}
+                className="flex flex-col gap-3"
+              >
+                <div className="flex items-center space-x-3">
+                  <RadioGroupItem value="manual" id="manual" />
+                  <Label
+                    htmlFor="manual"
+                    className="font-normal text-muted-foreground cursor-pointer text-sm"
+                  >
+                    Manual
+                  </Label>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <RadioGroupItem value="bank" id="bank" />
+                  <Label
+                    htmlFor="bank"
+                    className="font-normal text-muted-foreground cursor-pointer text-sm"
+                  >
+                    Question Bank
+                  </Label>
+                </div>
+              </RadioGroup>
+            </div>
 
-          <div className="h-px bg-border w-full" />
-        </>
-      )}
+            <div className="h-px bg-border w-full my-4" />
+          </>
+        )}
 
-      {/* Question Name */}
-      <div className="grid gap-2">
+        {authorship === "bank" ? (
+          <QuestionBankSelector
+            courseId={courseId}
+            onAddQuestions={onSave}
+            onCancel={onCancel}
+          />
+        ) : (
+          <>
+            {/* Question Name */}
+            <div className="grid gap-2">
         <Label htmlFor="name" className="text-[15px] font-medium">
           Question Name
         </Label>
@@ -304,14 +313,16 @@ export function QuestionForm({
         </div>
       </div>
 
-      <div className="flex justify-end gap-3 pt-4">
-        <Button variant="outline" onClick={onCancel}>
+      <div className="flex justify-end gap-3 pt-4 border-t border-border mt-2">
+        <Button type="button" variant="outline" onClick={onCancel}>
           Cancel
         </Button>
-        <Button onClick={handleSave} disabled={!canSave}>
+        <Button type="button" onClick={handleSave} disabled={!canSave}>
           Save changes
         </Button>
       </div>
+          </>
+        )}
     </div>
   );
 }
