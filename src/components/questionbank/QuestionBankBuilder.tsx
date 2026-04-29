@@ -34,7 +34,9 @@ export default function QuestionBankBuilder({
 
   const [activeTab, setActiveTab] = useState<Tab>("details");
 
-  const [questionBankData, setQuestionBankData] = useState<Partial<QuestionBank>>(
+  const [questionBankData, setQuestionBankData] = useState<
+    Partial<QuestionBank>
+  >(
     initialQuestionBank || {
       title: "",
       chapter: "",
@@ -48,7 +50,9 @@ export default function QuestionBankBuilder({
   );
 
   const [questions, setQuestions] = useState<BuilderQuestion[]>(
-    initialQuestionBank ? transformQBQuestionsToBuilder(initialQuestionBank.questions || []) : [],
+    initialQuestionBank
+      ? transformQBQuestionsToBuilder(initialQuestionBank.questions || [])
+      : [],
   );
 
   const handleSaveQuestionBank = async () => {
@@ -68,12 +72,18 @@ export default function QuestionBankBuilder({
 
     try {
       if (initialQuestionBank?._id) {
-        await questionBankService.updateQuestionBank(initialQuestionBank._id, questionBank);
+        await questionBankService.updateQuestionBank(
+          initialQuestionBank._id,
+          questionBank,
+        );
         toast.success("Question Bank updated successfully");
       } else {
-        const createdQB = await questionBankService.createQuestionBank(questionBank);
+        const createdQB =
+          await questionBankService.createQuestionBank(questionBank);
         toast.success("Question Bank created successfully");
-        router.push(`/courses/${courseId}/question-banks/${createdQB._id}/edit`);
+        router.push(
+          `/courses/${courseId}/question-banks/${createdQB._id}/edit`,
+        );
       }
     } catch (error) {
       toast.error("Failed to save question bank. Please try again.");
@@ -156,7 +166,9 @@ export default function QuestionBankBuilder({
       <ActionSidebar
         actions={[
           {
-            label: initialQuestionBank ? "Update Question Bank" : "Create Question Bank",
+            label: initialQuestionBank
+              ? "Update Question Bank"
+              : "Create Question Bank",
             icon: initialQuestionBank ? (
               <RefreshCcw className="h-4 w-4 shrink-0" />
             ) : (

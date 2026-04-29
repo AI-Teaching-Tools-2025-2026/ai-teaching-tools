@@ -23,7 +23,7 @@ export interface QuestionBank {
   createdAt: string;
   lastModified: string;
   questionCount: number;
-  questions: Question[]; 
+  questions: Question[];
 }
 
 // Convert BuilderQuestion into Question Bank Question
@@ -66,7 +66,9 @@ export const transformQBQuestionsToBuilder = (
   return questions.map((q) => {
     const correctAnswer = q.answers.find((a) => a.isCorrect)?.text;
     const options =
-      q.questionType === "multiple-choice" ? q.answers.map((a) => a.text) : undefined;
+      q.questionType === "multiple-choice"
+        ? q.answers.map((a) => a.text)
+        : undefined;
 
     return {
       id: q.questionId,

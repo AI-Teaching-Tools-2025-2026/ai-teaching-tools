@@ -20,7 +20,8 @@ export default function EditQuestionBankPage() {
     async function loadQuestionBank() {
       try {
         setLoading(true);
-        const data = await questionBankService.getQuestionBankById(questionBankId);
+        const data =
+          await questionBankService.getQuestionBankById(questionBankId);
         setQuestionBank(data);
       } catch (err) {
         console.error("Failed to load question bank", err);

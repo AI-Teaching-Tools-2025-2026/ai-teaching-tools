@@ -21,7 +21,6 @@ export function QuestionItem({
   index,
   onDelete,
   onUpdate,
-  hideAuthorship,
 }: QuestionItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isEditing, setIsEditing] = useState(false);

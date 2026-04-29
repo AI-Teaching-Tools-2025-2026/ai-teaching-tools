@@ -7,7 +7,13 @@ export interface SidebarAction {
   label: string;
   icon: React.ReactNode;
   onClick: () => void;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  variant?:
+    | "default"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | "link";
   className?: string;
   disabled?: boolean;
 }
@@ -17,7 +23,10 @@ interface ActionSidebarProps {
   actions: SidebarAction[];
 }
 
-export function ActionSidebar({ title = "Actions", actions }: ActionSidebarProps) {
+export function ActionSidebar({
+  title = "Actions",
+  actions,
+}: ActionSidebarProps) {
   return (
     <div className="lg:col-span-3 flex flex-col gap-6 h-fit sticky top-24">
       <Card className="border-border bg-card">
@@ -32,7 +41,7 @@ export function ActionSidebar({ title = "Actions", actions }: ActionSidebarProps
               disabled={action.disabled}
               className={cn(
                 "w-full gap-2 justify-start h-auto py-3 px-4 cursor-pointer whitespace-normal text-left",
-                action.className
+                action.className,
               )}
               onClick={action.onClick}
             >

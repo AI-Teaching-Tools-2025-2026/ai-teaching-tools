@@ -1,7 +1,11 @@
 "use client";
 
 import React, { useEffect, useState, useMemo } from "react";
-import { QuestionBank, Question, transformQBQuestionsToBuilder } from "@/types/questionBank";
+import {
+  QuestionBank,
+  Question,
+  transformQBQuestionsToBuilder,
+} from "@/types/questionBank";
 import { BuilderQuestion } from "@/types/quiz";
 import { questionBankService } from "@/services/questionBankService";
 
@@ -48,7 +52,8 @@ export function QuestionBankSelector({
     async function loadBanks() {
       if (!courseId) return;
       try {
-        const fetchedBanks = await questionBankService.getAllQuestionBanks(courseId);
+        const fetchedBanks =
+          await questionBankService.getAllQuestionBanks(courseId);
         setBanks(fetchedBanks || []);
       } catch (e) {
         console.error("Failed to load question banks", e);
@@ -67,7 +72,8 @@ export function QuestionBankSelector({
       }
       setLoading(true);
       try {
-        const bankDetails = await questionBankService.getQuestionBankById(selectedBankId);
+        const bankDetails =
+          await questionBankService.getQuestionBankById(selectedBankId);
         setQuestions(bankDetails.questions || []);
       } catch (e) {
         console.error("Failed to load questions", e);
@@ -84,7 +90,7 @@ export function QuestionBankSelector({
     if (!searchQuery.trim()) return questions;
     const lowerQuery = searchQuery.toLowerCase();
     return questions.filter((q) =>
-      q.questionText.toLowerCase().includes(lowerQuery)
+      q.questionText.toLowerCase().includes(lowerQuery),
     );
   }, [questions, searchQuery]);
 
@@ -191,7 +197,10 @@ export function QuestionBankSelector({
                     const isChecked = selectedIds.has(q.questionId);
 
                     return (
-                      <TableRow key={q.questionId} className="group border-b-border/40">
+                      <TableRow
+                        key={q.questionId}
+                        className="group border-b-border/40"
+                      >
                         <TableCell className="text-center align-middle">
                           <Checkbox
                             checked={isChecked}

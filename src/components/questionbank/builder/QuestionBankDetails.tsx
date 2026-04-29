@@ -6,7 +6,9 @@ import { QuestionBank } from "@/types/questionBank";
 
 interface QuestionBankDetailsProps {
   questionBankData: Partial<QuestionBank>;
-  setQuestionBankData: React.Dispatch<React.SetStateAction<Partial<QuestionBank>>>;
+  setQuestionBankData: React.Dispatch<
+    React.SetStateAction<Partial<QuestionBank>>
+  >;
 }
 
 export function QuestionBankDetails({
@@ -35,9 +37,7 @@ export function QuestionBankDetails({
 
       {/* Chapter Input */}
       <div className="flex flex-col gap-2">
-        <label className="text-sm font-medium text-foreground">
-          Chapter
-        </label>
+        <label className="text-sm font-medium text-foreground">Chapter</label>
         <Input
           type="text"
           placeholder="Enter chapter name or number"

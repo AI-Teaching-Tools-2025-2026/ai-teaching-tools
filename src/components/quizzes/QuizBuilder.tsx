@@ -20,11 +20,17 @@ import {
   transformBuilderQuestions,
   transformQuestionsToBuilder,
 } from "@/types/quiz";
-import { ActionSidebar, SidebarAction } from "@/components/shared/ActionSidebar";
+import { ActionSidebar } from "@/components/shared/ActionSidebar";
 import { quizService } from "@/services/quizService";
 import QuizPreview from "./QuizPreview";
 import { toast } from "sonner";
-import { Eye, GraduationCap, RefreshCcw, SquarePen, Trash2 } from "lucide-react";
+import {
+  Eye,
+  GraduationCap,
+  RefreshCcw,
+  SquarePen,
+  Trash2,
+} from "lucide-react";
 
 type Tab = "details" | "questions";
 
