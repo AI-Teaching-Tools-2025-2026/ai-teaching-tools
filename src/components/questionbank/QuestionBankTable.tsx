@@ -57,6 +57,11 @@ export default function QuestionBankTable() {
   const router = useRouter();
   const courseId = params.courseId as string | undefined;
 
+  const getPreviewHref = (bankId: string) =>
+    courseId
+      ? `/courses/${courseId}/question-banks/preview/${bankId}`
+      : `/dashboard/question-banks/preview/${bankId}`;
+
   useEffect(() => {
     const loadBanks = async () => {
       if (!courseId) {
@@ -315,10 +320,10 @@ export default function QuestionBankTable() {
                       />
                     </TableCell>
 
-                    {/* Title */}
+                    {/* Title — opens read-only preview (like quizzes) */}
                     <TableCell className="font-medium text-foreground">
                       <Link
-                        href={`/courses/${courseId}/question-banks/${bank._id}`}
+                        href={getPreviewHref(bank._id)}
                         className="text-foreground hover:underline focus:outline-none focus:underline"
                       >
                         {bank.title}
