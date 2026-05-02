@@ -54,9 +54,9 @@ export default function CourseDashboardPage() {
       icon: FileQuestion,
     },
     {
-      title: "Quiz builder",
-      description: "Draft a new quiz with guided steps.",
-      href: `${base}/quizzes/builder`,
+      title: "Question Bank",
+      description: "Find and use questions from your AI-powered question bank.",
+      href: `${base}/question-banks`,
       icon: ClipboardList,
     },
     {
