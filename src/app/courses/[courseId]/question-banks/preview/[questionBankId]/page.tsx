@@ -21,9 +21,8 @@ export default function CourseQuestionBankPreviewPage() {
     const load = async () => {
       if (!questionBankId) return;
       try {
-        const data = await questionBankService.getQuestionBankById(
-          questionBankId,
-        );
+        const data =
+          await questionBankService.getQuestionBankById(questionBankId);
         setQuestionBank(data);
       } catch {
         setError("Failed to load question bank.");
@@ -68,7 +67,9 @@ export default function CourseQuestionBankPreviewPage() {
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
-          <p className="text-destructive">{error ?? "Question bank not found."}</p>
+          <p className="text-destructive">
+            {error ?? "Question bank not found."}
+          </p>
         </div>
       </div>
     );
