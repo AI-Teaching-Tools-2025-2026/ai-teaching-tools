@@ -13,11 +13,12 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Brain, FileText, X } from "lucide-react";
 import { useState } from "react";
-import { useParams } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { questionBankService } from "@/services/questionBankService";
 import { toast } from "sonner";
 
 export default function QuestionBankGenerateSheet() {
+  const router = useRouter()
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
 
@@ -53,12 +54,14 @@ export default function QuestionBankGenerateSheet() {
 
     if (courseId && selectedFile?.name) {
       try {
+        toast.loading("Uploading Textbook...");
         // Parameters = courseId: string, filePath: string
         await questionBankService.generateQuestionBanks(
           courseId,
-          selectedFile.name,
-        );
-        toast.loading("Uploading Textbook...");
+          selectedFile,
+        )
+          // toast.success("Question Bank created successfully");
+          // router.push(`/courses/${courseId}/question-banks/`);
       } catch (error) {
         toast.error("Failed to upload textbook. Pleaes try again.");
         console.error("Failed to upload textbook:", error);

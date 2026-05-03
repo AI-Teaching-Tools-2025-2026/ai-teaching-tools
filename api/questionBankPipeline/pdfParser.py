@@ -53,7 +53,7 @@ def readOutline(reader, chapterData, textbookLastPage):
             endPage = endSectionStart - 1
         else:
             # Fallback to end of textbook if no ending section found
-            endPage = textbookLastPage
+            endPage = textbookLastPage - 1  # Minus 1 is necessary to handle conversion between 0-based and 1-based indices
 
         chapterData.append(
             {
@@ -86,14 +86,14 @@ def pdfParser(textbookFileName):
     textbookData = {"textbookName": f"{meta.title}", "chapters": []}
 
     for i, chapter in enumerate(chapterData):
-        # Print statement that can be commented out eventually
-        print(
-            f"Chapter {i + 1}: {chapter["chapterTitle"]}; Pages {chapter["startPage"]} - {chapter["endPage"]}"
-        )
+        # # Print statement that can be commented out eventually
+        # print(
+        #     f"Chapter {i + 1}: {chapter["chapterTitle"]}; Pages {chapter["startPage"]} - {chapter["endPage"]}"
+        # )
 
         chapterText = ""
 
-        for j in range(chapter["startPage"], chapter["endPage"]):
+        for j in range(chapter["startPage"], chapter["endPage"] + 1):
             page = reader.pages[j]
             chapterText += (
                 page.extract_text()
@@ -105,16 +105,12 @@ def pdfParser(textbookFileName):
         chapterData[i] = {
             "chapterNum": f"{i + 1}",
             "chapterTitle": chapter["chapterTitle"],
-            "startPage": chapter["startPage"],
-            "endPage": chapter["endPage"],
+            "startPage": chapter["startPage"] + 1,  # Convert from 0-based index to 1-based index
+            "endPage": chapter["endPage"] + 1,
             "text": chapterText,
         }
 
     textbookData["chapters"] = chapterData
-
-    # f = open("output.json", "w", encoding="utf-8")
-    # f.write(textbookJson)
-    # f.close()
 
     reader.close()
 

@@ -1,5 +1,5 @@
 import asyncio
-from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
+from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks, Request
 from db.utils import get_instructor_db
 from .models import QuestionBankCreate
 from datetime import datetime
@@ -7,6 +7,9 @@ from questionBankPipeline.question_bank_generator import generate_for_chapter
 from questionBankPipeline.pdfParser import pdfParser
 from pydantic import ValidationError
 import uuid
+import aiofiles
+import tempfile
+import os
 
 question_bank_router = APIRouter(prefix="/question_bank", tags=["Question Bank"])
 
@@ -90,39 +93,50 @@ async def duplicate_question_bank(questionBankId: str, db=Depends(get_instructor
     
     return question_bank
 
-async def process_question_bank_background(courseId: str, filePath: str, db):
-    print(f"Background task started for {filePath}")
+async def process_question_bank_background(courseId: str, temp_filename: str, original_filename: str, db):
+    print(f"Background task started for {original_filename}")
     
-    parsed_data = await asyncio.to_thread(pdfParser, filePath) 
+    # Open the file and parse it
+    print(f"Starting PDF parsing for {original_filename}")
+    parsed_data = await asyncio.to_thread(pdfParser, temp_filename)
     
     textbook_name = parsed_data["textbookName"]
     chapters = parsed_data["chapters"]
+    print(f"PDF parsed successfully. Textbook: {textbook_name}, Chapters: {len(chapters)}")
 
     for chapter_data in chapters:
         chapter_num = chapter_data["chapterNum"]
         chapter_title = chapter_data["chapterTitle"]
         chapter_text = chapter_data["text"]
         
-        question_bank = await asyncio.to_thread(
-            generate_for_chapter,
-            textbook_name=textbook_name, 
-            chapter_num=chapter_num, 
-            chapter_title=chapter_title, 
-            chapter_text=chapter_text
-        ) 
+        print(f"Chapter {chapter_num}: {chapter_title} - Text length: {len(chapter_text)}")
+        print(f"Generating questions for Chapter {chapter_num}: {chapter_title}")
+        try:
+            question_bank = await asyncio.to_thread(
+                generate_for_chapter,
+                textbook_name=textbook_name, 
+                chapter_num=chapter_num, 
+                chapter_title=chapter_title, 
+                chapter_text=chapter_text
+            )
+        except ValueError as e:
+            print(f"Failed to generate questions for Chapter {chapter_num}: {e}")
+            question_bank = None 
         
         if question_bank is None:
+            print(f"No question bank generated for Chapter {chapter_num}")
             continue
 
         current_time = datetime.now().isoformat()
 
         question_bank.update({
             "courseID": courseId,
-            "sourceFile": filePath,
+            "sourceFile": original_filename,
             "createdAt": current_time,
             "lastModified": current_time,
         })
         
+        print(f"Validating and saving question bank for Chapter {chapter_num}")
         try:
             validated_qb = QuestionBankCreate(**question_bank)
             final_db_document = validated_qb.model_dump(by_alias=True)
@@ -135,11 +149,35 @@ async def process_question_bank_background(courseId: str, filePath: str, db):
             print(e.errors())
             continue
             
-    print(f"Background task completed for {filePath}")
+    print(f"Background task completed for {original_filename}")
+    
+    # Clean up temp file
+    try:
+        os.unlink(temp_filename)
+        print(f"Temporary file {temp_filename} cleaned up")
+    except OSError:
+        print(f"Failed to clean up temporary file {temp_filename}")
 
+# CODE CITATION (Lines 167 - 176)
+# Author: Chris
+# Link: https://stackoverflow.com/questions/65342833/fastapi-uploadfile-is-slow-compared-to-flask/70667530#70667530 
+# Purpose: More efficient way to handle files larger than 1 MB (which is most textbook files) 
 @question_bank_router.post("/generate_question_banks")
-async def generate_question_bank(courseId: str, filePath: str, background_tasks: BackgroundTasks, db=Depends(get_instructor_db)):
-    
-    background_tasks.add_task(process_question_bank_background, courseId, filePath, db)
-    
+async def generate_question_bank(courseId: str, request: Request, background_tasks: BackgroundTasks, db=Depends(get_instructor_db)):
+    try: 
+        original_filename = request.headers.get('filename', 'uploaded_file.pdf')
+        
+        # Create a temporary file
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as temp_file:
+            temp_filename = temp_file.name
+        
+        async with aiofiles.open(temp_filename, 'wb') as f:
+            async for chunk in request.stream():
+                await f.write(chunk)
+
+        background_tasks.add_task(process_question_bank_background, courseId, temp_filename, original_filename, db)
+        
+    except Exception:
+        raise HTTPException(status_code=500, detail="Something went wrong.")
+   
     return {"message": "Question Bank generation started in the background. This may take a few minutes."}
