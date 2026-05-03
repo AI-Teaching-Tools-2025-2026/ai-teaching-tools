@@ -47,10 +47,6 @@ export default function QuestionBankGenerateSheet() {
   };
 
   const handleSubmit = async () => {
-    console.log("Course ID:", courseId);
-    console.log("Selected file:", selectedFile?.name);
-    // TODO: Verify course ID is valid?
-
     if (courseId && selectedFile?.name) {
       try {
         // Parameters = courseId: string, filePath: string
@@ -60,12 +56,12 @@ export default function QuestionBankGenerateSheet() {
           selectedFile,
         );
         
-        toast.success("Generating question banks... You can safely leave this page. We'll alert you when the process is complete");
+        toast.success("Generating question banks. We'll alert you when ready");
 
         pollJobStatus(jobId);
 
       } catch (error) {
-        toast.error("Failed to upload textbook. Pleaes try again.");
+        toast.error("Failed to upload textbook. Please try again.");
         console.error("Failed to upload textbook:", error);
       }
     }

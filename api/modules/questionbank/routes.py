@@ -2,7 +2,7 @@ import asyncio
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks, Request
 from db.utils import get_instructor_db
 from .models import QuestionBankCreate
-from datetime import datetime
+from datetime import datetime, timezone
 from questionBankPipeline.question_bank_generator import generate_for_chapter
 from questionBankPipeline.pdfParser import pdfParser
 from pydantic import ValidationError
@@ -152,7 +152,7 @@ async def process_question_bank_background(courseId: str, temp_filename: str, or
     # update job status
     await db["jobs"].update_one(
         {"_id": jobId}, 
-        {"$set": {"status": "completed", "completedAt": datetime.now().isoformat()}}
+        {"$set": {"status": "completed", "completedAt": datetime.now(timezone.utc)}}
     )
     print(f"Background task completed for {original_filename}")
     
@@ -187,7 +187,7 @@ async def generate_question_bank(courseId: str, request: Request, background_tas
             "courseId": courseId,
             "filename": original_filename,
             "status": "processing",
-            "createdAt": datetime.now().isoformat()
+            "createdAt": datetime.now(timezone.utc)      
         }
         await db["jobs"].insert_one(job_document)
 
