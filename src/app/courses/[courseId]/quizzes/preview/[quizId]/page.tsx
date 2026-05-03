@@ -2,11 +2,12 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, SquarePen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import QuizPreview from "@/components/quizzes/QuizPreview";
 import { quizService } from "@/services/quizService";
 import { QuizData } from "@/types/quiz";
+import { ActionSidebar } from "@/components/shared/ActionSidebar";
 
 export default function CourseQuizPreviewPage() {
   const params = useParams();
@@ -88,8 +89,22 @@ export default function CourseQuizPreviewPage() {
         </h1>
       </div>
 
-      <div className="flex-1 overflow-auto pb-8">
-        <QuizPreview quiz={quiz} />
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-[1600px]">
+        <div className="lg:col-span-9 overflow-auto pb-8">
+          <QuizPreview quiz={quiz} />
+        </div>
+
+        {/* Sidebar */}
+        <ActionSidebar
+          actions={[
+            {
+              label: "Edit",
+              icon: <SquarePen className="h-4 w-4 shrink-0" />,
+              onClick: () => router.push(`/courses/${courseId}/quizzes/${quizId}/edit`),
+              variant: "secondary",
+            }
+          ]}
+        />
       </div>
     </div>
   );

@@ -175,6 +175,7 @@ export default function QuestionBankBuilder({
               <SquarePen className="h-4 w-4 shrink-0" />
             ),
             onClick: handleSaveQuestionBank,
+            disabled: !questionBankData.title || questionBankData.title.trim() === "",
           },
           ...(initialQuestionBank
             ? [

@@ -227,6 +227,7 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
                 <SquarePen className="h-4 w-4 shrink-0" />
               ),
               onClick: handleSaveQuiz,
+              disabled: !quizData.quizTitle || quizData.quizTitle.trim() === "",
             },
             {
               label: "Publish Quiz",
