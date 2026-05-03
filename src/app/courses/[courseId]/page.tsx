@@ -1,7 +1,9 @@
 "use client";
 
+import axios from "axios";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   BookOpen,
@@ -13,36 +15,32 @@ import {
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
-  // Future card content?
-  // CardDescription,
-  // CardHeader,
-  // CardTitle,
+  CardContent
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
-// TODO: Are stats something that is within the scope of this project?
-// const stats = [
-//   {
-//     label: "Students enrolled",
-//     value: "—",
-//     hint: "Sync roster from your LMS when ready",
-//   },
-//   {
-//     label: "Quizzes this term",
-//     value: "—",
-//     hint: "Build from the quiz workspace",
-//   },
-//   {
-//     label: "Question bank items",
-//     value: "—",
-//     hint: "Reuse across assessments",
-//   },
-// ] as const;
 
 export default function CourseDashboardPage() {
   const params = useParams();
   const courseId = params.courseId as string;
+  const [course, setCourse] = useState<any>(null);  
+
+  useEffect(() => {
+      const loadCourse = async () => {
+        try {
+          const response = await axios.get(
+            `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${courseId}`,
+            { withCredentials: true },
+          );
+  
+          setCourse(response.data);
+        } catch (error) {
+          console.error(error);
+          alert("Failed to load course");
+        }
+      };
+  
+      loadCourse();
+    }, []);
 
   const base = `/courses/${courseId}`;
 
@@ -76,7 +74,7 @@ export default function CourseDashboardPage() {
 
   return (
     <div className="flex flex-col gap-10 p-8 max-w-[1200px] mx-auto w-full">
-      <section className="relative overflow-hidden rounded-2xl border bg-gradient-to-br from-card via-card to-muted/40 p-8 md:p-10 shadow-sm">
+      <section className="relative overflow-hidden rounded-2xl border bg-linear-to-br from-card via-card to-muted/40 p-8 md:p-10 shadow-sm">
         <div
           className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/5 blur-3xl"
           aria-hidden
@@ -87,17 +85,15 @@ export default function CourseDashboardPage() {
               AI Teaching Tools
             </p>
             <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              Course home
+              {course?.courseTitle ?? "Course home"}
             </h1>
             <p className="text-base text-muted-foreground leading-relaxed">
-              Your workspace for quizzes, assessments, and AI-assisted support.
-              Use the shortcuts below to move through this course. Student
-              Analytics — planned for future development.
+              {course?.courseDescription ?? ""}
             </p>
           </div>
           <Button asChild className="shrink-0 gap-2">
-            <Link href={`${base}/quizzes`}>
-              Go to quizzes
+            <Link href={`${base}/question-banks`}>
+              Create question bank
               <ArrowRight className="size-4" />
             </Link>
           </Button>
@@ -140,7 +136,6 @@ export default function CourseDashboardPage() {
                 >
                   <CardContent className="flex flex-col gap-3 p-6">
                     {row}
-                    <p className="text-xs text-muted-foreground">Coming soon</p>
                   </CardContent>
                 </Card>
               );

@@ -15,7 +15,9 @@ async def register_user(user_data: UserCreate, db = Depends(get_instructor_db)) 
 
     collection = db["users"]
 
-    existing_user = await collection.find_one({"username": user_data.username})
+    username = user_data.username.lower()
+
+    existing_user = await collection.find_one({"username": username})
     if existing_user:
         raise HTTPException(
             status_code=400, detail="username already exists."
@@ -25,7 +27,7 @@ async def register_user(user_data: UserCreate, db = Depends(get_instructor_db)) 
 
     user_doc = {
         "_id": user_id,
-        "username": user_data.username,
+        "username": username,
         "email": user_data.email,
         "hashed_password": pwd_context.hash(user_data.password)
     }
@@ -39,7 +41,9 @@ async def login_user(user_data: UserLogin, response: Response, db = Depends(get_
 
     collection = db["users"]
 
-    user = await collection.find_one({"username": user_data.username})
+    username = user_data.username.lower()
+
+    user = await collection.find_one({"username": username})
     if not user:
         raise HTTPException(status_code=404, detail="user not found" )
 
@@ -104,15 +108,16 @@ async def update_user(request: Request, user_data: UserUpdate, db = Depends(get_
     update_fields = {}
 
     if user_data.username is not None:
+        username = user_data.username.lower()
         # check if taken
         existing = await collection.find_one({
-            "username": user_data.username,
+            "username": username,
             "_id": {"$ne": user_id}
         })
         if existing:
             raise HTTPException(status_code=409, detail="This username already exists")
 
-        update_fields["username"] = user_data.username
+        update_fields["username"] = username
 
     if user_data.email is not None:
         update_fields["email"] = user_data.email

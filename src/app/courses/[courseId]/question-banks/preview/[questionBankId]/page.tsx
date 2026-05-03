@@ -2,11 +2,12 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, SquarePen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import QuestionBankPreview from "@/components/questionbank/QuestionBankPreview";
 import { questionBankService } from "@/services/questionBankService";
 import { QuestionBank } from "@/types/questionBank";
+import { ActionSidebar } from "@/components/shared/ActionSidebar";
 
 export default function CourseQuestionBankPreviewPage() {
   const params = useParams();
@@ -91,8 +92,22 @@ export default function CourseQuestionBankPreviewPage() {
         </h1>
       </div>
 
-      <div className="flex-1 overflow-auto pb-8">
-        <QuestionBankPreview questionBank={questionBank} />
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full max-w-[1600px]">
+        <div className="lg:col-span-9 overflow-auto pb-8">
+          <QuestionBankPreview questionBank={questionBank} />
+        </div>
+
+        {/* Sidebar */}
+        <ActionSidebar
+          actions={[
+            {
+              label: "Edit",
+              icon: <SquarePen className="h-4 w-4 shrink-0" />,
+              onClick: () => router.push(`/courses/${courseId}/question-banks/${questionBankId}/edit`),
+              variant: "secondary",
+            }
+          ]}
+        />
       </div>
     </div>
   );
