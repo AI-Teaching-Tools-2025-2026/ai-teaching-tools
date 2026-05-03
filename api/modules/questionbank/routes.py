@@ -1,5 +1,5 @@
 import asyncio
-from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
+from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks, File, UploadFile
 from db.utils import get_instructor_db
 from .models import QuestionBankCreate
 from datetime import datetime
@@ -136,6 +136,14 @@ async def process_question_bank_background(courseId: str, filePath: str, db):
             continue
             
     print(f"Background task completed for {filePath}")
+
+# @question_bank_router.post("/generate_question_banks")
+# async def generate_question_bank(courseId: str, filePath: str, background_tasks: BackgroundTasks, db=Depends(get_instructor_db)):
+    
+#     background_tasks.add_task(process_question_bank_background, courseId, filePath, db)
+    
+#     return {"message": "Question Bank generation started in the background. This may take a few minutes."}
+
 
 @question_bank_router.post("/generate_question_banks")
 async def generate_question_bank(courseId: str, filePath: str, background_tasks: BackgroundTasks, db=Depends(get_instructor_db)):
