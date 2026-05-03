@@ -23,12 +23,11 @@ load_dotenv()
 # ---------------------------------------------------------------------------
 ANTHROPIC_API_KEY: str = os.environ.get("ANTHROPIC_API_KEY", "")
 
-# Two models are used so the team can compare output quality side-by-side.
-# Change these strings to swap in any Anthropic model.
-MODELS: dict[str, str] = {
-    "opus":   "claude-opus-4-5-20251101",
-    "sonnet": "claude-sonnet-4-5-20250929",
-}
+# Change this string to swap in any Anthropic model.
+# best: claude-opus-4-7
+# good: claude-sonnet-4-6
+# okay: claude-haiku-4-5-20251001
+MODEL = "claude-haiku-4-5-20251001"
 
 # ---------------------------------------------------------------------------
 # Base Path Resolution
@@ -51,7 +50,7 @@ MAX_TOKENS: int = 8192
 # ---------------------------------------------------------------------------
 CONFIG: dict = {
     "ANTHROPIC_API_KEY": ANTHROPIC_API_KEY,
-    "MODELS": MODELS,
+    "MODEL": MODEL,
     "QUESTIONS_PER_CHAPTER": QUESTIONS_PER_CHAPTER,
     "ANSWERS_PER_QUESTION": ANSWERS_PER_QUESTION,
     "MAX_TOKENS": MAX_TOKENS
