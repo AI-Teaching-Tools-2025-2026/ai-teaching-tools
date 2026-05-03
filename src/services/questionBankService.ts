@@ -69,15 +69,16 @@ export const questionBankService = {
 
   generateQuestionBanks: async (
     courseId: string,
-    filePath: string,
+    file: File,
   ): Promise<{ message: string }> => {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/question_bank/generate_question_banks`,
-      null,
+      file,
       {
-        params: {
-          courseId,
-          filePath,
+        params: { courseId },
+        headers: {
+          'Content-Type': 'application/octet-stream',
+          'filename': file.name,
         },
         withCredentials: true,
       },

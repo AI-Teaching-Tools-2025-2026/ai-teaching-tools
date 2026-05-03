@@ -1,4 +1,5 @@
 adjustText
+aiofiles==25.1.0
 annotated-doc==0.0.3
 annotated-types==0.7.0
 anthropic
