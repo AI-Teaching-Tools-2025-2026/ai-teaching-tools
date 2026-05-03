@@ -13,12 +13,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Brain, FileText, X } from "lucide-react";
 import { useState } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { questionBankService } from "@/services/questionBankService";
 import { toast } from "sonner";
 
 export default function QuestionBankGenerateSheet() {
-  const router = useRouter()
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
 
@@ -54,19 +53,38 @@ export default function QuestionBankGenerateSheet() {
 
     if (courseId && selectedFile?.name) {
       try {
-        toast.loading("Uploading Textbook...");
         // Parameters = courseId: string, filePath: string
-        await questionBankService.generateQuestionBanks(
+        // Returns = jobId
+        const { jobId } = await questionBankService.generateQuestionBanks(
           courseId,
           selectedFile,
-        )
-          // toast.success("Question Bank created successfully");
-          // router.push(`/courses/${courseId}/question-banks/`);
+        );
+        
+        toast.success("Generating question banks... You can safely leave this page. We'll alert you when the process is complete");
+
+        pollJobStatus(jobId);
+
       } catch (error) {
         toast.error("Failed to upload textbook. Pleaes try again.");
         console.error("Failed to upload textbook:", error);
       }
     }
+  };
+
+  const pollJobStatus = async (jobId: string) => {
+    const pollInterval = setInterval(async () => {
+      try {
+        const { status } = await questionBankService.checkJobStatus(jobId);
+        
+        if (status === "completed") {
+          clearInterval(pollInterval);
+          toast.success("All question banks have been generated successfully!");
+          window.dispatchEvent(new Event("questionBanksUpdated"));
+        }    
+      } catch (error) {
+        console.error("Failed to check job status", error);
+      }
+    }, 15000); // polls every 15 seconds
   };
 
   return (
