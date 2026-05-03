@@ -49,18 +49,19 @@ export default function QuestionBankGenerateSheet() {
   const handleSubmit = async () => {
     console.log("Course ID:", courseId);
     console.log("Selected file:", selectedFile?.name);
+    console.log("File: ", selectedFile)
     // TODO: Verify course ID is valid?
 
-    if (courseId && selectedFile?.name) {
-      try {
-        // Parameters = courseId: string, filePath: string
-        await questionBankService.generateQuestionBanks(courseId, selectedFile.name)
-        toast.loading("Uploading Textbook...")
-      } catch (error) {
-        toast.error("Failed to upload textbook. Pleaes try again.");
-        console.error("Failed to upload textbook:", error);
-      }
-    }
+    // if (courseId && selectedFile?.name) {
+    //   try {
+    //     // Parameters = courseId: string, filePath: string
+    //     await questionBankService.generateQuestionBanks(courseId, selectedFile.name)
+    //     toast.loading("Uploading Textbook...")
+    //   } catch (error) {
+    //     toast.error("Failed to upload textbook. Pleaes try again.");
+    //     console.error("Failed to upload textbook:", error);
+    //   }
+    // }
   };
 
   return (
