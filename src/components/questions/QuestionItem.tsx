@@ -21,7 +21,6 @@ export function QuestionItem({
   index,
   onDelete,
   onUpdate,
-  hideAuthorship,
 }: QuestionItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -30,8 +29,8 @@ export function QuestionItem({
   const displayType =
     q.type === "multiple-choice" ? "Multiple Choice" : "True/False";
 
-  const handleEditSave = (updatedQ: BuilderQuestion) => {
-    onUpdate(updatedQ);
+  const handleEditSave = (updatedQuestions: BuilderQuestion[]) => {
+    onUpdate(updatedQuestions[0]);
     setIsEditing(false);
   };
 
@@ -51,7 +50,7 @@ export function QuestionItem({
           initialQuestion={q}
           onSave={handleEditSave}
           onCancel={handleEditCancel}
-          hideAuthorship={hideAuthorship}
+          hideAuthorship={true}
         />
       </div>
     );

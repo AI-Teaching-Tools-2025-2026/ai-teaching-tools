@@ -19,8 +19,8 @@ export function QuestionList({
 }: QuestionListProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const handleCreateQuestion = (newQuestion: BuilderQuestion) => {
-    setQuestions([...questions, newQuestion]);
+  const handleCreateQuestion = (newQuestions: BuilderQuestion[]) => {
+    setQuestions([...questions, ...newQuestions]);
     setIsFormOpen(false);
   };
 

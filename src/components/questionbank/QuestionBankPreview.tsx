@@ -1,89 +1,65 @@
 "use client";
 
-import { QuizData } from "@/types/quiz";
+import { QuestionBank } from "@/types/questionBank";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
-interface QuizPreviewProps {
-  quiz: QuizData;
+interface QuestionBankPreviewProps {
+  questionBank: QuestionBank;
 }
 
-function formatDueDate(iso: string) {
-  if (!iso?.trim()) return "Not set";
-  const d = new Date(iso);
-  return Number.isNaN(d.getTime()) ? "Not set" : d.toLocaleDateString();
-}
+export default function QuestionBankPreview({
+  questionBank,
+}: QuestionBankPreviewProps) {
+  const questions = questionBank.questions ?? [];
 
-export default function QuizPreview({ quiz }: QuizPreviewProps) {
   return (
     <div className="flex flex-col gap-6 max-w-2xl mx-auto w-full">
-      {/* Quiz header */}
       <Card>
         <CardHeader className="pb-2">
-          {/* Title + status */}
-          <div className="flex flex-wrap items-center gap-2">
-            <CardTitle className="text-xl">{quiz.quizTitle}</CardTitle>
+          <CardTitle className="text-xl">{questionBank.title}</CardTitle>
 
-            <Badge
-              variant={
-                quiz.quizStatus === "Published" ? "default" : "secondary"
-              }
-              className={cn(
-                "font-medium",
-                quiz.quizStatus === "Published"
-                  ? "bg-green-500/15 text-green-500 border-green-500/20"
-                  : "bg-neutral-500/15 text-neutral-400 border-neutral-500/20",
-              )}
-            >
-              {quiz.quizStatus}
-            </Badge>
-          </div>
-
-          {/*   Description (NEW) */}
-          {quiz.description && (
-            <p className="text-sm text-muted-foreground mt-2">
-              {quiz.description}
-            </p>
-          )}
-
-          {/* Meta info */}
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-2">
-            <span>Section: {quiz.section}</span>
-            <span>Due: {formatDueDate(quiz.dueDate)}</span>
-            <span>{quiz.totalPoints} pts</span>
-            <span>{quiz.questions.length} questions</span>
+            <span>Chapter: {questionBank.chapter}</span>
+            <span>{questions.length} questions</span>
+            {questionBank.lastModified && (
+              <span>
+                Last modified:{" "}
+                {new Date(questionBank.lastModified).toLocaleDateString()}
+              </span>
+            )}
           </div>
         </CardHeader>
       </Card>
 
-      {/* Questions */}
       <div className="flex flex-col gap-4">
         <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
           Preview — correct answers shown
         </h2>
 
-        {quiz.questions.length === 0 && (
+        {questions.length === 0 && (
           <Card>
             <CardContent className="py-8 text-center text-sm text-muted-foreground">
-              No questions yet. Add questions in the Questions tab to see them
-              here.
+              No questions in this bank yet.
             </CardContent>
           </Card>
         )}
 
-        {quiz.questions.map((q, index) => (
+        {questions.map((q, index) => (
           <Card key={q.questionId}>
             <CardHeader className="pb-2">
               <CardTitle className="text-base font-medium flex items-start gap-2">
                 <span className="text-muted-foreground shrink-0">
                   {index + 1}.
                 </span>
-                {q.question}
+                {q.questionText}
               </CardTitle>
 
               <p className="text-sm text-muted-foreground pl-6">
-                {q.questionPoints} pt{q.questionPoints !== 1 ? "s" : ""}
+                {q.questionPoints} pt{q.questionPoints !== 1 ? "s" : ""} ·{" "}
+                {q.questionType === "true-false"
+                  ? "True / false"
+                  : "Multiple choice"}
               </p>
             </CardHeader>
 
