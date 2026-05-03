@@ -79,7 +79,13 @@ export default function QuestionBankTable() {
       }
     };
 
-    loadBanks();
+    loadBanks(); // initial load on mount 
+
+    window.addEventListener("questionBanksUpdated", loadBanks); // when job completes 
+
+    return () => {
+      window.removeEventListener("questionBanksUpdated", loadBanks);
+    };
   }, [courseId]);
 
   const chapters = useMemo(

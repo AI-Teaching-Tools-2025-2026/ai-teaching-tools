@@ -3,7 +3,7 @@ from db.utils import get_instructor_db
 from .models import CourseCreate, CourseUpdate
 from modules.auth.jwt_service import verify_access_token
 from datetime import datetime
-from bson import ObjectId
+import uuid
 
 courses_router = APIRouter(prefix="/courses", tags=["Courses"])
 
@@ -18,9 +18,8 @@ async def create_course(course: CourseCreate, request: Request, db=Depends(get_i
         raise HTTPException(401, "invalid or expired token")
 
     new_course = {
-        "_id": str(ObjectId()),
+        "_id": f"COURSE{uuid.uuid4().hex[:6].upper()}",
         "userID": user_id,
-        # "textbookID": course.textbookID,
         "createdAt": datetime.utcnow().isoformat() + "Z",
         "courseTitle": course.courseTitle,
         "courseTerm": course.courseTerm,

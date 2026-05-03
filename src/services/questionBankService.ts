@@ -70,7 +70,7 @@ export const questionBankService = {
   generateQuestionBanks: async (
     courseId: string,
     file: File,
-  ): Promise<{ message: string }> => {
+  ): Promise<{ message: string; jobId: string }> => {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/question_bank/generate_question_banks`,
       file,
@@ -86,4 +86,12 @@ export const questionBankService = {
 
     return response.data;
   },
+
+  checkJobStatus: async (jobId: string): Promise<{ jobId: string; status: string }> => {
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/question_bank/jobs/${jobId}`,
+      { withCredentials: true }
+    );
+    return response.data;
+  }
 };

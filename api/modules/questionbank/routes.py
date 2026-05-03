@@ -2,7 +2,7 @@ import asyncio
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks, Request
 from db.utils import get_instructor_db
 from .models import QuestionBankCreate
-from datetime import datetime
+from datetime import datetime, timezone
 from questionBankPipeline.question_bank_generator import generate_for_chapter
 from questionBankPipeline.pdfParser import pdfParser
 from pydantic import ValidationError
@@ -93,7 +93,7 @@ async def duplicate_question_bank(questionBankId: str, db=Depends(get_instructor
     
     return question_bank
 
-async def process_question_bank_background(courseId: str, temp_filename: str, original_filename: str, db):
+async def process_question_bank_background(courseId: str, temp_filename: str, original_filename: str, db, jobId: str):
     print(f"Background task started for {original_filename}")
     
     # Open the file and parse it
@@ -148,7 +148,12 @@ async def process_question_bank_background(courseId: str, temp_filename: str, or
             print(f"CRITICAL VALIDATION FAILED for Chapter {chapter_num}. Not saving to DB.")
             print(e.errors())
             continue
-            
+
+    # update job status
+    await db["jobs"].update_one(
+        {"_id": jobId}, 
+        {"$set": {"status": "completed", "completedAt": datetime.now(timezone.utc)}}
+    )
     print(f"Background task completed for {original_filename}")
     
     # Clean up temp file
@@ -175,9 +180,31 @@ async def generate_question_bank(courseId: str, request: Request, background_tas
             async for chunk in request.stream():
                 await f.write(chunk)
 
-        background_tasks.add_task(process_question_bank_background, courseId, temp_filename, original_filename, db)
+        # create job to track status 
+        jobId = f"JOB{uuid.uuid4().hex[:6].upper()}"
+        job_document = {
+            "_id": jobId,
+            "courseId": courseId,
+            "filename": original_filename,
+            "status": "processing",
+            "createdAt": datetime.now(timezone.utc)      
+        }
+        await db["jobs"].insert_one(job_document)
+
+        background_tasks.add_task(process_question_bank_background, courseId, temp_filename, original_filename, db, jobId)
         
     except Exception:
         raise HTTPException(status_code=500, detail="Something went wrong.")
    
-    return {"message": "Question Bank generation started in the background. This may take a few minutes."}
+    return {
+        "message": "Question Bank generation started in the background.", 
+        "jobId": jobId 
+    }
+
+@question_bank_router.get("/jobs/{jobId}")
+async def get_job_status(jobId: str, db=Depends(get_instructor_db)):
+    job = await db["jobs"].find_one({"_id": jobId})
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    
+    return {"jobId": job["_id"], "status": job["status"]}

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import QuestionBankTable from "@/components/questionbank/QuestionBankTable";
 import { DashboardHeader } from "@/components/ui/dashboardHeader";
 import { Button } from "@/components/ui/button";
