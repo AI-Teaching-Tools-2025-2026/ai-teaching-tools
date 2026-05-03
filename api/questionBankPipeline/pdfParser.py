@@ -53,7 +53,7 @@ def readOutline(reader, chapterData, textbookLastPage):
             endPage = endSectionStart - 1
         else:
             # Fallback to end of textbook if no ending section found
-            endPage = textbookLastPage
+            endPage = textbookLastPage - 1  # Minus 1 is necessary to handle conversion between 0-based and 1-based indices
 
         chapterData.append(
             {

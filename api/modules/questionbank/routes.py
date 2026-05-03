@@ -158,14 +158,10 @@ async def process_question_bank_background(courseId: str, temp_filename: str, or
     except OSError:
         print(f"Failed to clean up temporary file {temp_filename}")
 
-# @question_bank_router.post("/generate_question_banks")
-# async def generate_question_bank(courseId: str, filePath: str, background_tasks: BackgroundTasks, db=Depends(get_instructor_db)):
-    
-#     background_tasks.add_task(process_question_bank_background, courseId, filePath, db)
-    
-#     return {"message": "Question Bank generation started in the background. This may take a few minutes."}
-
-# https://stackoverflow.com/questions/65342833/fastapi-uploadfile-is-slow-compared-to-flask/70667530#70667530 
+# CODE CITATION (Lines 167 - 176)
+# Author: Chris
+# Link: https://stackoverflow.com/questions/65342833/fastapi-uploadfile-is-slow-compared-to-flask/70667530#70667530 
+# Purpose: More efficient way to handle files larger than 1 MB (which is most textbook files) 
 @question_bank_router.post("/generate_question_banks")
 async def generate_question_bank(courseId: str, request: Request, background_tasks: BackgroundTasks, db=Depends(get_instructor_db)):
     try: 
