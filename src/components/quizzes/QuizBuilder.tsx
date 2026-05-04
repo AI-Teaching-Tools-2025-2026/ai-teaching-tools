@@ -43,8 +43,10 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
   const params = useParams();
   const courseId = params.courseId as string;
   const [activeTab, setActiveTab] = useState<Tab>("details");
+  const [baseQuiz, setBaseQuiz] = useState<QuizData | undefined>(initialQuiz);
+  
   const [quizData, setQuizData] = useState<Partial<QuizData>>(
-    initialQuiz || {
+    baseQuiz || {
       quizTitle: "",
       quizStatus: "Draft",
       section: "",
@@ -57,30 +59,30 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
     },
   );
   const [questions, setQuestions] = useState<BuilderQuestion[]>(
-    initialQuiz ? transformQuestionsToBuilder(initialQuiz.questions) : [],
+    baseQuiz ? transformQuestionsToBuilder(baseQuiz.questions) : [],
   );
   const [selectedSection, setSelectedSection] = useState(
-    mockSections.find((s) => s === initialQuiz?.section) || mockSections[0],
+    mockSections.find((s) => s === baseQuiz?.section) || mockSections[0],
   );
   const [previewOpen, setPreviewOpen] = useState(false);
 
-  const initialBuilderQuestions = useMemo(() => initialQuiz ? transformQuestionsToBuilder(initialQuiz.questions) : [], [initialQuiz]);
+  const initialBuilderQuestions = useMemo(() => baseQuiz ? transformQuestionsToBuilder(baseQuiz.questions) : [], [baseQuiz]);
 
   const isDirty = useMemo(() => {
-    if (!initialQuiz) return true;
+    if (!baseQuiz) return true;
     
-    if (quizData.quizTitle !== initialQuiz.quizTitle) return true;
-    if (quizData.description !== initialQuiz.description) return true;
-    if (quizData.dueDate !== initialQuiz.dueDate) return true;
+    if (quizData.quizTitle !== baseQuiz.quizTitle) return true;
+    if (quizData.description !== baseQuiz.description) return true;
+    if (quizData.dueDate !== baseQuiz.dueDate) return true;
     
     // Only check section if we actually changed it away from what was loaded
-    if (selectedSection !== initialQuiz.section && initialQuiz.section) return true;
-    if (!initialQuiz.section && selectedSection !== mockSections[0]) return true;
+    if (selectedSection !== baseQuiz.section && baseQuiz.section) return true;
+    if (!baseQuiz.section && selectedSection !== mockSections[0]) return true;
     
     if (JSON.stringify(questions) !== JSON.stringify(initialBuilderQuestions)) return true;
 
     return false;
-  }, [quizData, questions, selectedSection, initialQuiz, initialBuilderQuestions]);
+  }, [quizData, questions, selectedSection, baseQuiz, initialBuilderQuestions]);
 
   const previewQuiz = useMemo((): QuizData => {
     const transformed = transformBuilderQuestions(questions);
@@ -110,12 +112,12 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
     const transformedQuestions = transformBuilderQuestions(questions);
 
     const quiz: QuizData = {
-      _id: initialQuiz?._id || "",
+      _id: baseQuiz?._id || "",
       quizTitle: quizData.quizTitle ?? "",
       quizStatus: "Draft",
       section: selectedSection ?? "",
       courseId,
-      createdAt: initialQuiz?.createdAt || new Date().toISOString(),
+      createdAt: baseQuiz?.createdAt || new Date().toISOString(),
       description: quizData.description ?? "",
       dueDate: quizData.dueDate ?? "",
       totalPoints: quizData.totalPoints ?? 0,
@@ -123,8 +125,11 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
     };
 
     try {
-      if (initialQuiz?._id) {
-        await quizService.updateQuiz(initialQuiz._id, quiz);
+      if (baseQuiz?._id) {
+        await quizService.updateQuiz(baseQuiz._id, quiz);
+        setBaseQuiz(quiz);
+        setQuizData(quiz);
+        setQuestions(transformQuestionsToBuilder(quiz.questions));
         toast.success("Quiz updated successfully");
         // router.push(`/courses/${courseId}/quizzes`);
       } else {
@@ -139,9 +144,9 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
   };
 
   const handleDeleteQuiz = async () => {
-    if (!initialQuiz?._id) return;
+    if (!baseQuiz?._id) return;
     try {
-      await quizService.deleteQuizById(initialQuiz._id);
+      await quizService.deleteQuizById(baseQuiz._id);
       toast.success("Quiz deleted successfully");
       router.push(`/courses/${courseId}/quizzes`);
     } catch (error) {
@@ -238,14 +243,14 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
               variant: "secondary",
             },
             {
-              label: initialQuiz ? "Update Quiz" : "Create Quiz",
-              icon: initialQuiz ? (
+              label: baseQuiz ? "Update Quiz" : "Create Quiz",
+              icon: baseQuiz ? (
                 <RefreshCcw className="h-4 w-4 shrink-0" />
               ) : (
                 <SquarePen className="h-4 w-4 shrink-0" />
               ),
               onClick: handleSaveQuiz,
-              disabled: !quizData.quizTitle || quizData.quizTitle.trim() === "" || (initialQuiz ? !isDirty : false),
+              disabled: !quizData.quizTitle || quizData.quizTitle.trim() === "" || (baseQuiz ? !isDirty : false),
             },
             {
               label: "Publish Quiz",
@@ -254,7 +259,7 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
               disabled: true,
               className: "bg-blue-800 hover:bg-blue-900 text-white",
             },
-            ...(initialQuiz
+            ...(baseQuiz
               ? [
                   {
                     label: "Delete Quiz",
