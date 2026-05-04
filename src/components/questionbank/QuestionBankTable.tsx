@@ -79,9 +79,9 @@ export default function QuestionBankTable() {
       }
     };
 
-    loadBanks(); // initial load on mount 
+    loadBanks(); // initial load on mount
 
-    window.addEventListener("questionBanksUpdated", loadBanks); // when job completes 
+    window.addEventListener("questionBanksUpdated", loadBanks); // when job completes
 
     return () => {
       window.removeEventListener("questionBanksUpdated", loadBanks);

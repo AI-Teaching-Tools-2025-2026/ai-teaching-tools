@@ -34,7 +34,9 @@ export default function QuestionBankBuilder({
 
   const [activeTab, setActiveTab] = useState<Tab>("details");
 
-  const [baseQuestionBank, setBaseQuestionBank] = useState<QuestionBank | undefined>(initialQuestionBank);
+  const [baseQuestionBank, setBaseQuestionBank] = useState<
+    QuestionBank | undefined
+  >(initialQuestionBank);
 
   const [questionBankData, setQuestionBankData] = useState<
     Partial<QuestionBank>
@@ -57,15 +59,23 @@ export default function QuestionBankBuilder({
       : [],
   );
 
-  const initialBuilderQuestions = useMemo(() => baseQuestionBank ? transformQBQuestionsToBuilder(baseQuestionBank.questions || []) : [], [baseQuestionBank]);
+  const initialBuilderQuestions = useMemo(
+    () =>
+      baseQuestionBank
+        ? transformQBQuestionsToBuilder(baseQuestionBank.questions || [])
+        : [],
+    [baseQuestionBank],
+  );
 
   const isDirty = useMemo(() => {
     if (!baseQuestionBank) return true;
     if (questionBankData.title !== baseQuestionBank.title) return true;
     if (questionBankData.chapter !== baseQuestionBank.chapter) return true;
-    if (questionBankData.sourceFile !== baseQuestionBank.sourceFile) return true;
-    
-    if (JSON.stringify(questions) !== JSON.stringify(initialBuilderQuestions)) return true;
+    if (questionBankData.sourceFile !== baseQuestionBank.sourceFile)
+      return true;
+
+    if (JSON.stringify(questions) !== JSON.stringify(initialBuilderQuestions))
+      return true;
     return false;
   }, [questionBankData, questions, baseQuestionBank, initialBuilderQuestions]);
 
@@ -193,7 +203,10 @@ export default function QuestionBankBuilder({
               <SquarePen className="h-4 w-4 shrink-0" />
             ),
             onClick: handleSaveQuestionBank,
-            disabled: !questionBankData.title || questionBankData.title.trim() === "" || (baseQuestionBank ? !isDirty : false),
+            disabled:
+              !questionBankData.title ||
+              questionBankData.title.trim() === "" ||
+              (baseQuestionBank ? !isDirty : false),
           },
           ...(baseQuestionBank
             ? [

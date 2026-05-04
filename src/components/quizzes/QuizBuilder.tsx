@@ -44,7 +44,7 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
   const courseId = params.courseId as string;
   const [activeTab, setActiveTab] = useState<Tab>("details");
   const [baseQuiz, setBaseQuiz] = useState<QuizData | undefined>(initialQuiz);
-  
+
   const [quizData, setQuizData] = useState<Partial<QuizData>>(
     baseQuiz || {
       quizTitle: "",
@@ -66,20 +66,24 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
   );
   const [previewOpen, setPreviewOpen] = useState(false);
 
-  const initialBuilderQuestions = useMemo(() => baseQuiz ? transformQuestionsToBuilder(baseQuiz.questions) : [], [baseQuiz]);
+  const initialBuilderQuestions = useMemo(
+    () => (baseQuiz ? transformQuestionsToBuilder(baseQuiz.questions) : []),
+    [baseQuiz],
+  );
 
   const isDirty = useMemo(() => {
     if (!baseQuiz) return true;
-    
+
     if (quizData.quizTitle !== baseQuiz.quizTitle) return true;
     if (quizData.description !== baseQuiz.description) return true;
     if (quizData.dueDate !== baseQuiz.dueDate) return true;
-    
+
     // Only check section if we actually changed it away from what was loaded
     if (selectedSection !== baseQuiz.section && baseQuiz.section) return true;
     if (!baseQuiz.section && selectedSection !== mockSections[0]) return true;
-    
-    if (JSON.stringify(questions) !== JSON.stringify(initialBuilderQuestions)) return true;
+
+    if (JSON.stringify(questions) !== JSON.stringify(initialBuilderQuestions))
+      return true;
 
     return false;
   }, [quizData, questions, selectedSection, baseQuiz, initialBuilderQuestions]);
@@ -250,7 +254,10 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
                 <SquarePen className="h-4 w-4 shrink-0" />
               ),
               onClick: handleSaveQuiz,
-              disabled: !quizData.quizTitle || quizData.quizTitle.trim() === "" || (baseQuiz ? !isDirty : false),
+              disabled:
+                !quizData.quizTitle ||
+                quizData.quizTitle.trim() === "" ||
+                (baseQuiz ? !isDirty : false),
             },
             {
               label: "Publish Quiz",

@@ -55,11 +55,10 @@ export default function QuestionBankGenerateSheet() {
           courseId,
           selectedFile,
         );
-        
+
         toast.success("Generating question banks. We'll alert you when ready");
 
         pollJobStatus(jobId);
-
       } catch (error) {
         toast.error("Failed to upload textbook. Please try again.");
         console.error("Failed to upload textbook:", error);
@@ -71,12 +70,12 @@ export default function QuestionBankGenerateSheet() {
     const pollInterval = setInterval(async () => {
       try {
         const { status } = await questionBankService.checkJobStatus(jobId);
-        
+
         if (status === "completed") {
           clearInterval(pollInterval);
           toast.success("All question banks have been generated successfully!");
           window.dispatchEvent(new Event("questionBanksUpdated"));
-        }    
+        }
       } catch (error) {
         console.error("Failed to check job status", error);
       }
