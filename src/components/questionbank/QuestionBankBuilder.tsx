@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
@@ -54,6 +54,18 @@ export default function QuestionBankBuilder({
       ? transformQBQuestionsToBuilder(initialQuestionBank.questions || [])
       : [],
   );
+
+  const initialBuilderQuestions = useMemo(() => initialQuestionBank ? transformQBQuestionsToBuilder(initialQuestionBank.questions || []) : [], [initialQuestionBank]);
+
+  const isDirty = useMemo(() => {
+    if (!initialQuestionBank) return true;
+    if (questionBankData.title !== initialQuestionBank.title) return true;
+    if (questionBankData.chapter !== initialQuestionBank.chapter) return true;
+    if (questionBankData.sourceFile !== initialQuestionBank.sourceFile) return true;
+    
+    if (JSON.stringify(questions) !== JSON.stringify(initialBuilderQuestions)) return true;
+    return false;
+  }, [questionBankData, questions, initialQuestionBank, initialBuilderQuestions]);
 
   const handleSaveQuestionBank = async () => {
     const transformedQuestions = transformBuilderToQBQuestions(questions);
@@ -176,7 +188,7 @@ export default function QuestionBankBuilder({
               <SquarePen className="h-4 w-4 shrink-0" />
             ),
             onClick: handleSaveQuestionBank,
-            disabled: !questionBankData.title || questionBankData.title.trim() === "",
+            disabled: !questionBankData.title || questionBankData.title.trim() === "" || (initialQuestionBank ? !isDirty : false),
           },
           ...(initialQuestionBank
             ? [

@@ -64,6 +64,24 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
   );
   const [previewOpen, setPreviewOpen] = useState(false);
 
+  const initialBuilderQuestions = useMemo(() => initialQuiz ? transformQuestionsToBuilder(initialQuiz.questions) : [], [initialQuiz]);
+
+  const isDirty = useMemo(() => {
+    if (!initialQuiz) return true;
+    
+    if (quizData.quizTitle !== initialQuiz.quizTitle) return true;
+    if (quizData.description !== initialQuiz.description) return true;
+    if (quizData.dueDate !== initialQuiz.dueDate) return true;
+    
+    // Only check section if we actually changed it away from what was loaded
+    if (selectedSection !== initialQuiz.section && initialQuiz.section) return true;
+    if (!initialQuiz.section && selectedSection !== mockSections[0]) return true;
+    
+    if (JSON.stringify(questions) !== JSON.stringify(initialBuilderQuestions)) return true;
+
+    return false;
+  }, [quizData, questions, selectedSection, initialQuiz, initialBuilderQuestions]);
+
   const previewQuiz = useMemo((): QuizData => {
     const transformed = transformBuilderQuestions(questions);
     const pointsFromQuestions = questions.reduce((sum, q) => sum + q.points, 0);
@@ -227,7 +245,7 @@ export default function QuizBuilder({ initialQuiz }: QuizBuilderProps = {}) {
                 <SquarePen className="h-4 w-4 shrink-0" />
               ),
               onClick: handleSaveQuiz,
-              disabled: !quizData.quizTitle || quizData.quizTitle.trim() === "",
+              disabled: !quizData.quizTitle || quizData.quizTitle.trim() === "" || (initialQuiz ? !isDirty : false),
             },
             {
               label: "Publish Quiz",
