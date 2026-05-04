@@ -155,6 +155,7 @@ export default function QuestionBankBuilder({
                 questions={questions}
                 setQuestions={setQuestions}
                 hideAuthorship={true}
+                hidePoints={true}
                 courseId={courseId}
               />
             )}
