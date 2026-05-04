@@ -77,8 +77,8 @@ export const questionBankService = {
       {
         params: { courseId },
         headers: {
-          'Content-Type': 'application/octet-stream',
-          'filename': file.name,
+          "Content-Type": "application/octet-stream",
+          filename: file.name,
         },
         withCredentials: true,
       },
@@ -87,11 +87,13 @@ export const questionBankService = {
     return response.data;
   },
 
-  checkJobStatus: async (jobId: string): Promise<{ jobId: string; status: string }> => {
+  checkJobStatus: async (
+    jobId: string,
+  ): Promise<{ jobId: string; status: string }> => {
     const response = await axios.get(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/question_bank/jobs/${jobId}`,
-      { withCredentials: true }
+      { withCredentials: true },
     );
     return response.data;
-  }
+  },
 };

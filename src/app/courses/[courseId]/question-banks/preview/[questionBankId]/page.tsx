@@ -103,9 +103,12 @@ export default function CourseQuestionBankPreviewPage() {
             {
               label: "Edit",
               icon: <SquarePen className="h-4 w-4 shrink-0" />,
-              onClick: () => router.push(`/courses/${courseId}/question-banks/${questionBankId}/edit`),
+              onClick: () =>
+                router.push(
+                  `/courses/${courseId}/question-banks/${questionBankId}/edit`,
+                ),
               variant: "secondary",
-            }
+            },
           ]}
         />
       </div>

@@ -100,9 +100,10 @@ export default function CourseQuizPreviewPage() {
             {
               label: "Edit",
               icon: <SquarePen className="h-4 w-4 shrink-0" />,
-              onClick: () => router.push(`/courses/${courseId}/quizzes/${quizId}/edit`),
+              onClick: () =>
+                router.push(`/courses/${courseId}/quizzes/${quizId}/edit`),
               variant: "secondary",
-            }
+            },
           ]}
         />
       </div>

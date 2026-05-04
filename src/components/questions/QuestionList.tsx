@@ -10,6 +10,7 @@ interface QuestionListProps {
   questions: BuilderQuestion[];
   setQuestions: React.Dispatch<React.SetStateAction<BuilderQuestion[]>>;
   hideAuthorship?: boolean;
+  hidePoints?: boolean;
   courseId?: string;
 }
 
@@ -17,6 +18,7 @@ export function QuestionList({
   questions,
   setQuestions,
   hideAuthorship,
+  hidePoints,
   courseId,
 }: QuestionListProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -44,6 +46,7 @@ export function QuestionList({
             );
           }}
           hideAuthorship={hideAuthorship}
+          hidePoints={hidePoints}
         />
       ))}
 
@@ -55,6 +58,7 @@ export function QuestionList({
             onSave={handleCreateQuestion}
             onCancel={() => setIsFormOpen(false)}
             hideAuthorship={hideAuthorship}
+            hidePoints={hidePoints}
             courseId={courseId}
           />
         </div>

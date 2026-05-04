@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
@@ -34,10 +34,14 @@ export default function QuestionBankBuilder({
 
   const [activeTab, setActiveTab] = useState<Tab>("details");
 
+  const [baseQuestionBank, setBaseQuestionBank] = useState<
+    QuestionBank | undefined
+  >(initialQuestionBank);
+
   const [questionBankData, setQuestionBankData] = useState<
     Partial<QuestionBank>
   >(
-    initialQuestionBank || {
+    baseQuestionBank || {
       title: "",
       chapter: "",
       courseID: courseId,
@@ -50,32 +54,55 @@ export default function QuestionBankBuilder({
   );
 
   const [questions, setQuestions] = useState<BuilderQuestion[]>(
-    initialQuestionBank
-      ? transformQBQuestionsToBuilder(initialQuestionBank.questions || [])
+    baseQuestionBank
+      ? transformQBQuestionsToBuilder(baseQuestionBank.questions || [])
       : [],
   );
+
+  const initialBuilderQuestions = useMemo(
+    () =>
+      baseQuestionBank
+        ? transformQBQuestionsToBuilder(baseQuestionBank.questions || [])
+        : [],
+    [baseQuestionBank],
+  );
+
+  const isDirty = useMemo(() => {
+    if (!baseQuestionBank) return true;
+    if (questionBankData.title !== baseQuestionBank.title) return true;
+    if (questionBankData.chapter !== baseQuestionBank.chapter) return true;
+    if (questionBankData.sourceFile !== baseQuestionBank.sourceFile)
+      return true;
+
+    if (JSON.stringify(questions) !== JSON.stringify(initialBuilderQuestions))
+      return true;
+    return false;
+  }, [questionBankData, questions, baseQuestionBank, initialBuilderQuestions]);
 
   const handleSaveQuestionBank = async () => {
     const transformedQuestions = transformBuilderToQBQuestions(questions);
 
     const questionBank: QuestionBank = {
-      _id: initialQuestionBank?._id || "",
+      _id: baseQuestionBank?._id || "",
       title: questionBankData.title ?? "",
       chapter: questionBankData.chapter ?? "",
       courseID: courseId,
       sourceFile: questionBankData.sourceFile ?? "",
-      createdAt: initialQuestionBank?.createdAt || new Date().toISOString(),
+      createdAt: baseQuestionBank?.createdAt || new Date().toISOString(),
       lastModified: new Date().toISOString(),
       questionCount: transformedQuestions.length,
       questions: transformedQuestions,
     };
 
     try {
-      if (initialQuestionBank?._id) {
+      if (baseQuestionBank?._id) {
         await questionBankService.updateQuestionBank(
-          initialQuestionBank._id,
+          baseQuestionBank._id,
           questionBank,
         );
+        setBaseQuestionBank(questionBank);
+        setQuestionBankData(questionBank);
+        setQuestions(transformQBQuestionsToBuilder(questionBank.questions));
         toast.success("Question Bank updated successfully");
       } else {
         const createdQB =
@@ -92,9 +119,9 @@ export default function QuestionBankBuilder({
   };
 
   const handleDeleteQuestionBank = async () => {
-    if (!initialQuestionBank?._id) return;
+    if (!baseQuestionBank?._id) return;
     try {
-      await questionBankService.deleteQuestionBankById(initialQuestionBank._id);
+      await questionBankService.deleteQuestionBankById(baseQuestionBank._id);
       toast.success("Question Bank deleted successfully");
       router.push(`/courses/${courseId}/question-banks`);
     } catch (error) {
@@ -155,6 +182,7 @@ export default function QuestionBankBuilder({
                 questions={questions}
                 setQuestions={setQuestions}
                 hideAuthorship={true}
+                hidePoints={true}
                 courseId={courseId}
               />
             )}
@@ -166,18 +194,21 @@ export default function QuestionBankBuilder({
       <ActionSidebar
         actions={[
           {
-            label: initialQuestionBank
+            label: baseQuestionBank
               ? "Update Question Bank"
               : "Create Question Bank",
-            icon: initialQuestionBank ? (
+            icon: baseQuestionBank ? (
               <RefreshCcw className="h-4 w-4 shrink-0" />
             ) : (
               <SquarePen className="h-4 w-4 shrink-0" />
             ),
             onClick: handleSaveQuestionBank,
-            disabled: !questionBankData.title || questionBankData.title.trim() === "",
+            disabled:
+              !questionBankData.title ||
+              questionBankData.title.trim() === "" ||
+              (baseQuestionBank ? !isDirty : false),
           },
-          ...(initialQuestionBank
+          ...(baseQuestionBank
             ? [
                 {
                   label: "Delete Question Bank",

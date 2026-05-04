@@ -13,34 +13,31 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 export default function CourseDashboardPage() {
   const params = useParams();
   const courseId = params.courseId as string;
-  const [course, setCourse] = useState<any>(null);  
+  const [course, setCourse] = useState<any>(null);
 
   useEffect(() => {
-      const loadCourse = async () => {
-        try {
-          const response = await axios.get(
-            `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${courseId}`,
-            { withCredentials: true },
-          );
-  
-          setCourse(response.data);
-        } catch (error) {
-          console.error(error);
-          alert("Failed to load course");
-        }
-      };
-  
-      loadCourse();
-    }, []);
+    const loadCourse = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses/${courseId}`,
+          { withCredentials: true },
+        );
+
+        setCourse(response.data);
+      } catch (error) {
+        console.error(error);
+        alert("Failed to load course");
+      }
+    };
+
+    loadCourse();
+  });
 
   const base = `/courses/${courseId}`;
 

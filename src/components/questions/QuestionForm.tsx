@@ -24,6 +24,7 @@ interface QuestionFormProps {
   onSave: (questions: BuilderQuestion[]) => void;
   onCancel: () => void;
   hideAuthorship?: boolean;
+  hidePoints?: boolean;
   courseId?: string;
 }
 
@@ -32,6 +33,7 @@ export function QuestionForm({
   onSave,
   onCancel,
   hideAuthorship = false,
+  hidePoints = false,
   courseId,
 }: QuestionFormProps) {
   const [authorship, setAuthorship] = useState("manual");
@@ -122,7 +124,7 @@ export function QuestionForm({
       id: initialQuestion?.id || crypto.randomUUID(),
       text: questionText.trim(),
       type: questionType as "multiple-choice" | "true-false",
-      points: Number(points),
+      points: hidePoints ? 1 : Number(points),
       options:
         questionType === "multiple-choice"
           ? [
@@ -217,18 +219,20 @@ export function QuestionForm({
           </div>
 
           {/* Number of Points */}
-          <div className="grid gap-2">
-            <Label htmlFor="points" className="text-[15px] font-medium">
-              Number of Points
-            </Label>
-            <Input
-              id="points"
-              type="number"
-              className="w-[200px] bg-card/50"
-              value={points}
-              onChange={(e) => setPoints(Number(e.target.value))}
-            />
-          </div>
+          {!hidePoints && (
+            <div className="grid gap-2">
+              <Label htmlFor="points" className="text-[15px] font-medium">
+                Number of Points
+              </Label>
+              <Input
+                id="points"
+                type="number"
+                className="w-[200px] bg-card/50"
+                value={points}
+                onChange={(e) => setPoints(Number(e.target.value))}
+              />
+            </div>
+          )}
 
           {/* Answers Section */}
           <div className="grid gap-4 pt-2">
