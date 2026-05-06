@@ -20,6 +20,7 @@ import { Settings, LogOut, User, Pencil } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { authService } from "@/services/authService";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Navbar() {
   const router = useRouter();
@@ -70,18 +71,19 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50"
-      style={{ background: "var(--800, #262626)" }}
+      className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border"
     >
       <div className="flex items-center justify-between w-full p-4">
-        <h1 className="text-xl font-bold text-neutral-50">AI Teaching Tools</h1>
+        <h1 className="text-xl font-bold text-foreground">AI Teaching Tools</h1>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
+          
           {/* Settings */}
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <div
-                className="cursor-pointer text-neutral-200 hover:text-neutral-50 hover:bg-neutral-500 rounded-full p-2"
+                className="cursor-pointer text-primary hover:bg-accent rounded-full p-2"
                 onClick={() => setIsSheetOpen(true)}
               >
                 <Settings className="h-5 w-5" />
@@ -108,9 +110,9 @@ export default function Navbar() {
           {/* User Account Dropdown */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <div className="cursor-pointer rounded-full hover:bg-neutral-500 p-1">
+              <div className="cursor-pointer rounded-full hover:bg-accent p-1">
                 <Avatar className="h-8 w-8">
-                  <AvatarFallback className="bg-neutral-600 text-neutral-50">
+                  <AvatarFallback className="bg-muted text-muted-foreground">
                     <User className="h-4 w-4" />
                   </AvatarFallback>
                 </Avatar>
@@ -118,30 +120,30 @@ export default function Navbar() {
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="end"
-              className="w-56 bg-neutral-800 border-neutral-600"
+              className="w-56"
             >
               <div className="flex flex-col items-center p-3 m-2 gap-2">
                 <Avatar className="h-12 w-12">
-                  <AvatarFallback className="bg-neutral-600 text-neutral-50">
+                  <AvatarFallback className="bg-muted text-muted-foreground">
                     <User className="h-5 w-5" />
                   </AvatarFallback>
                 </Avatar>
-                <p className="text-sm">
+                <p className="text-sm font-medium">
                   Hi, {user ? user.username : "Loading..."}
                 </p>
-                <p className="text-sm"> {user ? user.email : ""}</p>
+                <p className="text-sm text-muted-foreground"> {user ? user.email : ""}</p>
               </div>
-              <DropdownMenuSeparator className="bg-neutral-600" />
+              <DropdownMenuSeparator />
               <DropdownMenuItem
-                className="text-neutral-50 focus:bg-neutral-600 focus:text-neutral-50 cursor-pointer"
+                className="cursor-pointer"
                 onClick={() => setIsSheetOpen(true)}
               >
                 <Pencil className="mr-2 h-4 w-4" />
                 <span>Edit Profile</span>
               </DropdownMenuItem>
-              <DropdownMenuSeparator className="bg-neutral-600" />
+              <DropdownMenuSeparator />
               <DropdownMenuItem
-                className="text-neutral-50 focus:bg-neutral-600 focus:text-neutral-50 cursor-pointer"
+                className="cursor-pointer"
                 onClick={handleLogout}
               >
                 <LogOut className="mr-2 h-4 w-4" />

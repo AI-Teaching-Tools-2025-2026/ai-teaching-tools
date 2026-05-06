@@ -58,14 +58,13 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
   return (
     <aside
       className={cn(
-        "fixed left-0 top-0 h-screen bg-neutral-900 text-neutral-200 flex flex-col pt-20 px-2 transition-all duration-300 ease-in-out border-r border-neutral-800 z-40",
+        "fixed left-0 top-0 h-screen bg-background text-foreground flex flex-col pt-20 px-2 transition-all duration-300 ease-in-out border-r border-border z-40",
         isCollapsed ? "w-[60px]" : "w-[240px]",
       )}
-      style={{ backgroundColor: "#171717" }}
     >
       <button
         onClick={toggleSidebar}
-        className="absolute -right-3 top-24 bg-neutral-800 border border-neutral-700 text-neutral-400 hover:text-neutral-200 p-0.5 rounded-full shadow-md z-50 flex items-center justify-center cursor-pointer"
+        className="absolute -right-3 top-24 bg-background border border-border text-muted-foreground hover:text-foreground p-0.5 rounded-full shadow-md z-50 flex items-center justify-center cursor-pointer"
         aria-label="Toggle Sidebar"
       >
         <ChevronLeft
@@ -78,7 +77,7 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
 
       <div
         className={cn(
-          "px-3 py-2 text-xs font-semibold text-neutral-500 transition-all duration-300 overflow-hidden",
+          "px-3 py-2 text-xs font-semibold text-muted-foreground transition-all duration-300 overflow-hidden",
           isCollapsed ? "opacity-0 h-0 py-0" : "opacity-100 h-auto",
         )}
       >
@@ -95,20 +94,20 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
           const rowClassName = cn(
             "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors relative group",
             item.disabled
-              ? "cursor-not-allowed text-neutral-600 opacity-50"
+              ? "cursor-not-allowed text-muted-foreground opacity-50"
               : isActive
-                ? "bg-neutral-800 text-neutral-50"
-                : "hover:bg-neutral-800 text-neutral-400 hover:text-neutral-200",
+                ? "bg-accent text-accent-foreground"
+                : "hover:bg-accent hover:text-accent-foreground text-muted-foreground",
             isCollapsed && "justify-center px-2",
           );
 
           const iconClassName = cn(
             "h-5 w-5 shrink-0",
             item.disabled
-              ? "text-neutral-600"
+              ? "text-muted-foreground"
               : isActive
-                ? "text-neutral-50"
-                : "text-neutral-400 group-hover:text-neutral-200",
+                ? "text-accent-foreground"
+                : "text-muted-foreground group-hover:text-accent-foreground",
           );
 
           const label = (
@@ -149,7 +148,7 @@ export default function SideBar({ isCollapsed, toggleSidebar }: SideBarProps) {
         <Link
           href="/courses"
           className={cn(
-            "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors text-neutral-400 hover:bg-neutral-800 hover:text-neutral-200",
+            "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors text-muted-foreground hover:bg-accent hover:text-accent-foreground",
             isCollapsed && "justify-center px-2",
           )}
         >
