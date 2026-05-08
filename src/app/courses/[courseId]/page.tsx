@@ -37,7 +37,7 @@ export default function CourseDashboardPage() {
     };
 
     loadCourse();
-  });
+  }, [courseId]);
 
   const base = `/courses/${courseId}`;
 
