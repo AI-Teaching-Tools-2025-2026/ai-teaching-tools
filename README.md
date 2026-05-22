@@ -23,23 +23,17 @@ This project aims to empower **instructors** with tools that let them design **c
 
 ## Core Features
 
-### Instructor Analytics Dashboard
-Visualize key student engagement metrics:
-- Reading completion per chapter/section
-- Quiz and flashcard scores
-- High-difficulty topics based on LLM analysis of student input
-- Progress tracking via dynamic Table of Contents
+### Course Management
+Teachers can easily create and manage courses, allowing them to organize course materials all in one place.
 
-### AI-Integrated Assignment Builder
-Create AI-powered teaching materials:
-- Drag-and-drop or form-based UI for document and materials upload
-- Integrates with existing course readings
-- Auto-generates Socratic questions, flashcards, and quizzes using LLMs, including both pre-generated and dynamically generated questions
+### Question Banks
+After uploading a textbook, the system automatically generates a question bank based on the course material. Teachers can then easily browse and add questions directly into quizzes.
 
-### Actionable Insights
-Let instructors proactively support student learning:
-- "Most students struggled with Chapter 3 Section 2 — consider reviewing this in class"
-- AI-generated interventions based on learning analytics and performance
+### Quizzes
+Quizzes can easily be created using AI-generated question banks or by manually adding their own questions. This provides flexibility while simplifying the quiz creation process.
+
+### AI Chatbot
+A personalized AI chatbot tutor can be created. This will eventually allow students to ask questions and get help directly from course-specific material.
 
 ---
 
@@ -47,9 +41,9 @@ Let instructors proactively support student learning:
 
 | Phase | Timeline | Milestones |
 |-------|----------|------------|
-| **Phase 1** | Fall 2025 – Winter 2026 | Build dashboard & assignment builder, integrate with current platform |
-| **Phase 2** | Late Winter 2026 | Pilot test with OSU psychology instructors |
-| **Phase 3** | Spring 2026 | Refine features, co-author academic submission |
+| **Phase 1** | Fall 2025 – Winter 2026 | Planning, research, and UI/UX design for the platform |
+| **Phase 2** | Late Winter 2026 | Implement core features including Course Management, Question Banks, Quizzes, and AI Chatbot integration |
+| **Phase 3** | Spring 2026 | Conduct testing, fix bugs, refine the user experience, and prepare the platform for demo presentation |
 
 ---
 
@@ -70,17 +64,15 @@ Let instructors proactively support student learning:
 
 ## Current System Overview
 
-Students can:
+Instructors can currently:
 - Upload textbook PDFs  
-- Auto-generate a dynamic, structured Table of Contents  
-- Engage with:
-  - Socratic Dialogue Tutor  
-  - On-demand Quiz & Flashcard Generator
+- Generate AI-generated questions based on uploaded textbook materials  
+- Create quizzes using generated or custom questions  
+- Access an AI chatbot connected to course materials  
 
-Instructors (coming soon) will:
-- View student engagement/performance
-- Receive real-time insights
-- Create interactive assignments powered by AI
+Students (coming soon) will:
+- Connect with the student side of the platform
+- Engage with AI-powered learning and study tools
 
 ---
 
