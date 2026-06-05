@@ -14,6 +14,12 @@ interface Message {
   timestamp: Date;
 }
 
+interface HistoryMessage {
+  role: "user" | "assistant";
+  content: string;
+  timestamp: string;
+}
+
 interface ChatInterfaceProps {
   courseId: string;
 }
@@ -44,6 +50,30 @@ export default function ChatInterface({ courseId }: ChatInterfaceProps) {
       }
     };
     loadConfig();
+  }, [courseId]);
+
+  // Load saved chat history so a refresh doesn't lose the conversation
+  useEffect(() => {
+    const loadHistory = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/chatbot/history/${courseId}`,
+          { withCredentials: true },
+        );
+        const saved: HistoryMessage[] = response.data?.messages || [];
+        setMessages(
+          saved.map((m) => ({
+            id: crypto.randomUUID(),
+            role: m.role,
+            content: m.content,
+            timestamp: new Date(m.timestamp),
+          })),
+        );
+      } catch {
+        // No history yet, start fresh
+      }
+    };
+    loadHistory();
   }, [courseId]);
 
   // Auto-scroll to bottom on new messages
@@ -85,8 +115,9 @@ export default function ChatInterface({ courseId }: ChatInterfaceProps) {
         content: m.content,
       }));
 
+      // /chatbot/ask gives RAG retrieval + auto-saves the turn to chat_sessions
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/chatbot/chat`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/chatbot/ask`,
         {
           courseId,
           messages: history,
@@ -127,8 +158,17 @@ export default function ChatInterface({ courseId }: ChatInterfaceProps) {
     }
   };
 
-  const clearChat = () => {
+  // Clear locally then on the server
+  const clearChat = async () => {
     setMessages([]);
+    try {
+      await axios.delete(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/chatbot/history/${courseId}`,
+        { withCredentials: true },
+      );
+    } catch {
+      console.warn("Failed to clear saved chat history on the server.");
+    }
   };
 
   if (configLoading) {
